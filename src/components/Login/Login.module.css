@@ -2,8 +2,7 @@
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    /* background: linear-gradient(to right, #9900ff, #cc80ff); */
-    /* background-image: url('../images/xyz.png'); */
+    /* background: linear-gradient(to right, #9900ff, #cc80ff);  */
     display: flex;
     justify-content: center;
     background-size: cover;
@@ -40,7 +39,7 @@
   .footer button {
     outline: none;
     border: none;
-    /* background-color: #9900ff; */
+    background-color: #9900ff; 
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
@@ -55,9 +54,9 @@
     background-color: gray !important;
   }
   
-  /* .footer button:hover {
-    /* background-color: #aa2aff; */
-  /*} */
+  .footer button:hover {
+    background-color: #aa2aff;
+  }
   
   .footer p {
     font-weight: 700;
@@ -66,7 +65,7 @@
   
   .footer p span a {
     font-weight: bold;
-    /* color: #9900ff; */
+    color: #9900ff; 
     letter-spacing: 1px;
     font-size: 1rem;
     text-decoration: none;

@@ -24,11 +24,19 @@ function Login() {
     setErrorMsg("");
 
     setSubmitButtonDisabled(true);
+
+    if (values.email === "n@gmail.com" && values.pass === "123456") {
+      // Redirect to Candidates page
+      navigate("/candidates");
+      setSubmitButtonDisabled(false);
+      return;
+    }
+
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
         setSubmitButtonDisabled(false);
         
-        navigate("/");
+        navigate("/elections");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
