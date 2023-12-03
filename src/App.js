@@ -6,6 +6,7 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import ElectionsList from "./components/ElectionsList/ElectionsList";
 import CandidatesList from "./components/CandidatesList/CandidatesList";
+import ResultsPage from "./components/Results/Results";
 import { auth } from "./firebase";
 import "./App.css";
 
@@ -65,6 +66,7 @@ function App() {
               />
             }
           />
+          <Route path="/results" element={<ResultsPage />} />
         </Routes>
       </Router>
     </div>
