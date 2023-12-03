@@ -49,10 +49,12 @@ function Login() {
         />
         <InputControl
           label="Password"
+          type="password"
           onChange={(event) =>
             setValues((prev) => ({ ...prev, pass: event.target.value }))
           }
           placeholder="Enter Password"
+          
         />
 
         <div className={styles.footer}>
@@ -73,3 +75,4 @@ function Login() {
 }
 
 export default Login;
+

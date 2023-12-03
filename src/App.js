@@ -6,9 +6,7 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import ElectionsList from "./components/ElectionsList/ElectionsList";
 import CandidatesList from "./components/CandidatesList/CandidatesList";
-
 import { auth } from "./firebase";
-
 import "./App.css";
 
 function App() {
@@ -38,6 +36,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+        
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route
