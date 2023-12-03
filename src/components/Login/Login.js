@@ -25,6 +25,8 @@ function Login() {
 
     setSubmitButtonDisabled(true);
 
+    // Will redirect to results page
+
     if (values.email === "n@gmail.com" && values.pass === "123456") {
       // Redirect to Candidates page
       navigate("/candidates");
