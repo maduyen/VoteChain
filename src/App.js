@@ -57,7 +57,7 @@ function App() {
           <Route path="/elections" element={<ElectionsList 
                   handleElectionSelect={handleElectionSelect} selectedElection={selectedElection} />} />
           <Route
-            path="/candidates"
+            path="/candidates/:electionId"
             element={
               <CandidatesList
                 selectedElection={selectedElection}
