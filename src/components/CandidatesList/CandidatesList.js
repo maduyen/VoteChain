@@ -202,7 +202,9 @@ import { POST_TRANSACTION, FETCH_TRANSACTION } from "../utils/ResDbApis"; // Imp
 import { sendRequest } from "../utils/ResDbClient"; // Import the sendRequest function
 import { app, auth } from '../../firebase';
 import { useParams } from "react-router-dom";
-
+import withAuthProtection from "../AuthProtect/AuthProtect";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 // Inside your CandidatesList component
 
 
@@ -311,6 +313,8 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
  
 
   return (
+    <>
+    <Navbar />
     <div>
       <Typography variant="h4">Candidates List</Typography>
       {selectedElection && (
@@ -344,8 +348,8 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
         </Card>
       ))}
     </div>
+    <Footer />
+    </>
   );
 };
-
-export default CandidatesList;
-
+export default withAuthProtection(CandidatesList);

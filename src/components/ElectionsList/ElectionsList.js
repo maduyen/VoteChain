@@ -156,7 +156,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-
+import withAuthProtection from "../AuthProtect/AuthProtect";
 const elections = [
   { id: 1, name: "Election A" },
   { id: 2, name: "Election B" },
@@ -235,4 +235,4 @@ function ElectionsList({ selectedElection, handleElectionSelect }) {
   );
 }
 
-export default ElectionsList;
+export default withAuthProtection(ElectionsList);

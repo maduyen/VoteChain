@@ -7,6 +7,7 @@ import Signup from "./components/Signup/Signup";
 import ElectionsList from "./components/ElectionsList/ElectionsList";
 import CandidatesList from "./components/CandidatesList/CandidatesList";
 import ResultsPage from "./components/Results/Results";
+import Logout from "./components/Logout/Logout"
 import { auth } from "./firebase";
 import "./App.css";
 
@@ -40,6 +41,7 @@ function App() {
         
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/logout" element={<Logout />} />
           <Route
             path="/"
             element={

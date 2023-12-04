@@ -113,7 +113,7 @@ function Login() {
 
     // Will redirect to results page
 
-    if (values.email === "n@gmail.com" && values.pass === "123456") {
+    if (values.email === "nj@gmail.com" && values.pass === "123456") {
       navigate("/results");
       setSubmitButtonDisabled(false);
       return;
