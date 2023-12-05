@@ -224,19 +224,23 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
   const [isVotingDisabled, setVotingDisabled] = useState(false);
   const [votedCandidate, setVotedCandidate] = useState(null);
   const [transactions, setTransactions] = useState([]);
+  const [voterList, setVoterList] = useState([]);
+  const [isVoted, setIsVoted] = useState(false);
   const { electionId } = useParams();
   console.log("Election ID from URL:", electionId);
   useEffect(() => {
     if (selectedElection) {
       // Fetch transactions for the selected election
-      fetchTransactions(selectedElection.id);
+      console.log("Selected Election is this:", selectedElection);
+      console.log("Selected Election id is this:",selectedElection.id);
+      fetchTransactions(selectedElection);
     }
   }, [selectedElection]);
 
   const fetchTransactions = async (electionId) => {
     try {
       // Fetch transactions using the FETCH_TRANSACTION API
-      const res = await sendRequest(FETCH_TRANSACTION("5qkZEPYKbJCDVzQ4BiWx3RZyZ2NvSNXJ7SnzdyZ9GBXB", "5qkZEPYKbJCDVzQ4BiWx3RZyZ2NvSNXJ7SnzdyZ9GBXB"));
+      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
       if (!selectedElection) {
         console.error("Selected election is null or undefined");
         return;
@@ -247,12 +251,52 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
         // Process the transaction data as needed
         setTransactions(res.data.getFilteredTransactions);
         console.log("Fetched Transactions:", res.data.getFilteredTransactions); // Log the fetched transactions
+        let voters = [...voterList];
+        res.data.getFilteredTransactions?.forEach(element => {
+          
+          voters.push(JSON.parse(element.asset.replace(/'/g, '"')).data);
+         
+        });
+        setVoterList(voters);
+         console.log(voters);
+
       }
     } catch (error) {
       console.error("Error fetching transactions:", error);
       // Handle error scenarios here
     }
   };
+
+  // const fetchTransactions = async (selectedElection) => {
+  //   try {
+  //     const user = auth.currentUser;
+
+  //     // Ensure the user is authenticated
+  //     if (!user) {
+  //       console.error("User not authenticated.");
+  //       // Handle authentication error
+  //       return;
+  //     }
+
+  //     // Fetch transactions for the user and the selected election
+  //     const fetchTransactionQuery = FETCH_TRANSACTION(user.uid, metadata.recipientPublicKey);
+  //     const transactionResponse = await sendRequest(fetchTransactionQuery);
+
+  //     // Check if there are transactions for the selected election
+  //     const transactionsForElection = transactionResponse.data.getFilteredTransactions;
+  //     const hasVotedForElection = transactionsForElection.some(
+  //       (transaction) => transaction.asset.includes(`"electionId":"${selectedElection.id}"`)
+  //     );
+
+  //     // Update the state to reflect whether the user has voted in the selected election
+  //     setTransactions(transactionsForElection);
+  //     setVotingDisabled(hasVotedForElection);
+  //   } catch (error) {
+  //     console.error("Error while fetching transactions:", error);
+  //     // Handle error scenarios here
+  //   }
+  // };
+
 
   const handleCandidateVote = async (candidateId) => {
     console.log("Voting for candidate:", candidateId);
@@ -295,6 +339,14 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
           },
         };
 
+        voterList.forEach((item)=>{
+          if(item["electionId"]==electionId && item["voterId"]==user.uid){
+            console.log("Vote already casted") //TODO
+            setIsVoted(true);
+          }
+        })
+        
+        if(!isVoted){
         // Call the API to post the transaction
         const res = await sendRequest(POST_TRANSACTION(metadata, JSON.stringify(dataItem)));
 
@@ -303,6 +355,7 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
         // Update the state to reflect the successful vote
         setVotedCandidate(candidateId);
         setVotingDisabled(true);
+        }
       } catch (error) {
         console.error("Error while voting:", error);
         // Handle error scenarios here
@@ -339,7 +392,12 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
             >
               Vote
             </Button>
-            {votedCandidate === candidate.id && (
+         
+           {isVoted? 
+              <Typography color="primary" style={{ marginTop: 10 }}>
+                You have already voted.
+              </Typography>
+            :  votedCandidate === candidate.id && (
               <Typography color="primary" style={{ marginTop: 10 }}>
                 You have successfully voted for {candidate.name}.
               </Typography>
