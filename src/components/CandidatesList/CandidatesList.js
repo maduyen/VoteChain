@@ -298,72 +298,129 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
   // };
 
 
+  // const handleCandidateVote = async (candidateId) => {
+  //   console.log("Voting for candidate:", candidateId);
+  //   if (!candidateId) {
+  //     console.error("Candidate ID is null or undefined");
+  //     return;
+  //   }
+  //   if (isElectionVoted) {
+  //     setVotedCandidate(null);
+  //     setVotingDisabled(true);
+  //   } else {
+  //     try {
+  //       const user = auth.currentUser;
+
+  //       // Ensure the user is authenticated
+  //       if (!user) {
+  //         console.error("User not authenticated.");
+  //         // Handle authentication error
+  //         return;
+  //       }
+  
+
+  //       const metadata = {
+  //         signerPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
+  //         signerPrivateKey: "5xFSv5y3HYJv5YSNJ78cSS7Tuaf38Lu6UYj2ajngFuwH",
+  //         recipientPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", // Change this according to your requirement
+  //       };
+
+  //       // Create a data object for the transaction
+  //       const dataItem = { // Add the candidate ID or any necessary data
+  //         // Add other necessary data properties here
+  //         electionId: electionId,
+  //         candidateId: candidateId,
+  //         voterId: user.uid, // Replace with the actual voter ID
+  //         voteCount: 1, // Initial vote count
+  //         additionalData: {
+  //           timestamp: Date.now(),
+  //           location: "Precinct 123", // Replace with actual location data
+  //           verificationCode: "ABCDEF", // Replace with actual verification code
+  //         },
+  //       };
+
+  //       voterList.forEach((item)=>{
+  //         if(item["electionId"]==electionId && item["voterId"]==user.uid){
+  //           console.log("Vote already casted") //TODO
+  //           setIsVoted(true);
+  //         }
+  //       })
+        
+  //       if(!isVoted){
+  //       // Call the API to post the transaction
+  //       const res = await sendRequest(POST_TRANSACTION(metadata, JSON.stringify(dataItem)));
+
+  //       console.log("Transaction response:", res);
+
+  //       // Update the state to reflect the successful vote
+  //       setVotedCandidate(candidateId);
+  //       setVotingDisabled(true);
+  //       }
+  //     } catch (error) {
+  //       console.error("Error while voting:", error);
+  //       // Handle error scenarios here
+  //     }
+  //   }
+  // };
+
   const handleCandidateVote = async (candidateId) => {
     console.log("Voting for candidate:", candidateId);
     if (!candidateId) {
       console.error("Candidate ID is null or undefined");
       return;
     }
-    if (isElectionVoted) {
-      setVotedCandidate(null);
-      setVotingDisabled(true);
-    } else {
-      try {
-        const user = auth.currentUser;
-
-        // Ensure the user is authenticated
-        if (!user) {
-          console.error("User not authenticated.");
-          // Handle authentication error
-          return;
-        }
+    try {
+      const user = auth.currentUser;
   
-
-        const metadata = {
-          signerPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
-          signerPrivateKey: "5xFSv5y3HYJv5YSNJ78cSS7Tuaf38Lu6UYj2ajngFuwH",
-          recipientPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", // Change this according to your requirement
-        };
-
+      // Ensure the user is authenticated
+      if (!user) {
+        console.error("User not authenticated.");
+        // Handle authentication error
+        return;
+      }
+  
+      const metadata = {
+        signerPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
+        signerPrivateKey: "5xFSv5y3HYJv5YSNJ78cSS7Tuaf38Lu6UYj2ajngFuwH",
+        recipientPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
+      };
+  
+      // Check if the user has already voted in the current election
+      const hasVoted = voterList.some((item) => item.electionId === electionId && item.voterId === user.uid);
+  
+      if (hasVoted) {
+        console.log("Vote already casted");
+        setIsVoted(true);
+      } else {
         // Create a data object for the transaction
-        const dataItem = { // Add the candidate ID or any necessary data
-          // Add other necessary data properties here
+        const dataItem = {
           electionId: electionId,
           candidateId: candidateId,
-          voterId: user.uid, // Replace with the actual voter ID
-          voteCount: 1, // Initial vote count
+          voterId: user.uid,
+          voteCount: 1,
           additionalData: {
             timestamp: Date.now(),
-            location: "Precinct 123", // Replace with actual location data
-            verificationCode: "ABCDEF", // Replace with actual verification code
+            location: "Precinct 123",
+            verificationCode: "ABCDEF",
           },
         };
-
-        voterList.forEach((item)=>{
-          if(item["electionId"]==electionId && item["voterId"]==user.uid){
-            console.log("Vote already casted") //TODO
-            setIsVoted(true);
-          }
-        })
-        
-        if(!isVoted){
+  
         // Call the API to post the transaction
         const res = await sendRequest(POST_TRANSACTION(metadata, JSON.stringify(dataItem)));
-
+  
         console.log("Transaction response:", res);
-
+  
         // Update the state to reflect the successful vote
         setVotedCandidate(candidateId);
         setVotingDisabled(true);
-        }
-      } catch (error) {
-        console.error("Error while voting:", error);
-        // Handle error scenarios here
+        setIsVoted(false); // Clear the isVoted state for the next election
       }
+    } catch (error) {
+      console.error("Error while voting:", error);
+      // Handle error scenarios here
     }
   };
-
- 
+  
 
   return (
     <>

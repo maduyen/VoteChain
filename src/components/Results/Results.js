@@ -493,6 +493,9 @@ const ResultsPage = () => {
     }
   };
 
+
+  
+
   useEffect(() => {
     if (isCalculated) {
       // Create datasets dynamically based on electionResults
