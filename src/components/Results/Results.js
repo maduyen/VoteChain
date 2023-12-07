@@ -240,13 +240,7 @@
 
 
 //Chatgpt - 3:14
-import React, { useEffect, useState } from 'react';
-import * as XLSX from 'xlsx';
-import { sendRequest } from '../utils/ResDbClient';
-import { FETCH_TRANSACTION } from '../utils/ResDbApis';
-import Chart from 'chart.js/auto';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+
 
 // const ResultsPage = () => {
 //   const [voterList, setVoterList] = useState([]);
@@ -444,13 +438,390 @@ import Footer from '../Footer';
 
 // export default ResultsPage;
 
+
+//Before!! - 442 line mainnnnn - bar chart working code
+// import React, { useEffect, useState } from 'react';
+// import * as XLSX from 'xlsx';
+// import { sendRequest } from '../utils/ResDbClient';
+// import { FETCH_TRANSACTION } from '../utils/ResDbApis';
+// import Chart from 'chart.js/auto';
+// import Navbar from '../Navbar';
+// import Footer from '../Footer';
+
+// const ResultsPage = () => {
+//   const [voterList, setVoterList] = useState([]);
+//   const [isCalculated, setIsCalculated] = useState(false);
+//   const [chartData, setChartData] = useState(null);
+//   const [electionResults, setElectionResults] = useState({});
+//   const [electionIds, setElectionIds] = useState([]);
+//   const [datasets, setDatasets] = useState([]);
+
+//   useEffect(() => {
+//     fetchTransactions();
+//   }, []);
+
+//   const fetchTransactions = async () => {
+//     try {
+//       const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
+
+//       if (res && res.data && res.data.getFilteredTransactions) {
+//         let voters = [];
+//         let updatedResults = {};
+
+//         res.data.getFilteredTransactions?.forEach(element => {
+//           let json = JSON.parse(element.asset.replace(/'/g, '"')).data;
+//           voters.push(json);
+
+//           let candidateId = json["candidateId"];
+//           let electionId = json["electionId"];
+
+//           if (!(electionId in updatedResults)) {
+//             updatedResults[electionId] = {};
+//           }
+
+//           if (!(candidateId in updatedResults[electionId])) {
+//             updatedResults[electionId][candidateId] = 0;
+//           }
+
+//           updatedResults[electionId][candidateId]++;
+//         });
+
+//         setVoterList(voters);
+//         setIsCalculated(true);
+//         setElectionResults(updatedResults);
+//         setElectionIds(Object.keys(updatedResults));
+//         console.log("Election Results: ", updatedResults);
+//       }
+//     } catch (error) {
+//       console.error("Error fetching transactions:", error);
+//     }
+//   };
+
+
+  
+
+//   useEffect(() => {
+//     if (isCalculated) {
+//       // Create datasets dynamically based on electionResults
+//       const newDatasets = electionIds.map((electionId, index) => {
+//         const dataValues = [
+//           electionResults[electionId]?.[1] || 0,
+//           electionResults[electionId]?.[2] || 0,
+//           electionResults[electionId]?.[3] || 0,
+//         ];
+
+//         return {
+//           label: `Election ${electionId}`,
+//           data: dataValues,
+//           // backgroundColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`,
+//           // borderColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`,
+//           backgroundColor: [
+//                         'rgba(255, 99, 132, 0.5)',
+//                         'rgba(54, 162, 235, 0.5)',
+//                         'rgba(255, 206, 86, 0.5)',
+//                       ],
+//                       borderColor: [
+//                         'rgba(255, 99, 132, 1)',
+//                         'rgba(54, 162, 235, 1)',
+//                         'rgba(255, 206, 86, 1)',
+//                       ],
+//           borderWidth: 1,
+//         };
+//       });
+//       setDatasets(newDatasets);
+
+//       const data = {
+//         labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+//         datasets: newDatasets,
+//       };
+
+//       setChartData(data);
+//     }
+//   }, [isCalculated, electionResults, electionIds]);
+
+//   useEffect(() => {
+//     if (chartData && datasets.length > 0) {
+//       // Destroy existing charts if they exist
+//       electionIds.forEach((electionId) => {
+//         const ctx = document.getElementById(`myBarChart${electionId}`);
+//         Chart.getChart(ctx)?.destroy();
+//       });
+
+//       // Create a new Chart instance for each election
+//       electionIds.forEach((electionId, index) => {
+//         const canvas = document.createElement('canvas');
+//         canvas.id = `myBarChart${electionId}`;
+//         canvas.width = 500;
+//         canvas.height = 300;
+
+//         document.getElementById('chartContainer').appendChild(canvas);
+
+//         const newCtx = document.getElementById(`myBarChart${electionId}`);
+//         new Chart(newCtx, {
+//           type: 'bar',
+//           data: {
+//             labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+//             datasets: [datasets[index]],
+//           },
+//           options: {
+//             scales: {
+//               y: {
+//                 beginAtZero: true,
+//               },
+//             },
+//           },
+//         });
+//       });
+//     }
+//   }, [chartData, electionIds, datasets]);
+
+// return (
+//   <>
+//     <Navbar />
+//     <div style={{margin: '3rem', padding: '3rem' }}>
+//       <h2>Bar Chart Example</h2>
+//       <div id="chartContainer" style={{ margin: '1rem',display: 'flex', flexDirection: 'column' }}>
+//         {/* Charts will be dynamically appended here */}
+//       </div>
+//     </div>
+//     <Footer />
+//   </>
+// );
+
+// };
+
+// export default ResultsPage;
+
+//After 6:38pm - bar and pie working code
+// import React, { useEffect, useState } from 'react';
+// import * as XLSX from 'xlsx';
+// import { sendRequest } from '../utils/ResDbClient';
+// import { FETCH_TRANSACTION } from '../utils/ResDbApis';
+// import Chart from 'chart.js/auto';
+// import Navbar from '../Navbar';
+// import Footer from '../Footer';
+
+// const ResultsPage = () => {
+//   const [voterList, setVoterList] = useState([]);
+//   const [isCalculated, setIsCalculated] = useState(false);
+//   const [chartData, setChartData] = useState(null);
+//   const [electionResults, setElectionResults] = useState({});
+//   const [electionIds, setElectionIds] = useState([]);
+//   const [barChartDatasets, setBarChartDatasets] = useState([]);
+//   const [pieChartDatasets, setPieChartDatasets] = useState([]);
+
+//   useEffect(() => {
+//     fetchTransactions();
+//   }, []);
+
+//   const fetchTransactions = async () => {
+//     try {
+//       const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
+
+//       if (res && res.data && res.data.getFilteredTransactions) {
+//         let voters = [];
+//         let updatedResults = {};
+
+//         res.data.getFilteredTransactions?.forEach(element => {
+//           let json = JSON.parse(element.asset.replace(/'/g, '"')).data;
+//           voters.push(json);
+
+//           let candidateId = json["candidateId"];
+//           let electionId = json["electionId"];
+
+//           if (!(electionId in updatedResults)) {
+//             updatedResults[electionId] = {};
+//           }
+
+//           if (!(candidateId in updatedResults[electionId])) {
+//             updatedResults[electionId][candidateId] = 0;
+//           }
+
+//           updatedResults[electionId][candidateId]++;
+//         });
+
+//         setVoterList(voters);
+//         setIsCalculated(true);
+//         setElectionResults(updatedResults);
+//         setElectionIds(Object.keys(updatedResults));
+//       }
+//     } catch (error) {
+//       console.error("Error fetching transactions:", error);
+//     }
+//   };
+
+//   useEffect(() => {
+//     if (isCalculated) {
+//       const newBarChartDatasets = electionIds.map((electionId) => {
+//         const dataValues = [
+//           electionResults[electionId]?.[1] || 0,
+//           electionResults[electionId]?.[2] || 0,
+//           electionResults[electionId]?.[3] || 0,
+//         ];
+
+//         return {
+//           label: `Election ${electionId}`,
+//           data: dataValues,
+//           backgroundColor: [
+//             'rgba(255, 99, 132, 0.5)',
+//             'rgba(54, 162, 235, 0.5)',
+//             'rgba(255, 206, 86, 0.5)',
+//           ],
+//           borderColor: [
+//             'rgba(255, 99, 132, 1)',
+//             'rgba(54, 162, 235, 1)',
+//             'rgba(255, 206, 86, 1)',
+//           ],
+//           borderWidth: 1,
+//         };
+//       });
+//       setBarChartDatasets(newBarChartDatasets);
+
+//       const barChartData = {
+//         labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+//         datasets: newBarChartDatasets,
+//       };
+//       setChartData(barChartData);
+
+//       const newPieChartDatasets = electionIds.map((electionId) => {
+//         const dataValues = [
+//           electionResults[electionId]?.[1] || 0,
+//           electionResults[electionId]?.[2] || 0,
+//           electionResults[electionId]?.[3] || 0,
+//         ];
+
+//         return {
+//           label: `Election ${electionId}`,
+//           data: dataValues,
+//           backgroundColor: [
+//             'rgba(255, 99, 132, 0.5)',
+//             'rgba(54, 162, 235, 0.5)',
+//             'rgba(255, 206, 86, 0.5)',
+//           ],
+//           borderColor: [
+//             'rgba(255, 99, 132, 1)',
+//             'rgba(54, 162, 235, 1)',
+//             'rgba(255, 206, 86, 1)',
+//           ],
+//           borderWidth: 1,
+//         };
+//       });
+//       setPieChartDatasets(newPieChartDatasets);
+//     }
+//   }, [isCalculated, electionResults, electionIds]);
+
+//   useEffect(() => {
+//     if (chartData && barChartDatasets.length > 0) {
+//       // Destroy existing bar charts if they exist
+//       electionIds.forEach((electionId) => {
+//         const ctx = document.getElementById(`myBarChart${electionId}`);
+//         Chart.getChart(ctx)?.destroy();
+//       });
+
+//       // Create new bar Chart instances for each election
+//       electionIds.forEach((electionId) => {
+//         const canvas = document.createElement('canvas');
+//         canvas.id = `myBarChart${electionId}`;
+//         canvas.width = 500;
+//         canvas.height = 300;
+
+//         document.getElementById('barChartContainer').appendChild(canvas);
+
+//         const newCtx = document.getElementById(`myBarChart${electionId}`);
+//         new Chart(newCtx, {
+//           type: 'bar',
+//           data: {
+//             labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+//             datasets: [barChartDatasets.find(dataset => dataset.label === `Election ${electionId}`)],
+//           },
+//           options: {
+//             scales: {
+//               y: {
+//                 beginAtZero: true,
+//               },
+//             },
+//           },
+//         });
+//       });
+//     }
+
+//     if (pieChartDatasets.length > 0) {
+//       // Destroy existing pie charts if they exist
+//       electionIds.forEach((electionId) => {
+//         const ctx = document.getElementById(`myPieChart${electionId}`);
+//         Chart.getChart(ctx)?.destroy();
+//       });
+
+//       // Create new pie Chart instances for each election
+//       electionIds.forEach((electionId) => {
+//         const canvas = document.createElement('canvas');
+//         canvas.id = `myPieChart${electionId}`;
+//         canvas.width = 500;
+//         canvas.height = 300;
+
+//         document.getElementById('pieChartContainer').appendChild(canvas);
+
+//         const newCtx = document.getElementById(`myPieChart${electionId}`);
+//         new Chart(newCtx, {
+//           type: 'doughnut', // You can use 'pie' for a regular pie chart
+//           data: {
+//             labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+//             datasets: [pieChartDatasets.find(dataset => dataset.label === `Election ${electionId}`)],
+//           },
+//           options: {
+//             responsive: true,
+//             plugins: {
+//               legend: {
+//                 position: 'top',
+//               },
+//               title: {
+//                 display: true,
+//                 text: `Election ${electionId} Results`,
+//               },
+//             },
+//           },
+//         });
+//       });
+//     }
+//   }, [chartData, barChartDatasets, pieChartDatasets, electionIds]);
+
+//   return (
+//     <>
+//       <Navbar />
+//       <div style={{ margin: '3rem', padding: '3rem' }}>
+//         <h2>Bar and Pie Chart Example</h2>
+//         <div id="barChartContainer" style={{ margin: '1rem' }}>
+//           {/* Bar Charts will be dynamically appended here */}
+//         </div>
+//         <div id="pieChartContainer" style={{ margin: '1rem' }}>
+//           {/* Pie Charts will be dynamically appended here */}
+//         </div>
+//       </div>
+//       <Footer />
+//     </>
+//   );
+// };
+
+// export default ResultsPage;
+
+
+// BAR, PIE, POLAR TRIAL
+import React, { useEffect, useState } from 'react';
+import Chart from 'chart.js/auto';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
+import { sendRequest } from '../utils/ResDbClient';
+import { FETCH_TRANSACTION } from '../utils/ResDbApis';
+
 const ResultsPage = () => {
   const [voterList, setVoterList] = useState([]);
   const [isCalculated, setIsCalculated] = useState(false);
   const [chartData, setChartData] = useState(null);
   const [electionResults, setElectionResults] = useState({});
   const [electionIds, setElectionIds] = useState([]);
-  const [datasets, setDatasets] = useState([]);
+  const [barChartDatasets, setBarChartDatasets] = useState([]);
+  const [pieChartDatasets, setPieChartDatasets] = useState([]);
+  const [polarChartDatasets, setPolarChartDatasets] = useState([]);
 
   useEffect(() => {
     fetchTransactions();
@@ -486,20 +857,15 @@ const ResultsPage = () => {
         setIsCalculated(true);
         setElectionResults(updatedResults);
         setElectionIds(Object.keys(updatedResults));
-        console.log("Election Results: ", updatedResults);
       }
     } catch (error) {
       console.error("Error fetching transactions:", error);
     }
   };
 
-
-  
-
   useEffect(() => {
     if (isCalculated) {
-      // Create datasets dynamically based on electionResults
-      const newDatasets = electionIds.map((electionId, index) => {
+      const newBarChartDatasets = electionIds.map((electionId) => {
         const dataValues = [
           electionResults[electionId]?.[1] || 0,
           electionResults[electionId]?.[2] || 0,
@@ -509,55 +875,108 @@ const ResultsPage = () => {
         return {
           label: `Election ${electionId}`,
           data: dataValues,
-          // backgroundColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.5)`,
-          // borderColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`,
           backgroundColor: [
-                        'rgba(255, 99, 132, 0.5)',
-                        'rgba(54, 162, 235, 0.5)',
-                        'rgba(255, 206, 86, 0.5)',
-                      ],
-                      borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                      ],
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+          ],
           borderWidth: 1,
         };
       });
-      setDatasets(newDatasets);
+      setBarChartDatasets(newBarChartDatasets);
 
-      const data = {
-        labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
-        datasets: newDatasets,
-      };
+      const newPieChartDatasets = electionIds.map((electionId) => {
+        const dataValues = [
+          electionResults[electionId]?.[1] || 0,
+          electionResults[electionId]?.[2] || 0,
+          electionResults[electionId]?.[3] || 0,
+        ];
 
-      setChartData(data);
+        return {
+          label: `Election ${electionId}`,
+          data: dataValues,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+          ],
+          borderWidth: 1,
+        };
+      });
+      setPieChartDatasets(newPieChartDatasets);
+
+      const newPolarChartDatasets = electionIds.map((electionId) => {
+        const dataValues = [
+          electionResults[electionId]?.[1] || 0,
+          electionResults[electionId]?.[2] || 0,
+          electionResults[electionId]?.[3] || 0,
+        ];
+
+        return {
+          label: `Election ${electionId}`,
+          data: dataValues,
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+          ],
+          borderWidth: 1,
+        };
+      });
+      setPolarChartDatasets(newPolarChartDatasets);
     }
   }, [isCalculated, electionResults, electionIds]);
 
   useEffect(() => {
-    if (chartData && datasets.length > 0) {
-      // Destroy existing charts if they exist
+    if (barChartDatasets.length > 0 && pieChartDatasets.length > 0 && polarChartDatasets.length > 0) {
+      document.getElementById('chartContainer').innerHTML = '';
+
       electionIds.forEach((electionId) => {
-        const ctx = document.getElementById(`myBarChart${electionId}`);
-        Chart.getChart(ctx)?.destroy();
-      });
+        const container = document.createElement('div');
+        container.classList.add('chart-container');
 
-      // Create a new Chart instance for each election
-      electionIds.forEach((electionId, index) => {
-        const canvas = document.createElement('canvas');
-        canvas.id = `myBarChart${electionId}`;
-        canvas.width = 500;
-        canvas.height = 300;
+        const barCanvas = document.createElement('canvas');
+        barCanvas.id = `myBarChart${electionId}`;
+        barCanvas.width = 150; // Adjust width as needed
+        barCanvas.height = 150; // Adjust height as needed
 
-        document.getElementById('chartContainer').appendChild(canvas);
+        const pieCanvas = document.createElement('canvas');
+        pieCanvas.id = `myPieChart${electionId}`;
+        pieCanvas.width = 150; // Adjust width as needed
+        pieCanvas.height = 150; // Adjust height as needed
 
-        const newCtx = document.getElementById(`myBarChart${electionId}`);
-        new Chart(newCtx, {
+        const polarCanvas = document.createElement('canvas');
+        polarCanvas.id = `myPolarChart${electionId}`;
+        polarCanvas.width = 150; // Adjust width as needed
+        polarCanvas.height = 150; // Adjust height as needed
+
+        container.appendChild(barCanvas);
+        container.appendChild(pieCanvas);
+        container.appendChild(polarCanvas);
+
+        document.getElementById('chartContainer').appendChild(container);
+
+        const barCtx = document.getElementById(`myBarChart${electionId}`);
+        new Chart(barCtx, {
           type: 'bar',
           data: {
             labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
-            datasets: [datasets[index]],
+            datasets: [barChartDatasets.find(dataset => dataset.label === `Election ${electionId}`)],
           },
           options: {
             scales: {
@@ -565,25 +984,76 @@ const ResultsPage = () => {
                 beginAtZero: true,
               },
             },
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              title: {
+                display: true,
+                text: `Election ${electionId} Bar Chart Results`,
+              },
+            },
+          },
+        });
+
+        const pieCtx = document.getElementById(`myPieChart${electionId}`);
+        new Chart(pieCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+            datasets: [pieChartDatasets.find(dataset => dataset.label === `Election ${electionId}`)],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              title: {
+                display: true,
+                text: `Election ${electionId} Pie Chart Results`,
+              },
+            },
+          },
+        });
+
+        const polarCtx = document.getElementById(`myPolarChart${electionId}`);
+        new Chart(polarCtx, {
+          type: 'polarArea',
+          data: {
+            labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
+            datasets: [polarChartDatasets.find(dataset => dataset.label === `Election ${electionId}`)],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: 'top',
+              },
+              title: {
+                display: true,
+                text: `Election ${electionId} Polar Area Chart Results`,
+              },
+            },
           },
         });
       });
     }
-  }, [chartData, electionIds, datasets]);
+  }, [barChartDatasets, pieChartDatasets, polarChartDatasets, electionIds]);
 
-return (
-  <>
-    <Navbar />
-    <div style={{margin: '3rem', padding: '3rem' }}>
-      <h2>Bar Chart Example</h2>
-      <div id="chartContainer" style={{ margin: '1rem',display: 'flex', flexDirection: 'column' }}>
-        {/* Charts will be dynamically appended here */}
+  return (
+    <>
+      <Navbar />
+      <div style={{ margin: '3rem', padding: '3rem' }}>
+        <h2>Bar, Pie, and Polar Area Chart</h2>
+        <div id="chartContainer" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          {/* Charts will be dynamically appended here */}
+        </div>
       </div>
-    </div>
-    <Footer />
-  </>
-);
-
+      <Footer />
+    </>
+  );
 };
 
 export default ResultsPage;
