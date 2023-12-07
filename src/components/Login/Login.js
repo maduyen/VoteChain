@@ -170,8 +170,8 @@ function Login() {
                 />
               </FormGroup>
 
-              {errorMsg && <Alert color="danger">{errorMsg}</Alert>}
-
+              {/* {errorMsg && <Alert color="danger">{errorMsg}</Alert>} */}
+              {errorMsg && <Alert color="danger">Invalid Credentials</Alert>}
               <div className={styles.footer}>
                 <Button
                   color="primary"
