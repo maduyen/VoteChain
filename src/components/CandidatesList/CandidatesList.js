@@ -205,6 +205,8 @@ import { useParams } from "react-router-dom";
 import withAuthProtection from "../AuthProtect/AuthProtect";
 import Navbar from "../Navbar2";
 import Footer from "../Footer";
+import styles from "./CandidatesList.module.css";
+import { Container, Row, Col, Form, FormGroup, Label, Input, Alert } from "reactstrap";
 // GUI imports
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -232,7 +234,7 @@ import c17 from '../../assest/c17.png';
 //Toastify 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import back_image_cand from "../../assest/undraw_people_re_8spw.svg";
 // Inside your CandidatesList component
 
 
@@ -501,7 +503,16 @@ useEffect(() => {
   return (
     <>
     <Navbar />
-    <div>
+    <Container className={styles.container}>
+    <Row className="justify-content-center">
+      <Col md="6" className={styles.imageCol} style={{paddingRight: "100px", paddingTop: "100px"}}>
+          {/* Left half of the page for the image */}
+          <div className={styles.imageContainer}>
+            <img src={back_image_cand} alt="..." className={styles.back_image_cand} />
+          </div>
+        </Col>
+        <Col md="6">
+        <div>
       <Typography variant="h3" style={{padding: "50px"}}>Candidates List</Typography>
       {selectedElection && (
         <Typography variant="h5">Election: {selectedElection.name}</Typography>
@@ -637,8 +648,12 @@ useEffect(() => {
     </div>
     </div>
 
+        </Col>
+        </Row>
+    </Container>
     
-    <Footer />
+    
+   <Footer />
     </>
   );
 };

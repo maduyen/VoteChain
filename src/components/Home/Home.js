@@ -253,7 +253,7 @@ import { Row, Col } from "reactstrap";
 // import {Typography} from "reactstrap";
 import CardContent from "@material-ui/core/CardContent";
 import Navbar from "../Navbar1";
-import Footer from "../Footer";
+import Footer from "../Footer2";
 import voting_home from "../../components/images/voting_home_2.svg";
 import signup from "../../components/images/signup.svg";
 import election from "../../components/images/election.svg";
@@ -402,8 +402,8 @@ function Home(props) {
             </Grid>
             <div className="content-center brand">
               <hr className="line-success" />
-              <h1 className="display-2" >Features</h1>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
+              <h1 className="display-2" style={{paddingBottom: "25px"}}>Features</h1>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', backgroundColor: "white", padding: "60px" }}>
                 <div style={{ textAlign: 'center' }}>
                   <img
                     alt="..."
@@ -447,7 +447,10 @@ function Home(props) {
 
         {/* </section> */}
       </div>
-      {/* <Footer /> */}
+      <div>
+      <Footer />
+      </div>
+       
     </div>
   );
 }

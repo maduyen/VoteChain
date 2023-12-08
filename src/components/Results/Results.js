@@ -1106,6 +1106,7 @@ const ResultsPage = () => {
         </div>
       </div>
       </Card>
+      <Footer />
     </>
   );
 };

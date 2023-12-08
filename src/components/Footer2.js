@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import CopyrightImage from "../assest/82954a041b27eadab9a9bd64e718c0a9-removebg-preview.png";
 const useStyles = makeStyles((theme) => ({
   footer: {
-    position: "fixed",
+    position: "fixed-bottom",
     bottom: 0,
     left: 0,
     right: 0,

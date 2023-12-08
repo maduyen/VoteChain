@@ -365,8 +365,8 @@ const elections = [
     name: "Constituency A",
     logo: election_1,
     title: "Constituency A Election",
-    description: "Join us on a journey towards a brighter future built on innovation, inclusivity, and progress. Envision a tomorrow where unity prevails, every citizen thrives, and cutting-edge solutions drive economic growth.",
-    dates: "Election Dates: 05/15/2023 - 05/20/2023"
+    description: "Join us on a successful journey towards a brighter future built on innovation, creativity, inclusivity, progress, etc. ",
+    dates: "Election Dates: 12/1/2023 - 12/12/2023"
   },
   {
     id: 2,
@@ -374,15 +374,15 @@ const elections = [
     logo: election_2,
     title: "Constituency B Election",
     description: "We promote community empowerment, fostering strong, vibrant neighborhoods where every voice is heard.",
-    dates: "Election Dates: 05/18/2023 - 05/23/2023"
+    dates: "Election Dates: 12/5/2023 - 12/15/2023"
   },
   {
     id: 3,
     name: "Constituency C",
     logo: election_4,
     title: "Constituency C Election",
-    description: "Advocating for accountability and transparency, believing in a government that is open, honest, and responsible.Join us in ushering in a new era of politics, where the power is returned to the people, and decisions are made with clarity and integrity.",
-    dates: "Election Dates: 05/20/2023 - 05/25/2023"
+    description: "Advocating for accountability and transparency, believing in a government that is open, honest, and responsible.",
+    dates: "Election Dates: 12/6/2023 - 12/12/2023"
   },
   // Add more elections as needed
 ];
@@ -429,7 +429,27 @@ function ElectionsList({ selectedElection, handleElectionSelect }) {
                         onClick={() => handleElectionSelect(election.id)}
                         component={Link}
                         to={`/candidates/${election.id}`}
-                        style={{ width: "100%" }}
+                        style={{
+                          width: "100%",
+                          backgroundColor: selectedElection && selectedElection.includes(election.id)
+                            ? "#000" // Change background color for selected election
+                            : "#000", // Change default background color
+                          color: "#fff", // Text color
+                          borderRadius: 8, // Button border radius
+                          boxShadow: "none", // Remove box-shadow if needed
+                          transition: "background-color 0.3s", // Add transition effect
+                        }}
+                        // Hover effect
+                        onMouseOver={(e) => {
+                          e.currentTarget.style.backgroundColor = selectedElection && selectedElection.includes(election.id)
+                            ? "#000" // Change background color on hover for selected election
+                            : "#000"; // Change default background color on hover
+                        }}
+                        onMouseOut={(e) => {
+                          e.currentTarget.style.backgroundColor = selectedElection && selectedElection.includes(election.id)
+                            ? "#000" // Revert back to selected election's color
+                            : "#000"; // Revert back to default color
+                        }}
                       >
                         {election.name}
                       </Button>
@@ -441,7 +461,8 @@ function ElectionsList({ selectedElection, handleElectionSelect }) {
           </Grid>
         </Container>
       </Card>
-      <Footer />
+      
+    <Footer/>
     </>
   );
 }
