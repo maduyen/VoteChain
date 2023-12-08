@@ -96,7 +96,7 @@
 //     labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
 //     datasets: [
 //       {
-//         label: 'Election A',
+//         label: 'Constituency A',
 //         data: [electionResults[1][1], electionResults[1][2], electionResults[1][3]],
 //         backgroundColor: [
 //           'rgba(255, 99, 132, 0.5)',
@@ -297,7 +297,7 @@
 //   //       labels: ['Candidate 1', 'Candidate 2', 'Candidate 3'],
 //   //       datasets: [
 //   //         {
-//   //           label: 'Election A',
+//   //           label: 'Constituency A',
 //   //           data: [
 //   //             electionResults[1]?.[1] || 0,
 //   //             electionResults[1]?.[2] || 0,
@@ -806,13 +806,18 @@
 
 
 // BAR, PIE, POLAR TRIAL
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Chart from 'chart.js/auto';
-import Navbar from '../Navbar';
+import Navbar from '../Navbar2';
 import Footer from '../Footer';
 import { sendRequest } from '../utils/ResDbClient';
 import { FETCH_TRANSACTION } from '../utils/ResDbApis';
-
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 const ResultsPage = () => {
   const [voterList, setVoterList] = useState([]);
   const [isCalculated, setIsCalculated] = useState(false);
@@ -822,7 +827,7 @@ const ResultsPage = () => {
   const [barChartDatasets, setBarChartDatasets] = useState([]);
   const [pieChartDatasets, setPieChartDatasets] = useState([]);
   const [polarChartDatasets, setPolarChartDatasets] = useState([]);
-
+  const chartContainerRef = useRef(null);
   useEffect(() => {
     fetchTransactions();
   }, []);
@@ -943,6 +948,51 @@ const ResultsPage = () => {
   }, [isCalculated, electionResults, electionIds]);
 
   useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust threshold as needed
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const chartId = entry.target.id;
+          const electionId = chartId.split('my')[1];
+
+          const barCtx = document.getElementById(`myBarChart${electionId}`);
+          // Create other charts similarly for pie and polar charts
+
+          new Chart(barCtx, {
+            type: 'bar',
+            data: {
+              // ... (your chart data configuration)
+            },
+            options: {
+              // ... (your chart options)
+            },
+          });
+
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    if (chartContainerRef.current) {
+      const chartContainers = chartContainerRef.current.querySelectorAll('.chart-container > div');
+      chartContainers.forEach((container) => {
+        observer.observe(container);
+      });
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [electionIds]);
+
+  useEffect(() => {
     if (barChartDatasets.length > 0 && pieChartDatasets.length > 0 && polarChartDatasets.length > 0) {
       document.getElementById('chartContainer').innerHTML = '';
 
@@ -1008,7 +1058,7 @@ const ResultsPage = () => {
             responsive: true,
             plugins: {
               legend: {
-                position: 'top',
+                position: 'right',
               },
               title: {
                 display: true,
@@ -1029,7 +1079,7 @@ const ResultsPage = () => {
             responsive: true,
             plugins: {
               legend: {
-                position: 'top',
+                position: 'left',
               },
               title: {
                 display: true,
@@ -1045,13 +1095,17 @@ const ResultsPage = () => {
   return (
     <>
       <Navbar />
-      <div style={{ margin: '3rem', padding: '3rem' }}>
-        <h2>Bar, Pie, and Polar Area Chart</h2>
-        <div id="chartContainer" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+      <Card sx={{ maxWidth: 1200,}}>
+      <div style={{ margin: '3rem', padding: '3rem'}}>
+        <h2 style={{ marginBottom: '1.5rem' }}>Bar, Pie, and Polar Area Chart</h2>
+        <div className="chart-heading" style={{ marginBottom: '2rem' }}>
+            {/* Charts will be dynamically appended here */}
+          </div>
+        <div id="chartContainer" ref={chartContainerRef} style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
           {/* Charts will be dynamically appended here */}
         </div>
       </div>
-      <Footer />
+      </Card>
     </>
   );
 };

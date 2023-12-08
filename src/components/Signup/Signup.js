@@ -195,7 +195,7 @@ import {
   Button,
 } from "reactstrap";
 import styles from "./Signup.module.css";
-import signupImage from "../images/Untitled_design-removebg-preview.png"; // Replace with your image path
+import signupImage from "../../assest/signup_undraw.svg"; // Replace with your image path
 
 function Signup() {
   const navigate = useNavigate();

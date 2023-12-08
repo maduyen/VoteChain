@@ -92,7 +92,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Alert } from "reactstrap";
 import styles from "./Login.module.css";
-import loginImage from "../images/Untitled_design-removebg-preview.png"
+import loginImage from "../../assest/login_undraw.svg"
+
 function Login() {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -134,7 +135,7 @@ function Login() {
     <Container className={styles.container}>
       {/* <Row className="justify-content-center"> */}
 <Row className="justify-content-center">
-      <Col md="6" className={styles.imageCol}>
+      <Col md="6" className={styles.imageCol} style={{paddingRight: "50px"}}>
           {/* Left half of the page for the image */}
           <div className={styles.imageContainer}>
             <img src={loginImage} alt="Login" className={styles.loginImage} />
@@ -169,6 +170,7 @@ function Login() {
                   }
                 />
               </FormGroup>
+              <div></div>
 
               {/* {errorMsg && <Alert color="danger">{errorMsg}</Alert>} */}
               {errorMsg && <Alert color="danger">Invalid Credentials</Alert>}
