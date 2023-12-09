@@ -809,7 +809,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import Navbar from '../Navbar2';
-import Footer from '../Footer';
+import Footer from '../Footer2';
 import { sendRequest } from '../utils/ResDbClient';
 import { FETCH_TRANSACTION } from '../utils/ResDbApis';
 import Card from '@mui/material/Card';

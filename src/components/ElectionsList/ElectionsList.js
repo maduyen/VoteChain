@@ -351,7 +351,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Navbar from "../Navbar2";
-import Footer from "../Footer";
+import Footer from "../Footer2";
 import withAuthProtection from "../AuthProtect/AuthProtect";
 import election_1 from '../../assest/election_1.jpg';
 import election_2 from '../../assest/election_2.jpg';
@@ -402,8 +402,8 @@ function ElectionsList({ selectedElection, handleElectionSelect }) {
         <Typography variant="h4" align="center" style={{ marginBottom: 24 , marginTop: 30}}>
           Select an Election
         </Typography>
-        <Container>
-          <Grid container spacing={2}>
+        <Container style={{paddingBottom: "50px"}}>
+          <Grid container spacing={4}>
             {elections.map((election) => (
               <Grid item key={election.id} xs={12} sm={6} md={4}>
                 <Card>
