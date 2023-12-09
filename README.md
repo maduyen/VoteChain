@@ -33,6 +33,19 @@ Please follow the detailed procedure below and ensure that every step is success
 ### Setup Python3.10
 Ensure you have Python3.10, otherwise download it and set it up as default.
 
+### Setup ResilientDB
+You will need to clone the ResilientDB repo to get started:
+git clone https://github.com/resilientdb/resilientdb.git
+
+Then navigate inside the ResilientDB directory:
+cd resilientdb
+
+Install dependencies:
+sh INSTALL.sh
+
+Run ResilientDB KV Service (this may take a few minutes for the first time):
+./service/tools/kv/server_tools/start_kv_service.sh
+
 ## Installation
 
 Follow these steps to set up the development environment and run the application locally.
