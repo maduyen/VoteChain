@@ -16,8 +16,7 @@ Vote-Chain is a decentralized voting application built using React, Node.js, and
 
 ## Architecture Diagram
 
-![image](https://github.com/Kri-hika/vote-chain/assets/70900997/2282f2ba-6268-488c-9b79-999b05456be3)
-
+<img src="https://github.com/Kri-hika/vote-chain/assets/70900997/2282f2ba-6268-488c-9b79-999b05456be3" alt="Architecture Diagram" width="100">
 
 ## Installation
 
