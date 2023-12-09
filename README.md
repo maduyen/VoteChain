@@ -51,7 +51,58 @@ Run ResilientDB KV Service (this may take a few minutes for the first time):
 ./service/tools/kv/server_tools/start_kv_service.sh
 ```
 
-## Installation
+### Setup Crow HTTP server, SDK, and GraphQL server
+You will need to clone the ResilientDB GraphQL repo to get started:
+```
+git clone https://github.com/Amoolya-Reddy/ResilientDB-GraphQL
+```
+
+Then navigate inside the ResilientDBGraphQL directory:
+```
+cd ResilientDB-GraphQL
+```
+
+Install the Crow dependencies:
+```
+sudo apt update sudo apt install build-essential sudo apt install python3.10-dev sudo apt install apt-transport-https curl gnupg
+```
+
+Build Crow HTTP server (this may take a few minutes for the first time):
+```
+bazel build service/http_server:crow_service_main
+```
+
+Start the Crow HTTP server:
+```
+bazel-bin/service/http_server/crow_service_main service/tools/config/interface/service.config service/http_server/server_config.config
+```
+
+Create virtual environment for the Python SDK:
+```
+python3 -m venv venv –without-pip
+```
+
+Activate the virtual environment:
+```
+source venv/bin/activate
+```
+
+Install pip in the virtual environment for the Python dependencies:
+```
+curl https://bootstrap.pypa.io/get-pip.py | python
+```
+
+Install the Python dependencies:
+```
+pip install -r requirements.txt
+```
+
+Start the GraphQL server:
+```
+python3 app.py
+```
+
+## Setup VoteChain
 
 Follow these steps to set up the development environment and run the application locally.
 
