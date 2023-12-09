@@ -1,5 +1,5 @@
 
-# Vote - Chain
+# VoteChain
 
 ## Overview
 
