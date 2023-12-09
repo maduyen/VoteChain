@@ -20,11 +20,18 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 
 ## Tech Stack
 
-1) ResilientDB - A cutting-edge blockchain technology chosen for its robustness and immutability, providing secure, transparent, and tamper-resistant data storage essential for our electronic voting system.
-2) GraphQL - Utilised for efficient and versatile data querying, offering a streamlined interface to access blockchain based information. Implemented Fetch Transaction, Post Transaction and Send Request APIs using GraphQL.
-3) React.js - It was utilized for building composable and interactive user interface within the VoteChain platform, facilitating the creation of modular components and seamless UI interactions.
-4) Material UI - A responsive UI design library complementing React.js, ensured a consistent and visually appealing layout across various devices and screen sizes.
-5) Node.js - It forms the foundational infrastructure for the VoteChain back end, managing server-side logic and acting as an intermediary between the user interface and ResilientDB blockchain
+1) **ResilientDB** - A cutting-edge blockchain technology chosen for its robustness and immutability, providing secure, transparent, and tamper-resistant data storage essential for our electronic voting system.
+2) **GraphQL** - Utilised for efficient and versatile data querying, offering a streamlined interface to access blockchain based information. Implemented Fetch Transaction, Post Transaction and Send Request APIs using GraphQL.
+3) **React.js** - It was utilized for building composable and interactive user interface within the VoteChain platform, facilitating the creation of modular components and seamless UI interactions.
+4) **Material UI** - A responsive UI design library complementing React.js, ensured a consistent and visually appealing layout across various devices and screen sizes.
+5) **Node.js** - It forms the foundational infrastructure for the VoteChain back end, managing server-side logic and acting as an intermediary between the user interface and ResilientDB blockchain
+
+## Steps to run the system
+
+Please follow the detailed procedure below and ensure that every step is successful.
+
+### Setup Python3.10
+Ensure you have Python3.10, otherwise download it and set it up as default.
 
 ## Installation
 
