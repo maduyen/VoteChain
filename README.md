@@ -5,6 +5,15 @@
 
 Vote-Chain is a decentralized voting application built using React, Node.js, and npm. This repository contains the source code for the application. With Vote-Chain, users can participate in secure and transparent voting processes on a blockchain-based platform.
 
+## Features
+
+1) Secure and Transparent Election
+2) Single Voting Instance
+3) Immutable Votes
+4) Limited Access to Results
+5) Electronic Vote Visualisation in the Admin Panel
+6) User Friendly interface
+
 ## Installation
 
 Follow these steps to set up the development environment and run the application locally.
