@@ -26,6 +26,25 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 4) **Material UI** - A responsive UI design library complementing React.js, ensured a consistent and visually appealing layout across various devices and screen sizes.
 5) **Node.js** - It forms the foundational infrastructure for the VoteChain back end, managing server-side logic and acting as an intermediary between the user interface and ResilientDB blockchain
 
+## Screenshots
+
+1) Home Screen
+<img width="931" alt="Landing page" src="https://github.com/Kri-hika/vote-chain/assets/70900997/75cac089-c4bc-4a16-9ab6-3f8eb985ec65">
+
+<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/c3ddae29-5862-409f-8f4c-6252310b9248">
+
+<img width="931" alt="Screenshot 2023-12-09 at 4 38 47 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/26a31fbe-ec70-4acc-a4c7-f8bb555c2def">
+
+2) Elections Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/8ca87ccb-b473-49ae-a2a2-47101db9b4cd">
+
+3) Candidates Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/4f6c9d9f-9a73-4e00-9382-243a1dea8d4d">
+
+4) Admin / Results Screen
+<img width="931" alt="Admin_Page_ss" src="https://github.com/Kri-hika/vote-chain/assets/70900997/404f325a-f515-4849-a3f9-1e7c09033524">
+
+
 ## Steps to run the system
 
 Please follow the detailed procedure below and ensure that every step is successful.
