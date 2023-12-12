@@ -165,6 +165,6 @@ npm start
 This will launch the application, and you can access it in your web browser at [http://localhost:3000](http://localhost:3000).
 
 ## For more information
-
+Website Link - https://kri-hika.github.io/vote-chain/
 Refer to the Blog - https://naitikjain3071.wixsite.com/my-site
 
