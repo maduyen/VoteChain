@@ -5,6 +5,8 @@
 
 Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and GraphQL, a cutting-edge blockchain technology, to revolutionize the landscape of electronic voting systems. Our primary focus is to ensure a secure and transparent voting process while emphasizing the significance of each voter's singular vote. VoteChain is designed to guarantee the permanence of votes, enabling every participant to cast a single vote per election. Our system strictly prohibits multiple votes, ensuring the integrity and fairness of the electoral process. One of the standout features of VoteChain is its user-friendly interface and the provision of a dedicated admin panel. Within the admin panel, a comprehensive display of all elections and their respective candidates' votes is showcased. These statistics are presented dynamically through visually intuitive representations such as bar graphs, pie charts, and polar area charts. At VoteChain, we are committed to fostering a trustworthy environment where the sanctity of each vote is upheld. Our utilization of ResilientDB technology ensures the highest standards of security, transparency, and reliability in electronic voting, empowering individuals to participate in the democratic process with confidence.
 
+Website Link - https://kri-hika.github.io/vote-chain/ 
+
 ## Features
 
 1) Secure and Transparent Election
@@ -165,7 +167,6 @@ npm start
 This will launch the application, and you can access it in your web browser at [http://localhost:3000](http://localhost:3000).
 
 ## For more information
-Website Link - https://kri-hika.github.io/vote-chain/ 
 
 Refer to the Blog - https://naitikjain3071.wixsite.com/my-site
 
