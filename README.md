@@ -41,7 +41,7 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 3) Candidates Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/4f6c9d9f-9a73-4e00-9382-243a1dea8d4d">
 
-4) Admin / Results Screen
+4) Admin / Results Screen (Login id = admin_votechain@gmail.com, Password = 123456)
 <img width="931" alt="Admin_Page_ss" src="https://github.com/Kri-hika/vote-chain/assets/70900997/404f325a-f515-4849-a3f9-1e7c09033524">
 
 
