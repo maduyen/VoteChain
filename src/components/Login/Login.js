@@ -183,7 +183,7 @@ function Login() {
                   {submitButtonDisabled ? "Logging in..." : "Login"}
                 </Button>
                 <p>
-                  Already have an account?{" "}
+                  Don't have an account?{" "}
                   <span>
                     <Link to="/signup">Signup</Link>
                   </span>
