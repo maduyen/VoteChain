@@ -13,6 +13,7 @@ import voting_home from "../../components/images/voting_home_2.svg";
 import signup from "../../components/images/signup.svg";
 import election from "../../components/images/election.svg";
 import report from "../../components/images/report.svg";
+import discussion from "../../components/images/discussion.svg";  //added discussion panel image to "images" folder
 import secure from "../../components/images/secure.svg";
 import transparent from "../../components/images/Electronic Vote Visualisation in the Admin panel.svg";
 import immutable from "../../components/images/Immutable_votes.svg";
@@ -61,7 +62,7 @@ function Home(props) {
                   <hr className="line-success" />
                   <h1 className="display-1" >VoteChain</h1>
                   <h4 style={{ color: "#575989" }}>Make Your Voice Heard: Vote for Change</h4>
-                  <p style={{ color: "#575989" , marginTop: '15px'}}>Revolutionize democracy with our secure and user-friendly e-voting system. Experience the future of voting – convenient, transparent, and accessible to all.</p>
+                  <p style={{ color: "#575989" , marginTop: '15px'}}>Experience the future of e-voting with VoteChain - our customizable, secure voting app that offers convenience, transparency, and accessibility for all!</p>
                   <div className="btn-wrapper profile">
                     <Button
                       color="primary"
@@ -86,7 +87,7 @@ function Home(props) {
           <Container>
             <div className="content-center brand">
               <hr className="line-success" />
-              <h1 className="display-2" >How it works?</h1>
+              <h1 className="display-2" >How Does VoteChain Work?</h1>
             </div>
           </Container>
         </div>
@@ -101,9 +102,9 @@ function Home(props) {
                       alt="..."
                       src={signup}
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px"}}>Voter registration</h3>
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px"}}>Registration</h3>
                     <h6>
-                      Get started on your civic journey! Register to vote and ensure your voice is counted in the upcoming elections. Your vote is your power – let's make a difference together.
+                      Make an account today! Register to vote and ensure your voice is counted in the upcoming voting polls. Your vote is your power – let's make a difference together.
                     </h6>
                   </CardContent>
                 </Card>
@@ -115,9 +116,9 @@ function Home(props) {
                       alt="..."
                       src={election}
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Election day details</h3>
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Get Ready to Vote</h3>
                     <h6>
-                      Mark your calendar! Find essential information about election dates, polling locations, and voting hours. Be prepared to make your voice heard on Election Day – your participation is crucial for a thriving democracy.
+                      Mark your calendar! Find essential information about election dates, polling locations, and voting hours on the voting pages. Be prepared to make your voice heard – your participation is crucial for a thriving community!
                     </h6>
                   </CardContent>
                 </Card>
@@ -129,10 +130,25 @@ function Home(props) {
                       alt="..."
                       src={report}
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Candidate profiles and issues
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Voting Topics
                     </h3>
                     <h6>
-                      Know your candidates and their stands on key issues. Explore comprehensive profiles to make an informed decision. Your vote shapes policies and influences change. Dive into the details and vote for a future you believe in.
+                      Explore topic pages to make an informed decision. Your vote shapes our community and influences change. Dive into the details and vote for a future you believe in.
+                    </h6>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Card className={classes.card}>
+                  <CardContent>
+                    <img
+                      alt="..."
+                      src={discussion}  //image for discussion panel description
+                      style={{ width: '300px', height: '300px' }} />
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Discussion Panels
+                    </h3>
+                    <h6>
+                      VoteChain's new discussion panels, users now have the opportunity to provide feedback and engage in conversations about voting topics! Please be mindful when participating 😊
                     </h6>
                   </CardContent>
                 </Card>
@@ -158,7 +174,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={immutable}
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Immutable votes</h3>
+                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Immutable Votes</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -167,7 +183,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={transparent}
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Secure and Transparent Election</h3>
+                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Secure and Transparent Voting</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -176,7 +192,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={singleVoting}
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Single voting</h3>
+                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Single Voting</h3>
                 </div>
               </div>
             </div>
