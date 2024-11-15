@@ -95,7 +95,7 @@ function Home(props) {
         <Container className="classes.usestyles">
           <div style={{ padding: 30 }} >
             <Grid container spacing={3}>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={6}>
                 <Card className={classes.card}>
                   <CardContent>
                     <img
@@ -109,21 +109,21 @@ function Home(props) {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={6}>
                 <Card className={classes.card}>
                   <CardContent>
                     <img
                       alt="..."
                       src={election}
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Get Ready to Vote</h3>
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Get Ready to Vote!</h3>
                     <h6>
                       Mark your calendar! Find essential information about election dates, polling locations, and voting hours on the voting pages. Be prepared to make your voice heard – your participation is crucial for a thriving community!
                     </h6>
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={6}>
                 <Card className={classes.card}>
                   <CardContent>
                     <img
@@ -138,7 +138,7 @@ function Home(props) {
                   </CardContent>
                 </Card>
               </Grid>
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={12} sm={6}>
                 <Card className={classes.card}>
                   <CardContent>
                     <img
