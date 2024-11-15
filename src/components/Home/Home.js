@@ -13,6 +13,7 @@ import voting_home from "../../components/images/voting_home_2.svg";
 import signup from "../../components/images/signup.svg";
 import election from "../../components/images/election.svg";
 import report from "../../components/images/report.svg";
+import discussion from "../../components/images/discussion.svg";  //added discussion panel image to "images" folder
 import secure from "../../components/images/secure.svg";
 import transparent from "../../components/images/Electronic Vote Visualisation in the Admin panel.svg";
 import immutable from "../../components/images/Immutable_votes.svg";
@@ -142,12 +143,12 @@ function Home(props) {
                   <CardContent>
                     <img
                       alt="..."
-                      src={report}  //FIXME: need to change image later
+                      src={discussion}  //image for discussion panel description
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Disucssion Panels
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Discussion Panels
                     </h3>
                     <h6>
-                      With the new addition of VoteChain's discussion panels, users now have the opportunity to provide feedback and ensue in conversation with others about voting topics! Please be mindful when contributing to the discussion panels 😊
+                      VoteChain's new discussion panels, users now have the opportunity to provide feedback and engage in conversations about voting topics! Please be mindful when participating 😊
                     </h6>
                   </CardContent>
                 </Card>
