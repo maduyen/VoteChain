@@ -39,17 +39,6 @@ const Navbar = () => {
           <Button component={Link} to="/login" style={linkStyle}>Admin Login</Button>
         </Typography>
       </Toolbar>
-      {/* Responsive Menu */}
-      {/* <Menu
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem component={Link} to="/login" onClick={handleClose}>Voter Login</MenuItem>
-        <MenuItem component={Link} to="/signup" onClick={handleClose}>Voter Signup</MenuItem>
-        <MenuItem component={Link} to="/login" onClick={handleClose}>Admin Login</MenuItem>
-      </Menu> */}
     </AppBar>
   );
 };
