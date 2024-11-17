@@ -151,7 +151,7 @@ function Home(props) {
                     <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Secured by Blockchain
                     </h3>
                     <h6>
-                      VoteChain is powered by the ResilientDB and Graph QL blockchain infrastructure. By decentralizing our voting system, we guarantee that voting data is secure and immutable
+                      VoteChain is powered by the ResilientDB and Graph QL blockchain infrastructure. By decentralizing our voting system, we guarantee that voting data is secure and immutable. Poll outcomes are fully determined by the people, creating a transparent voting environment.
                     </h6>
                   </CardContent>
                 </Card>
