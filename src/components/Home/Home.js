@@ -19,9 +19,9 @@ import transparent from "../../components/images/Electronic Vote Visualisation i
 import immutable from "../../components/images/Immutable_votes.svg";
 import singleVoting from "../../components/images/Single_voting_instance.svg";
 import restrictedAccess from "../../components/images/Restricted_access.svg";
-import blockchain from "../../components/images/blockchain.svg"
-import customize from "../../components/images/customize.svg"
-import immutable_vote from "../../components/images/immutable_vote.svg"
+import blockchain from "../../components/images/blockchain.svg"  //added blockchain image to "images" folder
+import customize from "../../components/images/customize.svg"  //added customizable voting mech image to "images" folder
+import immutable_vote from "../../components/images/immutable_vote.svg"  //added immutable vote image to "images folder"
 import { Button } from "reactstrap";
 
 const useStyles = makeStyles((theme) => ({
