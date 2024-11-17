@@ -61,7 +61,7 @@ function Home(props) {
                 <div className="px-md-4 text-left" >
                   <hr className="line-success" />
                   <h1 className="display-1" >VoteChain</h1>
-                  <h4 style={{ color: "#575989" }}>Make Your Voice Heard: Vote for Change</h4>
+                  <h4 style={{ color: "#575989" }}>Decentralizing Voting with Blockchain, One Vote at a Time</h4>
                   <p style={{ color: "#575989" , marginTop: '15px'}}>Experience the future of e-voting with VoteChain - our customizable, secure voting app that offers convenience, transparency, and accessibility for all!</p>
                   <div className="btn-wrapper profile">
                     <Button
@@ -104,7 +104,7 @@ function Home(props) {
                       style={{ width: '300px', height: '300px' }} />
                     <h3 style={{ color: "#626FDF", marginBottom: "20px"}}>Registration</h3>
                     <h6>
-                      Make an account today! Register to vote and ensure your voice is counted in the upcoming voting polls. Your vote is your power – let's make a difference together.
+                      Create an account today to participate in the upcoming polls! Each voter is assigned a unique digital token that is stored on the blockchain, ensuring identity integrity and preventing unauthorized access.
                     </h6>
                   </CardContent>
                 </Card>
@@ -118,22 +118,7 @@ function Home(props) {
                       style={{ width: '300px', height: '300px' }} />
                     <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Get Ready to Vote!</h3>
                     <h6>
-                      Mark your calendar! Find essential information about election dates, polling locations, and voting hours on the voting pages. Be prepared to make your voice heard – your participation is crucial for a thriving community!
-                    </h6>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <Card className={classes.card}>
-                  <CardContent>
-                    <img
-                      alt="..."
-                      src={report}
-                      style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Voting Topics
-                    </h3>
-                    <h6>
-                      Explore topic pages to make an informed decision. Your vote shapes our community and influences change. Dive into the details and vote for a future you believe in.
+                      Dive into the details and vote for what you believe in. Explore the topic pages to find essential information about the polls and be prepared to make your voice heard. Your participation is crucial for shaping our community!
                     </h6>
                   </CardContent>
                 </Card>
@@ -145,10 +130,25 @@ function Home(props) {
                       alt="..."
                       src={discussion}  //image for discussion panel description
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Discussion Panels
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Participate in Discussions
                     </h3>
                     <h6>
-                      VoteChain's new discussion panels, users now have the opportunity to provide feedback and engage in conversations about voting topics! Please be mindful when participating 😊
+                      Poll Creators can create configurable discussion panels with options for public or private access, integrating anonymity features. Users now have the opportunity to provide feedback and engage in conversations about voting topics! Please be mindful when participating 😊
+                    </h6>
+                  </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Card className={classes.card}>
+                  <CardContent>
+                    <img
+                      alt="..."
+                      src={blockchain}  //image for infrastructure description
+                      style={{ width: '300px', height: '300px' }} />
+                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Secured by Blockchain
+                    </h3>
+                    <h6>
+                      VoteChain is powered by the ResilientDB and Graph QL blockchain infrastructure. By decentralizing our voting system, we guarantee that voting data is secure and immutable
                     </h6>
                   </CardContent>
                 </Card>
@@ -163,18 +163,18 @@ function Home(props) {
                     alt="..."
                     style={{ width: '300px', height: '300px' }}
                     className="img-fluid floating"
-                    src={restrictedAccess}
+                    src={customize}  //image for customizable voting
                   />
-                  <h3 style={{ marginTop: '25px', color: '#575989'}}>Limited access</h3>
+                  <h3 style={{ marginTop: '25px', color: '#575989'}}>Customizable Voting Mechanisms</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
                     alt="..."
                     style={{ width: '300px', height: '300px' }}
                     className="img-fluid floating"
-                    src={immutable}
+                    src={immutable} 
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Immutable Votes</h3>
+                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Discussion Panels</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -190,9 +190,9 @@ function Home(props) {
                     alt="..."
                     style={{ width: '300px', height: '300px' }}
                     className="img-fluid floating"
-                    src={singleVoting}
+                    src={immutable_vote}
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Single Voting</h3>
+                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Immutable Votes</h3>
                 </div>
               </div>
             </div>
