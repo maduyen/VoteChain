@@ -7,7 +7,8 @@ import Signup from "./components/Signup/Signup";
 import ElectionsList from "./components/ElectionsList/ElectionsList";
 import CandidatesList from "./components/CandidatesList/CandidatesList";
 import ResultsPage from "./components/Results/Results";
-import Logout from "./components/Logout/Logout"
+import Logout from "./components/Logout/Logout";
+import PollCreationPage from "./components/PollCreationPage";
 import { auth } from "./firebase";
 import "./App.css";
 
@@ -38,7 +39,6 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-        
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/logout" element={<Logout />} />
@@ -56,8 +56,15 @@ function App() {
               )
             }
           />
-          <Route path="/elections" element={<ElectionsList 
-                  handleElectionSelect={handleElectionSelect} selectedElection={selectedElection} />} />
+          <Route
+            path="/elections"
+            element={
+              <ElectionsList
+                handleElectionSelect={handleElectionSelect}
+                selectedElection={selectedElection}
+              />
+            }
+          />
           <Route
             path="/candidates/:electionId"
             element={
@@ -69,6 +76,7 @@ function App() {
             }
           />
           <Route path="/results" element={<ResultsPage />} />
+          <Route path="/create-poll" element={<PollCreationPage />} />
         </Routes>
       </Router>
     </div>
