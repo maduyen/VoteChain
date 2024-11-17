@@ -73,7 +73,7 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
   const fetchTransactions = async (electionId) => {
     try {
       // Fetch transactions using the FETCH_TRANSACTION API
-      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gD", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gD"));
+      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
       if (!selectedElection) {
         console.error("Selected election is null or undefined");
         return;
@@ -117,9 +117,9 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
       }
   
       const metadata = {
-        signerPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gD",
+        signerPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
         signerPrivateKey: "5xFSv5y3HYJv5YSNJ78cSS7Tuaf38Lu6UYj2ajngFuwH",
-        recipientPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gD",
+        recipientPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
       };
   
       // Check if the user has already voted in the current election

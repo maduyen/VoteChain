@@ -27,7 +27,7 @@ const ResultsPage = () => {
 
   const fetchTransactions = async () => {
     try {
-      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gD", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gD"));
+      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
 
       if (res && res.data && res.data.getFilteredTransactions) {
         let voters = [];
