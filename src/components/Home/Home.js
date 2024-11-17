@@ -69,7 +69,7 @@ function Home(props) {
                   <div className="btn-wrapper profile">
                     <Button
                       color="primary"
-                      href="https://naitikjain3071.wixsite.com/my-site">
+                      href="https://xiuyuanqi799.wixsite.com/expanded-votechain">
                       Blog
                     </Button>
                   </div>
