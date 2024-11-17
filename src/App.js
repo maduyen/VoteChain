@@ -9,6 +9,7 @@ import CandidatesList from "./components/CandidatesList/CandidatesList";
 import ResultsPage from "./components/Results/Results";
 import Logout from "./components/Logout/Logout";
 import PollCreationPage from "./components/PollCreationPage";
+import Userinfo from "./components/Userinfo";
 import { auth } from "./firebase";
 import "./App.css";
 
@@ -77,6 +78,7 @@ function App() {
           />
           <Route path="/results" element={<ResultsPage />} />
           <Route path="/create-poll" element={<PollCreationPage />} />
+          <Route path="/userinfo" element={<Userinfo />} />
         </Routes>
       </Router>
     </div>
