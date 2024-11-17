@@ -1,188 +1,6 @@
-// import React, { useState } from "react";
-// import { Link, useNavigate } from "react-router-dom";
-// import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-
-// import InputControl from "../InputControl/InputContol";
-// import { auth } from "../../firebase";
-
-// import styles from "./Signup.module.css";
-
-// function Signup() {
-//   const navigate = useNavigate();
-//   const [values, setValues] = useState({
-//     name: "",
-//     email: "",
-//     pass: "",
-//   });
-//   const [errorMsg, setErrorMsg] = useState("");
-//   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
-
-//   const handleSubmission = () => {
-//     if (!values.name || !values.email || !values.pass) {
-//       setErrorMsg("Fill all fields");
-//       return;
-//     }
-//     setErrorMsg("");
-
-//     setSubmitButtonDisabled(true);
-//     createUserWithEmailAndPassword(auth, values.email, values.pass)
-//       .then(async (res) => {
-//         setSubmitButtonDisabled(false);
-//         const user = res.user;
-//         await updateProfile(user, {
-//           displayName: values.name,
-//         });
-//         navigate("/");
-//       })
-//       .catch((err) => {
-//         setSubmitButtonDisabled(false);
-//         setErrorMsg(err.message);
-//       });
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.innerBox}>
-//         <h1 className={styles.heading}>Signup</h1>
-
-//         <InputControl
-//           label="Name"
-//           placeholder="Enter your name"
-//           onChange={(event) =>
-//             setValues((prev) => ({ ...prev, name: event.target.value }))
-//           }
-//         />
-//         <InputControl
-//           label="Email"
-//           placeholder="Enter email address"
-//           onChange={(event) =>
-//             setValues((prev) => ({ ...prev, email: event.target.value }))
-//           }
-//         />
-//         <InputControl
-//           label="Password"
-//           placeholder="Enter password"
-//           onChange={(event) =>
-//             setValues((prev) => ({ ...prev, pass: event.target.value }))
-//           }
-//         />
-
-//         <div className={styles.footer}>
-//           <b className={styles.error}>{errorMsg}</b>
-//           <button onClick={handleSubmission} disabled={submitButtonDisabled}>
-//             Signup
-//           </button>
-//           <p>
-//             Already have an account?{" "}
-//             <span>
-//               <Link to="/login">Login</Link>
-//             </span>
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Signup;
-
-// import React, { useState } from "react";
-// import { Link, useNavigate } from "react-router-dom";
-// import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-// import InputControl from "../InputControl/InputContol";
-// import { auth } from "../../firebase";
-// import styles from "./Signup.module.css";
-
-// function Signup() {
-//   const navigate = useNavigate();
-//   const [values, setValues] = useState({
-//     name: "",
-//     email: "",
-//     pass: "",
-//   });
-//   const [errorMsg, setErrorMsg] = useState("");
-//   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
-
-//   const handleSubmission = () => {
-//     if (!values.name || !values.email || !values.pass) {
-//       setErrorMsg("Fill all fields");
-//       return;
-//     }
-//     setErrorMsg("");
-
-//     setSubmitButtonDisabled(true);
-//     createUserWithEmailAndPassword(auth, values.email, values.pass)
-//       .then(async (res) => {
-//         setSubmitButtonDisabled(false);
-//         const user = res.user;
-//         await updateProfile(user, {
-//           displayName: values.name,
-//         });
-//         navigate("/");
-//       })
-//       .catch((err) => {
-//         setSubmitButtonDisabled(false);
-//         setErrorMsg(err.message);
-//       });
-//   };
-
-//   const handlePasswordChange = (event) => {
-//     const value = event.target.value;
-//     setValues((prev) => ({
-//       ...prev,
-//       pass: value,
-//     }));
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.innerBox}>
-//         <h1 className={styles.heading}>Signup</h1>
-
-//         <InputControl
-//           label="Name"
-//           placeholder="Enter your name"
-//           onChange={(event) =>
-//             setValues((prev) => ({ ...prev, name: event.target.value }))
-//           }
-//         />
-//         <InputControl
-//           label="Email"
-//           placeholder="Enter email address"
-//           onChange={(event) =>
-//             setValues((prev) => ({ ...prev, email: event.target.value }))
-//           }
-//         />
-//         <InputControl
-//           label="Password"
-//           placeholder="Enter password"
-//           type="password" // Set the input type to "password"
-//           value={values.pass}
-//           onChange={handlePasswordChange} // Handle password changes
-//         />
-
-//         <div className={styles.footer}>
-//           <b className={styles.error}>{errorMsg}</b>
-//           <button onClick={handleSubmission} disabled={submitButtonDisabled}>
-//             Signup
-//           </button>
-//           <p>
-//             Already have an account?{" "}
-//             <span>
-//               <Link to="/login">Login</Link>
-//             </span>
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Signup;
-//9:35 3/12
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import {
   Container,
@@ -196,6 +14,7 @@ import {
 } from "reactstrap";
 import styles from "./Signup.module.css";
 import signupImage from "../../assest/signup_undraw.svg"; // Replace with your image path
+import { fabClasses } from "@mui/material";
 
 function Signup() {
   const navigate = useNavigate();
@@ -206,29 +25,89 @@ function Signup() {
   });
   const [errorMsg, setErrorMsg] = useState("");
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+  const [successMsg, setSuccessMsg] = useState(""); 
+  const [resendEmailMsg, setResendEmailMsg] = useState(false);
 
-  const handleSubmission = () => {
+  
+  const handleSubmission = async () => {
     if (!values.name || !values.email || !values.pass) {
       setErrorMsg("Fill all fields");
       return;
     }
     setErrorMsg("");
-
+    setSuccessMsg("");
     setSubmitButtonDisabled(true);
-    createUserWithEmailAndPassword(auth, values.email, values.pass)
-      .then(async (res) => {
-        setSubmitButtonDisabled(false);
-        const user = res.user;
-        await updateProfile(user, {
-          displayName: values.name,
+
+    try {
+      await createUserWithEmailAndPassword(auth, values.email, values.pass)
+        .then(async (res) => {
+          setSubmitButtonDisabled(false);
+          const user = res.user;
+          await updateProfile(user, {
+            displayName: values.name,
+          });
+          await sendEmailVerification(user); // Send email verification
+          setSuccessMsg("Signup successful! Please check your email to verify your account.");
+          //navigate("/"); // Navigate after signup
         });
-        navigate("/");
-      })
-      .catch((err) => {
-        setSubmitButtonDisabled(false);
-        setErrorMsg(err.message);
-      });
+    } catch (err) {
+      setSubmitButtonDisabled(false);
+
+      if (err.code === "auth/email-already-in-use") { // Handle existing account
+        const verified = await isEmailVerified(values.email, values.pass);
+    
+        if (verified) {
+          setSuccessMsg("Your email is already verified. You can log in.");
+          setResendEmailMsg(false); 
+        }
+        else {
+          setErrorMsg("This email is already registered but not verified.");
+          setResendEmailMsg(true);
+        }
+      } else {
+        const errorMessage = err.message.replace(/^Firebase:\s*/, ""); 
+        setErrorMsg(errorMessage);
+      }
+    }
   };
+
+  const isEmailVerified = async (email, password) => {
+    try {
+      // Temporarily sign in the user
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+  
+      // Reload user to ensure the latest state is fetched
+      await user.reload();
+  
+      // Check if the email is verified
+      return user.emailVerified;
+    } catch (err) {
+      console.error("Error checking email verification:", err.message);
+      return false; // Return false if an error occurs (e.g., user not found or wrong credentials)
+    }
+  };
+  
+  const handleResendVerification = async () => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, values.email, values.pass);
+      const user = userCredential.user;
+  
+      console.log("Resend User Info:", user);
+  
+      if (user) {
+        await sendEmailVerification(user); // Send verification email
+        setSuccessMsg("Verification email resent! Please check your inbox.");
+        setResendEmailMsg(false); // Hide the resend link after sending
+      }
+  
+      await auth.signOut();
+    } catch (err) {
+      const errorMessage = err.message.replace(/^Firebase:\s*/, "");
+      setErrorMsg(errorMessage);
+    }
+  };
+  
 
   const handleInputChange = (event, field) => {
     const { value } = event.target;
@@ -278,13 +157,30 @@ function Signup() {
                 </FormGroup>
                 <div className={styles.footer}>
                   <b className={styles.error}>{errorMsg}</b>
-                  <Button
-                    color="primary"
-                    onClick={handleSubmission}
-                    disabled={submitButtonDisabled}
-                  >
-                    Signup
-                  </Button>
+                  <b className={styles.success}>{successMsg}</b>
+                  {/* Resend Verification Email Button */}
+                  {resendEmailMsg && (
+                    <div>
+                      <Button
+                        color="link"
+                        onClick={handleResendVerification}
+                      >
+                        Resend Verification Email
+                      </Button>
+                    </div>
+                  )}
+
+                  {/* Conditionally Render Submit Button */}
+                  {!resendEmailMsg && (
+                    <Button
+                      color="primary"
+                      onClick={handleSubmission}
+                      disabled={submitButtonDisabled}
+                    >
+                      Signup
+                    </Button>
+                  )}
+
                   <p>
                     Already have an account?{" "}
                     <span>

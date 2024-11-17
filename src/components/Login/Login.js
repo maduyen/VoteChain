@@ -34,12 +34,21 @@ function Login() {
 
     signInWithEmailAndPassword(auth, values.email, values.pass)
       .then(async (res) => {
-        setSubmitButtonDisabled(false);
-        navigate("/elections");
+        const user = res.user;
+        if (!user.emailVerified) {
+          auth.signOut(); // Log them out
+          setSubmitButtonDisabled(false);
+          setErrorMsg("Please verify your email before logging in.");
+        } else {
+          //console.log("User Info:", user);
+          setSubmitButtonDisabled(false);
+          navigate("/elections");
+        }
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
-        setErrorMsg(err.message);
+        const errorMessage = err.message.replace(/^Firebase:\s*/, ""); 
+        setErrorMsg(errorMessage);
       });
   };
 
@@ -83,7 +92,7 @@ function Login() {
               </FormGroup>
               <div></div>
 
-              {errorMsg && <Alert color="danger">Invalid Credentials</Alert>}
+              {errorMsg && <Alert color="danger">{errorMsg}</Alert>}
               <div className={styles.footer}>
                 <Button
                   color="primary"
