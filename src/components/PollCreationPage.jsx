@@ -7,7 +7,8 @@ const PollCreationPage = () => {
   const [options, setOptions] = useState(["", ""]);
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
-  const [allowMultipleChoices, setAllowMultipleChoices] = useState(false);
+    //const [allowMultipleChoices, setAllowMultipleChoices] = useState(false);
+    //Consider to add this functionality later
 
   const handleAddOption = () => setOptions([...options, ""]);
   const handleOptionChange = (index, value) => {
