@@ -23,9 +23,9 @@ function DataUploader() {
 
   //TODO: Remove encryption keys from code
   const metadata = {
-    signerPublicKey: "HvNRQznqrRdCwSKn6R8ZoQE4U3aobQShajK1NShQhGRn",
-    signerPrivateKey: "2QdMTdaNj8mJjduXFAsHieVmcsBcqeWQyW9v891kZEXC",
-    recipientPublicKey: "HvNRQznqrRdCwSKn6R8ZoQE4U3aobQShajK1NShQhGRn",
+    signerPublicKey: localStorage.getItem("publicKey"),
+    signerPrivateKey: localStorage.getItem("privateKey"),
+    recipientPublicKey: localStorage.getItem("publicKey"),
   };
 
   const [inventory, setInventory] = useState([]);

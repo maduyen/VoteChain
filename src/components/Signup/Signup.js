@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile, sendEmailVerification, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth, db } from "../../firebase";
+import { doc, setDoc, addDoc, collection } from "firebase/firestore";
+import { GENERATE_KEYS } from "../utils/ResDbApis";
+import { sendRequest } from "../utils/ResDbClient";
 import {
   Container,
   Row,
@@ -27,7 +30,6 @@ function Signup() {
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
   const [successMsg, setSuccessMsg] = useState(""); 
   const [resendEmailMsg, setResendEmailMsg] = useState(false);
-
   
   const handleSubmission = async () => {
     if (!values.name || !values.email || !values.pass) {
@@ -43,12 +45,34 @@ function Signup() {
         .then(async (res) => {
           setSubmitButtonDisabled(false);
           const user = res.user;
+
+          const res_key = await sendRequest(GENERATE_KEYS);
+          let publicKey = "";let privateKey = "";
+          //console.log("Generated keys:", res_key);
+          if (res_key && res_key.data && res_key.data.generateKeys) { 
+            localStorage.setItem("publicKey", res_key.data.generateKeys.publicKey);
+            localStorage.setItem("privateKey", res_key.data.generateKeys.privateKey);
+            //console.log("Public Key:", localStorage.getItem("publicKey"));
+            //console.log("Private Key:", localStorage.getItem("privateKey"));
+          }
+          localStorage.setItem("name", values.name);
+          localStorage.setItem("email", values.email);
+          localStorage.setItem("uid", user.uid);
+
+          const docref = await addDoc(collection(db, "users"), {
+            uid: user.uid,
+            name: values.name,
+            email: values.email,
+            publicKey: localStorage.getItem("publicKey"), // Replace with your logic
+            createdAt: new Date().toISOString(),
+          });
+
           await updateProfile(user, {
             displayName: values.name,
           });
+
           await sendEmailVerification(user); // Send email verification
           setSuccessMsg("Signup successful! Please check your email to verify your account.");
-          //navigate("/"); // Navigate after signup
         });
     } catch (err) {
       setSubmitButtonDisabled(false);

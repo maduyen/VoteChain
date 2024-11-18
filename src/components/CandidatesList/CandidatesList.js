@@ -73,7 +73,7 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
   const fetchTransactions = async (electionId) => {
     try {
       // Fetch transactions using the FETCH_TRANSACTION API
-      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
+      const res = await sendRequest(FETCH_TRANSACTION(localStorage.getItem("publicKey"), localStorage.getItem("publicKey")));
       if (!selectedElection) {
         console.error("Selected election is null or undefined");
         return;
@@ -117,9 +117,9 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
       }
   
       const metadata = {
-        signerPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
-        signerPrivateKey: "5xFSv5y3HYJv5YSNJ78cSS7Tuaf38Lu6UYj2ajngFuwH",
-        recipientPublicKey: "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC",
+        signerPublicKey: localStorage.getItem("publicKey"),
+        signerPrivateKey: localStorage.getItem("privateKey"),
+        recipientPublicKey: localStorage.getItem("publicKey"),
       };
   
       // Check if the user has already voted in the current election
@@ -161,22 +161,7 @@ const CandidatesList = ({ selectedElection, votedCandidates, handleVote, isElect
   //random image icon
   // Assume you have a list of SVG images
 const svgImages = [
-  c1,
-  c2,
-  c3,
-  c4,
-  c5,
-  c6,
-  c7,
-  c8,
-  c9,
-  c10,
-  c11,
-  c12,
-  c13,
-  c14,
-  c15,
-  c16,
+  c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13, c14,c15,c16,
   // Add more SVG image paths as needed
 ];
 

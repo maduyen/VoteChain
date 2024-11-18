@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const Userinfo = () => {
+
   const [userInfo, setUserInfo] = useState({
-    name: "John Doe",
-    email: "john.doe@example.com",
-    id: "123456",
-    publicKey: "8LUKr81SmkdDhuBNAHfH9C8G5m6Cye2mpUggVu61USbD",
+    name: localStorage.getItem("name"),
+    email: localStorage.getItem("email"),
+    id: localStorage.getItem("uid"),
+    publicKey: localStorage.getItem("publicKey"),
+    privateKey: localStorage.getItem("privateKey"),
   });
 
   // Simulate fetching user info from a server or authentication service
@@ -22,6 +24,7 @@ const Userinfo = () => {
       <p><strong>Email:</strong> {userInfo.email}</p>
       <p><strong>ID:</strong> {userInfo.id}</p>
       <p><strong>Public Key:</strong> {userInfo.publicKey}</p>
+      <p><strong>Private Key:</strong> {userInfo.privateKey}</p>
     </div>
   );
 };

@@ -27,7 +27,7 @@ const ResultsPage = () => {
 
   const fetchTransactions = async () => {
     try {
-      const res = await sendRequest(FETCH_TRANSACTION("B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC", "B8GFzNi6vfVhA9crXSC2S8s9K2eoNJd1HhwEbCLwT6gC"));
+      const res = await sendRequest(FETCH_TRANSACTION(localStorage.getItem("publicKey"), localStorage.getItem("publicKey")));
 
       if (res && res.data && res.data.getFilteredTransactions) {
         let voters = [];
