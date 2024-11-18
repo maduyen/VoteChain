@@ -168,5 +168,5 @@ This will launch the application, and you can access it in your web browser at [
 
 ## For more information
 
-Refer to the Blog - https://naitikjain3071.wixsite.com/my-site
+Refer to the Blog - [https://naitikjain3071.wixsite.com/my-site](https://xiuyuanqi799.wixsite.com/expanded-votechain)
 
