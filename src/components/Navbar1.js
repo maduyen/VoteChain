@@ -23,7 +23,7 @@ const Navbar = () => {
   const linkStyle = { color: 'white', marginRight: '15px' };
 
   return (
-    <AppBar position="fixed" style={{ backgroundColor: '#7b859e' }}>
+    <AppBar position="fixed" style={{ backgroundColor: '#a2856d' }}>
       <Toolbar style={{ justifyContent: 'space-between' }}>
         <IconButton
           edge="start"
