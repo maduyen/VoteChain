@@ -17,7 +17,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./components/images/back_blue.png');
+  background-image: url('./components/images/back_tan.png');  /*changed backgroung to match blog*/
   /* background-size: cover; */
   min-height: 100vh;
   display: flex;

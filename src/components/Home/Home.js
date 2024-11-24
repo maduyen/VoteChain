@@ -64,8 +64,8 @@ function Home(props) {
                 <div className="px-md-4 text-left" >
                   <hr className="line-success" />
                   <h1 className="display-1" >VoteChain</h1>
-                  <h4 style={{ color: "#575989" }}>Decentralizing Voting with Blockchain, One Vote at a Time</h4>
-                  <p style={{ color: "#575989" , marginTop: '15px'}}>Experience the future of e-voting with VoteChain - our customizable, secure voting app that offers convenience, transparency, and accessibility for all!</p>
+                  <h4 style={{ color: "#221c1c" }}>Decentralizing Voting with Blockchain, One Vote at a Time</h4>
+                  <p style={{ color: "#221c1c" , marginTop: '15px'}}>Experience the future of e-voting with VoteChain - our customizable, secure voting app that offers convenience, transparency, and accessibility for all!</p>
                   <div className="btn-wrapper profile">
                     <Button
                       color="primary"
@@ -105,7 +105,7 @@ function Home(props) {
                       alt="..."
                       src={signup}
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px"}}>Registration</h3>
+                    <h3 style={{ color: "##555b69", marginBottom: "20px"}}>Registration</h3>
                     <h6>
                       Create an account today to participate in the upcoming polls! Each voter is assigned a unique digital token that is stored on the blockchain, ensuring identity integrity and preventing unauthorized access.
                     </h6>
@@ -119,7 +119,7 @@ function Home(props) {
                       alt="..."
                       src={election}
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Get Ready to Vote!</h3>
+                    <h3 style={{ color: "##555b69", marginBottom: "20px" }}>Get Ready to Vote!</h3>
                     <h6>
                       Dive into the details and vote for what you believe in. Explore the topic pages to find essential information about the polls and be prepared to make your voice heard. Your participation is crucial for shaping our community!
                     </h6>
@@ -133,7 +133,7 @@ function Home(props) {
                       alt="..."
                       src={discussion}  //image for discussion panel description
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Participate in Discussions
+                    <h3 style={{ color: "##555b69", marginBottom: "20px" }}>Participate in Discussions
                     </h3>
                     <h6>
                       Poll Creators can create configurable discussion panels with options for public or private access, integrating anonymity features. Users now have the opportunity to provide feedback and engage in conversations about voting topics! Please be mindful when participating 😊
@@ -148,7 +148,7 @@ function Home(props) {
                       alt="..."
                       src={blockchain}  //image for infrastructure description
                       style={{ width: '300px', height: '300px' }} />
-                    <h3 style={{ color: "#626FDF", marginBottom: "20px" }}>Secured by Blockchain
+                    <h3 style={{ color: "##555b69", marginBottom: "20px" }}>Secured by Blockchain
                     </h3>
                     <h6>
                       VoteChain is powered by the ResilientDB and Graph QL blockchain infrastructure. By decentralizing our voting system, we guarantee that voting data is secure and immutable. Poll outcomes are fully determined by the people, creating a transparent voting environment.
@@ -168,7 +168,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={customize}  //image for customizable voting
                   />
-                  <h3 style={{ marginTop: '25px', color: '#575989'}}>Customizable Voting Mechanisms</h3>
+                  <h3 style={{ marginTop: '25px', color: '#221c1c'}}>Customizable Voting Mechanisms</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -177,7 +177,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={immutable} 
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Discussion Panels</h3>
+                   <h3 style={{ marginTop: '25px', color: '#221c1c' }}>Discussion Panels</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -186,7 +186,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={transparent}
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Secure and Transparent Voting</h3>
+                   <h3 style={{ marginTop: '25px', color: '#221c1c' }}>Secure and Transparent Voting</h3>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -195,7 +195,7 @@ function Home(props) {
                     className="img-fluid floating"
                     src={immutable_vote}
                   />
-                   <h3 style={{ marginTop: '25px', color: '#575989' }}>Immutable Votes</h3>
+                   <h3 style={{ marginTop: '25px', color: '#221c1c' }}>Immutable Votes</h3>
                 </div>
               </div>
             </div>
