@@ -34,13 +34,8 @@ const Navbar = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6">
-<<<<<<< HEAD
           <Button component={Link} to="/login" style={linkStyle}>Voter Login</Button>
           <Button component={Link} to="/login" style={linkStyle}>Admin Login</Button>
-=======
-          <Button component={Link} to="/login" style={linkStyle}>Login</Button>
-          <Button component={Link} to="/signup" style={linkStyle}>Signup</Button>
->>>>>>> 90f5305d74015504a6ea030c4e96ed6f0f538bad
         </Typography>
       </Toolbar>
     </AppBar>

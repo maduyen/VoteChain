@@ -36,7 +36,7 @@ const Footer = () => {
         className={classes.copyrightImage}
       />
       <Typography variant="body2" style={{color: "white"}}>
-        2023 VoteChain
+        VoteChain 2024
       </Typography>
     </div>
   );
