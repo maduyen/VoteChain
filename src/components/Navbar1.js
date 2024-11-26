@@ -35,7 +35,6 @@ const Navbar = () => {
         </IconButton>
         <Typography variant="h6">
           <Button component={Link} to="/login" style={linkStyle}>Voter Login</Button>
-          <Button component={Link} to="/signup" style={linkStyle}>Voter Signup</Button>
           <Button component={Link} to="/login" style={linkStyle}>Admin Login</Button>
         </Typography>
       </Toolbar>

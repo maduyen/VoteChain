@@ -36,7 +36,7 @@ const Navbar = () => {
         <Typography variant="h6">
           {/* <Button component={Link} to="/login" style={linkStyle}>Voter Login</Button>
           <Button component={Link} to="/signup" style={linkStyle}>Voter Signup</Button> */}
-          <Button component={Link} to="/logout" style={linkStyle}>Logout</Button>
+          {/* <Button component={Link} to="/logout" style={linkStyle}>Logout</Button> */}
         </Typography>
       </Toolbar>
       {/* Responsive Menu */}

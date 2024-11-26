@@ -1,119 +1,164 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Alert } from "reactstrap";
-import styles from "./Login.module.css";
-import loginImage from "../../assest/login_undraw.svg"
+import React, { useEffect, useRef, useState } from "react";
+import ResVaultSDK from "resvault-sdk";
+import "../../App.css";
+import resvaultLogo from "../../assest/resilientdb.svg";
+import NotificationModal from "../NotificationModal";
+import { useNavigate } from "react-router-dom";
+import lottie from "lottie-web";
+import animation from "../../assest/animation.json";
 
-function Login() {
-  const navigate = useNavigate();
-  const [values, setValues] = useState({
-    email: "",
-    pass: "",
-  });
-  const [errorMsg, setErrorMsg] = useState("");
-  const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
+const Login = () => {
+  const sdkRef = useRef(null);
+  const navigate = useNavigate(); // React Router hook for navigation
+  const [showModal, setShowModal] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
+  const [modalMessage, setModalMessage] = useState("");
+  const animationContainer = useRef(null);
 
-  const handleSubmission = () => {
-    if (!values.email || !values.pass) {
-      setErrorMsg("Fill all fields");
-      return;
-    }
-    setErrorMsg("");
+  // Initialize ResVault SDK
+  if (!sdkRef.current) {
+    sdkRef.current = new ResVaultSDK();
+    console.log("ResVaultSDK initialized:", sdkRef.current);
+  }
 
-    setSubmitButtonDisabled(true);
-
-    // Will redirect to results page
-
-    if (values.email === "admin_votechain@gmail.com" && values.pass === "123456") {
-      navigate("/results");
-      setSubmitButtonDisabled(false);
-      return;
-    }
-
-    signInWithEmailAndPassword(auth, values.email, values.pass)
-      .then(async (res) => {
-        const user = res.user;
-        if (!user.emailVerified) {
-          auth.signOut(); // Log them out
-          setSubmitButtonDisabled(false);
-          setErrorMsg("Please verify your email before logging in.");
-        } else {
-          //console.log("User Info:", user);
-          setSubmitButtonDisabled(false);
-          navigate("/elections");
-        }
-      })
-      .catch((err) => {
-        setSubmitButtonDisabled(false);
-        const errorMessage = err.message.replace(/^Firebase:\s*/, ""); 
-        setErrorMsg(errorMessage);
+  // Animation setup
+  useEffect(() => {
+    if (animationContainer.current) {
+      const instance = lottie.loadAnimation({
+        container: animationContainer.current,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        animationData: animation,
       });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            instance.play();
+          } else {
+            instance.pause();
+          }
+        });
+      });
+
+      observer.observe(animationContainer.current);
+
+      return () => {
+        instance.destroy();
+        observer.disconnect();
+      };
+    } else {
+      console.error("Animation container is not defined");
+    }
+  }, []);
+
+  // Message listener
+  useEffect(() => {
+    const sdk = sdkRef.current;
+    if (!sdk) {
+      console.error("SDK is not available");
+      return;
+    }
+
+    const messageHandler = (event) => {
+      console.log("Message received:", event);
+      const message = event.data;
+
+      if (
+        message &&
+        message.type === "FROM_CONTENT_SCRIPT" &&
+        message.data &&
+        message.data.success !== undefined
+      ) {
+        if (message.data.success) {
+          const token = message.data.token; // Extract token
+          sessionStorage.setItem("token", token); // Store the token
+          console.log("Authentication successful. Redirecting...");
+          navigate("/elections"); // Redirect to your original signed-in page
+        }
+      } else if (
+        message &&
+        message.type === "FROM_CONTENT_SCRIPT" &&
+        message.data &&
+        message.data === "error"
+      ) {
+        setModalTitle("Authentication Failed");
+        setModalMessage(
+          "Please connect ResVault to this ResilientApp and try again."
+        );
+        setShowModal(true);
+        console.error("Authentication failed. Error received.");
+      } else {
+        console.warn("Unexpected message received:", message);
+      }
+    };
+
+    sdk.addMessageListener(messageHandler);
+    console.log("Message listener added.");
+
+    return () => {
+      sdk.removeMessageListener(messageHandler);
+      console.log("Message listener removed.");
+    };
+  }, [navigate]);
+
+  // Handle authentication
+  const handleAuthentication = () => {
+    if (sdkRef.current) {
+      console.log("Attempting to send login message...");
+      sdkRef.current.sendMessage(
+        {
+          type: "login",
+          direction: "login",
+        },
+        (response) => {
+          console.log("Response from sendMessage:", response);
+        }
+      );
+    } else {
+      setModalTitle("Error");
+      setModalMessage("SDK is not initialized.");
+      setShowModal(true);
+      console.error("SDK is not initialized.");
+    }
   };
 
+  // Close modal
+  const handleCloseModal = () => setShowModal(false);
+
   return (
-    <Container className={styles.container}>
-      <Row className="justify-content-center">
-        <Col md="6" className={styles.imageCol} style={{paddingRight: "50px"}}>
-          {/* Left half of the page for the image */}
-          <div className={styles.imageContainer}>
-            <img src={loginImage} alt="Login" className={styles.loginImage} />
-          </div>
-        </Col>
-        <Col md="6">
-          <div className={styles.innerBox}>
-            <h1 className={styles.heading}>Login</h1>
+    <>
+      <div className="page-container">
+        <div className="form-container">
+          <h2 className="heading">Resilient App</h2>
 
-            <Form>
-              <FormGroup>
-                <Label for="email">Email</Label>
-                <Input
-                  type="email"
-                  id="email"
-                  placeholder="Enter email address"
-                  value={values.email}
-                  onChange={(event) =>
-                    setValues((prev) => ({ ...prev, email: event.target.value }))
-                  }
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="password">Password</Label>
-                <Input
-                  type="password"
-                  id="password"
-                  placeholder="Enter Password"
-                  value={values.pass}
-                  onChange={(event) =>
-                    setValues((prev) => ({ ...prev, pass: event.target.value }))
-                  }
-                />
-              </FormGroup>
-              <div></div>
+          <div ref={animationContainer} className="animation-container"></div>
 
-              {errorMsg && <Alert color="danger">{errorMsg}</Alert>}
-              <div className={styles.footer}>
-                <Button
-                  color="primary"
-                  disabled={submitButtonDisabled}
-                  onClick={handleSubmission}
-                >
-                  {submitButtonDisabled ? "Logging in..." : "Login"}
-                </Button>
-                <p>
-                  Don't have an account?{" "}
-                  <span>
-                    <Link to="/signup">Signup</Link>
-                  </span>
-                </p>
+          <div className="form-group text-center mb-4">
+            <label className="signin-label">Sign In Via</label>
+            <button
+              type="button"
+              className="btn btn-secondary oauth-button"
+              onClick={handleAuthentication}
+            >
+              <div className="logoBox">
+                <img src={resvaultLogo} alt="ResVault" className="oauth-logo" />
               </div>
-            </Form>
+              <span className="oauth-text">ResVault</span>
+            </button>
           </div>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+
+      <NotificationModal
+        show={showModal}
+        title={modalTitle}
+        message={modalMessage}
+        onClose={handleCloseModal}
+      />
+    </>
   );
-}
+};
 
 export default Login;

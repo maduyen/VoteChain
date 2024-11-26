@@ -10,7 +10,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Navbar from "../Navbar1";
 import Footer from "../Footer2";
 import voting_home from "../../components/images/voting_home_2.svg";
-import signup from "../../components/images/signup.svg";
 import election from "../../components/images/election.svg";
 import report from "../../components/images/report.svg";
 import discussion from "../../components/images/discussion.svg";  //added discussion panel image to "images" folder
@@ -103,7 +102,7 @@ function Home(props) {
                   <CardContent>
                     <img
                       alt="..."
-                      src={signup}
+                      // src={signup}
                       style={{ width: '300px', height: '300px' }} />
                     <h3 style={{ color: "#626FDF", marginBottom: "20px"}}>Registration</h3>
                     <h6>

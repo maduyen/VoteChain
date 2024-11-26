@@ -9,6 +9,10 @@ const PollCreationPage = () => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
 
+  // Add public/private keys
+  const [publicKey, setPublicKey] = useState("");
+  const [privateKey, setPrivateKey] = useState("");
+
   // Add an option
   const handleAddOption = () => setOptions([...options, ""]);
 
@@ -25,33 +29,35 @@ const PollCreationPage = () => {
   // Handle form submission
   const handleSubmit = async () => {
     try {
+      // Fetch keys from ResilientDB
+      // const { publicKey, privateKey } = await fetchKeys();
+  
       // Validate input
       if (!pollTopic || options.filter((opt) => opt.trim()).length < 2) {
         alert("Please provide a topic and at least two valid options.");
         return;
       }
-
+  
       // Prepare form data
       const formData = new FormData();
       formData.append("topic", pollTopic);
       formData.append("description", pollDescription);
-      if (pollImage) formData.append("image", pollImage); // Attach the image if uploaded
+      if (pollImage) formData.append("image", pollImage);
       formData.append("options", JSON.stringify(options));
       formData.append("startTime", startTime);
       formData.append("endTime", endTime);
-
+      formData.append("publicKey", publicKey);
+      formData.append("privateKey", privateKey);
+  
       // Send POST request to the backend
-      console.log([...formData.entries()]);
-
       const response = await axios.post("http://localhost:5000/api/polls", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-
+  
       if (response.status === 201) {
         alert("Poll created successfully!");
-        // Optionally reset the form
         setPollTopic("");
         setPollDescription("");
         setPollImage(null);
@@ -64,6 +70,7 @@ const PollCreationPage = () => {
       alert("Failed to create poll. Please try again.");
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-200 flex items-center justify-center py-10 px-6">

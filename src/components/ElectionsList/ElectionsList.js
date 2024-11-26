@@ -9,7 +9,6 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Navbar from "../Navbar2";
 import Footer from "../Footer2";
-import withAuthProtection from "../AuthProtect/AuthProtect";
 import election_1 from '../../assest/election_1.jpg';
 import election_2 from '../../assest/election_2.jpg';
 // import election_3 from '../../assest/election_3.jpg';
@@ -124,4 +123,4 @@ function ElectionsList({ selectedElection, handleElectionSelect }) {
   );
 }
 
-export default withAuthProtection(ElectionsList);
+export default ElectionsList;
