@@ -23,7 +23,7 @@ const Navbar = () => {
   const linkStyle = { color: 'white', marginRight: '15px' };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" style={{ backgroundColor: '#a2856d' }}>
       <Toolbar style={{ justifyContent: 'space-between' }}>
         <IconButton
           edge="start"
@@ -34,12 +34,19 @@ const Navbar = () => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h6">
+<<<<<<< HEAD
           <Button component={Link} to="/login" style={linkStyle}>Voter Login</Button>
           <Button component={Link} to="/login" style={linkStyle}>Admin Login</Button>
+=======
+          <Button component={Link} to="/login" style={linkStyle}>Login</Button>
+          <Button component={Link} to="/signup" style={linkStyle}>Signup</Button>
+>>>>>>> 90f5305d74015504a6ea030c4e96ed6f0f538bad
         </Typography>
       </Toolbar>
     </AppBar>
   );
 };
+
+// ^^deleted Admin Login beause it routed to the same login page as Voter Login (simplifying UI)
 
 export default Navbar;
