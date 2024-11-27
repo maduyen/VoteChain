@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useContext } from "react";
+import ResVaultSDK from "resvault-sdk";
+import { GlobalContext } from "../context/GlobalContext";
+
+const sdk = new ResVaultSDK();
 
 const PollCreationPage = () => {
+  const { publicKey, setPublicKey } = useContext(GlobalContext);
+
   const [pollTopic, setPollTopic] = useState("");
   const [pollDescription, setPollDescription] = useState("");
   const [pollImage, setPollImage] = useState(null);
   const [options, setOptions] = useState(["", ""]);
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
-
-  // Add public/private keys
-  const [publicKey, setPublicKey] = useState("");
-  const [privateKey, setPrivateKey] = useState("");
 
   // Add an option
   const handleAddOption = () => setOptions([...options, ""]);
@@ -26,51 +27,130 @@ const PollCreationPage = () => {
   // Handle image upload
   const handleImageUpload = (event) => setPollImage(event.target.files[0]);
 
+  // Fetch public key if missing
+  useEffect(() => {
+    const fetchPublicKey = async () => {
+      if (!publicKey) {
+        try {
+          // Fetch the transaction ID from the ResVaultSDK context
+          const transactionId = sessionStorage.getItem("transactionId"); // Store transaction ID in sessionStorage during login
+
+          if (!transactionId) {
+            alert("Transaction ID not found. Please log in again.");
+            return;
+          }
+
+          // Fetch transaction details via GraphQL
+          const response = await fetch("http://<your-graphql-server-endpoint>", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              query: `
+                query {
+                  getTransaction(id: "${transactionId}") {
+                    publicKey
+                  }
+                }
+              `,
+            }),
+          });
+
+          const result = await response.json();
+          if (result.data && result.data.getTransaction) {
+            const fetchedPublicKey = result.data.getTransaction.publicKey;
+            setPublicKey(fetchedPublicKey); // Update context
+            sessionStorage.setItem("publicKey", fetchedPublicKey); // Store in session storage
+          } else {
+            console.error("Failed to fetch public key.");
+          }
+        } catch (error) {
+          console.error("Error fetching public key:", error);
+        }
+      }
+    };
+
+    fetchPublicKey();
+  }, [publicKey, setPublicKey]);
+
   // Handle form submission
   const handleSubmit = async () => {
     try {
-      // Fetch keys from ResilientDB
-      // const { publicKey, privateKey } = await fetchKeys();
+      if (!publicKey) {
+        alert("You must be logged in to create a poll.");
+        return;
+      }
   
-      // Validate input
       if (!pollTopic || options.filter((opt) => opt.trim()).length < 2) {
         alert("Please provide a topic and at least two valid options.");
         return;
       }
   
-      // Prepare form data
-      const formData = new FormData();
-      formData.append("topic", pollTopic);
-      formData.append("description", pollDescription);
-      if (pollImage) formData.append("image", pollImage);
-      formData.append("options", JSON.stringify(options));
-      formData.append("startTime", startTime);
-      formData.append("endTime", endTime);
-      formData.append("publicKey", publicKey);
-      formData.append("privateKey", privateKey);
-  
-      // Send POST request to the backend
-      const response = await axios.post("http://localhost:5000/api/polls", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-  
-      if (response.status === 201) {
-        alert("Poll created successfully!");
-        setPollTopic("");
-        setPollDescription("");
-        setPollImage(null);
-        setOptions(["", ""]);
-        setStartTime("");
-        setEndTime("");
+      // Validate and prepare the amount
+      let validatedAmount = 1; // Assuming a fixed amount
+      if (typeof validatedAmount !== "string" && typeof validatedAmount !== "number") {
+        console.error("Invalid amount:", validatedAmount);
+        alert("Transaction amount is invalid.");
+        return;
       }
+      if (typeof validatedAmount === "number") {
+        validatedAmount = validatedAmount.toString(); // Ensure it's a string
+      }
+  
+      // Prepare poll data
+      const pollData = {
+        topic: pollTopic,
+        description: pollDescription,
+        options: options.filter((opt) => opt.trim()), // Remove empty options
+        startTime,
+        endTime,
+        createdAt: new Date().toISOString(),
+      };
+  
+      // Prepare transaction message
+      const transactionMessage = {
+        type: "commit",
+        direction: "commit",
+        amount: validatedAmount, // Validated amount
+        data: pollData, // Poll data in JSON format
+        recipient: publicKey, // User's public key
+      };
+  
+      console.log("Submitting transaction:", transactionMessage);
+  
+      // Send the transaction to ResilientDB
+      sdk.sendMessage(transactionMessage);
     } catch (error) {
-      console.error("Error creating poll:", error);
-      alert("Failed to create poll. Please try again.");
+      console.error("Error submitting poll:", error);
+      alert("Failed to submit poll. Please try again.");
     }
   };
   
+  
+
+  useEffect(() => {
+    const handleMessage = (event) => {
+      const message = event.data;
+      if (
+        event.source === window &&
+        event.data &&
+        event.data.type === "FROM_CONTENT_SCRIPT"
+      ) {
+        if (message.data.success) {
+          alert("Poll created successfully! Transaction ID: " + message.data.data.postTransaction.id);
+        } else {
+          alert("Failed to create poll: " + (event.data.error || "Unknown error."));
+        }
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-200 flex items-center justify-center py-10 px-6">

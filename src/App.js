@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { GlobalProvider, GlobalContext } from "./context/GlobalContext"; // Import context
 
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
@@ -10,63 +11,67 @@ import PollCreationPage from "./components/PollCreationPage";
 import Userinfo from "./components/Userinfo";
 import "./App.css";
 
+// ProtectedRoute component for authenticated routes
+const ProtectedRoute = ({ children }) => {
+  const isAuthenticated = sessionStorage.getItem("token"); // Check token in session storage
+  return isAuthenticated ? children : <Navigate to="/login" replace />;
+};
+
 function App() {
-  const [selectedElection, setSelectedElection] = useState(null);
-  const [votedCandidates, setVotedCandidates] = useState([]);
-
-  const handleElectionSelect = (election) => {
-    setSelectedElection(election);
-  };
-
-  const handleVote = (candidateId) => {
-    setVotedCandidates((prevVotedCandidates) => [...prevVotedCandidates, candidateId]);
-  };
-
   return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          {/* <Route path="/signup" element={<Signup />} /> */}
-          {/* <Route path="/logout" element={<Logout />} /> */}
-          <Route
-            path="/"
-            element={
-              sessionStorage.getItem("token") ? (
-                <Navigate to="/elections" replace />
-              ) : (
-                <Home
-                  selectedElection={selectedElection}
-                  handleElectionSelect={handleElectionSelect}
-                />
-              )
-            }
-          />
-          <Route
-            path="/elections"
-            element={
-              <ElectionsList
-                handleElectionSelect={handleElectionSelect}
-                selectedElection={selectedElection}
-              />
-            }
-          />
-          <Route
-            path="/candidates/:electionId"
-            element={
-              <CandidatesList
-                selectedElection={selectedElection}
-                votedCandidates={votedCandidates}
-                handleVote={handleVote}
-              />
-            }
-          />
-          <Route path="/results" element={<ResultsPage />} />
-          <Route path="/create-poll" element={<PollCreationPage />} />
-          <Route path="/userinfo" element={<Userinfo />} />
-        </Routes>
-      </Router>
-    </div>
+    <GlobalProvider> {/* Wrap the app with GlobalProvider */}
+      <div className="App">
+        <Router>
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Home />} />
+
+            {/* Protected Routes */}
+            <Route
+              path="/elections"
+              element={
+                <ProtectedRoute>
+                  <ElectionsList />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/candidates/:electionId"
+              element={
+                <ProtectedRoute>
+                  <CandidatesList />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/results"
+              element={
+                <ProtectedRoute>
+                  <ResultsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/create-poll"
+              element={
+                <ProtectedRoute>
+                  <PollCreationPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/userinfo"
+              element={
+                <ProtectedRoute>
+                  <Userinfo />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </Router>
+      </div>
+    </GlobalProvider>
   );
 }
 

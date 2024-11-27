@@ -1,13 +1,11 @@
-import dotenv from "dotenv";
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import { MongoClient, ServerApiVersion } from "mongodb";
-import { WebSocketServer } from "ws";
-import pollRoutes from "./routes/pollRoutes.mjs";
-import voteRoutes from "./routes/voteRoutes.js";
-
-dotenv.config();
+require("dotenv").config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const { WebSocketServer } = require("ws");
+const ResVaultSDK = require("resvault-sdk");
+const pollRoutes = require("./routes/pollRoutes");
 
 const app = express();
 const PORT = 5000;
@@ -18,6 +16,9 @@ if (!process.env.MONGO_URI) {
   console.error("Error: MONGO_URI is not defined in .env file.");
   process.exit(1);
 }
+
+// Initialize ResVault SDK
+const sdk = new ResVaultSDK();
 
 // WebSocket setup
 const wss = new WebSocketServer({ port: WEBSOCKET_PORT });
@@ -51,8 +52,7 @@ const startServer = async () => {
     console.log("Connected to MongoDB");
 
     // Use Routes
-    app.use("/api", pollRoutes(db));
-    app.use("/api", voteRoutes(db, broadcast));
+    app.use("/api", pollRoutes(db, sdk, broadcast));
 
     // Start HTTP server
     app.listen(PORT, () => {

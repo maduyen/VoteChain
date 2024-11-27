@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +17,7 @@
     "express": "^4.21.1",
     "mongodb": "^6.10.0",
     "mongoose": "^8.8.1",
-    "resilient-node-cache": "^1.0.1"
+    "resilient-node-cache": "^1.0.1",
+    "resvault-sdk": "^1.0.2"
   }
 }

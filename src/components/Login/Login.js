@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import ResVaultSDK from "resvault-sdk";
 import "../../App.css";
 import resvaultLogo from "../../assest/resilientdb.svg";
@@ -6,14 +6,16 @@ import NotificationModal from "../NotificationModal";
 import { useNavigate } from "react-router-dom";
 import lottie from "lottie-web";
 import animation from "../../assest/animation.json";
-
+import { GlobalContext } from "../../context/GlobalContext"; // Import the context
+import { fetchTransactionDetails } from "../utils/ResilientDB";
 const Login = () => {
   const sdkRef = useRef(null);
-  const navigate = useNavigate(); // React Router hook for navigation
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalMessage, setModalMessage] = useState("");
   const animationContainer = useRef(null);
+  const { setPublicKey } = useContext(GlobalContext); // Access the function to update the public key
 
   // Initialize ResVault SDK
   if (!sdkRef.current) {
@@ -61,38 +63,27 @@ const Login = () => {
       return;
     }
 
-    const messageHandler = (event) => {
-      console.log("Message received:", event);
+    const messageHandler = async (event) => {
       const message = event.data;
-
-      if (
-        message &&
-        message.type === "FROM_CONTENT_SCRIPT" &&
-        message.data &&
-        message.data.success !== undefined
-      ) {
-        if (message.data.success) {
-          const token = message.data.token; // Extract token
-          sessionStorage.setItem("token", token); // Store the token
-          console.log("Authentication successful. Redirecting...");
-          navigate("/elections"); // Redirect to your original signed-in page
+    
+      if (message.data.success) {
+        const transactionId = message.data.data.postTransaction.id;
+        try {
+          const transactionDetails = await fetchTransactionDetails(transactionId);
+          const publicKey = transactionDetails.publicKey;
+    
+          sessionStorage.setItem("publicKey", publicKey);
+          setPublicKey(publicKey);
+    
+          navigate("/create-poll");
+        } catch (error) {
+          console.error("Failed to fetch public key:", error);
         }
-      } else if (
-        message &&
-        message.type === "FROM_CONTENT_SCRIPT" &&
-        message.data &&
-        message.data === "error"
-      ) {
-        setModalTitle("Authentication Failed");
-        setModalMessage(
-          "Please connect ResVault to this ResilientApp and try again."
-        );
-        setShowModal(true);
-        console.error("Authentication failed. Error received.");
-      } else {
-        console.warn("Unexpected message received:", message);
       }
     };
+    
+
+    
 
     sdk.addMessageListener(messageHandler);
     console.log("Message listener added.");
@@ -101,9 +92,8 @@ const Login = () => {
       sdk.removeMessageListener(messageHandler);
       console.log("Message listener removed.");
     };
-  }, [navigate]);
+  }, [navigate, setPublicKey]);
 
-  // Handle authentication
   const handleAuthentication = () => {
     if (sdkRef.current) {
       console.log("Attempting to send login message...");
@@ -124,7 +114,6 @@ const Login = () => {
     }
   };
 
-  // Close modal
   const handleCloseModal = () => setShowModal(false);
 
   return (
