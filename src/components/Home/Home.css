@@ -1,0 +1,10 @@
+/* adding space between slides */
+.slick-slide > div {
+    margin: 0 10px;
+  }
+
+/* changing color of slide arrow(s) */
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}

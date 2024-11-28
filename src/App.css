@@ -1,3 +1,7 @@
+body {
+  background-image: url('./components/images/back_tan.png');  /*changed backgroung to match blog*/
+}
+
 .page-container {
   background-image: url('./assest/bg.svg');
   background-size: cover;
