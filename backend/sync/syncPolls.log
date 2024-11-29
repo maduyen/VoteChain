@@ -1,0 +1,1370 @@
+[LOG] 2024-11-29T20:54:15.395Z HTTP Endpoint: https://crow.resilientdb.com/v1/blocks
+[LOG] 2024-11-29T20:54:15.401Z WebSocket Endpoint: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T20:54:15.402Z Initializing WebSocketMongoSync...
+[LOG] 2024-11-29T20:54:18.812Z Connected to MongoDB database: myDatabase, collection: polls
+[LOG] 2024-11-29T20:54:18.894Z Checking for blocks from 1 to 100
+[LOG] 2024-11-29T20:54:19.192Z Checking for blocks from 101 to 200
+[LOG] 2024-11-29T20:54:19.344Z Checking for blocks from 201 to 300
+[LOG] 2024-11-29T20:54:19.435Z Checking for blocks from 301 to 400
+[LOG] 2024-11-29T20:54:19.523Z Checking for blocks from 401 to 500
+[LOG] 2024-11-29T20:54:19.613Z Checking for blocks from 501 to 600
+[LOG] 2024-11-29T20:54:19.701Z Checking for blocks from 601 to 700
+[LOG] 2024-11-29T20:54:19.799Z Checking for blocks from 701 to 800
+[LOG] 2024-11-29T20:54:19.897Z Checking for blocks from 801 to 900
+[LOG] 2024-11-29T20:54:19.985Z Checking for blocks from 901 to 1000
+[LOG] 2024-11-29T20:54:20.075Z Checking for blocks from 1001 to 1100
+[LOG] 2024-11-29T20:54:20.161Z Checking for blocks from 1101 to 1200
+[LOG] 2024-11-29T20:54:20.247Z Checking for blocks from 1201 to 1300
+[LOG] 2024-11-29T20:54:20.335Z Checking for blocks from 1301 to 1400
+[LOG] 2024-11-29T20:54:20.423Z Checking for blocks from 1401 to 1500
+[LOG] 2024-11-29T20:54:20.512Z Checking for blocks from 1501 to 1600
+[LOG] 2024-11-29T20:54:20.603Z Checking for blocks from 1601 to 1700
+[LOG] 2024-11-29T20:54:20.692Z Checking for blocks from 1701 to 1800
+[LOG] 2024-11-29T20:54:20.782Z Checking for blocks from 1801 to 1900
+[LOG] 2024-11-29T20:54:20.870Z Checking for blocks from 1901 to 2000
+[LOG] 2024-11-29T20:54:20.959Z Checking for blocks from 2001 to 2100
+[LOG] 2024-11-29T20:54:21.045Z Checking for blocks from 2101 to 2200
+[LOG] 2024-11-29T20:54:21.132Z Checking for blocks from 2201 to 2300
+[LOG] 2024-11-29T20:54:21.237Z Checking for blocks from 2301 to 2400
+[LOG] 2024-11-29T20:54:21.325Z Checking for blocks from 2401 to 2500
+[LOG] 2024-11-29T20:54:21.415Z Checking for blocks from 2501 to 2600
+[LOG] 2024-11-29T20:54:21.504Z Checking for blocks from 2601 to 2700
+[LOG] 2024-11-29T20:54:21.594Z Checking for blocks from 2701 to 2800
+[LOG] 2024-11-29T20:54:21.685Z Checking for blocks from 2801 to 2900
+[LOG] 2024-11-29T20:54:21.781Z Checking for blocks from 2901 to 3000
+[LOG] 2024-11-29T20:54:21.869Z Checking for blocks from 3001 to 3100
+[LOG] 2024-11-29T20:54:21.957Z Checking for blocks from 3101 to 3200
+[LOG] 2024-11-29T20:54:22.054Z Checking for blocks from 3201 to 3300
+[LOG] 2024-11-29T20:54:22.143Z Checking for blocks from 3301 to 3400
+[LOG] 2024-11-29T20:54:22.237Z Checking for blocks from 3401 to 3500
+[LOG] 2024-11-29T20:54:22.328Z Checking for blocks from 3501 to 3600
+[LOG] 2024-11-29T20:54:22.416Z Checking for blocks from 3601 to 3700
+[LOG] 2024-11-29T20:54:22.504Z Checking for blocks from 3701 to 3800
+[LOG] 2024-11-29T20:54:22.609Z Checking for blocks from 3801 to 3900
+[LOG] 2024-11-29T20:54:22.697Z Checking for blocks from 3901 to 4000
+[LOG] 2024-11-29T20:54:22.787Z Checking for blocks from 4001 to 4100
+[LOG] 2024-11-29T20:54:22.875Z Checking for blocks from 4101 to 4200
+[LOG] 2024-11-29T20:54:22.962Z Checking for blocks from 4201 to 4300
+[LOG] 2024-11-29T20:54:23.050Z Checking for blocks from 4301 to 4400
+[LOG] 2024-11-29T20:54:23.136Z Checking for blocks from 4401 to 4500
+[LOG] 2024-11-29T20:54:23.223Z Checking for blocks from 4501 to 4600
+[LOG] 2024-11-29T20:54:23.311Z Checking for blocks from 4601 to 4700
+[LOG] 2024-11-29T20:54:23.401Z Checking for blocks from 4701 to 4800
+[LOG] 2024-11-29T20:54:23.504Z Checking for blocks from 4801 to 4900
+[LOG] 2024-11-29T20:54:23.595Z Checking for blocks from 4901 to 5000
+[LOG] 2024-11-29T20:54:23.688Z Checking for blocks from 5001 to 5100
+[LOG] 2024-11-29T20:54:23.775Z Checking for blocks from 5101 to 5200
+[LOG] 2024-11-29T20:54:23.860Z Checking for blocks from 5201 to 5300
+[LOG] 2024-11-29T20:54:23.964Z Checking for blocks from 5301 to 5400
+[LOG] 2024-11-29T20:54:24.065Z Checking for blocks from 5401 to 5500
+[LOG] 2024-11-29T20:54:24.158Z Checking for blocks from 5501 to 5600
+[LOG] 2024-11-29T20:54:24.248Z Checking for blocks from 5601 to 5700
+[LOG] 2024-11-29T20:54:24.336Z Checking for blocks from 5701 to 5800
+[LOG] 2024-11-29T20:54:24.424Z Checking for blocks from 5801 to 5900
+[LOG] 2024-11-29T20:54:24.513Z Checking for blocks from 5901 to 6000
+[LOG] 2024-11-29T20:54:24.600Z Checking for blocks from 6001 to 6100
+[LOG] 2024-11-29T20:54:24.686Z Checking for blocks from 6101 to 6200
+[LOG] 2024-11-29T20:54:24.775Z Checking for blocks from 6201 to 6300
+[LOG] 2024-11-29T20:54:24.864Z Checking for blocks from 6301 to 6400
+[LOG] 2024-11-29T20:54:24.955Z Checking for blocks from 6401 to 6500
+[LOG] 2024-11-29T20:54:25.051Z Checking for blocks from 6501 to 6600
+[LOG] 2024-11-29T20:54:25.146Z Checking for blocks from 6601 to 6700
+[LOG] 2024-11-29T20:54:25.233Z Checking for blocks from 6701 to 6800
+[LOG] 2024-11-29T20:54:25.334Z Checking for blocks from 6801 to 6900
+[LOG] 2024-11-29T20:54:25.422Z Checking for blocks from 6901 to 7000
+[LOG] 2024-11-29T20:54:25.519Z Checking for blocks from 7001 to 7100
+[LOG] 2024-11-29T20:54:25.606Z Checking for blocks from 7101 to 7200
+[LOG] 2024-11-29T20:54:25.697Z Checking for blocks from 7201 to 7300
+[LOG] 2024-11-29T20:54:25.785Z Checking for blocks from 7301 to 7400
+[LOG] 2024-11-29T20:54:25.871Z Checking for blocks from 7401 to 7500
+[LOG] 2024-11-29T20:54:25.960Z Checking for blocks from 7501 to 7600
+[LOG] 2024-11-29T20:54:26.062Z Checking for blocks from 7601 to 7700
+[LOG] 2024-11-29T20:54:26.168Z Checking for blocks from 7701 to 7800
+[LOG] 2024-11-29T20:54:26.260Z Checking for blocks from 7801 to 7900
+[LOG] 2024-11-29T20:54:26.351Z Checking for blocks from 7901 to 8000
+[LOG] 2024-11-29T20:54:26.445Z Checking for blocks from 8001 to 8100
+[LOG] 2024-11-29T20:54:26.535Z Checking for blocks from 8101 to 8200
+[LOG] 2024-11-29T20:54:26.646Z Checking for blocks from 8201 to 8300
+[LOG] 2024-11-29T20:54:26.732Z Checking for blocks from 8301 to 8400
+[LOG] 2024-11-29T20:54:26.820Z Checking for blocks from 8401 to 8500
+[LOG] 2024-11-29T20:54:26.908Z Checking for blocks from 8501 to 8600
+[LOG] 2024-11-29T20:54:26.998Z Checking for blocks from 8601 to 8700
+[LOG] 2024-11-29T20:54:27.095Z Checking for blocks from 8701 to 8800
+[LOG] 2024-11-29T20:54:27.188Z Checking for blocks from 8801 to 8900
+[LOG] 2024-11-29T20:54:27.279Z Checking for blocks from 8901 to 9000
+[LOG] 2024-11-29T20:54:27.372Z Checking for blocks from 9001 to 9100
+[LOG] 2024-11-29T20:54:27.460Z Checking for blocks from 9101 to 9200
+[LOG] 2024-11-29T20:54:27.552Z Checking for blocks from 9201 to 9300
+[LOG] 2024-11-29T20:54:27.638Z Checking for blocks from 9301 to 9400
+[LOG] 2024-11-29T20:54:27.733Z Checking for blocks from 9401 to 9500
+[LOG] 2024-11-29T20:54:27.826Z Checking for blocks from 9501 to 9600
+[LOG] 2024-11-29T20:54:27.919Z Checking for blocks from 9601 to 9700
+[LOG] 2024-11-29T20:54:28.015Z Checking for blocks from 9701 to 9800
+[LOG] 2024-11-29T20:54:28.105Z Checking for blocks from 9801 to 9900
+[LOG] 2024-11-29T20:54:28.211Z Checking for blocks from 9901 to 10000
+[LOG] 2024-11-29T20:54:28.304Z Checking for blocks from 10001 to 10100
+[LOG] 2024-11-29T20:54:28.546Z Checking for blocks from 10101 to 10200
+[LOG] 2024-11-29T20:54:28.641Z Checking for blocks from 10201 to 10300
+[LOG] 2024-11-29T20:54:28.736Z Checking for blocks from 10301 to 10400
+[LOG] 2024-11-29T20:54:28.827Z Checking for blocks from 10401 to 10500
+[LOG] 2024-11-29T20:54:28.918Z Checking for blocks from 10501 to 10600
+[LOG] 2024-11-29T20:54:29.017Z Checking for blocks from 10601 to 10700
+[LOG] 2024-11-29T20:54:29.111Z Checking for blocks from 10701 to 10800
+[LOG] 2024-11-29T20:54:29.206Z Checking for blocks from 10801 to 10900
+[LOG] 2024-11-29T20:54:29.299Z Checking for blocks from 10901 to 11000
+[LOG] 2024-11-29T20:54:29.401Z Checking for blocks from 11001 to 11100
+[LOG] 2024-11-29T20:54:29.494Z Checking for blocks from 11101 to 11200
+[LOG] 2024-11-29T20:54:29.586Z Checking for blocks from 11201 to 11300
+[LOG] 2024-11-29T20:54:29.681Z Checking for blocks from 11301 to 11400
+[LOG] 2024-11-29T20:54:29.774Z Checking for blocks from 11401 to 11500
+[LOG] 2024-11-29T20:54:29.866Z Checking for blocks from 11501 to 11600
+[LOG] 2024-11-29T20:54:29.960Z Checking for blocks from 11601 to 11700
+[LOG] 2024-11-29T20:54:30.053Z Checking for blocks from 11701 to 11800
+[LOG] 2024-11-29T20:54:30.148Z Checking for blocks from 11801 to 11900
+[LOG] 2024-11-29T20:54:30.243Z Checking for blocks from 11901 to 12000
+[LOG] 2024-11-29T20:54:30.336Z Checking for blocks from 12001 to 12100
+[LOG] 2024-11-29T20:54:30.437Z Checking for blocks from 12101 to 12200
+[LOG] 2024-11-29T20:54:30.534Z Checking for blocks from 12201 to 12300
+[LOG] 2024-11-29T20:54:30.638Z Checking for blocks from 12301 to 12400
+[LOG] 2024-11-29T20:54:30.731Z Checking for blocks from 12401 to 12500
+[LOG] 2024-11-29T20:54:30.834Z Checking for blocks from 12501 to 12600
+[LOG] 2024-11-29T20:54:30.925Z Checking for blocks from 12601 to 12700
+[LOG] 2024-11-29T20:54:31.016Z Checking for blocks from 12701 to 12800
+[LOG] 2024-11-29T20:54:31.109Z Checking for blocks from 12801 to 12900
+[LOG] 2024-11-29T20:54:31.201Z Checking for blocks from 12901 to 13000
+[LOG] 2024-11-29T20:54:31.297Z Checking for blocks from 13001 to 13100
+[LOG] 2024-11-29T20:54:31.391Z Checking for blocks from 13101 to 13200
+[LOG] 2024-11-29T20:54:31.484Z Checking for blocks from 13201 to 13300
+[LOG] 2024-11-29T20:54:31.577Z Checking for blocks from 13301 to 13400
+[LOG] 2024-11-29T20:54:31.671Z Checking for blocks from 13401 to 13500
+[LOG] 2024-11-29T20:54:31.771Z Checking for blocks from 13501 to 13600
+[LOG] 2024-11-29T20:54:31.881Z Checking for blocks from 13601 to 13700
+[LOG] 2024-11-29T20:54:31.985Z Checking for blocks from 13701 to 13800
+[LOG] 2024-11-29T20:54:32.082Z Checking for blocks from 13801 to 13900
+[LOG] 2024-11-29T20:54:32.199Z Checking for blocks from 13901 to 14000
+[LOG] 2024-11-29T20:54:32.293Z Checking for blocks from 14001 to 14100
+[LOG] 2024-11-29T20:54:32.390Z Checking for blocks from 14101 to 14200
+[LOG] 2024-11-29T20:54:32.562Z Checking for blocks from 14201 to 14300
+[LOG] 2024-11-29T20:54:32.664Z Checking for blocks from 14301 to 14400
+[LOG] 2024-11-29T20:54:32.760Z Checking for blocks from 14401 to 14500
+[LOG] 2024-11-29T20:54:32.853Z Checking for blocks from 14501 to 14600
+[LOG] 2024-11-29T20:54:32.949Z Checking for blocks from 14601 to 14700
+[LOG] 2024-11-29T20:54:33.049Z Checking for blocks from 14701 to 14800
+[LOG] 2024-11-29T20:54:33.144Z Checking for blocks from 14801 to 14900
+[LOG] 2024-11-29T20:54:33.238Z Checking for blocks from 14901 to 15000
+[LOG] 2024-11-29T20:54:33.335Z Checking for blocks from 15001 to 15100
+[LOG] 2024-11-29T20:54:33.436Z Checking for blocks from 15101 to 15200
+[LOG] 2024-11-29T20:54:33.529Z Checking for blocks from 15201 to 15300
+[LOG] 2024-11-29T20:54:33.621Z Checking for blocks from 15301 to 15400
+[LOG] 2024-11-29T20:54:33.713Z Checking for blocks from 15401 to 15500
+[LOG] 2024-11-29T20:54:33.809Z Checking for blocks from 15501 to 15600
+[LOG] 2024-11-29T20:54:33.905Z Checking for blocks from 15601 to 15700
+[LOG] 2024-11-29T20:54:34.006Z Checking for blocks from 15701 to 15800
+[LOG] 2024-11-29T20:54:34.097Z Checking for blocks from 15801 to 15900
+[LOG] 2024-11-29T20:54:34.198Z Checking for blocks from 15901 to 16000
+[LOG] 2024-11-29T20:54:34.304Z Checking for blocks from 16001 to 16100
+[LOG] 2024-11-29T20:54:34.404Z Checking for blocks from 16101 to 16200
+[LOG] 2024-11-29T20:54:34.497Z Checking for blocks from 16201 to 16300
+[LOG] 2024-11-29T20:54:34.590Z Checking for blocks from 16301 to 16400
+[LOG] 2024-11-29T20:54:34.683Z Checking for blocks from 16401 to 16500
+[LOG] 2024-11-29T20:54:34.774Z Checking for blocks from 16501 to 16600
+[LOG] 2024-11-29T20:54:34.883Z Checking for blocks from 16601 to 16700
+[LOG] 2024-11-29T20:54:34.976Z Checking for blocks from 16701 to 16800
+[LOG] 2024-11-29T20:54:35.083Z Checking for blocks from 16801 to 16900
+[LOG] 2024-11-29T20:54:35.180Z Checking for blocks from 16901 to 17000
+[LOG] 2024-11-29T20:54:35.285Z Checking for blocks from 17001 to 17100
+[LOG] 2024-11-29T20:54:35.379Z Checking for blocks from 17101 to 17200
+[LOG] 2024-11-29T20:54:35.470Z Checking for blocks from 17201 to 17300
+[LOG] 2024-11-29T20:54:35.564Z Checking for blocks from 17301 to 17400
+[LOG] 2024-11-29T20:54:35.657Z Checking for blocks from 17401 to 17500
+[LOG] 2024-11-29T20:54:35.747Z Checking for blocks from 17501 to 17600
+[LOG] 2024-11-29T20:54:35.840Z Checking for blocks from 17601 to 17700
+[LOG] 2024-11-29T20:54:35.933Z Checking for blocks from 17701 to 17800
+[LOG] 2024-11-29T20:54:36.024Z Checking for blocks from 17801 to 17900
+[LOG] 2024-11-29T20:54:36.116Z Checking for blocks from 17901 to 18000
+[LOG] 2024-11-29T20:54:36.211Z Checking for blocks from 18001 to 18100
+[LOG] 2024-11-29T20:54:36.307Z Checking for blocks from 18101 to 18200
+[LOG] 2024-11-29T20:54:36.402Z Checking for blocks from 18201 to 18300
+[LOG] 2024-11-29T20:54:36.500Z Checking for blocks from 18301 to 18400
+[LOG] 2024-11-29T20:54:36.593Z Checking for blocks from 18401 to 18500
+[LOG] 2024-11-29T20:54:36.685Z Checking for blocks from 18501 to 18600
+[LOG] 2024-11-29T20:54:36.784Z Checking for blocks from 18601 to 18700
+[LOG] 2024-11-29T20:54:36.879Z Checking for blocks from 18701 to 18800
+[LOG] 2024-11-29T20:54:36.972Z Checking for blocks from 18801 to 18900
+[LOG] 2024-11-29T20:54:37.063Z Checking for blocks from 18901 to 19000
+[LOG] 2024-11-29T20:54:37.159Z Checking for blocks from 19001 to 19100
+[LOG] 2024-11-29T20:54:37.263Z Checking for blocks from 19101 to 19200
+[LOG] 2024-11-29T20:54:37.373Z Checking for blocks from 19201 to 19300
+[LOG] 2024-11-29T20:54:37.484Z Checking for blocks from 19301 to 19400
+[LOG] 2024-11-29T20:54:37.576Z Checking for blocks from 19401 to 19500
+[LOG] 2024-11-29T20:54:37.673Z Checking for blocks from 19501 to 19600
+[LOG] 2024-11-29T20:54:37.767Z Checking for blocks from 19601 to 19700
+[LOG] 2024-11-29T20:54:37.860Z Checking for blocks from 19701 to 19800
+[LOG] 2024-11-29T20:54:37.955Z Checking for blocks from 19801 to 19900
+[LOG] 2024-11-29T20:54:38.044Z Checking for blocks from 19901 to 20000
+[LOG] 2024-11-29T20:54:38.135Z Checking for blocks from 20001 to 20100
+[LOG] 2024-11-29T20:54:38.358Z Checking for blocks from 20101 to 20200
+[LOG] 2024-11-29T20:54:38.450Z Checking for blocks from 20201 to 20300
+[LOG] 2024-11-29T20:54:38.539Z Checking for blocks from 20301 to 20400
+[LOG] 2024-11-29T20:54:38.628Z Checking for blocks from 20401 to 20500
+[LOG] 2024-11-29T20:54:38.717Z Checking for blocks from 20501 to 20600
+[LOG] 2024-11-29T20:54:38.807Z Checking for blocks from 20601 to 20700
+[LOG] 2024-11-29T20:54:38.900Z Checking for blocks from 20701 to 20800
+[LOG] 2024-11-29T20:54:39.008Z Checking for blocks from 20801 to 20900
+[LOG] 2024-11-29T20:54:39.097Z Checking for blocks from 20901 to 21000
+[LOG] 2024-11-29T20:54:39.186Z Checking for blocks from 21001 to 21100
+[LOG] 2024-11-29T20:54:39.276Z Checking for blocks from 21101 to 21200
+[LOG] 2024-11-29T20:54:39.367Z Checking for blocks from 21201 to 21300
+[LOG] 2024-11-29T20:54:39.456Z Checking for blocks from 21301 to 21400
+[LOG] 2024-11-29T20:54:39.549Z Checking for blocks from 21401 to 21500
+[LOG] 2024-11-29T20:54:39.640Z Checking for blocks from 21501 to 21600
+[LOG] 2024-11-29T20:54:39.727Z Checking for blocks from 21601 to 21700
+[LOG] 2024-11-29T20:54:39.815Z Checking for blocks from 21701 to 21800
+[LOG] 2024-11-29T20:54:39.906Z Checking for blocks from 21801 to 21900
+[LOG] 2024-11-29T20:54:39.997Z Checking for blocks from 21901 to 22000
+[LOG] 2024-11-29T20:54:40.105Z Checking for blocks from 22001 to 22100
+[LOG] 2024-11-29T20:54:40.261Z Checking for blocks from 22101 to 22200
+[LOG] 2024-11-29T20:54:40.418Z Checking for blocks from 22201 to 22300
+[LOG] 2024-11-29T20:54:40.510Z Checking for blocks from 22301 to 22400
+[LOG] 2024-11-29T20:54:40.610Z Checking for blocks from 22401 to 22500
+[LOG] 2024-11-29T20:54:40.961Z Checking for blocks from 22501 to 22600
+[LOG] 2024-11-29T20:54:41.053Z Checking for blocks from 22601 to 22700
+[LOG] 2024-11-29T20:54:41.143Z Checking for blocks from 22701 to 22800
+[LOG] 2024-11-29T20:54:41.233Z Checking for blocks from 22801 to 22900
+[LOG] 2024-11-29T20:54:41.323Z Checking for blocks from 22901 to 23000
+[LOG] 2024-11-29T20:54:41.415Z Checking for blocks from 23001 to 23100
+[LOG] 2024-11-29T20:54:41.506Z Checking for blocks from 23101 to 23200
+[LOG] 2024-11-29T20:54:41.597Z Checking for blocks from 23201 to 23300
+[LOG] 2024-11-29T20:54:41.708Z Checking for blocks from 23301 to 23400
+[LOG] 2024-11-29T20:54:41.798Z Checking for blocks from 23401 to 23500
+[LOG] 2024-11-29T20:54:41.886Z Checking for blocks from 23501 to 23600
+[LOG] 2024-11-29T20:54:41.977Z Checking for blocks from 23601 to 23700
+[LOG] 2024-11-29T20:54:42.066Z Checking for blocks from 23701 to 23800
+[LOG] 2024-11-29T20:54:42.154Z Checking for blocks from 23801 to 23900
+[LOG] 2024-11-29T20:54:42.242Z Checking for blocks from 23901 to 24000
+[LOG] 2024-11-29T20:54:42.331Z Checking for blocks from 24001 to 24100
+[LOG] 2024-11-29T20:54:42.425Z Checking for blocks from 24101 to 24200
+[LOG] 2024-11-29T20:54:42.535Z Checking for blocks from 24201 to 24300
+[LOG] 2024-11-29T20:54:42.630Z Checking for blocks from 24301 to 24400
+[LOG] 2024-11-29T20:54:42.725Z Checking for blocks from 24401 to 24500
+[LOG] 2024-11-29T20:54:42.833Z Checking for blocks from 24501 to 24600
+[LOG] 2024-11-29T20:54:42.930Z Checking for blocks from 24601 to 24700
+[LOG] 2024-11-29T20:54:43.020Z Checking for blocks from 24701 to 24800
+[LOG] 2024-11-29T20:54:43.107Z Checking for blocks from 24801 to 24900
+[LOG] 2024-11-29T20:54:43.199Z Checking for blocks from 24901 to 25000
+[LOG] 2024-11-29T20:54:43.290Z Checking for blocks from 25001 to 25100
+[LOG] 2024-11-29T20:54:43.380Z Checking for blocks from 25101 to 25200
+[LOG] 2024-11-29T20:54:43.482Z Checking for blocks from 25201 to 25300
+[LOG] 2024-11-29T20:54:43.577Z Checking for blocks from 25301 to 25400
+[LOG] 2024-11-29T20:54:43.670Z Checking for blocks from 25401 to 25500
+[LOG] 2024-11-29T20:54:43.761Z Checking for blocks from 25501 to 25600
+[LOG] 2024-11-29T20:54:43.852Z Checking for blocks from 25601 to 25700
+[LOG] 2024-11-29T20:54:43.940Z Checking for blocks from 25701 to 25800
+[LOG] 2024-11-29T20:54:44.030Z Checking for blocks from 25801 to 25900
+[LOG] 2024-11-29T20:54:44.195Z Checking for blocks from 25901 to 26000
+[LOG] 2024-11-29T20:54:44.286Z Checking for blocks from 26001 to 26100
+[LOG] 2024-11-29T20:54:44.379Z Checking for blocks from 26101 to 26200
+[LOG] 2024-11-29T20:54:44.473Z Checking for blocks from 26201 to 26300
+[LOG] 2024-11-29T20:54:44.572Z Checking for blocks from 26301 to 26400
+[LOG] 2024-11-29T20:54:44.662Z Checking for blocks from 26401 to 26500
+[LOG] 2024-11-29T20:54:44.754Z Checking for blocks from 26501 to 26600
+[LOG] 2024-11-29T20:54:44.873Z Checking for blocks from 26601 to 26700
+[LOG] 2024-11-29T20:54:44.965Z Checking for blocks from 26701 to 26800
+[LOG] 2024-11-29T20:54:45.062Z Checking for blocks from 26801 to 26900
+[LOG] 2024-11-29T20:54:45.165Z Checking for blocks from 26901 to 27000
+[LOG] 2024-11-29T20:54:45.263Z Checking for blocks from 27001 to 27100
+[LOG] 2024-11-29T20:54:45.352Z Checking for blocks from 27101 to 27200
+[LOG] 2024-11-29T20:54:45.458Z Checking for blocks from 27201 to 27300
+[LOG] 2024-11-29T20:54:45.551Z Checking for blocks from 27301 to 27400
+[LOG] 2024-11-29T20:54:45.645Z Checking for blocks from 27401 to 27500
+[LOG] 2024-11-29T20:54:45.732Z Checking for blocks from 27501 to 27600
+[LOG] 2024-11-29T20:54:45.822Z Checking for blocks from 27601 to 27700
+[LOG] 2024-11-29T20:54:45.912Z Checking for blocks from 27701 to 27800
+[LOG] 2024-11-29T20:54:46.001Z Checking for blocks from 27801 to 27900
+[LOG] 2024-11-29T20:54:46.097Z Checking for blocks from 27901 to 28000
+[LOG] 2024-11-29T20:54:46.189Z Checking for blocks from 28001 to 28100
+[LOG] 2024-11-29T20:54:46.275Z Checking for blocks from 28101 to 28200
+[LOG] 2024-11-29T20:54:46.365Z Checking for blocks from 28201 to 28300
+[LOG] 2024-11-29T20:54:46.456Z Checking for blocks from 28301 to 28400
+[LOG] 2024-11-29T20:54:46.563Z Checking for blocks from 28401 to 28500
+[LOG] 2024-11-29T20:54:46.667Z Checking for blocks from 28501 to 28600
+[LOG] 2024-11-29T20:54:46.762Z Checking for blocks from 28601 to 28700
+[LOG] 2024-11-29T20:54:46.855Z Checking for blocks from 28701 to 28800
+[LOG] 2024-11-29T20:54:46.956Z Checking for blocks from 28801 to 28900
+[LOG] 2024-11-29T20:54:47.046Z Checking for blocks from 28901 to 29000
+[LOG] 2024-11-29T20:54:47.146Z Checking for blocks from 29001 to 29100
+[LOG] 2024-11-29T20:54:47.237Z Checking for blocks from 29101 to 29200
+[LOG] 2024-11-29T20:54:47.329Z Checking for blocks from 29201 to 29300
+[LOG] 2024-11-29T20:54:47.420Z Checking for blocks from 29301 to 29400
+[LOG] 2024-11-29T20:54:47.508Z Checking for blocks from 29401 to 29500
+[LOG] 2024-11-29T20:54:47.596Z Checking for blocks from 29501 to 29600
+[LOG] 2024-11-29T20:54:47.686Z Checking for blocks from 29601 to 29700
+[LOG] 2024-11-29T20:54:47.778Z Checking for blocks from 29701 to 29800
+[LOG] 2024-11-29T20:54:47.865Z Checking for blocks from 29801 to 29900
+[LOG] 2024-11-29T20:54:47.955Z Checking for blocks from 29901 to 30000
+[LOG] 2024-11-29T20:54:48.160Z Checking for blocks from 30001 to 30100
+[LOG] 2024-11-29T20:54:48.379Z Checking for blocks from 30101 to 30200
+[LOG] 2024-11-29T20:54:48.467Z Checking for blocks from 30201 to 30300
+[LOG] 2024-11-29T20:54:48.565Z Checking for blocks from 30301 to 30400
+[LOG] 2024-11-29T20:54:48.792Z Checking for blocks from 30401 to 30500
+[LOG] 2024-11-29T20:54:48.881Z Checking for blocks from 30501 to 30600
+[LOG] 2024-11-29T20:54:48.972Z Checking for blocks from 30601 to 30700
+[LOG] 2024-11-29T20:54:49.066Z Checking for blocks from 30701 to 30800
+[LOG] 2024-11-29T20:54:49.175Z Checking for blocks from 30801 to 30900
+[LOG] 2024-11-29T20:54:49.264Z Checking for blocks from 30901 to 31000
+[LOG] 2024-11-29T20:54:49.353Z Checking for blocks from 31001 to 31100
+[LOG] 2024-11-29T20:54:49.440Z Checking for blocks from 31101 to 31200
+[LOG] 2024-11-29T20:54:49.527Z Checking for blocks from 31201 to 31300
+[LOG] 2024-11-29T20:54:49.614Z Checking for blocks from 31301 to 31400
+[LOG] 2024-11-29T20:54:49.701Z Checking for blocks from 31401 to 31500
+[LOG] 2024-11-29T20:54:49.792Z Checking for blocks from 31501 to 31600
+[LOG] 2024-11-29T20:54:49.886Z Checking for blocks from 31601 to 31700
+[LOG] 2024-11-29T20:54:49.976Z Checking for blocks from 31701 to 31800
+[LOG] 2024-11-29T20:54:50.063Z Checking for blocks from 31801 to 31900
+[LOG] 2024-11-29T20:54:50.156Z Checking for blocks from 31901 to 32000
+[LOG] 2024-11-29T20:54:50.263Z Checking for blocks from 32001 to 32100
+[LOG] 2024-11-29T20:54:50.353Z Checking for blocks from 32101 to 32200
+[LOG] 2024-11-29T20:54:50.445Z Checking for blocks from 32201 to 32300
+[LOG] 2024-11-29T20:54:50.531Z Checking for blocks from 32301 to 32400
+[LOG] 2024-11-29T20:54:50.621Z Checking for blocks from 32401 to 32500
+[LOG] 2024-11-29T20:54:50.707Z Checking for blocks from 32501 to 32600
+[LOG] 2024-11-29T20:54:50.797Z Checking for blocks from 32601 to 32700
+[LOG] 2024-11-29T20:54:50.885Z Checking for blocks from 32701 to 32800
+[LOG] 2024-11-29T20:54:50.975Z Checking for blocks from 32801 to 32900
+[LOG] 2024-11-29T20:54:51.064Z Checking for blocks from 32901 to 33000
+[LOG] 2024-11-29T20:54:51.151Z Checking for blocks from 33001 to 33100
+[LOG] 2024-11-29T20:54:51.246Z Checking for blocks from 33101 to 33200
+[LOG] 2024-11-29T20:54:51.337Z Checking for blocks from 33201 to 33300
+[LOG] 2024-11-29T20:54:51.423Z Checking for blocks from 33301 to 33400
+[LOG] 2024-11-29T20:54:51.514Z Checking for blocks from 33401 to 33500
+[LOG] 2024-11-29T20:54:51.601Z Checking for blocks from 33501 to 33600
+[LOG] 2024-11-29T20:54:51.689Z Checking for blocks from 33601 to 33700
+[LOG] 2024-11-29T20:54:51.779Z Checking for blocks from 33701 to 33800
+[LOG] 2024-11-29T20:54:51.869Z Checking for blocks from 33801 to 33900
+[LOG] 2024-11-29T20:54:51.956Z Checking for blocks from 33901 to 34000
+[LOG] 2024-11-29T20:54:52.047Z Checking for blocks from 34001 to 34100
+[LOG] 2024-11-29T20:54:52.136Z Checking for blocks from 34101 to 34200
+[LOG] 2024-11-29T20:54:52.226Z Checking for blocks from 34201 to 34300
+[LOG] 2024-11-29T20:54:52.331Z Checking for blocks from 34301 to 34400
+[LOG] 2024-11-29T20:54:52.422Z Checking for blocks from 34401 to 34500
+[LOG] 2024-11-29T20:54:52.511Z Checking for blocks from 34501 to 34600
+[LOG] 2024-11-29T20:54:52.603Z Checking for blocks from 34601 to 34700
+[LOG] 2024-11-29T20:54:52.691Z Checking for blocks from 34701 to 34800
+[LOG] 2024-11-29T20:54:52.780Z Checking for blocks from 34801 to 34900
+[LOG] 2024-11-29T20:54:52.952Z Checking for blocks from 34901 to 35000
+[LOG] 2024-11-29T20:54:53.044Z Checking for blocks from 35001 to 35100
+[LOG] 2024-11-29T20:54:53.133Z Checking for blocks from 35101 to 35200
+[LOG] 2024-11-29T20:54:53.219Z Checking for blocks from 35201 to 35300
+[LOG] 2024-11-29T20:54:53.313Z Checking for blocks from 35301 to 35400
+[LOG] 2024-11-29T20:54:53.404Z Checking for blocks from 35401 to 35500
+[LOG] 2024-11-29T20:54:53.492Z Checking for blocks from 35501 to 35600
+[LOG] 2024-11-29T20:54:53.582Z Checking for blocks from 35601 to 35700
+[LOG] 2024-11-29T20:54:53.669Z Checking for blocks from 35701 to 35800
+[LOG] 2024-11-29T20:54:53.775Z Checking for blocks from 35801 to 35900
+[LOG] 2024-11-29T20:54:53.861Z Checking for blocks from 35901 to 36000
+[LOG] 2024-11-29T20:54:53.951Z Checking for blocks from 36001 to 36100
+[LOG] 2024-11-29T20:54:54.047Z Checking for blocks from 36101 to 36200
+[LOG] 2024-11-29T20:54:54.136Z Checking for blocks from 36201 to 36300
+[LOG] 2024-11-29T20:54:54.225Z Checking for blocks from 36301 to 36400
+[LOG] 2024-11-29T20:54:54.311Z Checking for blocks from 36401 to 36500
+[LOG] 2024-11-29T20:54:54.401Z Checking for blocks from 36501 to 36600
+[LOG] 2024-11-29T20:54:54.490Z Checking for blocks from 36601 to 36700
+[LOG] 2024-11-29T20:54:54.578Z Checking for blocks from 36701 to 36800
+[LOG] 2024-11-29T20:54:54.667Z Checking for blocks from 36801 to 36900
+[LOG] 2024-11-29T20:54:54.756Z Checking for blocks from 36901 to 37000
+[LOG] 2024-11-29T20:54:54.847Z Checking for blocks from 37001 to 37100
+[LOG] 2024-11-29T20:54:54.933Z Checking for blocks from 37101 to 37200
+[LOG] 2024-11-29T20:54:55.025Z Checking for blocks from 37201 to 37300
+[LOG] 2024-11-29T20:54:55.117Z Checking for blocks from 37301 to 37400
+[LOG] 2024-11-29T20:54:55.203Z Checking for blocks from 37401 to 37500
+[LOG] 2024-11-29T20:54:55.305Z Checking for blocks from 37501 to 37600
+[LOG] 2024-11-29T20:54:55.396Z Checking for blocks from 37601 to 37700
+[LOG] 2024-11-29T20:54:55.491Z Checking for blocks from 37701 to 37800
+[LOG] 2024-11-29T20:54:55.583Z Checking for blocks from 37801 to 37900
+[LOG] 2024-11-29T20:54:55.674Z Checking for blocks from 37901 to 38000
+[LOG] 2024-11-29T20:54:55.761Z Checking for blocks from 38001 to 38100
+[LOG] 2024-11-29T20:54:55.851Z Checking for blocks from 38101 to 38200
+[LOG] 2024-11-29T20:54:55.946Z Checking for blocks from 38201 to 38300
+[LOG] 2024-11-29T20:54:56.035Z Checking for blocks from 38301 to 38400
+[LOG] 2024-11-29T20:54:56.125Z Checking for blocks from 38401 to 38500
+[LOG] 2024-11-29T20:54:56.213Z Checking for blocks from 38501 to 38600
+[LOG] 2024-11-29T20:54:56.304Z Checking for blocks from 38601 to 38700
+[LOG] 2024-11-29T20:54:56.391Z Checking for blocks from 38701 to 38800
+[LOG] 2024-11-29T20:54:56.479Z Checking for blocks from 38801 to 38900
+[LOG] 2024-11-29T20:54:56.566Z Checking for blocks from 38901 to 39000
+[LOG] 2024-11-29T20:54:56.658Z Checking for blocks from 39001 to 39100
+[LOG] 2024-11-29T20:54:56.753Z Checking for blocks from 39101 to 39200
+[LOG] 2024-11-29T20:54:56.842Z Checking for blocks from 39201 to 39300
+[LOG] 2024-11-29T20:54:56.939Z Checking for blocks from 39301 to 39400
+[LOG] 2024-11-29T20:54:57.029Z Checking for blocks from 39401 to 39500
+[LOG] 2024-11-29T20:54:57.120Z Checking for blocks from 39501 to 39600
+[LOG] 2024-11-29T20:54:57.212Z Checking for blocks from 39601 to 39700
+[LOG] 2024-11-29T20:54:57.299Z Checking for blocks from 39701 to 39800
+[LOG] 2024-11-29T20:54:57.387Z Checking for blocks from 39801 to 39900
+[LOG] 2024-11-29T20:54:57.475Z Checking for blocks from 39901 to 40000
+[LOG] 2024-11-29T20:54:57.566Z Checking for blocks from 40001 to 40100
+[LOG] 2024-11-29T20:54:57.937Z Checking for blocks from 40101 to 40200
+[LOG] 2024-11-29T20:54:58.032Z Checking for blocks from 40201 to 40300
+[LOG] 2024-11-29T20:54:58.127Z Checking for blocks from 40301 to 40400
+[LOG] 2024-11-29T20:54:58.218Z Checking for blocks from 40401 to 40500
+[LOG] 2024-11-29T20:54:58.307Z Checking for blocks from 40501 to 40600
+[LOG] 2024-11-29T20:54:58.399Z Checking for blocks from 40601 to 40700
+[LOG] 2024-11-29T20:54:58.494Z Checking for blocks from 40701 to 40800
+[LOG] 2024-11-29T20:54:58.582Z Checking for blocks from 40801 to 40900
+[LOG] 2024-11-29T20:54:58.677Z Checking for blocks from 40901 to 41000
+[LOG] 2024-11-29T20:54:58.765Z Checking for blocks from 41001 to 41100
+[LOG] 2024-11-29T20:54:58.855Z Checking for blocks from 41101 to 41200
+[LOG] 2024-11-29T20:54:58.944Z Checking for blocks from 41201 to 41300
+[LOG] 2024-11-29T20:54:59.032Z Checking for blocks from 41301 to 41400
+[LOG] 2024-11-29T20:54:59.122Z Checking for blocks from 41401 to 41500
+[LOG] 2024-11-29T20:54:59.212Z Checking for blocks from 41501 to 41600
+[LOG] 2024-11-29T20:54:59.305Z Checking for blocks from 41601 to 41700
+[LOG] 2024-11-29T20:54:59.393Z Checking for blocks from 41701 to 41800
+[LOG] 2024-11-29T20:54:59.487Z Checking for blocks from 41801 to 41900
+[LOG] 2024-11-29T20:54:59.575Z Checking for blocks from 41901 to 42000
+[LOG] 2024-11-29T20:54:59.667Z Checking for blocks from 42001 to 42100
+[LOG] 2024-11-29T20:54:59.755Z Checking for blocks from 42101 to 42200
+[LOG] 2024-11-29T20:54:59.849Z Checking for blocks from 42201 to 42300
+[LOG] 2024-11-29T20:54:59.938Z Checking for blocks from 42301 to 42400
+[LOG] 2024-11-29T20:55:00.027Z Checking for blocks from 42401 to 42500
+[LOG] 2024-11-29T20:55:00.124Z Checking for blocks from 42501 to 42600
+[LOG] 2024-11-29T20:55:00.219Z Checking for blocks from 42601 to 42700
+[LOG] 2024-11-29T20:55:00.306Z Checking for blocks from 42701 to 42800
+[LOG] 2024-11-29T20:55:00.394Z Checking for blocks from 42801 to 42900
+[LOG] 2024-11-29T20:55:00.496Z Checking for blocks from 42901 to 43000
+[LOG] 2024-11-29T20:55:00.584Z Checking for blocks from 43001 to 43100
+[LOG] 2024-11-29T20:55:00.675Z Checking for blocks from 43101 to 43200
+[LOG] 2024-11-29T20:55:00.768Z Checking for blocks from 43201 to 43300
+[LOG] 2024-11-29T20:55:00.857Z Checking for blocks from 43301 to 43400
+[LOG] 2024-11-29T20:55:00.954Z Checking for blocks from 43401 to 43500
+[LOG] 2024-11-29T20:55:01.041Z Checking for blocks from 43501 to 43600
+[LOG] 2024-11-29T20:55:01.129Z Checking for blocks from 43601 to 43700
+[LOG] 2024-11-29T20:55:01.219Z Checking for blocks from 43701 to 43800
+[LOG] 2024-11-29T20:55:01.309Z Checking for blocks from 43801 to 43900
+[LOG] 2024-11-29T20:55:01.409Z Checking for blocks from 43901 to 44000
+[LOG] 2024-11-29T20:55:01.501Z Checking for blocks from 44001 to 44100
+[LOG] 2024-11-29T20:55:01.610Z Checking for blocks from 44101 to 44200
+[LOG] 2024-11-29T20:55:01.708Z Checking for blocks from 44201 to 44300
+[LOG] 2024-11-29T20:55:01.801Z Checking for blocks from 44301 to 44400
+[LOG] 2024-11-29T20:55:01.892Z Checking for blocks from 44401 to 44500
+[LOG] 2024-11-29T20:55:01.983Z Checking for blocks from 44501 to 44600
+[LOG] 2024-11-29T20:55:02.074Z Checking for blocks from 44601 to 44700
+[LOG] 2024-11-29T20:55:02.176Z Checking for blocks from 44701 to 44800
+[LOG] 2024-11-29T20:55:02.304Z Checking for blocks from 44801 to 44900
+[LOG] 2024-11-29T20:55:02.396Z Checking for blocks from 44901 to 45000
+[LOG] 2024-11-29T20:55:02.485Z Checking for blocks from 44947 to 45046
+[LOG] 2024-11-29T20:55:02.576Z Total batches to fetch: 450
+[LOG] 2024-11-29T20:55:02.576Z Fetching blocks from 1 to 100
+[LOG] 2024-11-29T20:55:02.577Z Fetching blocks from 101 to 200
+[LOG] 2024-11-29T20:55:02.579Z Fetching blocks from 201 to 300
+[LOG] 2024-11-29T20:55:02.580Z Fetching blocks from 301 to 400
+[LOG] 2024-11-29T20:55:02.581Z Fetching blocks from 401 to 500
+[LOG] 2024-11-29T20:55:02.912Z Blocks 1 to 100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:02.912Z Fetching blocks from 501 to 600
+[LOG] 2024-11-29T20:55:03.045Z Blocks 201 to 300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.045Z Fetching blocks from 601 to 700
+[LOG] 2024-11-29T20:55:03.175Z Blocks 101 to 200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.175Z Fetching blocks from 701 to 800
+[LOG] 2024-11-29T20:55:03.307Z Blocks 501 to 600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.308Z Fetching blocks from 801 to 900
+[LOG] 2024-11-29T20:55:03.443Z Blocks 701 to 800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.443Z Fetching blocks from 901 to 1000
+[LOG] 2024-11-29T20:55:03.517Z Blocks 401 to 500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.517Z Fetching blocks from 1001 to 1100
+[LOG] 2024-11-29T20:55:03.534Z Blocks 301 to 400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.534Z Fetching blocks from 1101 to 1200
+[LOG] 2024-11-29T20:55:03.698Z Blocks 901 to 1000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.698Z Fetching blocks from 1201 to 1300
+[LOG] 2024-11-29T20:55:03.786Z Blocks 1001 to 1100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.787Z Fetching blocks from 1301 to 1400
+[LOG] 2024-11-29T20:55:03.801Z Blocks 1101 to 1200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.802Z Fetching blocks from 1401 to 1500
+[LOG] 2024-11-29T20:55:03.971Z Blocks 1201 to 1300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:03.971Z Fetching blocks from 1501 to 1600
+[LOG] 2024-11-29T20:55:04.007Z Blocks 601 to 700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.007Z Fetching blocks from 1601 to 1700
+[LOG] 2024-11-29T20:55:04.089Z Blocks 1301 to 1400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.090Z Fetching blocks from 1701 to 1800
+[LOG] 2024-11-29T20:55:04.096Z Blocks 1401 to 1500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.096Z Fetching blocks from 1801 to 1900
+[LOG] 2024-11-29T20:55:04.110Z Blocks 801 to 900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.110Z Fetching blocks from 1901 to 2000
+[LOG] 2024-11-29T20:55:04.287Z Blocks 1501 to 1600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.287Z Fetching blocks from 2001 to 2100
+[LOG] 2024-11-29T20:55:04.332Z Blocks 1601 to 1700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.332Z Fetching blocks from 2101 to 2200
+[LOG] 2024-11-29T20:55:04.421Z Blocks 1701 to 1800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.421Z Fetching blocks from 2201 to 2300
+[LOG] 2024-11-29T20:55:04.440Z Blocks 1801 to 1900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.441Z Fetching blocks from 2301 to 2400
+[LOG] 2024-11-29T20:55:04.446Z Blocks 1901 to 2000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.446Z Fetching blocks from 2401 to 2500
+[LOG] 2024-11-29T20:55:04.632Z Blocks 2001 to 2100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.633Z Fetching blocks from 2501 to 2600
+[LOG] 2024-11-29T20:55:04.689Z Blocks 2101 to 2200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.690Z Fetching blocks from 2601 to 2700
+[LOG] 2024-11-29T20:55:04.796Z Blocks 2201 to 2300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.796Z Fetching blocks from 2701 to 2800
+[LOG] 2024-11-29T20:55:04.820Z Blocks 2301 to 2400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.820Z Fetching blocks from 2801 to 2900
+[LOG] 2024-11-29T20:55:04.821Z Blocks 2401 to 2500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:04.821Z Fetching blocks from 2901 to 3000
+[LOG] 2024-11-29T20:55:05.030Z Blocks 2501 to 2600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.031Z Fetching blocks from 3001 to 3100
+[LOG] 2024-11-29T20:55:05.107Z Blocks 2601 to 2700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.107Z Fetching blocks from 3101 to 3200
+[LOG] 2024-11-29T20:55:05.267Z Blocks 2701 to 2800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.267Z Fetching blocks from 3201 to 3300
+[LOG] 2024-11-29T20:55:05.280Z Blocks 2901 to 3000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.280Z Fetching blocks from 3301 to 3400
+[LOG] 2024-11-29T20:55:05.291Z Blocks 2801 to 2900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.292Z Fetching blocks from 3401 to 3500
+[LOG] 2024-11-29T20:55:05.488Z Blocks 3001 to 3100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.488Z Fetching blocks from 3501 to 3600
+[LOG] 2024-11-29T20:55:05.560Z Blocks 3101 to 3200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.560Z Fetching blocks from 3601 to 3700
+[LOG] 2024-11-29T20:55:05.728Z Blocks 3201 to 3300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.728Z Fetching blocks from 3701 to 3800
+[LOG] 2024-11-29T20:55:05.748Z Blocks 3301 to 3400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.748Z Fetching blocks from 3801 to 3900
+[LOG] 2024-11-29T20:55:05.752Z Blocks 3401 to 3500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.752Z Fetching blocks from 3901 to 4000
+[LOG] 2024-11-29T20:55:05.945Z Blocks 3501 to 3600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:05.945Z Fetching blocks from 4001 to 4100
+[LOG] 2024-11-29T20:55:06.096Z Blocks 3601 to 3700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.096Z Fetching blocks from 4101 to 4200
+[LOG] 2024-11-29T20:55:06.211Z Blocks 3701 to 3800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.212Z Fetching blocks from 4201 to 4300
+[LOG] 2024-11-29T20:55:06.255Z Blocks 3801 to 3900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.255Z Fetching blocks from 4301 to 4400
+[LOG] 2024-11-29T20:55:06.327Z Blocks 3901 to 4000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.327Z Fetching blocks from 4401 to 4500
+[LOG] 2024-11-29T20:55:06.564Z Blocks 4001 to 4100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.564Z Fetching blocks from 4501 to 4600
+[LOG] 2024-11-29T20:55:06.692Z Blocks 4101 to 4200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.692Z Fetching blocks from 4601 to 4700
+[LOG] 2024-11-29T20:55:06.745Z Blocks 4201 to 4300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.745Z Fetching blocks from 4701 to 4800
+[LOG] 2024-11-29T20:55:06.797Z Blocks 4301 to 4400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.797Z Fetching blocks from 4801 to 4900
+[LOG] 2024-11-29T20:55:06.876Z Blocks 4401 to 4500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:06.876Z Fetching blocks from 4901 to 5000
+[LOG] 2024-11-29T20:55:07.135Z Blocks 4501 to 4600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.135Z Fetching blocks from 5001 to 5100
+[LOG] 2024-11-29T20:55:07.268Z Blocks 4601 to 4700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.268Z Fetching blocks from 5101 to 5200
+[LOG] 2024-11-29T20:55:07.366Z Blocks 4801 to 4900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.366Z Fetching blocks from 5201 to 5300
+[LOG] 2024-11-29T20:55:07.417Z Blocks 4701 to 4800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.417Z Fetching blocks from 5301 to 5400
+[LOG] 2024-11-29T20:55:07.457Z Blocks 4901 to 5000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.458Z Fetching blocks from 5401 to 5500
+[LOG] 2024-11-29T20:55:07.743Z Blocks 5001 to 5100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.743Z Fetching blocks from 5501 to 5600
+[LOG] 2024-11-29T20:55:07.878Z Blocks 5101 to 5200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.878Z Fetching blocks from 5601 to 5700
+[LOG] 2024-11-29T20:55:07.982Z Blocks 5201 to 5300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:07.982Z Fetching blocks from 5701 to 5800
+[LOG] 2024-11-29T20:55:08.055Z Blocks 5301 to 5400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.055Z Fetching blocks from 5801 to 5900
+[LOG] 2024-11-29T20:55:08.079Z Blocks 5401 to 5500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.079Z Fetching blocks from 5901 to 6000
+[LOG] 2024-11-29T20:55:08.454Z Blocks 5501 to 5600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.454Z Fetching blocks from 6001 to 6100
+[LOG] 2024-11-29T20:55:08.573Z Blocks 5601 to 5700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.573Z Fetching blocks from 6101 to 6200
+[LOG] 2024-11-29T20:55:08.649Z Blocks 5701 to 5800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.649Z Fetching blocks from 6201 to 6300
+[LOG] 2024-11-29T20:55:08.718Z Blocks 5801 to 5900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.718Z Fetching blocks from 6301 to 6400
+[LOG] 2024-11-29T20:55:08.813Z Blocks 5901 to 6000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:08.813Z Fetching blocks from 6401 to 6500
+[LOG] 2024-11-29T20:55:09.134Z Blocks 6001 to 6100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.135Z Fetching blocks from 6501 to 6600
+[LOG] 2024-11-29T20:55:09.252Z Blocks 6101 to 6200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.253Z Fetching blocks from 6601 to 6700
+[LOG] 2024-11-29T20:55:09.406Z Blocks 6301 to 6400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.406Z Fetching blocks from 6701 to 6800
+[LOG] 2024-11-29T20:55:09.407Z Blocks 6201 to 6300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.407Z Fetching blocks from 6801 to 6900
+[LOG] 2024-11-29T20:55:09.508Z Blocks 6401 to 6500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.508Z Fetching blocks from 6901 to 7000
+[LOG] 2024-11-29T20:55:09.858Z Blocks 6501 to 6600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.859Z Fetching blocks from 7001 to 7100
+[LOG] 2024-11-29T20:55:09.961Z Blocks 6601 to 6700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:09.961Z Fetching blocks from 7101 to 7200
+[LOG] 2024-11-29T20:55:10.115Z Blocks 6701 to 6800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.115Z Fetching blocks from 7201 to 7300
+[LOG] 2024-11-29T20:55:10.178Z Blocks 6801 to 6900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.178Z Fetching blocks from 7301 to 7400
+[LOG] 2024-11-29T20:55:10.210Z Blocks 6901 to 7000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.211Z Fetching blocks from 7401 to 7500
+[LOG] 2024-11-29T20:55:10.583Z Blocks 7001 to 7100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.583Z Fetching blocks from 7501 to 7600
+[LOG] 2024-11-29T20:55:10.710Z Blocks 7101 to 7200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.711Z Fetching blocks from 7601 to 7700
+[LOG] 2024-11-29T20:55:10.853Z Blocks 7201 to 7300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.854Z Fetching blocks from 7701 to 7800
+[LOG] 2024-11-29T20:55:10.991Z Blocks 7301 to 7400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:10.991Z Fetching blocks from 7801 to 7900
+[LOG] 2024-11-29T20:55:11.047Z Blocks 7401 to 7500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:11.047Z Fetching blocks from 7901 to 8000
+[LOG] 2024-11-29T20:55:11.360Z Blocks 7501 to 7600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:11.360Z Fetching blocks from 8001 to 8100
+[LOG] 2024-11-29T20:55:11.503Z Blocks 7601 to 7700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:11.503Z Fetching blocks from 8101 to 8200
+[LOG] 2024-11-29T20:55:11.654Z Blocks 7701 to 7800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:11.655Z Fetching blocks from 8201 to 8300
+[LOG] 2024-11-29T20:55:11.794Z Blocks 7801 to 7900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:11.794Z Fetching blocks from 8301 to 8400
+[LOG] 2024-11-29T20:55:11.915Z Blocks 7901 to 8000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:11.915Z Fetching blocks from 8401 to 8500
+[LOG] 2024-11-29T20:55:12.177Z Blocks 8001 to 8100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:12.177Z Fetching blocks from 8501 to 8600
+[LOG] 2024-11-29T20:55:12.313Z Blocks 8101 to 8200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:12.313Z Fetching blocks from 8601 to 8700
+[LOG] 2024-11-29T20:55:12.479Z Blocks 8201 to 8300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:12.479Z Fetching blocks from 8701 to 8800
+[LOG] 2024-11-29T20:55:12.608Z Blocks 8301 to 8400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:12.609Z Fetching blocks from 8801 to 8900
+[LOG] 2024-11-29T20:55:12.745Z Blocks 8401 to 8500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:12.745Z Fetching blocks from 8901 to 9000
+[LOG] 2024-11-29T20:55:13.020Z Blocks 8501 to 8600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:13.020Z Fetching blocks from 9001 to 9100
+[LOG] 2024-11-29T20:55:13.155Z Blocks 8601 to 8700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:13.155Z Fetching blocks from 9101 to 9200
+[LOG] 2024-11-29T20:55:13.324Z Blocks 8701 to 8800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:13.324Z Fetching blocks from 9201 to 9300
+[LOG] 2024-11-29T20:55:13.473Z Blocks 8801 to 8900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:13.473Z Fetching blocks from 9301 to 9400
+[LOG] 2024-11-29T20:55:13.631Z Blocks 8901 to 9000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:13.631Z Fetching blocks from 9401 to 9500
+[LOG] 2024-11-29T20:55:13.909Z Blocks 9001 to 9100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:13.909Z Fetching blocks from 9501 to 9600
+[LOG] 2024-11-29T20:55:14.049Z Blocks 9101 to 9200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:14.050Z Fetching blocks from 9601 to 9700
+[LOG] 2024-11-29T20:55:14.205Z Blocks 9201 to 9300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:14.205Z Fetching blocks from 9701 to 9800
+[LOG] 2024-11-29T20:55:14.370Z Blocks 9301 to 9400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:14.370Z Fetching blocks from 9801 to 9900
+[LOG] 2024-11-29T20:55:14.530Z Blocks 9401 to 9500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:14.530Z Fetching blocks from 9901 to 10000
+[LOG] 2024-11-29T20:55:14.822Z Blocks 9501 to 9600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:14.822Z Fetching blocks from 10001 to 10100
+[LOG] 2024-11-29T20:55:14.976Z Blocks 9601 to 9700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:14.976Z Fetching blocks from 10101 to 10200
+[LOG] 2024-11-29T20:55:15.130Z Blocks 9701 to 9800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:15.131Z Fetching blocks from 10201 to 10300
+[LOG] 2024-11-29T20:55:15.305Z Blocks 9801 to 9900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:15.305Z Fetching blocks from 10301 to 10400
+[LOG] 2024-11-29T20:55:15.535Z Blocks 9901 to 10000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:15.535Z Fetching blocks from 10401 to 10500
+[LOG] 2024-11-29T20:55:15.783Z Blocks 10001 to 10100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:15.783Z Fetching blocks from 10501 to 10600
+[LOG] 2024-11-29T20:55:15.944Z Blocks 10101 to 10200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:15.944Z Fetching blocks from 10601 to 10700
+[LOG] 2024-11-29T20:55:16.099Z Blocks 10201 to 10300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:16.100Z Fetching blocks from 10701 to 10800
+[LOG] 2024-11-29T20:55:16.313Z Blocks 10301 to 10400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:16.313Z Fetching blocks from 10801 to 10900
+[LOG] 2024-11-29T20:55:16.509Z Blocks 10401 to 10500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:16.509Z Fetching blocks from 10901 to 11000
+[LOG] 2024-11-29T20:55:16.763Z Blocks 10501 to 10600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:16.763Z Fetching blocks from 11001 to 11100
+[LOG] 2024-11-29T20:55:16.938Z Blocks 10601 to 10700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:16.939Z Fetching blocks from 11101 to 11200
+[LOG] 2024-11-29T20:55:17.092Z Blocks 10701 to 10800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:17.092Z Fetching blocks from 11201 to 11300
+[LOG] 2024-11-29T20:55:17.311Z Blocks 10801 to 10900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:17.311Z Fetching blocks from 11301 to 11400
+[LOG] 2024-11-29T20:55:17.508Z Blocks 10901 to 11000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:17.508Z Fetching blocks from 11401 to 11500
+[LOG] 2024-11-29T20:55:17.775Z Blocks 11001 to 11100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:17.775Z Fetching blocks from 11501 to 11600
+[LOG] 2024-11-29T20:55:17.968Z Blocks 11101 to 11200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:17.968Z Fetching blocks from 11601 to 11700
+[LOG] 2024-11-29T20:55:18.141Z Blocks 11201 to 11300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:18.141Z Fetching blocks from 11701 to 11800
+[LOG] 2024-11-29T20:55:18.356Z Blocks 11301 to 11400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:18.356Z Fetching blocks from 11801 to 11900
+[LOG] 2024-11-29T20:55:18.549Z Blocks 11401 to 11500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:18.549Z Fetching blocks from 11901 to 12000
+[LOG] 2024-11-29T20:55:18.828Z Blocks 11501 to 11600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:18.829Z Fetching blocks from 12001 to 12100
+[LOG] 2024-11-29T20:55:19.045Z Blocks 11601 to 11700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:19.045Z Fetching blocks from 12101 to 12200
+[LOG] 2024-11-29T20:55:19.216Z Blocks 11701 to 11800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:19.216Z Fetching blocks from 12201 to 12300
+[LOG] 2024-11-29T20:55:19.451Z Blocks 11801 to 11900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:19.451Z Fetching blocks from 12301 to 12400
+[LOG] 2024-11-29T20:55:19.636Z Blocks 11901 to 12000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:19.636Z Fetching blocks from 12401 to 12500
+[LOG] 2024-11-29T20:55:19.928Z Blocks 12001 to 12100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:19.928Z Fetching blocks from 12501 to 12600
+[LOG] 2024-11-29T20:55:20.146Z Blocks 12101 to 12200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:20.146Z Fetching blocks from 12601 to 12700
+[LOG] 2024-11-29T20:55:20.336Z Blocks 12201 to 12300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:20.337Z Fetching blocks from 12701 to 12800
+[LOG] 2024-11-29T20:55:20.574Z Blocks 12301 to 12400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:20.574Z Fetching blocks from 12801 to 12900
+[LOG] 2024-11-29T20:55:20.765Z Blocks 12401 to 12500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:20.765Z Fetching blocks from 12901 to 13000
+[LOG] 2024-11-29T20:55:21.129Z Blocks 12501 to 12600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:21.129Z Fetching blocks from 13001 to 13100
+[LOG] 2024-11-29T20:55:21.286Z Blocks 12601 to 12700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:21.286Z Fetching blocks from 13101 to 13200
+[LOG] 2024-11-29T20:55:21.491Z Blocks 12701 to 12800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:21.492Z Fetching blocks from 13201 to 13300
+[LOG] 2024-11-29T20:55:21.728Z Blocks 12801 to 12900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:21.728Z Fetching blocks from 13301 to 13400
+[LOG] 2024-11-29T20:55:21.939Z Blocks 12901 to 13000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:21.939Z Fetching blocks from 13401 to 13500
+[LOG] 2024-11-29T20:55:22.300Z Blocks 13001 to 13100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:22.300Z Fetching blocks from 13501 to 13600
+[LOG] 2024-11-29T20:55:22.474Z Blocks 13101 to 13200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:22.474Z Fetching blocks from 13601 to 13700
+[LOG] 2024-11-29T20:55:22.673Z Blocks 13201 to 13300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:22.673Z Fetching blocks from 13701 to 13800
+[LOG] 2024-11-29T20:55:22.942Z Blocks 13301 to 13400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:22.942Z Fetching blocks from 13801 to 13900
+[LOG] 2024-11-29T20:55:23.158Z Blocks 13401 to 13500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:23.158Z Fetching blocks from 13901 to 14000
+[LOG] 2024-11-29T20:55:23.577Z Blocks 13501 to 13600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:23.577Z Fetching blocks from 14001 to 14100
+[LOG] 2024-11-29T20:55:23.698Z Blocks 13601 to 13700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:23.698Z Fetching blocks from 14101 to 14200
+[LOG] 2024-11-29T20:55:23.913Z Blocks 13701 to 13800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:23.913Z Fetching blocks from 14201 to 14300
+[LOG] 2024-11-29T20:55:24.197Z Blocks 13801 to 13900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:24.197Z Fetching blocks from 14301 to 14400
+[LOG] 2024-11-29T20:55:24.409Z Blocks 13901 to 14000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:24.409Z Fetching blocks from 14401 to 14500
+[LOG] 2024-11-29T20:55:24.915Z Blocks 14001 to 14100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:24.915Z Fetching blocks from 14501 to 14600
+[LOG] 2024-11-29T20:55:25.356Z Blocks 14201 to 14300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:25.357Z Fetching blocks from 14601 to 14700
+[LOG] 2024-11-29T20:55:25.424Z Blocks 14101 to 14200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:25.425Z Fetching blocks from 14701 to 14800
+[LOG] 2024-11-29T20:55:25.477Z Blocks 14301 to 14400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:25.478Z Fetching blocks from 14801 to 14900
+[LOG] 2024-11-29T20:55:25.699Z Blocks 14401 to 14500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:25.699Z Fetching blocks from 14901 to 15000
+[LOG] 2024-11-29T20:55:26.258Z Blocks 14501 to 14600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:26.258Z Fetching blocks from 15001 to 15100
+[LOG] 2024-11-29T20:55:26.683Z Blocks 14601 to 14700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:26.683Z Fetching blocks from 15101 to 15200
+[LOG] 2024-11-29T20:55:26.797Z Blocks 14801 to 14900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:26.798Z Fetching blocks from 15201 to 15300
+[LOG] 2024-11-29T20:55:26.887Z Blocks 14701 to 14800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:26.887Z Fetching blocks from 15301 to 15400
+[LOG] 2024-11-29T20:55:27.024Z Blocks 14901 to 15000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:27.024Z Fetching blocks from 15401 to 15500
+[LOG] 2024-11-29T20:55:27.600Z Blocks 15001 to 15100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:27.600Z Fetching blocks from 15501 to 15600
+[LOG] 2024-11-29T20:55:28.067Z Blocks 15101 to 15200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:28.068Z Fetching blocks from 15601 to 15700
+[LOG] 2024-11-29T20:55:28.155Z Blocks 15201 to 15300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:28.155Z Fetching blocks from 15701 to 15800
+[LOG] 2024-11-29T20:55:28.323Z Blocks 15301 to 15400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:28.323Z Fetching blocks from 15801 to 15900
+[LOG] 2024-11-29T20:55:28.393Z Blocks 15401 to 15500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:28.393Z Fetching blocks from 15901 to 16000
+[LOG] 2024-11-29T20:55:29.057Z Blocks 15501 to 15600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:29.057Z Fetching blocks from 16001 to 16100
+[LOG] 2024-11-29T20:55:29.606Z Blocks 15701 to 15800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:29.606Z Fetching blocks from 16101 to 16200
+[LOG] 2024-11-29T20:55:29.775Z Blocks 15801 to 15900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:29.776Z Fetching blocks from 16201 to 16300
+[LOG] 2024-11-29T20:55:29.814Z Blocks 15601 to 15700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:29.814Z Fetching blocks from 16301 to 16400
+[LOG] 2024-11-29T20:55:29.998Z Blocks 15901 to 16000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:29.999Z Fetching blocks from 16401 to 16500
+[LOG] 2024-11-29T20:55:30.559Z Blocks 16001 to 16100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:30.559Z Fetching blocks from 16501 to 16600
+[LOG] 2024-11-29T20:55:31.101Z Blocks 16101 to 16200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:31.101Z Fetching blocks from 16601 to 16700
+[LOG] 2024-11-29T20:55:31.241Z Blocks 16301 to 16400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:31.241Z Fetching blocks from 16701 to 16800
+[LOG] 2024-11-29T20:55:31.276Z Blocks 16201 to 16300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:31.276Z Fetching blocks from 16801 to 16900
+[LOG] 2024-11-29T20:55:31.430Z Blocks 16401 to 16500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:31.430Z Fetching blocks from 16901 to 17000
+[LOG] 2024-11-29T20:55:32.071Z Blocks 16501 to 16600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:32.071Z Fetching blocks from 17001 to 17100
+[LOG] 2024-11-29T20:55:32.628Z Blocks 16601 to 16700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:32.628Z Fetching blocks from 17101 to 17200
+[LOG] 2024-11-29T20:55:32.744Z Blocks 16801 to 16900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:32.744Z Fetching blocks from 17201 to 17300
+[LOG] 2024-11-29T20:55:32.785Z Blocks 16701 to 16800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:32.785Z Fetching blocks from 17301 to 17400
+[LOG] 2024-11-29T20:55:32.901Z Blocks 16901 to 17000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:32.902Z Fetching blocks from 17401 to 17500
+[LOG] 2024-11-29T20:55:33.643Z Blocks 17001 to 17100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:33.643Z Fetching blocks from 17501 to 17600
+[LOG] 2024-11-29T20:55:34.206Z Blocks 17101 to 17200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:34.206Z Fetching blocks from 17601 to 17700
+[LOG] 2024-11-29T20:55:34.318Z Blocks 17201 to 17300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:34.318Z Fetching blocks from 17701 to 17800
+[LOG] 2024-11-29T20:55:34.362Z Blocks 17301 to 17400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:34.362Z Fetching blocks from 17801 to 17900
+[LOG] 2024-11-29T20:55:34.393Z Blocks 17401 to 17500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:34.393Z Fetching blocks from 17901 to 18000
+[LOG] 2024-11-29T20:55:35.287Z Blocks 17501 to 17600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:35.288Z Fetching blocks from 18001 to 18100
+[LOG] 2024-11-29T20:55:35.744Z Blocks 17601 to 17700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:35.745Z Fetching blocks from 18101 to 18200
+[LOG] 2024-11-29T20:55:35.875Z Blocks 17701 to 17800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:35.875Z Fetching blocks from 18201 to 18300
+[LOG] 2024-11-29T20:55:35.965Z Blocks 17801 to 17900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:35.965Z Fetching blocks from 18301 to 18400
+[LOG] 2024-11-29T20:55:36.265Z Blocks 17901 to 18000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:36.266Z Fetching blocks from 18401 to 18500
+[LOG] 2024-11-29T20:55:36.849Z Blocks 18001 to 18100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:36.849Z Fetching blocks from 18501 to 18600
+[LOG] 2024-11-29T20:55:37.409Z Blocks 18101 to 18200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:37.409Z Fetching blocks from 18601 to 18700
+[LOG] 2024-11-29T20:55:37.548Z Blocks 18301 to 18400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:37.548Z Fetching blocks from 18701 to 18800
+[LOG] 2024-11-29T20:55:37.549Z Blocks 18201 to 18300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:37.549Z Fetching blocks from 18801 to 18900
+[LOG] 2024-11-29T20:55:37.852Z Blocks 18401 to 18500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:37.853Z Fetching blocks from 18901 to 19000
+[LOG] 2024-11-29T20:55:38.519Z Blocks 18501 to 18600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:38.519Z Fetching blocks from 19001 to 19100
+[LOG] 2024-11-29T20:55:39.123Z Blocks 18601 to 18700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:39.123Z Fetching blocks from 19101 to 19200
+[LOG] 2024-11-29T20:55:39.226Z Blocks 18701 to 18800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:39.226Z Fetching blocks from 19201 to 19300
+[LOG] 2024-11-29T20:55:39.241Z Blocks 18801 to 18900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:39.242Z Fetching blocks from 19301 to 19400
+[LOG] 2024-11-29T20:55:39.513Z Blocks 18901 to 19000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:39.513Z Fetching blocks from 19401 to 19500
+[LOG] 2024-11-29T20:55:40.281Z Blocks 19001 to 19100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:40.281Z Fetching blocks from 19501 to 19600
+[LOG] 2024-11-29T20:55:40.862Z Blocks 19101 to 19200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:40.862Z Fetching blocks from 19601 to 19700
+[LOG] 2024-11-29T20:55:40.933Z Blocks 19201 to 19300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:40.933Z Fetching blocks from 19701 to 19800
+[LOG] 2024-11-29T20:55:40.964Z Blocks 19301 to 19400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:40.964Z Fetching blocks from 19801 to 19900
+[LOG] 2024-11-29T20:55:41.196Z Blocks 19401 to 19500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:41.196Z Fetching blocks from 19901 to 20000
+[LOG] 2024-11-29T20:55:42.036Z Blocks 19501 to 19600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:42.037Z Fetching blocks from 20001 to 20100
+[LOG] 2024-11-29T20:55:42.628Z Blocks 19601 to 19700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:42.628Z Fetching blocks from 20101 to 20200
+[LOG] 2024-11-29T20:55:42.673Z Blocks 19701 to 19800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:42.673Z Fetching blocks from 20201 to 20300
+[LOG] 2024-11-29T20:55:42.735Z Blocks 19801 to 19900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:42.735Z Fetching blocks from 20301 to 20400
+[LOG] 2024-11-29T20:55:42.907Z Blocks 19901 to 20000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:42.907Z Fetching blocks from 20401 to 20500
+[LOG] 2024-11-29T20:55:43.846Z Blocks 20001 to 20100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:43.846Z Fetching blocks from 20501 to 20600
+[LOG] 2024-11-29T20:55:44.456Z Blocks 20201 to 20300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:44.457Z Fetching blocks from 20601 to 20700
+[LOG] 2024-11-29T20:55:44.458Z Blocks 20101 to 20200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:44.458Z Fetching blocks from 20701 to 20800
+[LOG] 2024-11-29T20:55:44.539Z Blocks 20301 to 20400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:44.540Z Fetching blocks from 20801 to 20900
+[LOG] 2024-11-29T20:55:44.648Z Blocks 20401 to 20500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:44.648Z Fetching blocks from 20901 to 21000
+[LOG] 2024-11-29T20:55:45.679Z Blocks 20501 to 20600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:45.680Z Fetching blocks from 21001 to 21100
+[LOG] 2024-11-29T20:55:46.305Z Blocks 20601 to 20700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:46.305Z Fetching blocks from 21101 to 21200
+[LOG] 2024-11-29T20:55:46.358Z Blocks 20701 to 20800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:46.358Z Fetching blocks from 21201 to 21300
+[LOG] 2024-11-29T20:55:46.435Z Blocks 20901 to 21000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:46.435Z Fetching blocks from 21301 to 21400
+[LOG] 2024-11-29T20:55:46.437Z Blocks 20801 to 20900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:46.437Z Fetching blocks from 21401 to 21500
+[LOG] 2024-11-29T20:55:47.557Z Blocks 21001 to 21100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:47.557Z Fetching blocks from 21501 to 21600
+[LOG] 2024-11-29T20:55:48.176Z Blocks 21101 to 21200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:48.176Z Fetching blocks from 21601 to 21700
+[LOG] 2024-11-29T20:55:48.223Z Blocks 21201 to 21300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:48.223Z Fetching blocks from 21701 to 21800
+[LOG] 2024-11-29T20:55:48.292Z Blocks 21301 to 21400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:48.293Z Fetching blocks from 21801 to 21900
+[LOG] 2024-11-29T20:55:48.426Z Blocks 21401 to 21500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:48.426Z Fetching blocks from 21901 to 22000
+[LOG] 2024-11-29T20:55:49.467Z Blocks 21501 to 21600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:49.467Z Fetching blocks from 22001 to 22100
+[LOG] 2024-11-29T20:55:50.107Z Blocks 21601 to 21700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:50.107Z Fetching blocks from 22101 to 22200
+[LOG] 2024-11-29T20:55:50.141Z Blocks 21701 to 21800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:50.141Z Fetching blocks from 22201 to 22300
+[LOG] 2024-11-29T20:55:50.220Z Blocks 21801 to 21900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:50.220Z Fetching blocks from 22301 to 22400
+[LOG] 2024-11-29T20:55:50.286Z Blocks 21901 to 22000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:50.286Z Fetching blocks from 22401 to 22500
+[LOG] 2024-11-29T20:55:51.478Z Blocks 22001 to 22100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:51.478Z Fetching blocks from 22501 to 22600
+[LOG] 2024-11-29T20:55:52.141Z Blocks 22101 to 22200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:52.141Z Fetching blocks from 22601 to 22700
+[LOG] 2024-11-29T20:55:52.274Z Blocks 22201 to 22300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:52.274Z Fetching blocks from 22701 to 22800
+[LOG] 2024-11-29T20:55:52.345Z Blocks 22401 to 22500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:52.345Z Fetching blocks from 22801 to 22900
+[LOG] 2024-11-29T20:55:52.447Z Blocks 22301 to 22400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:52.447Z Fetching blocks from 22901 to 23000
+[LOG] 2024-11-29T20:55:53.393Z Blocks 22501 to 22600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:53.394Z Fetching blocks from 23001 to 23100
+[LOG] 2024-11-29T20:55:54.083Z Blocks 22601 to 22700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:54.083Z Fetching blocks from 23101 to 23200
+[LOG] 2024-11-29T20:55:54.201Z Blocks 22701 to 22800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:54.202Z Fetching blocks from 23201 to 23300
+[LOG] 2024-11-29T20:55:54.368Z Blocks 22801 to 22900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:54.368Z Fetching blocks from 23301 to 23400
+[LOG] 2024-11-29T20:55:54.379Z Blocks 22901 to 23000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:54.380Z Fetching blocks from 23401 to 23500
+[LOG] 2024-11-29T20:55:55.398Z Blocks 23001 to 23100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:55.399Z Fetching blocks from 23501 to 23600
+[LOG] 2024-11-29T20:55:56.085Z Blocks 23101 to 23200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:56.085Z Fetching blocks from 23601 to 23700
+[LOG] 2024-11-29T20:55:56.247Z Blocks 23201 to 23300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:56.248Z Fetching blocks from 23701 to 23800
+[LOG] 2024-11-29T20:55:56.321Z Blocks 23301 to 23400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:56.322Z Fetching blocks from 23801 to 23900
+[LOG] 2024-11-29T20:55:56.338Z Blocks 23401 to 23500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:56.338Z Fetching blocks from 23901 to 24000
+[LOG] 2024-11-29T20:55:57.477Z Blocks 23501 to 23600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:57.478Z Fetching blocks from 24001 to 24100
+[LOG] 2024-11-29T20:55:58.167Z Blocks 23601 to 23700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:58.167Z Fetching blocks from 24101 to 24200
+[LOG] 2024-11-29T20:55:58.331Z Blocks 23701 to 23800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:58.331Z Fetching blocks from 24201 to 24300
+[LOG] 2024-11-29T20:55:58.354Z Blocks 23801 to 23900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:58.354Z Fetching blocks from 24301 to 24400
+[LOG] 2024-11-29T20:55:58.518Z Blocks 23901 to 24000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:58.518Z Fetching blocks from 24401 to 24500
+[LOG] 2024-11-29T20:55:59.562Z Blocks 24001 to 24100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:55:59.562Z Fetching blocks from 24501 to 24600
+[LOG] 2024-11-29T20:56:00.287Z Blocks 24101 to 24200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:00.287Z Fetching blocks from 24601 to 24700
+[LOG] 2024-11-29T20:56:00.403Z Blocks 24301 to 24400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:00.403Z Fetching blocks from 24701 to 24800
+[LOG] 2024-11-29T20:56:00.458Z Blocks 24201 to 24300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:00.458Z Fetching blocks from 24801 to 24900
+[LOG] 2024-11-29T20:56:00.569Z Blocks 24401 to 24500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:00.570Z Fetching blocks from 24901 to 25000
+[LOG] 2024-11-29T20:56:01.717Z Blocks 24501 to 24600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:01.717Z Fetching blocks from 25001 to 25100
+[LOG] 2024-11-29T20:56:02.446Z Blocks 24601 to 24700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:02.446Z Fetching blocks from 25101 to 25200
+[LOG] 2024-11-29T20:56:02.545Z Blocks 24701 to 24800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:02.545Z Fetching blocks from 25201 to 25300
+[LOG] 2024-11-29T20:56:02.618Z Blocks 24801 to 24900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:02.619Z Fetching blocks from 25301 to 25400
+[LOG] 2024-11-29T20:56:02.659Z Blocks 24901 to 25000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:02.660Z Fetching blocks from 25401 to 25500
+[LOG] 2024-11-29T20:56:03.918Z Blocks 25001 to 25100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:03.919Z Fetching blocks from 25501 to 25600
+[LOG] 2024-11-29T20:56:04.636Z Blocks 25101 to 25200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:04.637Z Fetching blocks from 25601 to 25700
+[LOG] 2024-11-29T20:56:04.755Z Blocks 25201 to 25300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:04.756Z Fetching blocks from 25701 to 25800
+[LOG] 2024-11-29T20:56:04.757Z Blocks 25301 to 25400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:04.757Z Fetching blocks from 25801 to 25900
+[LOG] 2024-11-29T20:56:04.870Z Blocks 25401 to 25500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:04.870Z Fetching blocks from 25901 to 26000
+[LOG] 2024-11-29T20:56:06.153Z Blocks 25501 to 25600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:06.153Z Fetching blocks from 26001 to 26100
+[LOG] 2024-11-29T20:56:06.893Z Blocks 25601 to 25700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:06.893Z Fetching blocks from 26101 to 26200
+[LOG] 2024-11-29T20:56:06.991Z Blocks 25701 to 25800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:06.992Z Fetching blocks from 26201 to 26300
+[LOG] 2024-11-29T20:56:07.014Z Blocks 25801 to 25900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:07.014Z Fetching blocks from 26301 to 26400
+[LOG] 2024-11-29T20:56:07.073Z Blocks 25901 to 26000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:07.073Z Fetching blocks from 26401 to 26500
+[LOG] 2024-11-29T20:56:08.434Z Blocks 26001 to 26100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:08.434Z Fetching blocks from 26501 to 26600
+[LOG] 2024-11-29T20:56:09.165Z Blocks 26101 to 26200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:09.165Z Fetching blocks from 26601 to 26700
+[LOG] 2024-11-29T20:56:09.249Z Blocks 26201 to 26300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:09.249Z Fetching blocks from 26701 to 26800
+[LOG] 2024-11-29T20:56:09.267Z Blocks 26301 to 26400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:09.268Z Fetching blocks from 26801 to 26900
+[LOG] 2024-11-29T20:56:09.286Z Blocks 26401 to 26500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:09.286Z Fetching blocks from 26901 to 27000
+[LOG] 2024-11-29T20:56:10.776Z Blocks 26501 to 26600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:10.776Z Fetching blocks from 27001 to 27100
+[LOG] 2024-11-29T20:56:11.469Z Blocks 26601 to 26700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:11.469Z Fetching blocks from 27101 to 27200
+[LOG] 2024-11-29T20:56:11.815Z Blocks 26801 to 26900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:11.815Z Fetching blocks from 27201 to 27300
+[LOG] 2024-11-29T20:56:11.859Z Blocks 26701 to 26800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:11.859Z Fetching blocks from 27301 to 27400
+[LOG] 2024-11-29T20:56:12.004Z Blocks 26901 to 27000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:12.005Z Fetching blocks from 27401 to 27500
+[LOG] 2024-11-29T20:56:13.068Z Blocks 27001 to 27100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:13.069Z Fetching blocks from 27501 to 27600
+[LOG] 2024-11-29T20:56:13.815Z Blocks 27101 to 27200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:13.815Z Fetching blocks from 27601 to 27700
+[LOG] 2024-11-29T20:56:14.088Z Blocks 27201 to 27300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:14.088Z Fetching blocks from 27701 to 27800
+[LOG] 2024-11-29T20:56:14.191Z Blocks 27301 to 27400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:14.191Z Fetching blocks from 27801 to 27900
+[LOG] 2024-11-29T20:56:14.288Z Blocks 27401 to 27500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:14.288Z Fetching blocks from 27901 to 28000
+[LOG] 2024-11-29T20:56:15.448Z Blocks 27501 to 27600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:15.448Z Fetching blocks from 28001 to 28100
+[LOG] 2024-11-29T20:56:16.186Z Blocks 27601 to 27700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:16.187Z Fetching blocks from 28101 to 28200
+[LOG] 2024-11-29T20:56:16.401Z Blocks 27701 to 27800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:16.401Z Fetching blocks from 28201 to 28300
+[LOG] 2024-11-29T20:56:16.506Z Blocks 27801 to 27900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:16.506Z Fetching blocks from 28301 to 28400
+[LOG] 2024-11-29T20:56:16.654Z Blocks 27901 to 28000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:16.655Z Fetching blocks from 28401 to 28500
+[LOG] 2024-11-29T20:56:17.846Z Blocks 28001 to 28100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:17.846Z Fetching blocks from 28501 to 28600
+[LOG] 2024-11-29T20:56:18.597Z Blocks 28101 to 28200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:18.598Z Fetching blocks from 28601 to 28700
+[LOG] 2024-11-29T20:56:18.763Z Blocks 28201 to 28300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:18.763Z Fetching blocks from 28701 to 28800
+[LOG] 2024-11-29T20:56:18.839Z Blocks 28301 to 28400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:18.839Z Fetching blocks from 28801 to 28900
+[LOG] 2024-11-29T20:56:18.993Z Blocks 28401 to 28500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:18.993Z Fetching blocks from 28901 to 29000
+[LOG] 2024-11-29T20:56:20.279Z Blocks 28501 to 28600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:20.279Z Fetching blocks from 29001 to 29100
+[LOG] 2024-11-29T20:56:21.046Z Blocks 28601 to 28700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:21.046Z Fetching blocks from 29101 to 29200
+[LOG] 2024-11-29T20:56:21.156Z Blocks 28701 to 28800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:21.157Z Fetching blocks from 29201 to 29300
+[LOG] 2024-11-29T20:56:21.314Z Blocks 28801 to 28900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:21.315Z Fetching blocks from 29301 to 29400
+[LOG] 2024-11-29T20:56:21.383Z Blocks 28901 to 29000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:21.383Z Fetching blocks from 29401 to 29500
+[LOG] 2024-11-29T20:56:22.773Z Blocks 29001 to 29100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:22.773Z Fetching blocks from 29501 to 29600
+[LOG] 2024-11-29T20:56:23.548Z Blocks 29101 to 29200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:23.548Z Fetching blocks from 29601 to 29700
+[LOG] 2024-11-29T20:56:23.635Z Blocks 29201 to 29300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:23.635Z Fetching blocks from 29701 to 29800
+[LOG] 2024-11-29T20:56:23.728Z Blocks 29301 to 29400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:23.728Z Fetching blocks from 29801 to 29900
+[LOG] 2024-11-29T20:56:23.817Z Blocks 29401 to 29500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:23.817Z Fetching blocks from 29901 to 30000
+[LOG] 2024-11-29T20:56:25.276Z Blocks 29501 to 29600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:25.276Z Fetching blocks from 30001 to 30100
+[LOG] 2024-11-29T20:56:26.108Z Blocks 29601 to 29700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:26.108Z Fetching blocks from 30101 to 30200
+[LOG] 2024-11-29T20:56:26.146Z Blocks 29701 to 29800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:26.146Z Fetching blocks from 30201 to 30300
+[LOG] 2024-11-29T20:56:26.191Z Blocks 29801 to 29900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:26.191Z Fetching blocks from 30301 to 30400
+[LOG] 2024-11-29T20:56:26.859Z Blocks 29901 to 30000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:26.859Z Fetching blocks from 30401 to 30500
+[LOG] 2024-11-29T20:56:27.742Z Blocks 30001 to 30100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:27.742Z Fetching blocks from 30501 to 30600
+[LOG] 2024-11-29T20:56:28.642Z Blocks 30101 to 30200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:28.643Z Fetching blocks from 30601 to 30700
+[LOG] 2024-11-29T20:56:28.697Z Blocks 30201 to 30300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:28.698Z Fetching blocks from 30701 to 30800
+[LOG] 2024-11-29T20:56:29.083Z Blocks 30301 to 30400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:29.083Z Fetching blocks from 30801 to 30900
+[LOG] 2024-11-29T20:56:29.361Z Blocks 30401 to 30500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:29.361Z Fetching blocks from 30901 to 31000
+[LOG] 2024-11-29T20:56:30.615Z Blocks 30501 to 30600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:30.615Z Fetching blocks from 31001 to 31100
+[LOG] 2024-11-29T20:56:31.208Z Blocks 30601 to 30700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:31.209Z Fetching blocks from 31101 to 31200
+[LOG] 2024-11-29T20:56:31.590Z Blocks 30701 to 30800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:31.590Z Fetching blocks from 31201 to 31300
+[LOG] 2024-11-29T20:56:31.706Z Blocks 30801 to 30900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:31.706Z Fetching blocks from 31301 to 31400
+[LOG] 2024-11-29T20:56:31.923Z Blocks 30901 to 31000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:31.923Z Fetching blocks from 31401 to 31500
+[LOG] 2024-11-29T20:56:33.253Z Blocks 31001 to 31100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:33.253Z Fetching blocks from 31501 to 31600
+[LOG] 2024-11-29T20:56:33.784Z Blocks 31101 to 31200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:33.784Z Fetching blocks from 31601 to 31700
+[LOG] 2024-11-29T20:56:34.174Z Blocks 31201 to 31300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:34.174Z Fetching blocks from 31701 to 31800
+[LOG] 2024-11-29T20:56:34.320Z Blocks 31301 to 31400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:34.320Z Fetching blocks from 31801 to 31900
+[LOG] 2024-11-29T20:56:34.583Z Blocks 31401 to 31500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:34.583Z Fetching blocks from 31901 to 32000
+[LOG] 2024-11-29T20:56:35.964Z Blocks 31501 to 31600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:35.964Z Fetching blocks from 32001 to 32100
+[LOG] 2024-11-29T20:56:36.470Z Blocks 31601 to 31700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:36.470Z Fetching blocks from 32101 to 32200
+[LOG] 2024-11-29T20:56:36.886Z Blocks 31701 to 31800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:36.887Z Fetching blocks from 32201 to 32300
+[LOG] 2024-11-29T20:56:37.105Z Blocks 31801 to 31900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:37.105Z Fetching blocks from 32301 to 32400
+[LOG] 2024-11-29T20:56:37.276Z Blocks 31901 to 32000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:37.276Z Fetching blocks from 32401 to 32500
+[LOG] 2024-11-29T20:56:38.695Z Blocks 32001 to 32100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:38.695Z Fetching blocks from 32501 to 32600
+[LOG] 2024-11-29T20:56:39.199Z Blocks 32101 to 32200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:39.199Z Fetching blocks from 32601 to 32700
+[LOG] 2024-11-29T20:56:39.640Z Blocks 32201 to 32300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:39.640Z Fetching blocks from 32701 to 32800
+[LOG] 2024-11-29T20:56:39.784Z Blocks 32301 to 32400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:39.785Z Fetching blocks from 32801 to 32900
+[LOG] 2024-11-29T20:56:39.961Z Blocks 32401 to 32500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:39.961Z Fetching blocks from 32901 to 33000
+[LOG] 2024-11-29T20:56:41.464Z Blocks 32501 to 32600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:41.464Z Fetching blocks from 33001 to 33100
+[LOG] 2024-11-29T20:56:41.973Z Blocks 32601 to 32700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:41.973Z Fetching blocks from 33101 to 33200
+[LOG] 2024-11-29T20:56:42.496Z Blocks 32701 to 32800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:42.496Z Fetching blocks from 33201 to 33300
+[LOG] 2024-11-29T20:56:42.667Z Blocks 32901 to 33000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:42.667Z Fetching blocks from 33301 to 33400
+[LOG] 2024-11-29T20:56:42.668Z Blocks 32801 to 32900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:42.669Z Fetching blocks from 33401 to 33500
+[LOG] 2024-11-29T20:56:44.222Z Blocks 33001 to 33100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:44.223Z Fetching blocks from 33501 to 33600
+[LOG] 2024-11-29T20:56:44.779Z Blocks 33101 to 33200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:44.779Z Fetching blocks from 33601 to 33700
+[LOG] 2024-11-29T20:56:45.328Z Blocks 33201 to 33300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:45.328Z Fetching blocks from 33701 to 33800
+[LOG] 2024-11-29T20:56:45.481Z Blocks 33301 to 33400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:45.482Z Fetching blocks from 33801 to 33900
+[LOG] 2024-11-29T20:56:45.636Z Blocks 33401 to 33500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:45.636Z Fetching blocks from 33901 to 34000
+[LOG] 2024-11-29T20:56:47.103Z Blocks 33501 to 33600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:47.103Z Fetching blocks from 34001 to 34100
+[LOG] 2024-11-29T20:56:47.623Z Blocks 33601 to 33700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:47.623Z Fetching blocks from 34101 to 34200
+[LOG] 2024-11-29T20:56:48.190Z Blocks 33701 to 33800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:48.191Z Fetching blocks from 34201 to 34300
+[LOG] 2024-11-29T20:56:48.328Z Blocks 33801 to 33900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:48.328Z Fetching blocks from 34301 to 34400
+[LOG] 2024-11-29T20:56:48.487Z Blocks 33901 to 34000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:48.487Z Fetching blocks from 34401 to 34500
+[LOG] 2024-11-29T20:56:50.006Z Blocks 34001 to 34100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:50.006Z Fetching blocks from 34501 to 34600
+[LOG] 2024-11-29T20:56:50.471Z Blocks 34101 to 34200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:50.471Z Fetching blocks from 34601 to 34700
+[LOG] 2024-11-29T20:56:51.099Z Blocks 34201 to 34300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:51.100Z Fetching blocks from 34701 to 34800
+[LOG] 2024-11-29T20:56:51.224Z Blocks 34301 to 34400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:51.224Z Fetching blocks from 34801 to 34900
+[LOG] 2024-11-29T20:56:51.309Z Blocks 34401 to 34500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:51.309Z Fetching blocks from 34901 to 35000
+[LOG] 2024-11-29T20:56:52.913Z Blocks 34501 to 34600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:52.913Z Fetching blocks from 35001 to 35100
+[LOG] 2024-11-29T20:56:53.365Z Blocks 34601 to 34700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:53.365Z Fetching blocks from 35101 to 35200
+[LOG] 2024-11-29T20:56:54.032Z Blocks 34701 to 34800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:54.033Z Fetching blocks from 35201 to 35300
+[LOG] 2024-11-29T20:56:54.163Z Blocks 34901 to 35000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:54.163Z Fetching blocks from 35301 to 35400
+[LOG] 2024-11-29T20:56:54.502Z Blocks 34801 to 34900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:54.502Z Fetching blocks from 35401 to 35500
+[LOG] 2024-11-29T20:56:55.762Z Blocks 35001 to 35100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:55.763Z Fetching blocks from 35501 to 35600
+[LOG] 2024-11-29T20:56:56.258Z Blocks 35101 to 35200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:56.258Z Fetching blocks from 35601 to 35700
+[LOG] 2024-11-29T20:56:56.986Z Blocks 35201 to 35300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:56.986Z Fetching blocks from 35701 to 35800
+[LOG] 2024-11-29T20:56:57.150Z Blocks 35301 to 35400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:57.150Z Fetching blocks from 35801 to 35900
+[LOG] 2024-11-29T20:56:57.421Z Blocks 35401 to 35500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:57.421Z Fetching blocks from 35901 to 36000
+[LOG] 2024-11-29T20:56:58.753Z Blocks 35501 to 35600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:58.753Z Fetching blocks from 36001 to 36100
+[LOG] 2024-11-29T20:56:59.176Z Blocks 35601 to 35700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:56:59.176Z Fetching blocks from 36101 to 36200
+[LOG] 2024-11-29T20:57:00.113Z Blocks 35801 to 35900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:00.113Z Fetching blocks from 36201 to 36300
+[LOG] 2024-11-29T20:57:00.332Z Blocks 35901 to 36000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:00.332Z Fetching blocks from 36301 to 36400
+[LOG] 2024-11-29T20:57:00.441Z Blocks 35701 to 35800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:00.442Z Fetching blocks from 36401 to 36500
+[LOG] 2024-11-29T20:57:01.912Z Blocks 36001 to 36100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:01.912Z Fetching blocks from 36501 to 36600
+[LOG] 2024-11-29T20:57:02.135Z Blocks 36101 to 36200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:02.135Z Fetching blocks from 36601 to 36700
+[LOG] 2024-11-29T20:57:03.093Z Blocks 36201 to 36300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:03.093Z Fetching blocks from 36701 to 36800
+[LOG] 2024-11-29T20:57:03.314Z Blocks 36301 to 36400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:03.314Z Fetching blocks from 36801 to 36900
+[LOG] 2024-11-29T20:57:03.427Z Blocks 36401 to 36500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:03.428Z Fetching blocks from 36901 to 37000
+[LOG] 2024-11-29T20:57:05.001Z Blocks 36501 to 36600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:05.001Z Fetching blocks from 37001 to 37100
+[LOG] 2024-11-29T20:57:05.143Z Blocks 36601 to 36700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:05.143Z Fetching blocks from 37101 to 37200
+[LOG] 2024-11-29T20:57:06.194Z Blocks 36701 to 36800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:06.194Z Fetching blocks from 37201 to 37300
+[LOG] 2024-11-29T20:57:06.338Z Blocks 36801 to 36900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:06.338Z Fetching blocks from 37301 to 37400
+[LOG] 2024-11-29T20:57:06.450Z Blocks 36901 to 37000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:06.450Z Fetching blocks from 37401 to 37500
+[LOG] 2024-11-29T20:57:08.108Z Blocks 37001 to 37100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:08.108Z Fetching blocks from 37501 to 37600
+[LOG] 2024-11-29T20:57:08.278Z Blocks 37101 to 37200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:08.278Z Fetching blocks from 37601 to 37700
+[LOG] 2024-11-29T20:57:09.316Z Blocks 37201 to 37300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:09.316Z Fetching blocks from 37701 to 37800
+[LOG] 2024-11-29T20:57:09.464Z Blocks 37301 to 37400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:09.464Z Fetching blocks from 37801 to 37900
+[LOG] 2024-11-29T20:57:09.492Z Blocks 37401 to 37500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:09.492Z Fetching blocks from 37901 to 38000
+[LOG] 2024-11-29T20:57:11.232Z Blocks 37501 to 37600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:11.232Z Fetching blocks from 38001 to 38100
+[LOG] 2024-11-29T20:57:11.348Z Blocks 37601 to 37700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:11.348Z Fetching blocks from 38101 to 38200
+[LOG] 2024-11-29T20:57:12.442Z Blocks 37701 to 37800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:12.442Z Fetching blocks from 38201 to 38300
+[LOG] 2024-11-29T20:57:12.561Z Blocks 37901 to 38000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:12.561Z Fetching blocks from 38301 to 38400
+[LOG] 2024-11-29T20:57:12.619Z Blocks 37801 to 37900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:12.619Z Fetching blocks from 38401 to 38500
+[LOG] 2024-11-29T20:57:14.461Z Blocks 38001 to 38100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:14.462Z Fetching blocks from 38501 to 38600
+[LOG] 2024-11-29T20:57:14.547Z Blocks 38101 to 38200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:14.548Z Fetching blocks from 38601 to 38700
+[LOG] 2024-11-29T20:57:15.637Z Blocks 38201 to 38300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:15.637Z Fetching blocks from 38701 to 38800
+[LOG] 2024-11-29T20:57:15.724Z Blocks 38401 to 38500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:15.724Z Fetching blocks from 38801 to 38900
+[LOG] 2024-11-29T20:57:15.754Z Blocks 38301 to 38400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:15.754Z Fetching blocks from 38901 to 39000
+[LOG] 2024-11-29T20:57:17.709Z Blocks 38501 to 38600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:17.709Z Fetching blocks from 39001 to 39100
+[LOG] 2024-11-29T20:57:17.737Z Blocks 38601 to 38700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:17.737Z Fetching blocks from 39101 to 39200
+[LOG] 2024-11-29T20:57:18.844Z Blocks 38701 to 38800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:18.844Z Fetching blocks from 39201 to 39300
+[LOG] 2024-11-29T20:57:18.963Z Blocks 38801 to 38900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:18.963Z Fetching blocks from 39301 to 39400
+[LOG] 2024-11-29T20:57:19.084Z Blocks 38901 to 39000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:19.084Z Fetching blocks from 39401 to 39500
+[LOG] 2024-11-29T20:57:20.948Z Blocks 39001 to 39100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:20.948Z Fetching blocks from 39501 to 39600
+[LOG] 2024-11-29T20:57:21.007Z Blocks 39101 to 39200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:21.007Z Fetching blocks from 39601 to 39700
+[LOG] 2024-11-29T20:57:22.204Z Blocks 39301 to 39400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:22.204Z Fetching blocks from 39701 to 39800
+[LOG] 2024-11-29T20:57:22.299Z Blocks 39201 to 39300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:22.300Z Fetching blocks from 39801 to 39900
+[LOG] 2024-11-29T20:57:22.328Z Blocks 39401 to 39500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:22.328Z Fetching blocks from 39901 to 40000
+[LOG] 2024-11-29T20:57:24.287Z Blocks 39601 to 39700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:24.287Z Fetching blocks from 40001 to 40100
+[LOG] 2024-11-29T20:57:24.373Z Blocks 39501 to 39600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:24.373Z Fetching blocks from 40101 to 40200
+[LOG] 2024-11-29T20:57:25.468Z Blocks 39701 to 39800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:25.468Z Fetching blocks from 40201 to 40300
+[LOG] 2024-11-29T20:57:25.498Z Blocks 39801 to 39900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:25.498Z Fetching blocks from 40301 to 40400
+[LOG] 2024-11-29T20:57:25.622Z Blocks 39901 to 40000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:25.622Z Fetching blocks from 40401 to 40500
+[LOG] 2024-11-29T20:57:27.663Z Blocks 40101 to 40200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:27.663Z Fetching blocks from 40501 to 40600
+[LOG] 2024-11-29T20:57:27.789Z Blocks 40001 to 40100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:27.789Z Fetching blocks from 40601 to 40700
+[LOG] 2024-11-29T20:57:28.806Z Blocks 40301 to 40400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:28.806Z Fetching blocks from 40701 to 40800
+[LOG] 2024-11-29T20:57:28.985Z Blocks 40401 to 40500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:28.985Z Fetching blocks from 40801 to 40900
+[LOG] 2024-11-29T20:57:28.987Z Blocks 40201 to 40300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:28.987Z Fetching blocks from 40901 to 41000
+[LOG] 2024-11-29T20:57:31.127Z Blocks 40501 to 40600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:31.127Z Fetching blocks from 41001 to 41100
+[LOG] 2024-11-29T20:57:31.272Z Blocks 40601 to 40700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:31.273Z Fetching blocks from 41101 to 41200
+[LOG] 2024-11-29T20:57:32.278Z Blocks 40701 to 40800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:32.279Z Fetching blocks from 41201 to 41300
+[LOG] 2024-11-29T20:57:32.342Z Blocks 40901 to 41000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:32.342Z Fetching blocks from 41301 to 41400
+[LOG] 2024-11-29T20:57:32.436Z Blocks 40801 to 40900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:32.436Z Fetching blocks from 41401 to 41500
+[LOG] 2024-11-29T20:57:34.543Z Blocks 41001 to 41100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:34.543Z Fetching blocks from 41501 to 41600
+[LOG] 2024-11-29T20:57:34.732Z Blocks 41101 to 41200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:34.733Z Fetching blocks from 41601 to 41700
+[LOG] 2024-11-29T20:57:35.677Z Blocks 41201 to 41300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:35.678Z Fetching blocks from 41701 to 41800
+[LOG] 2024-11-29T20:57:35.783Z Blocks 41401 to 41500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:35.783Z Fetching blocks from 41801 to 41900
+[LOG] 2024-11-29T20:57:35.809Z Blocks 41301 to 41400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:35.809Z Fetching blocks from 41901 to 42000
+[LOG] 2024-11-29T20:57:38.014Z Blocks 41501 to 41600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:38.014Z Fetching blocks from 42001 to 42100
+[LOG] 2024-11-29T20:57:38.142Z Blocks 41601 to 41700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:38.142Z Fetching blocks from 42101 to 42200
+[LOG] 2024-11-29T20:57:39.085Z Blocks 41701 to 41800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:39.085Z Fetching blocks from 42201 to 42300
+[LOG] 2024-11-29T20:57:39.215Z Blocks 41801 to 41900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:39.215Z Fetching blocks from 42301 to 42400
+[LOG] 2024-11-29T20:57:39.344Z Blocks 41901 to 42000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:39.344Z Fetching blocks from 42401 to 42500
+[LOG] 2024-11-29T20:57:41.495Z Blocks 42001 to 42100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:41.495Z Fetching blocks from 42501 to 42600
+[LOG] 2024-11-29T20:57:41.603Z Blocks 42101 to 42200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:41.604Z Fetching blocks from 42601 to 42700
+[LOG] 2024-11-29T20:57:42.572Z Blocks 42201 to 42300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:42.572Z Fetching blocks from 42701 to 42800
+[LOG] 2024-11-29T20:57:42.706Z Blocks 42301 to 42400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:42.706Z Fetching blocks from 42801 to 42900
+[LOG] 2024-11-29T20:57:42.765Z Blocks 42401 to 42500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:42.766Z Fetching blocks from 42901 to 43000
+[LOG] 2024-11-29T20:57:45.019Z Blocks 42501 to 42600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:45.020Z Fetching blocks from 43001 to 43100
+[LOG] 2024-11-29T20:57:45.119Z Blocks 42601 to 42700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:45.119Z Fetching blocks from 43101 to 43200
+[LOG] 2024-11-29T20:57:46.104Z Blocks 42701 to 42800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:46.104Z Fetching blocks from 43201 to 43300
+[LOG] 2024-11-29T20:57:46.236Z Blocks 42801 to 42900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:46.237Z Fetching blocks from 43301 to 43400
+[LOG] 2024-11-29T20:57:46.238Z Blocks 42901 to 43000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:46.238Z Fetching blocks from 43401 to 43500
+[LOG] 2024-11-29T20:57:48.651Z Blocks 43001 to 43100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:48.651Z Fetching blocks from 43501 to 43600
+[LOG] 2024-11-29T20:57:48.746Z Blocks 43101 to 43200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:48.746Z Fetching blocks from 43601 to 43700
+[LOG] 2024-11-29T20:57:49.641Z Blocks 43201 to 43300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:49.641Z Fetching blocks from 43701 to 43800
+[LOG] 2024-11-29T20:57:49.787Z Blocks 43301 to 43400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:49.787Z Fetching blocks from 43801 to 43900
+[LOG] 2024-11-29T20:57:49.944Z Blocks 43401 to 43500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:49.945Z Fetching blocks from 43901 to 44000
+[LOG] 2024-11-29T20:57:52.269Z Blocks 43501 to 43600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:52.269Z Fetching blocks from 44001 to 44100
+[LOG] 2024-11-29T20:57:52.305Z Blocks 43601 to 43700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:52.306Z Fetching blocks from 44101 to 44200
+[LOG] 2024-11-29T20:57:53.242Z Blocks 43701 to 43800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:53.242Z Fetching blocks from 44201 to 44300
+[LOG] 2024-11-29T20:57:53.380Z Blocks 43801 to 43900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:53.381Z Fetching blocks from 44301 to 44400
+[LOG] 2024-11-29T20:57:53.481Z Blocks 43901 to 44000 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:53.482Z Fetching blocks from 44401 to 44500
+[LOG] 2024-11-29T20:57:55.897Z Blocks 44001 to 44100 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:55.897Z Fetching blocks from 44501 to 44600
+[LOG] 2024-11-29T20:57:55.930Z Blocks 44101 to 44200 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:55.930Z Fetching blocks from 44601 to 44700
+[LOG] 2024-11-29T20:57:56.870Z Blocks 44201 to 44300 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:56.871Z Fetching blocks from 44701 to 44800
+[LOG] 2024-11-29T20:57:57.006Z Blocks 44301 to 44400 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:57.006Z Fetching blocks from 44801 to 44900
+[LOG] 2024-11-29T20:57:57.039Z Blocks 44401 to 44500 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:57.040Z Fetching blocks from 44901 to 45000
+[LOG] 2024-11-29T20:57:58.761Z Blocks 44901 to 45000 synced: Inserted 46, Modified 0
+[LOG] 2024-11-29T20:57:59.548Z Blocks 44501 to 44600 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:57:59.587Z Blocks 44601 to 44700 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:58:00.519Z Blocks 44701 to 44800 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:58:00.694Z Blocks 44801 to 44900 synced: Inserted 100, Modified 0
+[LOG] 2024-11-29T20:58:00.695Z Started periodic fetch every 30 seconds.
+[LOG] 2024-11-29T20:58:00.698Z Synchronization initialized.
+[LOG] 2024-11-29T20:58:00.928Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T20:58:00.929Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T20:58:30.695Z Checking for new blocks from 44947 to 45046
+[LOG] 2024-11-29T20:58:30.929Z No new blocks to sync.
+[LOG] 2024-11-29T20:59:00.704Z Checking for new blocks from 44947 to 45046
+[LOG] 2024-11-29T20:59:00.917Z No new blocks to sync.
+[LOG] 2024-11-29T20:59:00.937Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T20:59:05.942Z Reconnection attempt #1
+[LOG] 2024-11-29T20:59:06.165Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T20:59:06.165Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T20:59:30.718Z Checking for new blocks from 44947 to 45046
+[LOG] 2024-11-29T20:59:30.956Z No new blocks to sync.
