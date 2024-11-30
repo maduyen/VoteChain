@@ -13,7 +13,7 @@ import "./App.css";
 
 // ProtectedRoute component for authenticated routes
 const ProtectedRoute = ({ children }) => {
-  const isAuthenticated = sessionStorage.getItem("token"); // Check token in session storage
+  const isAuthenticated = sessionStorage.getItem("publicKey");  //for testing purpose, related functionality can be removed later
   return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
 

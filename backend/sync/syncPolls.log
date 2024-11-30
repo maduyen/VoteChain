@@ -1750,3 +1750,447 @@
 [LOG] 2024-11-29T21:48:55.415Z Reconnection attempt #1
 [LOG] 2024-11-29T21:48:55.612Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
 [LOG] 2024-11-29T21:48:55.613Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:49:01.449Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:49:01.643Z No new blocks to sync.
+[LOG] 2024-11-29T21:49:31.452Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:49:31.694Z No new blocks to sync.
+[LOG] 2024-11-29T21:49:55.619Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:50:00.633Z Reconnection attempt #1
+[LOG] 2024-11-29T21:50:00.836Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:50:00.836Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:50:01.458Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:50:01.684Z No new blocks to sync.
+[LOG] 2024-11-29T21:50:31.473Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:50:31.712Z No new blocks to sync.
+[LOG] 2024-11-29T21:51:00.845Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:51:01.486Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:51:01.682Z No new blocks to sync.
+[LOG] 2024-11-29T21:51:05.852Z Reconnection attempt #1
+[LOG] 2024-11-29T21:51:06.060Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:51:06.060Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:51:31.495Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:51:31.717Z No new blocks to sync.
+[LOG] 2024-11-29T21:52:01.509Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:52:01.748Z No new blocks to sync.
+[LOG] 2024-11-29T21:52:06.065Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:52:11.069Z Reconnection attempt #1
+[LOG] 2024-11-29T21:52:11.226Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:52:11.227Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:52:31.509Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:52:31.725Z No new blocks to sync.
+[LOG] 2024-11-29T21:53:01.523Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:53:01.747Z No new blocks to sync.
+[LOG] 2024-11-29T21:53:11.217Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:53:16.223Z Reconnection attempt #1
+[LOG] 2024-11-29T21:53:16.459Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:53:16.459Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:53:31.529Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:53:31.715Z No new blocks to sync.
+[LOG] 2024-11-29T21:54:01.529Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:54:01.730Z No new blocks to sync.
+[LOG] 2024-11-29T21:54:16.451Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:54:21.463Z Reconnection attempt #1
+[LOG] 2024-11-29T21:54:21.667Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:54:21.667Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:54:31.536Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:54:31.747Z No new blocks to sync.
+[LOG] 2024-11-29T21:55:01.546Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:55:01.777Z No new blocks to sync.
+[LOG] 2024-11-29T21:55:21.669Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:55:26.684Z Reconnection attempt #1
+[LOG] 2024-11-29T21:55:26.888Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:55:26.888Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:55:31.553Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:55:31.755Z No new blocks to sync.
+[LOG] 2024-11-29T21:56:01.554Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:56:01.745Z No new blocks to sync.
+[LOG] 2024-11-29T21:56:26.902Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:56:31.558Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:56:31.684Z No new blocks to sync.
+[LOG] 2024-11-29T21:56:31.912Z Reconnection attempt #1
+[LOG] 2024-11-29T21:56:32.108Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:56:32.108Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:57:01.571Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:57:01.777Z No new blocks to sync.
+[LOG] 2024-11-29T21:57:31.580Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:57:31.790Z No new blocks to sync.
+[LOG] 2024-11-29T21:57:32.110Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:57:37.124Z Reconnection attempt #1
+[LOG] 2024-11-29T21:57:37.330Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:57:37.330Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:58:01.580Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:58:01.810Z No new blocks to sync.
+[LOG] 2024-11-29T21:58:31.583Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:58:31.771Z No new blocks to sync.
+[LOG] 2024-11-29T21:58:37.324Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:58:42.335Z Reconnection attempt #1
+[LOG] 2024-11-29T21:58:42.550Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:58:42.550Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T21:59:01.584Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:59:01.794Z No new blocks to sync.
+[LOG] 2024-11-29T21:59:31.595Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T21:59:31.838Z No new blocks to sync.
+[LOG] 2024-11-29T21:59:42.556Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T21:59:47.571Z Reconnection attempt #1
+[LOG] 2024-11-29T21:59:47.798Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T21:59:47.798Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:00:00.292Z Received message: Update blocks
+[LOG] 2024-11-29T22:00:00.293Z Checking for new blocks from 44948 to 45047
+[LOG] 2024-11-29T22:00:00.498Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:00:00.589Z Total new batches to fetch: 1
+[LOG] 2024-11-29T22:00:00.590Z Fetching blocks from 44948 to 45047
+[LOG] 2024-11-29T22:00:00.820Z Blocks 44948 to 45047 synced: Inserted 1, Modified 0
+[LOG] 2024-11-29T22:00:01.604Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:00:01.693Z No new blocks to sync.
+[LOG] 2024-11-29T22:00:31.605Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:00:31.843Z No new blocks to sync.
+[LOG] 2024-11-29T22:01:00.301Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:01:01.618Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:01:01.830Z No new blocks to sync.
+[LOG] 2024-11-29T22:01:05.313Z Reconnection attempt #1
+[LOG] 2024-11-29T22:01:05.519Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:01:05.520Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:01:31.623Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:01:31.828Z No new blocks to sync.
+[LOG] 2024-11-29T22:02:01.627Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:02:01.824Z No new blocks to sync.
+[LOG] 2024-11-29T22:02:05.517Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:02:10.531Z Reconnection attempt #1
+[LOG] 2024-11-29T22:02:10.729Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:02:10.729Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:02:31.637Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:02:31.840Z No new blocks to sync.
+[LOG] 2024-11-29T22:03:01.649Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:03:01.867Z No new blocks to sync.
+[LOG] 2024-11-29T22:03:10.727Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:03:15.736Z Reconnection attempt #1
+[LOG] 2024-11-29T22:03:15.968Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:03:15.968Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:03:31.663Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:03:31.861Z No new blocks to sync.
+[LOG] 2024-11-29T22:04:01.677Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:04:01.886Z No new blocks to sync.
+[LOG] 2024-11-29T22:04:15.950Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:04:20.952Z Reconnection attempt #1
+[LOG] 2024-11-29T22:04:21.170Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:04:21.170Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:04:31.678Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:04:31.937Z No new blocks to sync.
+[LOG] 2024-11-29T22:05:01.689Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:05:01.905Z No new blocks to sync.
+[LOG] 2024-11-29T22:05:21.182Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:05:26.184Z Reconnection attempt #1
+[LOG] 2024-11-29T22:05:26.442Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:05:26.442Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:05:31.698Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:05:31.907Z No new blocks to sync.
+[LOG] 2024-11-29T22:06:01.707Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:06:01.923Z No new blocks to sync.
+[LOG] 2024-11-29T22:06:26.454Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:06:31.457Z Reconnection attempt #1
+[LOG] 2024-11-29T22:06:31.680Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:06:31.680Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:06:31.719Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:06:31.927Z No new blocks to sync.
+[LOG] 2024-11-29T22:07:01.721Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:07:01.922Z No new blocks to sync.
+[LOG] 2024-11-29T22:07:31.681Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:07:31.725Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:07:31.914Z No new blocks to sync.
+[LOG] 2024-11-29T22:07:36.694Z Reconnection attempt #1
+[LOG] 2024-11-29T22:07:36.911Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:07:36.911Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:08:01.730Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:08:02.016Z No new blocks to sync.
+[LOG] 2024-11-29T22:08:31.736Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:08:31.936Z No new blocks to sync.
+[LOG] 2024-11-29T22:08:36.918Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:08:41.920Z Reconnection attempt #1
+[LOG] 2024-11-29T22:08:42.142Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:08:42.142Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:09:01.746Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:09:01.988Z No new blocks to sync.
+[LOG] 2024-11-29T22:09:31.755Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:09:31.999Z No new blocks to sync.
+[LOG] 2024-11-29T22:09:42.139Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:09:47.149Z Reconnection attempt #1
+[LOG] 2024-11-29T22:09:47.413Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:09:47.413Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:10:01.766Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:10:01.973Z No new blocks to sync.
+[LOG] 2024-11-29T22:10:31.775Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:10:32.009Z No new blocks to sync.
+[LOG] 2024-11-29T22:10:47.401Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:10:52.405Z Reconnection attempt #1
+[LOG] 2024-11-29T22:10:52.605Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:10:52.605Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:11:01.778Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:11:01.968Z No new blocks to sync.
+[LOG] 2024-11-29T22:11:31.780Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:11:32.007Z No new blocks to sync.
+[LOG] 2024-11-29T22:11:52.608Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:11:57.610Z Reconnection attempt #1
+[LOG] 2024-11-29T22:11:57.812Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:11:57.812Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:12:01.784Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:12:02.002Z No new blocks to sync.
+[LOG] 2024-11-29T22:12:31.793Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:12:32.007Z No new blocks to sync.
+[LOG] 2024-11-29T22:12:57.811Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:13:01.801Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:13:02.027Z No new blocks to sync.
+[LOG] 2024-11-29T22:13:02.814Z Reconnection attempt #1
+[LOG] 2024-11-29T22:13:03.057Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:13:03.057Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:13:31.802Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:13:32.034Z No new blocks to sync.
+[LOG] 2024-11-29T22:14:01.813Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:14:02.013Z No new blocks to sync.
+[LOG] 2024-11-29T22:14:03.056Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:14:08.066Z Reconnection attempt #1
+[LOG] 2024-11-29T22:14:08.321Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:14:08.321Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:14:31.813Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:14:32.069Z No new blocks to sync.
+[LOG] 2024-11-29T22:15:01.826Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:15:02.054Z No new blocks to sync.
+[LOG] 2024-11-29T22:15:08.318Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:15:13.323Z Reconnection attempt #1
+[LOG] 2024-11-29T22:15:13.550Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:15:13.551Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:15:31.835Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:15:32.057Z No new blocks to sync.
+[LOG] 2024-11-29T22:16:01.844Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:16:02.053Z No new blocks to sync.
+[LOG] 2024-11-29T22:16:13.551Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:16:18.561Z Reconnection attempt #1
+[LOG] 2024-11-29T22:16:18.786Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:16:18.786Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:16:31.854Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:16:32.072Z No new blocks to sync.
+[LOG] 2024-11-29T22:17:01.864Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:17:02.084Z No new blocks to sync.
+[LOG] 2024-11-29T22:17:18.799Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:17:23.802Z Reconnection attempt #1
+[LOG] 2024-11-29T22:17:23.998Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:17:23.998Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:17:31.874Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:17:32.077Z No new blocks to sync.
+[LOG] 2024-11-29T22:18:01.881Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:18:02.102Z No new blocks to sync.
+[LOG] 2024-11-29T22:18:24.005Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:18:29.016Z Reconnection attempt #1
+[LOG] 2024-11-29T22:18:29.211Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:18:29.211Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:18:31.894Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:18:32.106Z No new blocks to sync.
+[LOG] 2024-11-29T22:19:01.896Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:19:02.127Z No new blocks to sync.
+[LOG] 2024-11-29T22:19:29.275Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:19:31.908Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:19:32.196Z No new blocks to sync.
+[LOG] 2024-11-29T22:19:34.286Z Reconnection attempt #1
+[LOG] 2024-11-29T22:19:34.503Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:19:34.503Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:20:01.912Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:20:02.127Z No new blocks to sync.
+[LOG] 2024-11-29T22:20:31.922Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:20:32.136Z No new blocks to sync.
+[LOG] 2024-11-29T22:20:34.506Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:20:39.520Z Reconnection attempt #1
+[LOG] 2024-11-29T22:20:39.760Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:20:39.760Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:21:01.926Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:21:02.146Z No new blocks to sync.
+[LOG] 2024-11-29T22:21:31.939Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:21:32.255Z No new blocks to sync.
+[LOG] 2024-11-29T22:21:39.766Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:21:44.774Z Reconnection attempt #1
+[LOG] 2024-11-29T22:21:44.982Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:21:44.982Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:22:01.951Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:22:02.165Z No new blocks to sync.
+[LOG] 2024-11-29T22:22:31.959Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:22:32.167Z No new blocks to sync.
+[LOG] 2024-11-29T22:22:44.983Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:22:49.994Z Reconnection attempt #1
+[LOG] 2024-11-29T22:22:50.218Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:22:50.218Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:23:01.960Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:23:02.151Z No new blocks to sync.
+[LOG] 2024-11-29T22:23:03.793Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:23:08.797Z Reconnection attempt #1
+[ERROR] 2024-11-29T22:23:09.023Z WebSocket error: Error: Unexpected server response: 502
+[ERROR] 2024-11-29T22:23:09.024Z WebSocket error: Error: Unexpected server response: 502
+[LOG] 2024-11-29T22:23:09.024Z Attempting to reconnect in 10 seconds...
+[LOG] 2024-11-29T22:23:19.028Z Reconnection attempt #2
+[ERROR] 2024-11-29T22:23:19.265Z WebSocket error: Error: Unexpected server response: 502
+[ERROR] 2024-11-29T22:23:19.266Z WebSocket error: Error: Unexpected server response: 502
+[LOG] 2024-11-29T22:23:19.266Z Attempting to reconnect in 20 seconds...
+[LOG] 2024-11-29T22:23:31.965Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:23:32.191Z No new blocks to sync.
+[LOG] 2024-11-29T22:23:39.276Z Reconnection attempt #3
+[LOG] 2024-11-29T22:23:39.491Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:23:39.492Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:24:01.968Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:24:02.184Z No new blocks to sync.
+[LOG] 2024-11-29T22:24:31.970Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:24:32.208Z No new blocks to sync.
+[LOG] 2024-11-29T22:24:39.500Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:24:44.509Z Reconnection attempt #1
+[LOG] 2024-11-29T22:24:44.729Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:24:44.729Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:25:01.973Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:25:02.171Z No new blocks to sync.
+[LOG] 2024-11-29T22:25:31.986Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:25:32.192Z No new blocks to sync.
+[LOG] 2024-11-29T22:25:44.740Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:25:49.745Z Reconnection attempt #1
+[LOG] 2024-11-29T22:25:49.951Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:25:49.951Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:26:01.994Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:26:02.232Z No new blocks to sync.
+[LOG] 2024-11-29T22:26:31.999Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:26:32.224Z No new blocks to sync.
+[LOG] 2024-11-29T22:26:49.961Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:26:54.962Z Reconnection attempt #1
+[LOG] 2024-11-29T22:26:55.188Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:26:55.188Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:27:02.006Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:27:02.233Z No new blocks to sync.
+[LOG] 2024-11-29T22:27:32.010Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:27:32.222Z No new blocks to sync.
+[LOG] 2024-11-29T22:27:55.193Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:28:00.203Z Reconnection attempt #1
+[LOG] 2024-11-29T22:28:00.394Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:28:00.394Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:28:02.025Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:28:02.245Z No new blocks to sync.
+[LOG] 2024-11-29T22:28:32.040Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:28:32.247Z No new blocks to sync.
+[LOG] 2024-11-29T22:29:00.395Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:29:02.042Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:29:02.254Z No new blocks to sync.
+[LOG] 2024-11-29T22:29:05.409Z Reconnection attempt #1
+[LOG] 2024-11-29T22:29:05.651Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:29:05.651Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:29:32.047Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:29:32.290Z No new blocks to sync.
+[LOG] 2024-11-29T22:30:02.055Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:30:02.257Z No new blocks to sync.
+[LOG] 2024-11-29T22:30:05.651Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:30:10.654Z Reconnection attempt #1
+[LOG] 2024-11-29T22:30:10.859Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:30:10.859Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:30:32.062Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:30:32.266Z No new blocks to sync.
+[LOG] 2024-11-29T22:31:02.075Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:31:02.283Z No new blocks to sync.
+[LOG] 2024-11-29T22:31:10.863Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:31:15.872Z Reconnection attempt #1
+[LOG] 2024-11-29T22:31:16.089Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:31:16.089Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:31:32.085Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:31:32.301Z No new blocks to sync.
+[LOG] 2024-11-29T22:32:02.094Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:32:02.323Z No new blocks to sync.
+[LOG] 2024-11-29T22:32:16.102Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:32:21.110Z Reconnection attempt #1
+[LOG] 2024-11-29T22:32:21.310Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:32:21.311Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:32:32.103Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:32:32.317Z No new blocks to sync.
+[LOG] 2024-11-29T22:33:02.104Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:33:02.304Z No new blocks to sync.
+[LOG] 2024-11-29T22:33:21.316Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:33:26.317Z Reconnection attempt #1
+[LOG] 2024-11-29T22:33:26.518Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:33:26.519Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:33:32.104Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:33:32.297Z No new blocks to sync.
+[LOG] 2024-11-29T22:34:02.112Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:34:02.332Z No new blocks to sync.
+[LOG] 2024-11-29T22:34:26.529Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:34:31.539Z Reconnection attempt #1
+[LOG] 2024-11-29T22:34:31.774Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:34:31.774Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:34:32.119Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:34:32.332Z No new blocks to sync.
+[LOG] 2024-11-29T22:35:02.122Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:35:02.358Z No new blocks to sync.
+[LOG] 2024-11-29T22:35:31.795Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:35:32.131Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:35:32.329Z No new blocks to sync.
+[LOG] 2024-11-29T22:35:36.812Z Reconnection attempt #1
+[LOG] 2024-11-29T22:35:37.041Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:35:37.041Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:36:02.144Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:36:02.373Z No new blocks to sync.
+[LOG] 2024-11-29T22:36:32.148Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:36:32.374Z No new blocks to sync.
+[LOG] 2024-11-29T22:36:37.045Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:36:42.047Z Reconnection attempt #1
+[LOG] 2024-11-29T22:36:42.251Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:36:42.251Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:37:02.163Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:37:02.397Z No new blocks to sync.
+[LOG] 2024-11-29T22:37:32.167Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:37:32.389Z No new blocks to sync.
+[LOG] 2024-11-29T22:37:42.246Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:37:47.257Z Reconnection attempt #1
+[LOG] 2024-11-29T22:37:47.469Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:37:47.469Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:38:02.175Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:38:02.396Z No new blocks to sync.
+[LOG] 2024-11-29T22:38:32.184Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:38:32.400Z No new blocks to sync.
+[LOG] 2024-11-29T22:38:47.473Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:38:52.481Z Reconnection attempt #1
+[LOG] 2024-11-29T22:38:52.701Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:38:52.701Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:39:02.190Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:39:02.398Z No new blocks to sync.
+[LOG] 2024-11-29T22:39:32.205Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:39:32.426Z No new blocks to sync.
+[LOG] 2024-11-29T22:39:52.705Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:39:57.717Z Reconnection attempt #1
+[LOG] 2024-11-29T22:39:57.931Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:39:57.931Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:40:02.207Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:40:02.455Z No new blocks to sync.
+[LOG] 2024-11-29T22:40:32.207Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:40:32.439Z No new blocks to sync.
+[LOG] 2024-11-29T22:40:57.936Z Attempting to reconnect in 5 seconds...
+[LOG] 2024-11-29T22:41:02.212Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:41:02.402Z No new blocks to sync.
+[LOG] 2024-11-29T22:41:02.939Z Reconnection attempt #1
+[LOG] 2024-11-29T22:41:03.150Z Connected to WebSocket: wss://crow.resilientdb.com/blockupdatelistener
+[LOG] 2024-11-29T22:41:03.150Z WebSocket connection established with ResilientDB.
+[LOG] 2024-11-29T22:41:32.224Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:41:32.426Z No new blocks to sync.
+[LOG] 2024-11-29T22:41:40.158Z Received message: Update blocks
+[LOG] 2024-11-29T22:41:40.158Z Checking for new blocks from 44949 to 45048
+[LOG] 2024-11-29T22:41:40.362Z Checking for new blocks from 44950 to 45049
+[LOG] 2024-11-29T22:41:40.460Z Total new batches to fetch: 1
+[LOG] 2024-11-29T22:41:40.461Z Fetching blocks from 44949 to 45048
+[LOG] 2024-11-29T22:41:40.600Z Received message: Update blocks
+[LOG] 2024-11-29T22:41:40.601Z Checking for new blocks from 44950 to 45049
+[LOG] 2024-11-29T22:41:40.676Z Blocks 44949 to 45048 synced: Inserted 1, Modified 0
+[LOG] 2024-11-29T22:41:40.693Z Checking for new blocks from 44951 to 45050
+[LOG] 2024-11-29T22:41:40.785Z Total new batches to fetch: 1
+[LOG] 2024-11-29T22:41:40.785Z Fetching blocks from 44950 to 45049
+[LOG] 2024-11-29T22:41:40.994Z Blocks 44950 to 45049 synced: Inserted 1, Modified 0
+[LOG] 2024-11-29T22:41:50.724Z Received message: Update blocks
+[LOG] 2024-11-29T22:41:50.724Z Checking for new blocks from 44951 to 45050
+[LOG] 2024-11-29T22:41:50.945Z Checking for new blocks from 44952 to 45051
+[LOG] 2024-11-29T22:41:51.045Z Total new batches to fetch: 1
+[LOG] 2024-11-29T22:41:51.045Z Fetching blocks from 44951 to 45050
+[LOG] 2024-11-29T22:41:51.145Z Received message: Update blocks
+[LOG] 2024-11-29T22:41:51.145Z Checking for new blocks from 44952 to 45051
+[LOG] 2024-11-29T22:41:51.259Z Blocks 44951 to 45050 synced: Inserted 1, Modified 0
+[LOG] 2024-11-29T22:41:51.354Z Checking for new blocks from 44953 to 45052
+[LOG] 2024-11-29T22:41:51.450Z Total new batches to fetch: 1
+[LOG] 2024-11-29T22:41:51.450Z Fetching blocks from 44952 to 45051
+[LOG] 2024-11-29T22:41:51.649Z Blocks 44952 to 45051 synced: Inserted 1, Modified 0
+[LOG] 2024-11-29T22:42:02.232Z Checking for new blocks from 44953 to 45052
+[LOG] 2024-11-29T22:42:02.429Z No new blocks to sync.

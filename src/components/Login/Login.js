@@ -65,24 +65,29 @@ const Login = () => {
 
     const messageHandler = async (event) => {
       const message = event.data;
+      
+      if (message.data?.success) { // Use optional chaining to avoid errors if structure changes
+        const transactionId = message.data.data.postTransaction?.id;
+        if (!transactionId) {
+          console.error("Transaction ID is missing.");
+          return;
+        }
     
-      if (message.data.success) {
-        const transactionId = message.data.data.postTransaction.id;
         try {
           const transactionDetails = await fetchTransactionDetails(transactionId);
+          
           const publicKey = transactionDetails.publicKey;
-    
           sessionStorage.setItem("publicKey", publicKey);
           setPublicKey(publicKey);
     
           navigate("/create-poll");
         } catch (error) {
-          console.error("Failed to fetch public key:", error);
+          console.error("Failed to fetch transaction details or navigate:", error);
         }
+      } else {
+        console.error("Message success flag is false or message format is invalid.");
       }
     };
-    
-
     
 
     sdk.addMessageListener(messageHandler);

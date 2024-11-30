@@ -14,4 +14,4 @@ const PollSchema = new mongoose.Schema({
   syncedAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model("Poll", PollSchema);
+module.exports = mongoose.model("TestPoll", PollSchema);

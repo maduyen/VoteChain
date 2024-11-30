@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import ResVaultSDK from "resvault-sdk";
 import { GlobalContext } from "../context/GlobalContext";
+import { fetchTransactionDetails } from "./utils/ResilientDB";
 
 const sdk = new ResVaultSDK();
 
@@ -13,6 +14,9 @@ const PollCreationPage = () => {
   const [options, setOptions] = useState(["", ""]);
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
+  const [transactionId, setTransactionId] = useState(null);
+
+  const sdkRef = useRef(sdk); // Ref to manage SDK instance
 
   // Add an option
   const handleAddOption = () => setOptions([...options, ""]);
@@ -27,52 +31,39 @@ const PollCreationPage = () => {
   // Handle image upload
   const handleImageUpload = (event) => setPollImage(event.target.files[0]);
 
-  // Fetch public key if missing
+  // Message Listener to Fetch Transaction ID
   useEffect(() => {
-    const fetchPublicKey = async () => {
-      if (!publicKey) {
+    const messageHandler = async (event) => {
+      const message = event.data;
+
+      if (message.data?.success) {
+        const txnId = message.data.data.postTransaction?.id;
+        console.log("TransactionID: " + txnId);
+        if (txnId) {
+          setTransactionId(txnId); // Update state with transaction ID
+        }
+
+        // Fetch transaction details if needed
         try {
-          // Fetch the transaction ID from the ResVaultSDK context
-          const transactionId = sessionStorage.getItem("transactionId"); // Store transaction ID in sessionStorage during login
+          const transactionDetails = await fetchTransactionDetails(txnId);
 
-          if (!transactionId) {
-            alert("Transaction ID not found. Please log in again.");
-            return;
-          }
-
-          // Fetch transaction details via GraphQL
-          const response = await fetch("http://<your-graphql-server-endpoint>", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              query: `
-                query {
-                  getTransaction(id: "${transactionId}") {
-                    publicKey
-                  }
-                }
-              `,
-            }),
-          });
-
-          const result = await response.json();
-          if (result.data && result.data.getTransaction) {
-            const fetchedPublicKey = result.data.getTransaction.publicKey;
-            setPublicKey(fetchedPublicKey); // Update context
-            sessionStorage.setItem("publicKey", fetchedPublicKey); // Store in session storage
-          } else {
-            console.error("Failed to fetch public key.");
+          if (transactionDetails?.publicKey) {
+            setPublicKey(transactionDetails.publicKey);
           }
         } catch (error) {
-          console.error("Error fetching public key:", error);
+          console.error("Error fetching transaction details:", error);
         }
+      } else {
+        console.error("Message format invalid or success flag is false.");
       }
     };
 
-    fetchPublicKey();
-  }, [publicKey, setPublicKey]);
+    sdkRef.current.addMessageListener(messageHandler);
+
+    return () => {
+      sdkRef.current.removeMessageListener(messageHandler);
+    };
+  }, [setPublicKey]);
 
   // Handle form submission
   const handleSubmit = async () => {
@@ -87,70 +78,79 @@ const PollCreationPage = () => {
         return;
       }
   
-      // Validate and prepare the amount
-      let validatedAmount = 1; // Assuming a fixed amount
-      if (typeof validatedAmount !== "string" && typeof validatedAmount !== "number") {
-        console.error("Invalid amount:", validatedAmount);
-        alert("Transaction amount is invalid.");
-        return;
-      }
-      if (typeof validatedAmount === "number") {
-        validatedAmount = validatedAmount.toString(); // Ensure it's a string
-      }
-  
-      // Prepare poll data
       const pollData = {
         topic: pollTopic,
         description: pollDescription,
-        options: options.filter((opt) => opt.trim()), // Remove empty options
+        options: options.filter((opt) => opt.trim()),
         startTime,
         endTime,
         createdAt: new Date().toISOString(),
       };
   
-      // Prepare transaction message
       const transactionMessage = {
         type: "commit",
         direction: "commit",
-        amount: validatedAmount, // Validated amount
-        data: pollData, // Poll data in JSON format
-        recipient: publicKey, // User's public key
+        amount: "1",
+        data: pollData,
+        recipient: publicKey,
       };
   
       console.log("Submitting transaction:", transactionMessage);
   
-      // Send the transaction to ResilientDB
-      sdk.sendMessage(transactionMessage);
+      // Send the transaction to the SDK
+      sdkRef.current.sendMessage(transactionMessage);
+
     } catch (error) {
       console.error("Error submitting poll:", error);
       alert("Failed to submit poll. Please try again.");
     }
   };
-  
-  
 
   useEffect(() => {
-    const handleMessage = (event) => {
-      const message = event.data;
-      if (
-        event.source === window &&
-        event.data &&
-        event.data.type === "FROM_CONTENT_SCRIPT"
-      ) {
-        if (message.data.success) {
-          alert("Poll created successfully! Transaction ID: " + message.data.data.postTransaction.id);
-        } else {
-          alert("Failed to create poll: " + (event.data.error || "Unknown error."));
+    const storePollInMongoDB = async () => {
+      if (transactionId) {
+        try {
+          const pollData = {
+            topic: pollTopic,
+            description: pollDescription,
+            options: options.filter((opt) => opt.trim()),
+            startTime,
+            endTime,
+            createdAt: new Date().toISOString(),
+          };
+
+          console.log("Sending data to backend:", {
+            transactionId,
+            pollData,
+          });
+
+          const response = await fetch("http://localhost:3000/api/storePollRoutes", {
+          // const response = await fetch("/api/storePollRoutes", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              transactionId,
+              pollData,
+            }),
+          });
+
+          if (response.ok) {
+            alert("Poll stored successfully in MongoDB!");
+          } else {
+            console.error("Failed to store poll in MongoDB:", await response.text());
+            alert("Failed to store poll.");
+          }
+        } catch (error) {
+          console.error("Error storing poll in MongoDB:", error);
         }
       }
     };
 
-    window.addEventListener("message", handleMessage);
-
-    return () => {
-      window.removeEventListener("message", handleMessage);
-    };
-  }, []);
+    storePollInMongoDB();
+  }, [transactionId, pollTopic, pollDescription, options, startTime, endTime]);
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-200 flex items-center justify-center py-10 px-6">
