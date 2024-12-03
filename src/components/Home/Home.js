@@ -29,19 +29,28 @@ function Home(props) {
     slidesToScroll: 1
   };
 
+  function scrollToHowItWorks() {
+    document.getElementById("how-it-works").scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <div>
       <div>
         <Navbar />
       </div>
 
-      <div className="wrapper" style={{ paddingLeft: "4rem", paddingRight: "4rem"}}>
+      <div className="wrapper" style={{ paddingLeft: "4rem", paddingRight: "4rem" }}>
         <section className="section section-lg section-safe">
 
           <div style={{ display: "flex", alignItems: "center"}}>
             <div>
-              <h1 className="display-1" style={{ color: "#221c1c" }}>VoteChain</h1>
+              <h1 className="display-1" style={{ color: "#221c1c", marginBottom: '0px'}}>VoteChain 2.0</h1>
               <h4 style={{ color: "#555b69" }}>Decentralizing Voting with Blockchain, One Vote at a Time ✅</h4>
+              <p style={{ color: "#555b69" }}> Read about VoteChain's latest updates{" "}
+                <span onClick={scrollToHowItWorks} style={{ color: "#8fac86", textDecoration: "underline", cursor: "pointer" }}>
+                  below
+                </span>!
+              </p>
             </div>
             <img
                   src={homepage}
@@ -72,14 +81,14 @@ function Home(props) {
         </section>
 
 
-        <div className="content-center brand">
+        <div id="how-it-works" className="content-center brand">
           <h1 className="display-2 text-center" style={{ color: "#221c1c" }}>How Does VoteChain Work?</h1>
         </div>
 
         <div className="w-3/4 m-auto">
           <Slider {...settings}>
             {data.map((d) => (
-              <div className="bg-white h-[500px] text-black rounded-xl">
+              <div className="bg-white h-[520px] text-black rounded-xl">
                 <div className="h-60 bg-white flex justify-center items-center rounded-t-xl">
                   <img 
                   style={{ width: '200px', height: '200px' }}
@@ -108,8 +117,8 @@ function Home(props) {
 const data = [
   {
     image: signup,
-    section: 'Registration',
-    text: 'Create an account today to participate in the upcoming polls! Each voter is assigned a unique digital token that is stored on the blockchain, ensuring identity integrity and preventing unauthorized access.'
+    section: 'NEW! Registration',
+    text: (<span>VoteChain now uses the Resilient-App <a href="https://github.com/apache/incubator-resilientdb-resvault" style={{textDecoration: "underline"}}>ResVault</a> for user authentication, adding extra security. Users log in with their ResVault Wallet, and poll submissions will be linked to their account for enhanced protection and accountability.</span>)
   },
   {
     image: election,
@@ -118,18 +127,18 @@ const data = [
   },
   {
     image: customize,
-    section: 'Customizable Voting',
+    section: 'NEW! Customizable Voting',
     text: 'With our latest update, users can now create and customize their own polls, tailoring voting rules and formats to meet their specific needs! This enhancement ensures a seamless blend of flexibility and security for an optimized voting experience.'
   },
   {
     image: discussion,
-    section: 'Participate in Discussions',
+    section: 'NEW! Participate in Discussions',
     text: 'Poll creators can also set up discussion panels with public or private access, supporting anonymous feedback. Users now have the opportunity to engage in conversations about voting topics! Please be mindful when participating 😊'
   },
   {
     image: blockchain,
     section: 'Secured by Blockchain',
-    text: 'VoteChain is powered by the ResilientDB and Graph QL blockchain infrastructure. By decentralizing our voting system, we guarantee that voting data is secure and immutable. Poll outcomes are fully determined by the people, creating a transparent voting environment.'
+    text: (<span>VoteChain is powered by the <a href="https://github.com/apache/incubator-resilientdb" style={{textDecoration: "underline"}}>ResilientDB</a> and <a href="https://github.com/apache/incubator-resilientdb-graphql" style={{textDecoration: "underline"}}>ResilientDB-GraphQL</a> blockchain infrastructures. By decentralizing our voting system, we guarantee that voting data is secure and immutable. Poll outcomes are fully determined by the people, creating a transparent voting environment.</span>)
   }
 ]
 
