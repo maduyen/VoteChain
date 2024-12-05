@@ -7,9 +7,9 @@ router.post("/", async (req, res) => {
     console.log("Incoming request body:", req.body);
   
     try {
-      const { transactionId, pollData } = req.body;
+      const { transactionId, publicKey, pollData } = req.body;
   
-      if (!transactionId || !pollData) {
+      if (!transactionId || !publicKey || !pollData) {
         console.error("Invalid request data:", req.body);
         return res.status(400).json({ error: "Invalid request data" });
       }
@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
       // Decompose pollData and match schema
       const newPoll = new Poll({
         transactionId,
-        publicKey: req.body.publicKey || process.env.PUBLIC_KEY, // Provide a default public key if missing
+        publicKey: req.body.publicKey,
         pollData: {
           topic: pollData.topic,
           description: pollData.description,

@@ -31,40 +31,6 @@ const PollCreationPage = () => {
   // Handle image upload
   const handleImageUpload = (event) => setPollImage(event.target.files[0]);
 
-  // Message Listener to Fetch Transaction ID
-  useEffect(() => {
-    const messageHandler = async (event) => {
-      const message = event.data;
-
-      if (message.data?.success) {
-        const txnId = message.data.data.postTransaction?.id;
-        console.log("TransactionID: " + txnId);
-        if (txnId) {
-          setTransactionId(txnId); // Update state with transaction ID
-        }
-
-        // Fetch transaction details if needed
-        try {
-          const transactionDetails = await fetchTransactionDetails(txnId);
-
-          if (transactionDetails?.publicKey) {
-            setPublicKey(transactionDetails.publicKey);
-          }
-        } catch (error) {
-          console.error("Error fetching transaction details:", error);
-        }
-      } else {
-        console.error("Message format invalid or success flag is false.");
-      }
-    };
-
-    sdkRef.current.addMessageListener(messageHandler);
-
-    return () => {
-      sdkRef.current.removeMessageListener(messageHandler);
-    };
-  }, [setPublicKey]);
-
   // Handle form submission
   const handleSubmit = async () => {
     try {
@@ -72,6 +38,7 @@ const PollCreationPage = () => {
         alert("You must be logged in to create a poll.");
         return;
       }
+      console.log("My public key: " + publicKey);
   
       if (!pollTopic || options.filter((opt) => opt.trim()).length < 2) {
         alert("Please provide a topic and at least two valid options.");
@@ -106,6 +73,40 @@ const PollCreationPage = () => {
     }
   };
 
+  // Message Listener to Fetch Transaction ID
+  useEffect(() => {
+    const messageHandler = async (event) => {
+      const message = event.data;
+
+      if (message.data?.success) {
+        const txnId = message.data.data.postTransaction?.id;
+        console.log("TransactionID: " + txnId);
+        if (txnId) {
+          setTransactionId(txnId); // Update state with transaction ID
+        }
+
+        // Fetch transaction details if needed
+        try {
+          const transactionDetails = await fetchTransactionDetails(txnId);
+
+          if (transactionDetails?.publicKey) {
+            setPublicKey(transactionDetails.publicKey);
+          }
+        } catch (error) {
+          console.error("Error fetching transaction details:", error);
+        }
+      } else {
+        console.error("Message format invalid or success flag is false.");
+      }
+    };
+
+    sdkRef.current.addMessageListener(messageHandler);
+
+    return () => {
+      sdkRef.current.removeMessageListener(messageHandler);
+    };
+  }, [setPublicKey]);
+
   useEffect(() => {
     const storePollInMongoDB = async () => {
       if (transactionId) {
@@ -121,6 +122,7 @@ const PollCreationPage = () => {
 
           console.log("Sending data to backend:", {
             transactionId,
+            publicKey,
             pollData,
           });
 
@@ -132,6 +134,7 @@ const PollCreationPage = () => {
             },
             body: JSON.stringify({
               transactionId,
+              publicKey,
               pollData,
             }),
           });
