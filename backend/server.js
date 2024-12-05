@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const pollRoutes = require("./routes/pollRoutes");
 const storePollRoutes = require("./routes/storePollRoutes");
+const voteRoutes = require("./routes/voteRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -37,6 +38,7 @@ app.use(express.json());
 // Routes
 app.use("/api/polls", pollRoutes); // For fetching
 app.use("/api/storePollRoutes", storePollRoutes);  // For storing
+app.use("/api/vote", voteRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

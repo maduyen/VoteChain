@@ -9,6 +9,8 @@ import CandidatesList from "./components/CandidatesList/CandidatesList";
 import ResultsPage from "./components/Results/Results";
 import PollCreationPage from "./components/PollCreationPage";
 import Userinfo from "./components/Userinfo";
+import PollsListPage from "./components/PollsListPage";
+import PollDetailPage from "./components/PollDetailPage";
 import "./App.css";
 
 // ProtectedRoute component for authenticated routes
@@ -26,6 +28,8 @@ function App() {
             {/* Public Routes */}
             <Route path="/login" element={<Login />} />
             <Route path="/" element={<Home />} />
+            <Route path="/polls" element={<PollsListPage />} />
+            <Route path="/polls/:transactionId" element={<PollDetailPage />} />
 
             {/* Protected Routes */}
             <Route
