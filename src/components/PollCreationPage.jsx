@@ -76,11 +76,11 @@ const PollCreationPage = () => {
   // Message Listener to Fetch Transaction ID
   useEffect(() => {
     const messageHandler = async (event) => {
+      console.log("Start to ftech");
       const message = event.data;
 
       if (message.data?.success) {
         const txnId = message.data.data.postTransaction?.id;
-        console.log("TransactionID: " + txnId);
         if (txnId) {
           setTransactionId(txnId); // Update state with transaction ID
         }
@@ -88,7 +88,6 @@ const PollCreationPage = () => {
         // Fetch transaction details if needed
         try {
           const transactionDetails = await fetchTransactionDetails(txnId);
-
           if (transactionDetails?.publicKey) {
             setPublicKey(transactionDetails.publicKey);
           }
@@ -99,7 +98,7 @@ const PollCreationPage = () => {
         console.error("Message format invalid or success flag is false.");
       }
     };
-
+    //console.log("Start to ftech");
     sdkRef.current.addMessageListener(messageHandler);
 
     return () => {

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
 
 const Userinfo = () => {
 
+  const { publicKey, setPublicKey } = useContext(GlobalContext);
   const [userInfo, setUserInfo] = useState({
     name: localStorage.getItem("name"),
     email: localStorage.getItem("email"),
@@ -23,7 +25,7 @@ const Userinfo = () => {
       <p><strong>Name:</strong> {userInfo.name}</p>
       <p><strong>Email:</strong> {userInfo.email}</p>
       <p><strong>ID:</strong> {userInfo.id}</p>
-      <p><strong>Public Key:</strong> {userInfo.publicKey}</p>
+      <p><strong>Public Key:</strong> {publicKey}</p>
       <p><strong>Private Key:</strong> {userInfo.privateKey}</p>
     </div>
   );
