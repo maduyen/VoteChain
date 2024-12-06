@@ -70,7 +70,7 @@ useEffect(() => {
         createdAt: new Date().toISOString(),
       };
 
-      setsendpublicKey(poll.publicKey);
+      setsendpublicKey(process.env.PUBLIC_KEY);
       const transactionMessage = {
         type: "commit",
         direction: "commit",

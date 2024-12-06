@@ -10,20 +10,20 @@ router.post("/", async (req, res) => {
     const { VoteTransactionId, sendpublicKey, receivekey, voteData } = req.body;
 
     
-    if (!VoteTransactionId || !sendpublicKey || !receivekey || !voteData) {
+    if (!VoteTransactionId || !receivekey || !voteData) {
       console.error("Invalid vote data:", req.body);
       return res.status(400).json({ error: "Invalid vote data" });
     }
   
     console.log("VoteTransactionId ID:", VoteTransactionId);
-    console.log("Public key:", sendpublicKey);
+    console.log("Public key:", process.env.PUBLIC_KEY);
     console.log("Receive key:", receivekey);
     console.log("Poll Data:", voteData);
 
     // Decompose pollData and match schema
     const newVote = new Vote({
       VoteTransactionId,
-      sendpublicKey, // Provide a default public key if missing
+      sendpublicKey: process.env.PUBLIC_KEY || sendpublicKey ,
       receivekey,
       Data: {
         pollid: voteData.pollid,
