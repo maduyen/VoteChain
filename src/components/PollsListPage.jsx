@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "reactstrap";
+
 
 const PollsListPage = () => {
   const [polls, setPolls] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     const fetchPolls = async () => {
@@ -49,6 +52,12 @@ const PollsListPage = () => {
             >
               View & Vote
             </Link>
+            <Button
+                style={{ color: "#111", marginTop: '10px'}}
+                onClick={() => navigate("discussion")} // Navigate to DiscussionPanel/DiscussionPanel.js
+              >
+                Join Discussion
+              </Button>
           </div>
         ))}
       </div>

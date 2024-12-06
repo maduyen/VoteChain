@@ -4,6 +4,11 @@ import Navbar from "../Navbar1";
 import Footer from "../Footer2";
 import homepage from "../../components/images/homepage.svg";
 import homepage_vote from "../../components/images/homepage_vote.svg";
+import election from "../../components/images/election.svg";
+import discussion from "../../components/images/discussion.svg";
+import blockchain from "../../components/images/blockchain.svg";
+import customize from "../../components/images/customize.svg";
+import signup from "../../components/images/signup.svg";
 import { Button } from "reactstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 
@@ -92,7 +97,7 @@ function Home(props) {
               <div className="btn-wrapper profile">
                 <Button
                   href="https://xiuyuanqi799.wixsite.com/expanded-votechain"
-                  style={{ backgroundColor: "#8fac86" }}
+                  style={{ backgroundColor: "#8fac86", color: "#fff" }}
                 >
                   Blog
                 </Button>
@@ -137,24 +142,30 @@ function Home(props) {
 
 const data = [
   {
-    image: homepage_vote,
-    section: "NEW! Registration",
-    text: (
-      <span>
-        VoteChain now uses the Resilient-App{" "}
-        <a
-          href="https://github.com/apache/incubator-resilientdb-resvault"
-          style={{ textDecoration: "underline" }}
-        >
-          ResVault
-        </a>{" "}
-        for user authentication, adding extra security. Users log in with their ResVault Wallet,
-        and poll submissions will be linked to their account for enhanced protection and
-        accountability.
-      </span>
-    ),
+    image: signup,
+    section: 'NEW! Registration',
+    text: (<span>VoteChain now uses the Resilient-App <a href="https://github.com/apache/incubator-resilientdb-resvault" style={{textDecoration: "underline"}}>ResVault</a> for user authentication, adding extra security. Users log in with their ResVault Wallet, and poll submissions will be linked to their account for enhanced protection and accountability.</span>)
   },
-  // More data sections...
+  {
+    image: election,
+    section: 'Get Ready to Vote!',
+    text: 'Dive into the details and vote for what you believe in. Explore the topic pages to find essential information about the polls and be prepared to make your voice heard. Your participation is crucial for shaping our community!'
+  },
+  {
+    image: customize,
+    section: 'NEW! Customizable Voting',
+    text: 'With our latest update, users can now create and customize their own polls, tailoring voting rules and formats to meet their specific needs! This enhancement ensures a seamless blend of flexibility and security for an optimized voting experience.'
+  },
+  {
+    image: discussion,
+    section: 'NEW! Participate in Discussions',
+    text: 'Poll creators can also set up discussion panels with public or private access, supporting anonymous feedback. Users now have the opportunity to engage in conversations about voting topics! Please be mindful when participating 😊'
+  },
+  {
+    image: blockchain,
+    section: 'Secured by Blockchain',
+    text: (<span>VoteChain is powered by the <a href="https://github.com/apache/incubator-resilientdb" style={{textDecoration: "underline"}}>ResilientDB</a> and <a href="https://github.com/apache/incubator-resilientdb-graphql" style={{textDecoration: "underline"}}>ResilientDB-GraphQL</a> blockchain infrastructures. By decentralizing our voting system, we guarantee that voting data is secure and immutable. Poll outcomes are fully determined by the people, creating a transparent voting environment.</span>)
+  }
 ];
 
 export default Home;
