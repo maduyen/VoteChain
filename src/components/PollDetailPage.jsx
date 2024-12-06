@@ -12,6 +12,7 @@ const PollDetailPage = () => {
   const [error, setError] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
   const {publicKey, setPublicKey} = useContext(GlobalContext);
+  const [sendpublicKey, setsendpublicKey] = useState(null);
   const [receivekey, setreceivekey] = useState(null);
   const [VoteTransactionId, setVoteTransactionId] = useState(null);
 
@@ -45,6 +46,18 @@ useEffect(() => {
   }
 }, [receivekey]);
 
+useEffect(() => {
+  if (publicKey) {
+    console.log("Public Key (local):", publicKey);
+  }
+}, [publicKey]);
+
+useEffect(() => {
+  if (sendpublicKey) {
+    console.log("sendpublicKey:", sendpublicKey);
+  }
+}, [sendpublicKey]);
+
   const handleVote = async () => {
     if (!selectedOption) {
       alert("Please select an option before voting.");
@@ -57,6 +70,7 @@ useEffect(() => {
         createdAt: new Date().toISOString(),
       };
 
+      setsendpublicKey(poll.publicKey);
       const transactionMessage = {
         type: "commit",
         direction: "commit",
@@ -64,6 +78,7 @@ useEffect(() => {
         data: pollData,
         recipient: poll.publicKey,
       }; 
+      setreceivekey(poll.publicKey);
 
       console.log("Submitting transaction:", transactionMessage);
       sdkRef.current.sendMessage(transactionMessage);
@@ -71,36 +86,17 @@ useEffect(() => {
       console.error("Error submitting vote:", error);
       alert("Failed to submit vote. Please try again.");
     }
-
-    try {
-      const response = await fetch(`http://localhost:3000/api/vote`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ transactionId, selectedOption }),
-      });
-
-      if (response.ok) {
-        alert("Vote submitted successfully!");
-      } else {
-        throw new Error("Failed to submit vote.");
-      }
-    } catch (error) {
-      console.error("Error submitting vote:", error);
-      alert("An error occurred while submitting your vote.");
-    }
   };
 
 // Message Listener to Fetch Transaction ID
 useEffect(() => {
   const messageHandler = async (event) => {
     console.log("Start to ftech");
-    //console.log("SDK Message:", event.data);
     const message = event.data;
 
     if (message.data?.success) {
       const txnId = message.data.data.postTransaction?.id;
+      //console.log("SDK Message:", event.data.data);
       if (txnId) {
         console.log("Transaction ID received:", txnId);
         setVoteTransactionId(txnId); // Update the transaction ID state
@@ -131,13 +127,46 @@ useEffect(() => {
 
 useEffect(() => {
   const storePollInMongoDB = async () => {
+  console.log("Start to store to mongodb");
+  if (VoteTransactionId) {
+    try {
 
+      const voteData = {
+        pollid: transactionId,
+        options: selectedOption,
+        createdAt: new Date().toISOString(),
+      };
 
+      const response = await fetch("http://localhost:3000/api/vote", {
+        // const response = await fetch("/api/storePollRoutes", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            VoteTransactionId,
+            sendpublicKey,
+            receivekey,
+            voteData,
+          }),
+        });
+
+      if (response.ok) {
+        alert("Vote stored successfully in MongoDB!");
+      } else {
+        console.error("Failed to store Vote in MongoDB:", await response.text());
+        alert("Failed to store Vote.");
+      }
+    } catch (error) {
+      console.error("Error storing vote in MongoDB:", error);
+    }
+  }
   };
 
   storePollInMongoDB();
 
 }, [VoteTransactionId, selectedOption]); 
+
   if (loading)
     return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading poll...</div>;
   if (error) return <div className="text-center text-red-500 font-medium">{error}</div>;
