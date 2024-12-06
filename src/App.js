@@ -31,7 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/polls" element={<PollsListPage />} />
             <Route path="/polls/:transactionId" element={<PollDetailPage />} />
-            <Route path="/discussion" element={<DiscussionPanel />} />
+            <Route path="/polls/discussion" element={<DiscussionPanel />} />
 
             {/* Protected Routes */}
             <Route
