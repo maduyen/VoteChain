@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const PollSchema = new mongoose.Schema({
-  transactionId: { type: String, unique: true, required: true ,sparse:true},
+  transactionId: { type: String, unique: true, required: true },
   publicKey: { type: String, required: true },
   pollData: {
     topic: { type: String, required: true },

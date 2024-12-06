@@ -25,7 +25,10 @@ router.get("/", async (req, res) => {
 
 // Get polls by public key
 router.get("/user/:publicKey", async (req, res) => {
+  console.log("Request is:", req.params);
   const { publicKey } = req.params;
+  console.log("publicKey is:", publicKey);
+
 
   try {
     const polls = await Poll.find({ publicKey });

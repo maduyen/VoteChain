@@ -43,4 +43,51 @@ router.post("/", async (req, res) => {
   }
 });
 
+
+// Get all polls with pagination
+router.get("/", async (req, res) => {
+  const { page = 1, limit = 10 } = req.query;
+
+  try {
+    const votes = await Vote.find({})
+      .sort({ "Data.createdAt": -1 })
+      .skip((page - 1) * limit)
+      .limit(Number(limit));
+
+    const total = await Vote.countDocuments();
+    res.json({
+      votes,
+      totalPages: Math.ceil(total / limit),
+      currentPage: Number(page),
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch votes." });
+  }
+});
+
+// Get polls by public key
+router.get("/user/:publicKey", async (req, res) => {
+  const { publicKey } = req.params;
+
+  try {
+    const votes = await Vote.find({ sendpublicKey: publicKey });
+    res.json(votes);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch votes." });
+  }
+});
+
+// Get a specific poll by transaction ID
+router.get("/:transactionId", async (req, res) => {
+  const { transactionId } = req.params;
+
+  try {
+    const votes = await Vote.findOne({ VoteTransactionId: transactionId });
+    if (!votes) return res.status(404).json({ error: "Vote not found." });
+    res.json(votes);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch Vote." });
+  }
+});
+
 module.exports = router;

@@ -165,7 +165,7 @@ useEffect(() => {
 
   storePollInMongoDB();
 
-}, [VoteTransactionId, selectedOption]); 
+}, [VoteTransactionId, selectedOption,sendpublicKey,receivekey,transactionId]); 
 
   if (loading)
     return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading poll...</div>;
