@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Grid from "@material-ui/core/Grid";
-import Box from "@material-ui/core/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import Navbar from "../Navbar2";
 import Footer from "../Footer2";
 import election_1 from '../../assest/election_1.jpg';
 import election_2 from '../../assest/election_2.jpg';
-// import election_3 from '../../assest/election_3.jpg';
+import election_3 from '../../assest/election_3.jpg';
 import election_4 from '../../assest/election_4.jpg';
+
 
 
 const elections = [
