@@ -11,6 +11,7 @@ import PollCreationPage from "./components/PollCreationPage";
 import Userinfo from "./components/Userinfo";
 import PollsListPage from "./components/PollsListPage";
 import PollDetailPage from "./components/PollDetailPage";
+import DiscussionPanel from "./components/DiscussionPanel/DiscussionPanel";
 import "./App.css";
 
 // ProtectedRoute component for authenticated routes
@@ -30,6 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/polls" element={<PollsListPage />} />
             <Route path="/polls/:transactionId" element={<PollDetailPage />} />
+            <Route path="/discussion" element={<DiscussionPanel />} />
 
             {/* Protected Routes */}
             <Route
