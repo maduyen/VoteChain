@@ -9,7 +9,10 @@ router.post("/", async (req, res) => {
   try {
     const { VoteTransactionId, sendpublicKey, receivekey, voteData } = req.body;
 
-    
+    if(VoteTransactionId.trim() === "") {
+      console.error("Empty voteid:", req.body);
+      return res.status(400).json({ error: "Invalid vote data" });
+    }
     if (!VoteTransactionId || !receivekey || !voteData) {
       console.error("Invalid vote data:", req.body);
       return res.status(400).json({ error: "Invalid vote data" });
@@ -38,6 +41,10 @@ router.post("/", async (req, res) => {
 
     res.status(201).json({ success: true, poll: savedVote });
   } catch (error) {
+    if (error.code === 11000) {
+      console.error("Duplicate VoteTransactionId detected");
+      return res.status(400).json({ error: "Duplicate VoteTransactionId" });
+    }
     console.error("Error recording vote:", error);
     res.status(500).json({ error: "Failed to record vote" });
   }
