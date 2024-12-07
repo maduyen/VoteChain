@@ -9,16 +9,19 @@ router.post("/", async (req, res) => {
   try {
     const { VoteTransactionId, sendpublicKey, receivekey, voteData } = req.body;
 
-    
+    if(VoteTransactionId.trim() === "") {
+      console.error("Empty voteid:", req.body);
+      return res.status(400).json({ error: "Invalid vote data" });
+    }
     if (!VoteTransactionId || !receivekey || !voteData) {
       console.error("Invalid vote data:", req.body);
       return res.status(400).json({ error: "Invalid vote data" });
     }
   
-    console.log("VoteTransactionId ID:", VoteTransactionId);
-    console.log("Public key:", process.env.PUBLIC_KEY);
-    console.log("Receive key:", receivekey);
-    console.log("Poll Data:", voteData);
+    //console.log("VoteTransactionId ID:", VoteTransactionId);
+    //console.log("Public key:", process.env.PUBLIC_KEY);
+    //console.log("Receive key:", receivekey);
+    //console.log("Poll Data:", voteData);
 
     // Decompose pollData and match schema
     const newVote = new Vote({
@@ -31,13 +34,17 @@ router.post("/", async (req, res) => {
         createdAt: new Date(voteData.createdAt),
       },
     });
-    console.log("newVote:", newVote);
+    //console.log("newVote:", newVote);
 
     const savedVote = await newVote.save();
     console.log("Vote successfully stored:", savedVote);
 
     res.status(201).json({ success: true, poll: savedVote });
   } catch (error) {
+    if (error.code === 11000) {
+      console.error("Duplicate VoteTransactionId detected");
+      return res.status(400).json({ error: "Duplicate VoteTransactionId" });
+    }
     console.error("Error recording vote:", error);
     res.status(500).json({ error: "Failed to record vote" });
   }
