@@ -3,6 +3,9 @@ console.log("MongoDB URI:", process.env.MONGO_URI);
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const http = require("http"); // Import http to create a server
+const { Server } = require("socket.io"); // Import Server from socket.io
+
 const pollRoutes = require("./routes/pollRoutes");
 const storePollRoutes = require("./routes/storePollRoutes");
 const voteRoutes = require("./routes/voteRoutes");
@@ -10,6 +13,18 @@ const voteRoutes = require("./routes/voteRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Use http to create a server for both Express and Socket.IO
+const server = http.createServer(app);
+
+// Initialize Socket.IO on the same server
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:3001", // Frontend URL
+    methods: ["GET", "POST"]
+  }
+});
+
+// MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error("MongoDB connection error:", error));
@@ -40,6 +55,21 @@ app.use("/api/polls", pollRoutes); // For fetching
 app.use("/api/storePollRoutes", storePollRoutes);  // For storing
 app.use("/api/vote", voteRoutes);
 
-app.listen(PORT, () => {
+// Socket.IO: handling discussion feature
+io.on("connection", (socket) => {
+  console.log("A voter has joined the discussion");
+  socket.emit("message", "VoteChain: Welcome! Please be respectful and courteous to others as you participate in the discussion panel 😊");
+  socket.on("disconnect", () => {
+    console.log("A voter has left the discussion");
+  });
+
+  socket.on("chatmessage", (msg) => {
+    console.log("Received message:", msg);
+    io.emit("message", msg);
+  });
+});
+
+// Start the server
+server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
