@@ -28,6 +28,7 @@ const PollDetailPage = () => {
         }
         const data = await response.json();
         setPoll(data);
+        
       } catch (error) {
         console.error("Failed to fetch poll:", error);
         setError("Unable to load poll. Please try again later.");
@@ -40,37 +41,32 @@ const PollDetailPage = () => {
   }, [transactionId]);
 
 
-// Log updated publicKey after it is set
-useEffect(() => {
-  if (receivekey) {
-    console.log("Public Key (receivekey):", receivekey);
-  }
-}, [receivekey]);
-
-useEffect(() => {
-  if (publicKey) {
-    console.log("Public Key (local):", publicKey);
-  }
-}, [publicKey]);
-
-useEffect(() => {
-  if (sendpublicKey) {
-    console.log("sendpublicKey:", sendpublicKey);
-  }
-}, [sendpublicKey]);
-
   const handleVote = async () => {
     if (!selectedOption) {
       alert("Please select an option before voting.");
       return;
     }
   
-    if (hasVoted) {
-      alert("You have already voted!");
-      return;
-    }
-
     try {
+        // Check if the user has already voted
+        const voteCheckResponse = await fetch(`http://localhost:3000/api/vote/user/${publicKey}`);
+        console.log("voteCheckResponse publicKey: ", publicKey);
+        console.log("voteCheckResponse: ", voteCheckResponse);
+        if (voteCheckResponse.ok) {
+          const voteData = await voteCheckResponse.json();
+          console.log("voteData: ", voteData);
+          const hasVotedForThisPoll = voteData.some(
+            (vote) => vote.Data.pollid === transactionId
+          );
+          console.log("hasVotedForThisPoll: ", hasVotedForThisPoll);
+          setHasVoted(hasVotedForThisPoll);
+
+          if (hasVotedForThisPoll) {
+            alert("You have already voted for this poll!");
+            return; // Exit to prevent further execution
+          }
+        }
+
       const pollData = {
         options: selectedOption,
         createdAt: new Date().toISOString(),
@@ -173,7 +169,7 @@ useEffect(() => {
 
   storePollInMongoDB();
 
-}, [VoteTransactionId, hasVoted]); 
+}, [VoteTransactionId]); 
 
   if (loading)
     return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading poll...</div>;
