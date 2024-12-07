@@ -29,7 +29,18 @@ const PollDetailPage = () => {
         }
         const data = await response.json();
         setPoll(data);
-        
+ 
+        // Check if the user has already voted
+        //TODO: make sure the local publick key is correct 
+        const voteCheckResponse = await fetch(`http://localhost:3000/api/vote/user/${publicKey}`);
+        if (voteCheckResponse.ok) {
+          const voteData = await voteCheckResponse.json();
+          const hasVotedForThisPoll = voteData.some(
+            (vote) => vote.Data.pollid === transactionId
+          );
+          setHasVoted(hasVotedForThisPoll);
+        }
+
       } catch (error) {
         console.error("Failed to fetch poll:", error);
         setError("Unable to load poll. Please try again later.");
@@ -132,7 +143,7 @@ useEffect(() => {
 
 useEffect(() => {
   const storePollInMongoDB = async () => {
-  console.log("Start to store to mongodb");
+  //console.log("Start to store to mongodb");
   if (VoteTransactionId && hasVoted) {
     try {
 

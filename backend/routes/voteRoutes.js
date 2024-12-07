@@ -51,26 +51,21 @@ router.post("/", async (req, res) => {
 });
 
 
-// Get all polls with pagination
+// Get all votes without pagination
 router.get("/", async (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
-
   try {
     const votes = await Vote.find({})
-      .sort({ "Data.createdAt": -1 })
-      .skip((page - 1) * limit)
-      .limit(Number(limit));
+      .sort({ "Data.createdAt": -1 }); // Sort by creation date, newest first
 
-    const total = await Vote.countDocuments();
     res.json({
       votes,
-      totalPages: Math.ceil(total / limit),
-      currentPage: Number(page),
+      total: votes.length, // Include the total count of votes
     });
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch votes." });
   }
 });
+
 
 // Get polls by public key
 router.get("/user/:publicKey", async (req, res) => {
