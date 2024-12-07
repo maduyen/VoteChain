@@ -13,7 +13,6 @@
 
 .innerBox {
     text-align: left;
-    min-width: 480px;
     height: 95vh;
     width: 95vw;
     background-color: #fff;
@@ -37,7 +36,22 @@
 }
 
 .sendButton {
-    background-color: #8fac86;
+    background-color: #8fac86 !important; /* other class was overriding the color */
     margin-left: 4px;
     height: 75%;
+}
+
+/* needed another container to control msg overflow */
+.msgContainer {
+    overflow-y: auto;  /* for msg overflow*/
+    scroll-behavior: smooth;  /* for scrolling through msgs*/
+    margin-bottom: 110px;
+}
+
+.discussionMessage div {
+    margin-top: 10px; /* gaps btwn msgs */
+    padding: 8px; /* padding between msg and border */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { io } from 'socket.io-client';
 import styles from "./DiscussionPanel.module.css";
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Alert } from "reactstrap";
+import { Container, Form, Input, Button } from "reactstrap";
 
 function DiscussionPanel() {
     // state to store messages and socket connection
@@ -44,15 +44,14 @@ function DiscussionPanel() {
     //handle sending a new message
     const handleSendMessage = (e) => {
         e.preventDefault();
-        if (message.trim() && socket) {
-            socket.emit("chatmessage", message); // Send message via socket
+        if (message.trim() && socket) {  //ensures connection + NOT blank msg
+            const formattedMessage = `Me: ${message}`;  // add "Me: " to the start of the msg
+            socket.emit("chatmessage", formattedMessage); // Send message via socket
             setMessage(""); // Clear the input after sending the message
         }
     };
 
     return (
-        //FIXME: figure out how to get submission history removed from Form -> it currently shows past messages D:<
-        //FIXME: dont use Form for messages
         <Container className={styles.container}>
             <div className={styles.innerBox}>
                 <h1 className={styles.heading}>Discussion</h1>
@@ -66,12 +65,15 @@ function DiscussionPanel() {
                         onChange={(e) => setMessage(e.target.value)}/>
                     <Button className={styles.sendButton}>Send</Button>
                 </Form>
-                {/* Render messages dynamically */}
-                <div id="messages">
-                    {messages.map((msg, index) => (
-                        <div key={index}>{msg}</div>
-                    ))}
+
+                <div className={styles.msgContainer}>
+                    <div id="messages" className={styles.discussionMessage}>
+                        {messages.map((msg, index) => (
+                            <div key={index}>{msg}</div>
+                        ))}
+                    </div>
                 </div>
+                
             </div>
         </Container>
     );
