@@ -1,46 +1,44 @@
 // Footer.js
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import CopyrightImage from "../assest/82954a041b27eadab9a9bd64e718c0a9-removebg-preview.png";
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: "#000",
-    color: "#fff",
-    textAlign: "center",
-    padding: theme.spacing(2),
-    display: "flex", // Ensuring items are displayed in a row
-    alignItems: "center", // Align items in the center
-    justifyContent: "center", 
-    width: "100%",
-  },
-  copyrightImage: {
-    width: "20px", // Set the width as per your design
-    marginRight: "5px", // Adjust margin if needed
-    verticalAlign: "middle",
-  },
-}));
 
 const Footer = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.footer}>
-      <img
+    <Box
+      sx={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: "#000",
+        color: "#fff",
+        textAlign: "center",
+        padding: 2, // Equivalent to theme.spacing(2)
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "100%",
+      }}
+    >
+      <Box
+        component="img"
         src={CopyrightImage}
         alt="Copyright"
-        className={classes.copyrightImage}
+        sx={{
+          width: "20px", // Set the width as per your design
+          marginRight: "5px", // Adjust margin if needed
+          verticalAlign: "middle",
+        }}
       />
-      <Typography variant="body2" style={{color: "white"}}>
+      <Typography variant="body2" sx={{ color: "white" }}>
         VoteChain 2024
       </Typography>
-    </div>
+    </Box>
   );
 };
 
 export default Footer;
+
 

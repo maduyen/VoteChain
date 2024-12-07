@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button, Typography } from "@material-ui/core";
-import CheckIcon from "@material-ui/icons/Check";
+import { Button, Typography } from "@mui/material";
+import CheckIcon from "@mui/icons-material/Check";
 import { POST_TRANSACTION, FETCH_TRANSACTION } from "../utils/ResDbApis";
 import { sendRequest } from "../utils/ResDbClient";
 import { useParams } from "react-router-dom";
@@ -8,15 +8,16 @@ import Navbar from "../Navbar2";
 import Footer from "../Footer";
 import styles from "./CandidatesList.module.css";
 import { Container, Row, Col } from "reactstrap";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import back_image_cand from "../../assest/undraw_people_re_8spw.svg";
-import c1 from '../../assest/c1.png';
-import c2 from '../../assest/c2.png';
+import c1 from "../../assest/c1.png";
+import c2 from "../../assest/c2.png";
+
 
 const sampleCandidates = [
   { id: "1", name: "Candidate 1" },
