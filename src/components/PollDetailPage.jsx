@@ -12,13 +12,14 @@ const PollDetailPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
-  const {publicKey, setPublicKey} = useContext(GlobalContext);
+  // const {publicKey, setPublicKey} = useContext(GlobalContext);
   const [sendpublicKey, setsendpublicKey] = useState(null);
   const [receivekey, setreceivekey] = useState(null);
   const [VoteTransactionId, setVoteTransactionId] = useState(null);
   const [hasVoted, setHasVoted] = useState(false);
 
   const sdkRef = useRef(sdk); // Ref to manage SDK instance
+  const publicKey = sessionStorage.getItem('publicKey');
 
   useEffect(() => {
     const fetchPoll = async () => {
@@ -106,23 +107,21 @@ const PollDetailPage = () => {
 // Message Listener to Fetch Transaction ID
 useEffect(() => {
   const messageHandler = async (event) => {
-    console.log("Start to ftech");
     const message = event.data;
 
     if (message.data?.success) {
       const txnId = message.data.data.postTransaction?.id;
-      //console.log("SDK Message:", event.data.data);
       if (txnId) {
         console.log("Transaction ID received:", txnId);
-        setVoteTransactionId(txnId); // Update the transaction ID state
+        setVoteTransactionId(txnId);
         setHasVoted(true);
       }
 
       try {
-        // Fetch additional transaction details
         const transactionDetails = await fetchTransactionDetails(txnId);
         if (transactionDetails?.publicKey) {
-          setPublicKey(transactionDetails.publicKey);
+          // Store the fetched publicKey in sessionStorage
+          sessionStorage.setItem('publicKey', transactionDetails.publicKey);
         }
       } catch (error) {
         console.error("Error fetching transaction details:", error);
@@ -139,7 +138,8 @@ useEffect(() => {
   return () => {
     sdkRef.current.removeMessageListener(messageHandler);
   };
-}, [setPublicKey]);
+}, []);
+
 
 useEffect(() => {
   const storePollInMongoDB = async () => {
