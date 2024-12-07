@@ -8,7 +8,6 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        position: "fixed",
         bottom: 0,
         left: 0,
         right: 0,
