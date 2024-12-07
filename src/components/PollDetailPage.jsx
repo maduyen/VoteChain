@@ -2,11 +2,12 @@ import React, { useEffect, useState, useContext, useRef  } from "react";
 import ResVaultSDK from "resvault-sdk";
 import { fetchTransactionDetails } from "./utils/ResilientDB";
 import { GlobalContext } from "../context/GlobalContext";
-import { useParams } from "react-router-dom";
+import { useParams,Link, useNavigate } from "react-router-dom";
 
 const sdk = new ResVaultSDK();
 const PollDetailPage = () => {
   const { transactionId } = useParams(); // Get the poll's transactionId from the URL
+  const navigate = useNavigate(); // For navigation
   const [poll, setPoll] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -171,6 +172,11 @@ useEffect(() => {
 
 }, [VoteTransactionId]); 
 
+const handleViewResults = () => {
+  navigate(`/polls/result/${transactionId}`);
+};
+
+
   if (loading)
     return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading poll...</div>;
   if (error) return <div className="text-center text-red-500 font-medium">{error}</div>;
@@ -190,6 +196,7 @@ useEffect(() => {
               value={option}
               onChange={() => setSelectedOption(option)}
               className="w-4 h-4 text-blue-500 border-gray-300 focus:ring-blue-400"
+              disabled={hasVoted} // Disable option selection if already voted
             />
             <label
               htmlFor={`option-${index}`}
@@ -200,14 +207,23 @@ useEffect(() => {
           </div>
         ))}
       </form>
-      <button
-        onClick={handleVote}
-        className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-      >
-        Submit Vote
-      </button>
+      {!hasVoted && (
+        <button
+          onClick={handleVote}
+          className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+        >
+          Submit Vote
+        </button>
+      )}
+      {hasVoted && (
+        <button
+          onClick={handleViewResults}
+          className="mt-6 w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors"
+        >
+          View Results
+        </button>
+      )}
     </div>
   );
 };
-
 export default PollDetailPage;
