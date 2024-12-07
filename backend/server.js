@@ -63,9 +63,9 @@ io.on("connection", (socket) => {
     console.log("A voter has left the discussion");
   });
 
-  socket.on("chatmessage", (msg) => {
-    console.log("Received message:", msg);
+  socket.on("chatmessage", msg => {
     io.emit("message", msg);
+    console.log("Received message:", msg);
   });
 });
 
