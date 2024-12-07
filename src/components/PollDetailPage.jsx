@@ -15,6 +15,7 @@ const PollDetailPage = () => {
   const [sendpublicKey, setsendpublicKey] = useState(null);
   const [receivekey, setreceivekey] = useState(null);
   const [VoteTransactionId, setVoteTransactionId] = useState(null);
+  const [hasVoted, setHasVoted] = useState(false);
 
   const sdkRef = useRef(sdk); // Ref to manage SDK instance
 
@@ -63,6 +64,11 @@ useEffect(() => {
       alert("Please select an option before voting.");
       return;
     }
+  
+    if (hasVoted) {
+      alert("You have already voted!");
+      return;
+    }
 
     try {
       const pollData = {
@@ -86,6 +92,7 @@ useEffect(() => {
       console.error("Error submitting vote:", error);
       alert("Failed to submit vote. Please try again.");
     }
+
   };
 
 // Message Listener to Fetch Transaction ID
@@ -100,6 +107,7 @@ useEffect(() => {
       if (txnId) {
         console.log("Transaction ID received:", txnId);
         setVoteTransactionId(txnId); // Update the transaction ID state
+        setHasVoted(true);
       }
 
       try {
@@ -128,7 +136,7 @@ useEffect(() => {
 useEffect(() => {
   const storePollInMongoDB = async () => {
   console.log("Start to store to mongodb");
-  if (VoteTransactionId) {
+  if (VoteTransactionId && hasVoted) {
     try {
 
       const voteData = {
@@ -138,7 +146,6 @@ useEffect(() => {
       };
 
       const response = await fetch("http://localhost:3000/api/vote", {
-        // const response = await fetch("/api/storePollRoutes", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -152,6 +159,7 @@ useEffect(() => {
         });
 
       if (response.ok) {
+        setHasVoted(false);
         alert("Vote stored successfully in MongoDB!");
       } else {
         console.error("Failed to store Vote in MongoDB:", await response.text());
@@ -165,7 +173,7 @@ useEffect(() => {
 
   storePollInMongoDB();
 
-}, [VoteTransactionId, selectedOption,sendpublicKey,receivekey,transactionId]); 
+}, [VoteTransactionId, hasVoted]); 
 
   if (loading)
     return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading poll...</div>;

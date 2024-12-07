@@ -18,10 +18,10 @@ router.post("/", async (req, res) => {
       return res.status(400).json({ error: "Invalid vote data" });
     }
   
-    console.log("VoteTransactionId ID:", VoteTransactionId);
-    console.log("Public key:", process.env.PUBLIC_KEY);
-    console.log("Receive key:", receivekey);
-    console.log("Poll Data:", voteData);
+    //console.log("VoteTransactionId ID:", VoteTransactionId);
+    //console.log("Public key:", process.env.PUBLIC_KEY);
+    //console.log("Receive key:", receivekey);
+    //console.log("Poll Data:", voteData);
 
     // Decompose pollData and match schema
     const newVote = new Vote({
@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
         createdAt: new Date(voteData.createdAt),
       },
     });
-    console.log("newVote:", newVote);
+    //console.log("newVote:", newVote);
 
     const savedVote = await newVote.save();
     console.log("Vote successfully stored:", savedVote);
