@@ -2,21 +2,25 @@ import React, { useEffect, useState, useContext, useRef  } from "react";
 import ResVaultSDK from "resvault-sdk";
 import { fetchTransactionDetails } from "./utils/ResilientDB";
 import { GlobalContext } from "../context/GlobalContext";
-import { useParams } from "react-router-dom";
+import { useParams,Link, useNavigate } from "react-router-dom";
 
 const sdk = new ResVaultSDK();
 const PollDetailPage = () => {
   const { transactionId } = useParams(); // Get the poll's transactionId from the URL
+  const navigate = useNavigate(); // For navigation
   const [poll, setPoll] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
-  const {publicKey, setPublicKey} = useContext(GlobalContext);
-  const [sendpublicKey, setsendpublicKey] = useState(null);
+  // const {publicKey, setPublicKey} = useContext(GlobalContext);
+  const sendpublicKey = sessionStorage.getItem('publicKey');
   const [receivekey, setreceivekey] = useState(null);
   const [VoteTransactionId, setVoteTransactionId] = useState(null);
+  const [hasVoted, setHasVoted] = useState(false);
 
   const sdkRef = useRef(sdk); // Ref to manage SDK instance
+  const publicKey = sessionStorage.getItem('publicKey');
+
 
   useEffect(() => {
     const fetchPoll = async () => {
@@ -27,6 +31,18 @@ const PollDetailPage = () => {
         }
         const data = await response.json();
         setPoll(data);
+ 
+        // Check if the user has already voted
+        //TODO: make sure the local publick key is correct 
+        const voteCheckResponse = await fetch(`http://localhost:3000/api/vote/user/${publicKey}`);
+        if (voteCheckResponse.ok) {
+          const voteData = await voteCheckResponse.json();
+          const hasVotedForThisPoll = voteData.some(
+            (vote) => vote.Data.pollid === transactionId
+          );
+          setHasVoted(hasVotedForThisPoll);
+        }
+
       } catch (error) {
         console.error("Failed to fetch poll:", error);
         setError("Unable to load poll. Please try again later.");
@@ -38,39 +54,45 @@ const PollDetailPage = () => {
     fetchPoll();
   }, [transactionId]);
 
-
-// Log updated publicKey after it is set
 useEffect(() => {
-  if (receivekey) {
-    console.log("Public Key (receivekey):", receivekey);
-  }
-}, [receivekey]);
+    console.log("My public key is",publicKey);
+    }, [publicKey]);
 
-useEffect(() => {
-  if (publicKey) {
-    console.log("Public Key (local):", publicKey);
-  }
-}, [publicKey]);
-
-useEffect(() => {
-  if (sendpublicKey) {
-    console.log("sendpublicKey:", sendpublicKey);
-  }
-}, [sendpublicKey]);
+    useEffect(() => {
+      console.log("My sendpublicKey key is",publicKey);
+      }, [sendpublicKey]);
 
   const handleVote = async () => {
     if (!selectedOption) {
       alert("Please select an option before voting.");
       return;
     }
-
+  
     try {
+        // Check if the user has already voted
+        const voteCheckResponse = await fetch(`http://localhost:3000/api/vote/user/${publicKey}`);
+        console.log("voteCheckResponse publicKey: ", publicKey);
+        console.log("voteCheckResponse: ", voteCheckResponse);
+        if (voteCheckResponse.ok) {
+          const voteData = await voteCheckResponse.json();
+          console.log("voteData: ", voteData);
+          const hasVotedForThisPoll = voteData.some(
+            (vote) => vote.Data.pollid === transactionId
+          );
+          console.log("hasVotedForThisPoll: ", hasVotedForThisPoll);
+          setHasVoted(hasVotedForThisPoll);
+
+          if (hasVotedForThisPoll) {
+            alert("You have already voted for this poll!");
+            return; // Exit to prevent further execution
+          }
+        }
+
       const pollData = {
         options: selectedOption,
         createdAt: new Date().toISOString(),
       };
 
-      setsendpublicKey(process.env.PUBLIC_KEY);
       const transactionMessage = {
         type: "commit",
         direction: "commit",
@@ -86,31 +108,31 @@ useEffect(() => {
       console.error("Error submitting vote:", error);
       alert("Failed to submit vote. Please try again.");
     }
+
   };
 
 // Message Listener to Fetch Transaction ID
 useEffect(() => {
   const messageHandler = async (event) => {
-    console.log("Start to ftech");
     const message = event.data;
 
     if (message.data?.success) {
       const txnId = message.data.data.postTransaction?.id;
-      //console.log("SDK Message:", event.data.data);
       if (txnId) {
         console.log("Transaction ID received:", txnId);
-        setVoteTransactionId(txnId); // Update the transaction ID state
+        setVoteTransactionId(txnId);
+        setHasVoted(true);
       }
 
-      try {
-        // Fetch additional transaction details
-        const transactionDetails = await fetchTransactionDetails(txnId);
-        if (transactionDetails?.publicKey) {
-          setPublicKey(transactionDetails.publicKey);
-        }
-      } catch (error) {
-        console.error("Error fetching transaction details:", error);
-      }
+      // try {
+      //   const transactionDetails = await fetchTransactionDetails(txnId);
+      //   if (transactionDetails?.publicKey) {
+      //     // Store the fetched publicKey in sessionStorage
+      //     sessionStorage.setItem('publicKey', transactionDetails.publicKey);
+      //   }
+      // } catch (error) {
+      //   console.error("Error fetching transaction details:", error);
+      // }
     } else {
       console.error("Message format invalid or success flag is false.");
     }
@@ -123,12 +145,13 @@ useEffect(() => {
   return () => {
     sdkRef.current.removeMessageListener(messageHandler);
   };
-}, [setPublicKey]);
+}, []);
+
 
 useEffect(() => {
   const storePollInMongoDB = async () => {
-  console.log("Start to store to mongodb");
-  if (VoteTransactionId) {
+  //console.log("Start to store to mongodb");
+  if (VoteTransactionId && hasVoted) {
     try {
 
       const voteData = {
@@ -138,7 +161,6 @@ useEffect(() => {
       };
 
       const response = await fetch("http://localhost:3000/api/vote", {
-        // const response = await fetch("/api/storePollRoutes", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -152,6 +174,7 @@ useEffect(() => {
         });
 
       if (response.ok) {
+        setHasVoted(false);
         alert("Vote stored successfully in MongoDB!");
       } else {
         console.error("Failed to store Vote in MongoDB:", await response.text());
@@ -165,7 +188,12 @@ useEffect(() => {
 
   storePollInMongoDB();
 
-}, [VoteTransactionId, selectedOption,sendpublicKey,receivekey,transactionId]); 
+}, [VoteTransactionId]); 
+
+const handleViewResults = () => {
+  navigate(`/polls/result/${transactionId}`);
+};
+
 
   if (loading)
     return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading poll...</div>;
@@ -186,6 +214,7 @@ useEffect(() => {
               value={option}
               onChange={() => setSelectedOption(option)}
               className="w-4 h-4 text-blue-500 border-gray-300 focus:ring-blue-400"
+              disabled={hasVoted} // Disable option selection if already voted
             />
             <label
               htmlFor={`option-${index}`}
@@ -196,14 +225,23 @@ useEffect(() => {
           </div>
         ))}
       </form>
-      <button
-        onClick={handleVote}
-        className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-      >
-        Submit Vote
-      </button>
+      {!hasVoted && (
+        <button
+          onClick={handleVote}
+          className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+        >
+          Submit Vote
+        </button>
+      )}
+      {hasVoted && (
+        <button
+          onClick={handleViewResults}
+          className="mt-6 w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors"
+        >
+          View Results
+        </button>
+      )}
     </div>
   );
 };
-
 export default PollDetailPage;
