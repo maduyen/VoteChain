@@ -81,7 +81,7 @@ const PollsListPage = () => {
                   View & Vote
                 </Link>
                 <Link
-                  to={`/polls/discussion`}
+                  to={`/polls/${poll.transactionId}/discussion`}
                   style={{ backgroundColor: "#8fac86", color: "#fff" }}
                   className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
                 >

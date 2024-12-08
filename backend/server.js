@@ -58,27 +58,46 @@ app.use("/api/vote", voteRoutes);
 
 // Socket.IO: handling discussion feature
 io.on("connection", (socket) => {
-  //emitting previoud msgs @ start of connection
-  Msg.find().then(result =>{
-    socket.emit('output-messages', result);
-  });
+  //join a specific panel for the poll
+  socket.on("joinPanel", (transactionId) => {
+    socket.join(transactionId);
+    console.log(`User joined panel: ${transactionId}`);
 
-  //welcome msg
-  console.log("A voter has joined the discussion");
-  socket.emit("message", "VoteChain: Welcome! Please be respectful and courteous to others as you participate in the discussion panel 😊");
-  
-  //handing disconnect
-  socket.on("disconnect", () => {
-    console.log("A voter has left the discussion");
+    //welcome msg
+    socket.emit("message", "VoteChain: Welcome! Please be respectful and courteous to others as you participate in the discussion panel 😊");
+
+    //emitting previoud msgs @ start of connection
+    Msg.find({ transactionId })
+    .then(result => {
+      console.log("Previous messages:", result);
+      const messagesWithPrefix = result.map(msg => `Voter: ${msg.msg}`);
+      console.log("Messages with prefix:", messagesWithPrefix); 
+      socket.emit('output-messages', messagesWithPrefix);
+    }).catch((error) => {
+      console.error("Error retrieving messages:", error);
+    });
   });
 
   //handling discussion posts
-  socket.on("chatmessage", msg => {
-    console.log("Received message:", msg);
-    const message = new Msg({msg});
-    message.save().then(()=>{  //save message
-      io.emit("message", msg);  //THEN emit
-    })
+  socket.on("chatmessage", ({ transactionId, sender, msg }) => {
+    console.log(`Message received for transactionId ${transactionId}: ${msg}`);
+    
+    //save msg to MongoDB
+    const message = new Msg({ transactionId, msg });
+    message.save()
+      .then(() => {
+        console.log("Message saved to MongoDB, emitting to room");
+        io.to(transactionId).emit("message", `${sender}: ${msg}`);
+      })
+      .catch((error) => {
+        console.error("Error saving message to MongoDB:", error);
+      });
+  });
+
+  // Leave the panel when the user disconnects
+  socket.on("leavePanel", (transactionId) => {
+    socket.leave(transactionId);
+    console.log(`User left panel: ${transactionId}`);
   });
 });
 

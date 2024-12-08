@@ -4,9 +4,12 @@ import React, { useState, useEffect } from "react";
 import { io } from 'socket.io-client';
 import styles from "./DiscussionPanel.module.css";
 import { Container, Form, Input, Button } from "reactstrap";
+import { useParams } from "react-router-dom";
 import Navbar from "../Navbar1";
 
 function DiscussionPanel() {
+    const { transactionId } = useParams(); //access curr transactionID
+
     // state to store messages and socket connection
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
@@ -22,6 +25,7 @@ function DiscussionPanel() {
         //log when user connects
         socketConnection.on("connect", () => {
             console.log("Connected to the backend via Socket.IO");
+            socketConnection.emit("joinPanel", transactionId);
         });
 
         //listen for messages from the server
@@ -32,10 +36,10 @@ function DiscussionPanel() {
 
         //get old msgs & output
         socketConnection.on("output-messages", (data) => {
-            console.log("Message from server:", data);
+            console.log("Previous message(s) from server:", data);
             if(data.length) {  //if there is previous message(s)
                 data.forEach(message => {
-                    appendMessages(message.msg); //output message(s)
+                    appendMessages(message); //output message(s)
                 })
             }
         });
@@ -45,7 +49,7 @@ function DiscussionPanel() {
             socketConnection.disconnect();
             console.log("Disconnected from socket");
         };
-    }, []); // Empty dependency array ensures this effect runs only once
+    }, [transactionId]);
 
     //append messages to the state
     function appendMessages(newMessage) {
@@ -56,9 +60,9 @@ function DiscussionPanel() {
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socket) {  //ensures connection + NOT blank msg
-            const formattedMessage = `Voter: ${message}`;  // add "Voter: " to the start of the msg
-            socket.emit("chatmessage", formattedMessage); // Send message via socket
-            setMessage(""); // Clear the input after sending the message
+            const formattedMessage = { transactionId, sender: "Voter", msg: message };  // add "Voter: " to the start of the msg
+            socket.emit("chatmessage", formattedMessage); // send message via socket
+            setMessage(""); // clear Input after sending the message
         }
     };
 
@@ -69,7 +73,7 @@ function DiscussionPanel() {
 			</div>
 			<Container className={styles.container}>
 				<div className={styles.innerBox}>
-					<h1 className={styles.heading}>Discussion</h1>
+					<h1 className={styles.heading}>Discussion for Poll {transactionId}</h1>
 					<Form className={styles.formContainer} id="msgForm" onSubmit={handleSendMessage}>
 						<Input 
 							type="text"
@@ -81,11 +85,11 @@ function DiscussionPanel() {
 					</Form>
 
 					<div className={styles.msgContainer}>
-						<div id="messages" className={styles.discussionMessage}>
-							{messages.map((msg, index) => (
-								<div key={index}>{msg}</div>
-							))}
-						</div>
+                        <div id="messages" className={styles.discussionMessage}>
+                            {messages.map((msg, index) => (
+                                <div key={index}>{msg}</div>
+                            ))}
+                        </div>
 					</div>
 					
 				</div>
