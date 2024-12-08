@@ -41,6 +41,7 @@ const PollResultPage = () => {
           (vote) => vote.Data.pollid === transactionId
         );
         setPollResults(filteredResults);
+        console.log("results are",filteredResults);
       } catch (err) {
         console.error("Error fetching poll results:", err);
         setError("Unable to load poll results. Please try again later.");

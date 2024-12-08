@@ -12,7 +12,6 @@ const PollDetailPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
-  // const {publicKey, setPublicKey} = useContext(GlobalContext);
   const sendpublicKey = sessionStorage.getItem('publicKey');
   const [receivekey, setreceivekey] = useState(null);
   const [VoteTransactionId, setVoteTransactionId] = useState(null);
@@ -32,7 +31,6 @@ const PollDetailPage = () => {
         setPoll(data);
  
         // Check if the user has already voted
-        //TODO: make sure the local publick key is correct 
         const voteCheckResponse = await fetch(`http://localhost:3000/api/vote/user/${publicKey}`);
         if (voteCheckResponse.ok) {
           const voteData = await voteCheckResponse.json();
