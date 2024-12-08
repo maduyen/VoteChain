@@ -79,8 +79,9 @@ const Login = () => {
           const publicKey = transactionDetails.publicKey;
           sessionStorage.setItem("publicKey", publicKey);
           setPublicKey(publicKey);
-    
-          navigate("/create-poll");
+          alert("You're successfully logged in.");
+          //navigate("/create-poll");
+          navigate("/");
         } catch (error) {
           console.error("Failed to fetch transaction details or navigate:", error);
         }
