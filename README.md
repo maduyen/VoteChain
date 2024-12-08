@@ -32,9 +32,9 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 ## Screenshots
 
 1) Home Screen
-<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/1320a2d5-b5c8-41f7-a2f3-bc18d0088c97">
+<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/628c9068-1590-4e67-8a2b-23e960e05b1f">
 
-<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/32fd2cd8-6bf7-4d00-96e9-322c4d0de302">
+<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/bc76ca20-fe62-43e1-aa6c-ed2bc1d4ed8e">
 
 2) Create Polls Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/04d6648e-26ec-4d2d-b916-a065080574de">
