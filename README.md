@@ -39,7 +39,7 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 <img width="931" alt="Screenshot 2023-12-09 at 4 38 47 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/26a31fbe-ec70-4acc-a4c7-f8bb555c2def">
 
 2) Elections Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/8ca87ccb-b473-49ae-a2a2-47101db9b4cd">
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/1829cb3b-c275-4cbf-be84-77456083afb1">
 
 3) Candidates Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/4f6c9d9f-9a73-4e00-9382-243a1dea8d4d">
