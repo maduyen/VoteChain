@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
     // Decompose pollData and match schema
     const newVote = new Vote({
       VoteTransactionId,
-      sendpublicKey: process.env.PUBLIC_KEY || sendpublicKey ,
+      sendpublicKey: sendpublicKey,
       receivekey,
       Data: {
         pollid: voteData.pollid,
