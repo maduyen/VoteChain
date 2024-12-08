@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar1";
 
 const VoteHistoryPage = () => {
   const [voteHistory, setVoteHistory] = useState([]);
@@ -59,34 +60,39 @@ const VoteHistoryPage = () => {
     return <div>No vote history found for this user.</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-4">Your Vote History</h1>
-      <p className="text-center text-gray-500 mb-8">Public Key: {publicKey}</p> {/* Display Public Key */}
-      <div className="space-y-4">
-        {voteHistory.map((vote, index) => (
-          <div
-            key={index}
-            className="p-4 bg-white shadow-lg rounded-lg flex justify-between items-center"
-          >
-            <div>
-              <h2 className="text-lg font-semibold">
-                {vote.pollDetails?.topic || "Unknown Poll"}
-              </h2>
-              <p className="text-gray-600">
-                {vote.pollDetails?.description || "No description available."}
-              </p>
-              <p className="text-sm text-gray-500">
-                Selected Option: {vote.Data.options}
-              </p>
-            </div>
-            <Link
-              to={`/polls/result/${vote.Data.pollid}`}
-              className="text-blue-500 hover:underline"
+    <div>
+    <div>
+      <Navbar />
+    </div>
+      <div className="max-w-4xl mx-auto p-6">
+        <h1 className="text-3xl font-bold text-center mb-4">Your Vote History</h1>
+        <p className="text-center text-gray-500 mb-8">Public Key: {publicKey}</p> {/* Display Public Key */}
+        <div className="space-y-4">
+          {voteHistory.map((vote, index) => (
+            <div
+              key={index}
+              className="p-4 bg-white shadow-lg rounded-lg flex justify-between items-center"
             >
-              View Results
-            </Link>
-          </div>
-        ))}
+              <div>
+                <h2 className="text-lg font-semibold">
+                  {vote.pollDetails?.topic || "Unknown Poll"}
+                </h2>
+                <p className="text-gray-600">
+                  {vote.pollDetails?.description || "No description available."}
+                </p>
+                <p className="text-sm text-gray-500">
+                  Selected Option: {vote.Data.options}
+                </p>
+              </div>
+              <Link
+                to={`/polls/result/${vote.Data.pollid}`}
+                className="text-blue-500 hover:underline"
+              >
+                View Results
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

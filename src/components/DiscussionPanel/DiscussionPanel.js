@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { io } from 'socket.io-client';
 import styles from "./DiscussionPanel.module.css";
 import { Container, Form, Input, Button } from "reactstrap";
+import Navbar from "../Navbar1";
 
 function DiscussionPanel() {
     // state to store messages and socket connection
@@ -62,30 +63,34 @@ function DiscussionPanel() {
     };
 
     return (
-        <Container className={styles.container}>
-            <div className={styles.innerBox}>
-                <h1 className={styles.heading}>Discussion</h1>
+		<div>
+			<div>
+			<Navbar />
+			</div>
+			<Container className={styles.container}>
+				<div className={styles.innerBox}>
+					<h1 className={styles.heading}>Discussion</h1>
+					<Form className={styles.formContainer} id="msgForm" onSubmit={handleSendMessage}>
+						<Input 
+							type="text"
+							name="msg"
+							placeholder="Post to Discussion Panel"
+							value={message}
+							onChange={(e) => setMessage(e.target.value)}/>
+						<Button className={styles.sendButton}>Send</Button>
+					</Form>
 
-                <Form className={styles.formContainer} id="msgForm" onSubmit={handleSendMessage}>
-                    <Input 
-                        type="text"
-                        name="msg"
-                        placeholder="Post to Discussion Panel"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}/>
-                    <Button className={styles.sendButton}>Send</Button>
-                </Form>
-
-                <div className={styles.msgContainer}>
-                    <div id="messages" className={styles.discussionMessage}>
-                        {messages.map((msg, index) => (
-                            <div key={index}>{msg}</div>
-                        ))}
-                    </div>
-                </div>
-                
-            </div>
-        </Container>
+					<div className={styles.msgContainer}>
+						<div id="messages" className={styles.discussionMessage}>
+							{messages.map((msg, index) => (
+								<div key={index}>{msg}</div>
+							))}
+						</div>
+					</div>
+					
+				</div>
+			</Container>
+		</div>
     );
 }
 

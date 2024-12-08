@@ -3,6 +3,7 @@ import ResVaultSDK from "resvault-sdk";
 import { fetchTransactionDetails } from "./utils/ResilientDB";
 import { GlobalContext } from "../context/GlobalContext";
 import { useParams,Link, useNavigate } from "react-router-dom";
+import Navbar from "./Navbar1";
 
 const sdk = new ResVaultSDK();
 const PollDetailPage = () => {
@@ -198,46 +199,51 @@ const handleViewResults = () => {
   if (!poll) return <div className="text-center text-gray-500">No poll found.</div>;
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
-      <h1 className="text-2xl font-bold text-center mb-4">{poll.pollData.topic}</h1>
-      <p className="text-gray-600 text-center mb-6">{poll.pollData.description}</p>
-      <form className="space-y-4">
-        {poll.pollData.options.map((option, index) => (
-          <div key={index} className="flex items-center">
-            <input
-              type="radio"
-              id={`option-${index}`}
-              name="poll-option"
-              value={option}
-              onChange={() => setSelectedOption(option)}
-              className="w-4 h-4 text-blue-500 border-gray-300 focus:ring-blue-400"
-              disabled={hasVoted} // Disable option selection if already voted
-            />
-            <label
-              htmlFor={`option-${index}`}
-              className="ml-3 text-gray-700 cursor-pointer"
-            >
-              {option}
-            </label>
-          </div>
-        ))}
-      </form>
-      {!hasVoted && (
-        <button
-          onClick={handleVote}
-          className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
-        >
-          Submit Vote
-        </button>
-      )}
-      {hasVoted && (
-        <button
-          onClick={handleViewResults}
-          className="mt-6 w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors"
-        >
-          View Results
-        </button>
-      )}
+    <div>
+      <div>
+        <Navbar />
+      </div>
+      <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <h1 className="text-2xl font-bold text-center mb-4">{poll.pollData.topic}</h1>
+        <p className="text-gray-600 text-center mb-6">{poll.pollData.description}</p>
+        <form className="space-y-4">
+          {poll.pollData.options.map((option, index) => (
+            <div key={index} className="flex items-center">
+              <input
+                type="radio"
+                id={`option-${index}`}
+                name="poll-option"
+                value={option}
+                onChange={() => setSelectedOption(option)}
+                className="w-4 h-4 text-blue-500 border-gray-300 focus:ring-blue-400"
+                disabled={hasVoted} // Disable option selection if already voted
+              />
+              <label
+                htmlFor={`option-${index}`}
+                className="ml-3 text-gray-700 cursor-pointer"
+              >
+                {option}
+              </label>
+            </div>
+          ))}
+        </form>
+        {!hasVoted && (
+          <button
+            onClick={handleVote}
+            className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+          >
+            Submit Vote
+          </button>
+        )}
+        {hasVoted && (
+          <button
+            onClick={handleViewResults}
+            className="mt-6 w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors"
+          >
+            View Results
+          </button>
+        )}
+      </div>
     </div>
   );
 };

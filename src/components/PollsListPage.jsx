@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "reactstrap";
+import Navbar from "./Navbar1";
 
 const PollsListPage = () => {
   const [polls, setPolls] = useState([]);
@@ -42,79 +43,85 @@ const PollsListPage = () => {
   if (polls.length === 0) return <div className="text-center text-gray-500">No polls available.</div>;
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-8">Polls</h1>
-
-      {/* Search Input */}
-      <div className="mb-6">
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search polls by topic..."
-          className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+    <div>
+      <div>
+        <Navbar />
       </div>
 
-      {/* Polls Grid */}
-      <div className="grid gap-3">
-        {filteredPolls.length > 0 ? (
-          filteredPolls.map((poll) => (
-            <div
-              key={poll.transactionId}
-              className="bg-white shadow-md rounded-lg p-5 hover:shadow-lg transition-shadow"
-            >
-              <h2 className="text-xl font-semibold mb-2">{poll.pollData.topic}</h2>
-              <p className="text-gray-600 mb-4">{poll.pollData.description}</p>
-              <p className="text-sm text-gray-500">Created by: {poll.publicKey}</p>
-              <Link
-                to={`/polls/${poll.transactionId}`}
-                style={{ backgroundColor: "#8fac86", color: "#fff" }}
-                className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
+      <div className="max-w-4xl mx-auto p-6">
+        <h1 className="text-3xl font-bold text-center mb-6">Polls</h1>
+
+        {/* Search Input */}
+        <div className="mb-6">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search polls by topic..."
+            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        {/* Polls Grid */}
+        <div className="grid gap-3">
+          {filteredPolls.length > 0 ? (
+            filteredPolls.map((poll) => (
+              <div
+                key={poll.transactionId}
+                className="bg-white shadow-md rounded-lg p-5 hover:shadow-lg transition-shadow"
               >
-                View & Vote
-              </Link>
-              <Link
-                to={`/polls/discussion`}
-                style={{ backgroundColor: "#8fac86", color: "#fff" }}
-                className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
-              >
-                Join Discussion
-              </Link>
-            </div>
-          ))
-        ) : (
-          <div className="text-center text-gray-500">No matching polls found.</div>
-        )}
-      </div>
+                <h2 className="text-xl font-semibold mb-2">{poll.pollData.topic}</h2>
+                <p className="text-gray-600 mb-4">{poll.pollData.description}</p>
+                <p className="text-sm text-gray-500">Created by: {poll.publicKey}</p>
+                <Link
+                  to={`/polls/${poll.transactionId}`}
+                  style={{ backgroundColor: "#8fac86", color: "#fff" }}
+                  className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
+                >
+                  View & Vote
+                </Link>
+                <Link
+                  to={`/polls/discussion`}
+                  style={{ backgroundColor: "#8fac86", color: "#fff" }}
+                  className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
+                >
+                  Join Discussion
+                </Link>
+              </div>
+            ))
+          ) : (
+            <div className="text-center text-gray-500">No matching polls found.</div>
+          )}
+        </div>
 
-      {/* Pagination */}
-      <div className="flex justify-between items-center mt-8">
-        <button
-          onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-          disabled={page === 1}
-          className={`px-4 py-2 rounded-md ${
-            page === 1
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-              : "bg-blue-500 text-white hover:bg-blue-600"
-          }`}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
-          disabled={page === totalPages}
-          className={`px-4 py-2 rounded-md ${
-            page === totalPages
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-              : "bg-blue-500 text-white hover:bg-blue-600"
-          }`}
-        >
-          Next
-        </button>
-      </div>
+        {/* Pagination */}
+        <div className="flex justify-between items-center mt-8">
+          <button
+            onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+            disabled={page === 1}
+            className={`px-4 py-2 rounded-md ${
+              page === 1
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
+            Previous
+          </button>
+          <button
+            onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+            disabled={page === totalPages}
+            className={`px-4 py-2 rounded-md ${
+              page === totalPages
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
+            Next
+          </button>
+        </div>
+      </div>  
     </div>
-  );
+    );
 };
 
 export default PollsListPage;
