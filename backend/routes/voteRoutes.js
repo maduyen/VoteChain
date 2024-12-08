@@ -9,16 +9,19 @@ router.post("/", async (req, res) => {
   try {
     const { VoteTransactionId, sendpublicKey, receivekey, voteData } = req.body;
 
-    
+    if(VoteTransactionId.trim() === "") {
+      console.error("Empty voteid:", req.body);
+      return res.status(400).json({ error: "Invalid vote data" });
+    }
     if (!VoteTransactionId || !receivekey || !voteData) {
       console.error("Invalid vote data:", req.body);
       return res.status(400).json({ error: "Invalid vote data" });
     }
   
-    console.log("VoteTransactionId ID:", VoteTransactionId);
-    console.log("Public key:", process.env.PUBLIC_KEY);
-    console.log("Receive key:", receivekey);
-    console.log("Poll Data:", voteData);
+    //console.log("VoteTransactionId ID:", VoteTransactionId);
+    //console.log("Public key:", process.env.PUBLIC_KEY);
+    //console.log("Receive key:", receivekey);
+    //console.log("Poll Data:", voteData);
 
     // Decompose pollData and match schema
     const newVote = new Vote({
@@ -31,39 +34,38 @@ router.post("/", async (req, res) => {
         createdAt: new Date(voteData.createdAt),
       },
     });
-    console.log("newVote:", newVote);
+    //console.log("newVote:", newVote);
 
     const savedVote = await newVote.save();
     console.log("Vote successfully stored:", savedVote);
 
     res.status(201).json({ success: true, poll: savedVote });
   } catch (error) {
+    if (error.code === 11000) {
+      console.error("Duplicate VoteTransactionId detected");
+      return res.status(400).json({ error: "Duplicate VoteTransactionId" });
+    }
     console.error("Error recording vote:", error);
     res.status(500).json({ error: "Failed to record vote" });
   }
 });
 
 
-// Get all polls with pagination
+// Get all votes without pagination
 router.get("/", async (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
-
   try {
     const votes = await Vote.find({})
-      .sort({ "Data.createdAt": -1 })
-      .skip((page - 1) * limit)
-      .limit(Number(limit));
+      .sort({ "Data.createdAt": -1 }); // Sort by creation date, newest first
 
-    const total = await Vote.countDocuments();
     res.json({
       votes,
-      totalPages: Math.ceil(total / limit),
-      currentPage: Number(page),
+      total: votes.length, // Include the total count of votes
     });
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch votes." });
   }
 });
+
 
 // Get polls by public key
 router.get("/user/:publicKey", async (req, res) => {

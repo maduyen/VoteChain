@@ -21,7 +21,6 @@ const PollDetailPage = () => {
   const sdkRef = useRef(sdk); // Ref to manage SDK instance
   const publicKey = sessionStorage.getItem('publicKey');
 
-
   useEffect(() => {
     const fetchPoll = async () => {
       try {

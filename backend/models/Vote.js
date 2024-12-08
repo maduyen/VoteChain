@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Votechema = new mongoose.Schema({
-  VoteTransactionId: { type: String, require: true},
+  VoteTransactionId: { type: String, require: true, unique: true },
   sendpublicKey: { type: String, required: true },
   receivekey: { type: String, required: true },
   Data: {

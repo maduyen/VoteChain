@@ -20,6 +20,7 @@
     "mongoose": "^8.8.1",
     "resilient-node-cache": "^1.0.1",
     "resvault-sdk": "^1.0.2",
+    "socket.io": "^4.8.1",
     "ws": "^8.18.0"
   },
   "devDependencies": {

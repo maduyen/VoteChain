@@ -33,6 +33,7 @@
     "resvault-sdk": "^1.0.2",
     "scrollmonitor": "^1.2.11",
     "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.8.1",
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"
   },

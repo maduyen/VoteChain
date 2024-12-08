@@ -6,7 +6,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import ElectionsList from "./components/ElectionsList/ElectionsList";
 import CandidatesList from "./components/CandidatesList/CandidatesList";
-import ResultsPage from "./components/Results/Results";
+import ResultsPage from  "./components/VoteResultPage";//"./components/Results/Results";
 import PollCreationPage from "./components/PollCreationPage";
 import Userinfo from "./components/Userinfo";
 import PollsListPage from "./components/PollsListPage";
@@ -32,7 +32,7 @@ function App() {
             <Route path="/polls" element={<PollsListPage />} />
             <Route path="/polls/:transactionId" element={<PollDetailPage />} />
             <Route path="/polls/discussion" element={<DiscussionPanel />} />
-
+            <Route path="/polls/result/:transactionId" element={<ResultsPage />} />
             {/* Protected Routes */}
             <Route
               path="/elections"
