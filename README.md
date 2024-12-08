@@ -32,20 +32,27 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 ## Screenshots
 
 1) Home Screen
-<img width="931" alt="Landing page" src="https://github.com/Kri-hika/vote-chain/assets/70900997/75cac089-c4bc-4a16-9ab6-3f8eb985ec65">
+<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/1320a2d5-b5c8-41f7-a2f3-bc18d0088c97">
 
-<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/c3ddae29-5862-409f-8f4c-6252310b9248">
+<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/32fd2cd8-6bf7-4d00-96e9-322c4d0de302">
 
-<img width="931" alt="Screenshot 2023-12-09 at 4 38 47 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/26a31fbe-ec70-4acc-a4c7-f8bb555c2def">
+2) Create Polls Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/04d6648e-26ec-4d2d-b916-a065080574de">
 
-2) Elections Screen
+3) Vote Polls Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/b7c9627e-99ee-4d83-b28f-1594b17273a6">
+
+4) Vote Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/6867216a-2d26-4e30-8931-4a9db9ff17c2">
+
+5) Result Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/1829cb3b-c275-4cbf-be84-77456083afb1">
 
-3) Candidates Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/Kri-hika/vote-chain/assets/70900997/4f6c9d9f-9a73-4e00-9382-243a1dea8d4d">
+6) User History Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/user-attachments/assets/07e0154f-eec5-4075-a9b6-f8d19871a8ab">
 
-4) Admin / Results Screen (Admin Login - Email = admin_votechain@gmail.com, Password = 123456)
-<img width="931" alt="Admin_Page_ss" src="https://github.com/Kri-hika/vote-chain/assets/70900997/404f325a-f515-4849-a3f9-1e7c09033524">
+7) Discussion Screen
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/1cc0c76c-9068-4885-9ad6-1e23d91cd524">
 
 
 ## Preparation
@@ -90,7 +97,7 @@ Google Chrome is installable on macOS, Linux, and Windows platforms. Please refe
       npm install
       ```
 3. Once the dependencies are installed successfully
-   - Navigate to the backend directory, launch the backend
+   - Navigate to the backend directory, launch the backend. (Make sure the server is running on port 3000)
       ```
       cd backend
       node server.js
