@@ -35,7 +35,8 @@ const Navbar = () => {
         </IconButton>
         <Typography variant="h6">
           <Button component={Link} to="/login" style={linkStyle}>Voter Login</Button>
-          <Button component={Link} to="/login" style={linkStyle}>Admin Login</Button>
+          <Button component={Link} to="/create-poll" style={linkStyle}>CREATE POLL</Button>
+          <Button component={Link} to="/userinfo" style={linkStyle}>YOUR VOTES</Button>
         </Typography>
       </Toolbar>
     </AppBar>
