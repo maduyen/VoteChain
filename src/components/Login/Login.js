@@ -136,6 +136,19 @@ const Login = () => {
               type="button"
               className="btn btn-secondary oauth-button"
               onClick={handleAuthentication}
+              style={{
+                backgroundColor: "#fff", 
+                color: "#000", 
+                padding: "10px 20px",
+                border: "1px solid #ccc",
+                borderRadius: "8px", 
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: "bold",
+                fontSize: "16px",
+                cursor: "pointer",
+              }}
             >
               <div className="logoBox">
                 <img src={resvaultLogo} alt="ResVault" className="oauth-logo" />
