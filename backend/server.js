@@ -3,9 +3,10 @@ console.log("MongoDB URI:", process.env.MONGO_URI);
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const http = require("http"); // Import http to create a server
-const { Server } = require("socket.io"); // Import Server from socket.io
-const Msg = require('./models/DiscussionPanel');
+const http = require("http"); //import http to create a server
+const { Server } = require("socket.io"); //import Server from socket.io
+const Msg = require('./models/DiscussionPanel');  //importing DiscussionPanel model
+const Poll = require('./models/Poll');  //importing Poll model to get topic name
 
 const pollRoutes = require("./routes/pollRoutes");
 const storePollRoutes = require("./routes/storePollRoutes");
@@ -14,13 +15,13 @@ const voteRoutes = require("./routes/voteRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Use http to create a server for both Express and Socket.IO
+//use http to create a server for both express and socket.io (Poll and DiscussionPanel)
 const server = http.createServer(app);
 
-// Initialize Socket.IO on the same server
+//init socket.io on the same server
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3001", // Frontend URL
+    origin: "http://localhost:3001", //frontend URL
     methods: ["GET", "POST"]
   }
 });
@@ -63,6 +64,14 @@ io.on("connection", (socket) => {
     socket.join(transactionId);
     console.log(`User joined panel: ${transactionId}`);
 
+    //getting poll topic via transactionId
+    Poll.findOne({ transactionId })
+    .then(poll => {
+        socket.emit("poll-topic", poll.pollData.topic);  //emit the poll topic
+    }).catch((error) => {
+      console.error("Error retrieving poll data:", error);
+    });
+
     //welcome msg
     socket.emit("message", "VoteChain: Welcome! Please be respectful and courteous to others as you participate in the discussion panel 😊");
 
@@ -70,8 +79,7 @@ io.on("connection", (socket) => {
     Msg.find({ transactionId })
     .then(result => {
       console.log("Previous messages:", result);
-      const messagesWithPrefix = result.map(msg => `Voter: ${msg.msg}`);
-      console.log("Messages with prefix:", messagesWithPrefix); 
+      const messagesWithPrefix = result.map(msg => `Voter: ${msg.msg}`);  //adding Voter previx -> can be upgraded to "username" in future!!
       socket.emit('output-messages', messagesWithPrefix);
     }).catch((error) => {
       console.error("Error retrieving messages:", error);
@@ -86,7 +94,7 @@ io.on("connection", (socket) => {
     const message = new Msg({ transactionId, msg });
     message.save()
       .then(() => {
-        console.log("Message saved to MongoDB, emitting to room");
+        console.log("Message saved to MongoDB, emitting to panel");
         io.to(transactionId).emit("message", `${sender}: ${msg}`);
       })
       .catch((error) => {

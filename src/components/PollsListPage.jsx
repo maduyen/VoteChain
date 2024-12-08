@@ -85,7 +85,7 @@ const PollsListPage = () => {
                   style={{ backgroundColor: "#8fac86", color: "#fff" }}
                   className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
                 >
-                  Join Discussion
+                  Join Discussion Panel
                 </Link>
               </div>
             ))

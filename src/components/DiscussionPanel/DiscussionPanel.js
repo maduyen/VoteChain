@@ -10,10 +10,11 @@ import Navbar from "../Navbar1";
 function DiscussionPanel() {
     const { transactionId } = useParams(); //access curr transactionID
 
-    // state to store messages and socket connection
+    // state to store messages, socket connection, and topic
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
     const [socket, setSocket] = useState(null);
+    const [pollTopic, setPollTopic] = useState("");
 
     useEffect(() => {
         //establish socket connection
@@ -28,10 +29,15 @@ function DiscussionPanel() {
             socketConnection.emit("joinPanel", transactionId);
         });
 
+        //listen for poll topic from the server
+        socketConnection.on("poll-topic", (topic) => {
+            setPollTopic(topic); //set the poll topic in the state
+        });
+
         //listen for messages from the server
         socketConnection.on("message", (data) => {
             console.log("Message from server:", data);
-            appendMessages(data); // Add message to the list
+            appendMessages(data); //add message to the list
         });
 
         //get old msgs & output
@@ -73,7 +79,7 @@ function DiscussionPanel() {
 			</div>
 			<Container className={styles.container}>
 				<div className={styles.innerBox}>
-					<h1 className={styles.heading}>Discussion for Poll {transactionId}</h1>
+                    <h1 className={styles.heading}>Discussion: {pollTopic}</h1>
 					<Form className={styles.formContainer} id="msgForm" onSubmit={handleSendMessage}>
 						<Input 
 							type="text"
