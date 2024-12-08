@@ -29,6 +29,16 @@ function DiscussionPanel() {
             appendMessages(data); // Add message to the list
         });
 
+        //get old msgs & output
+        socketConnection.on("output-messages", (data) => {
+            console.log("Message from server:", data);
+            if(data.length) {  //if there is previous message(s)
+                data.forEach(message => {
+                    appendMessages(message.msg); //output message(s)
+                })
+            }
+        });
+
         //disconnect when user leaves the discussion board
         return () => {
             socketConnection.disconnect();
@@ -45,7 +55,7 @@ function DiscussionPanel() {
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socket) {  //ensures connection + NOT blank msg
-            const formattedMessage = `Me: ${message}`;  // add "Me: " to the start of the msg
+            const formattedMessage = `Voter: ${message}`;  // add "Voter: " to the start of the msg
             socket.emit("chatmessage", formattedMessage); // Send message via socket
             setMessage(""); // Clear the input after sending the message
         }

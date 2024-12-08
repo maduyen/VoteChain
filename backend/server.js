@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const http = require("http"); // Import http to create a server
 const { Server } = require("socket.io"); // Import Server from socket.io
+const Msg = require('./models/DiscussionPanel');
 
 const pollRoutes = require("./routes/pollRoutes");
 const storePollRoutes = require("./routes/storePollRoutes");
@@ -57,15 +58,27 @@ app.use("/api/vote", voteRoutes);
 
 // Socket.IO: handling discussion feature
 io.on("connection", (socket) => {
+  //emitting previoud msgs @ start of connection
+  Msg.find().then(result =>{
+    socket.emit('output-messages', result);
+  });
+
+  //welcome msg
   console.log("A voter has joined the discussion");
   socket.emit("message", "VoteChain: Welcome! Please be respectful and courteous to others as you participate in the discussion panel 😊");
+  
+  //handing disconnect
   socket.on("disconnect", () => {
     console.log("A voter has left the discussion");
   });
 
+  //handling discussion posts
   socket.on("chatmessage", msg => {
-    io.emit("message", msg);
     console.log("Received message:", msg);
+    const message = new Msg({msg});
+    message.save().then(()=>{  //save message
+      io.emit("message", msg);  //THEN emit
+    })
   });
 });
 
