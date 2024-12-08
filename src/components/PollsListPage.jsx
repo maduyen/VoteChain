@@ -7,7 +7,7 @@ const PollsListPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState(""); // State for search input
+  const [totalPages, setTotalPages] = useState(1); // Add total pages state
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,6 +19,7 @@ const PollsListPage = () => {
         }
         const data = await response.json();
         setPolls(data.polls);
+        setTotalPages(data.totalPages || 1); // Assuming API provides total pages
       } catch (error) {
         console.error("Failed to fetch polls:", error);
         setError("Unable to load polls. Please try again later.");
@@ -31,6 +32,7 @@ const PollsListPage = () => {
   }, [page]);
 
   // Filter polls based on search input
+  const [search, setSearch] = useState("");
   const filteredPolls = polls.filter((poll) =>
     poll.pollData.topic.toLowerCase().includes(search.toLowerCase())
   );
@@ -100,8 +102,13 @@ const PollsListPage = () => {
           Previous
         </button>
         <button
-          onClick={() => setPage((prev) => prev + 1)}
-          className="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600"
+          onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+          disabled={page === totalPages}
+          className={`px-4 py-2 rounded-md ${
+            page === totalPages
+              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              : "bg-blue-500 text-white hover:bg-blue-600"
+          }`}
         >
           Next
         </button>
