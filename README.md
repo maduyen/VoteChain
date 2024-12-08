@@ -27,6 +27,7 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 3) **React.js** - It was utilized for building composable and interactive user interface within the VoteChain platform, facilitating the creation of modular components and seamless UI interactions.
 4) **Material UI** - A responsive UI design library complementing React.js, ensured a consistent and visually appealing layout across various devices and screen sizes.
 5) **Node.js** - It forms the foundational infrastructure for the VoteChain back end, managing server-side logic and acting as an intermediary between the user interface and ResilientDB blockchain
+6) **MongoDB** - ~~Please add description~~
 
 ## Screenshots
 
@@ -47,8 +48,60 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 <img width="931" alt="Admin_Page_ss" src="https://github.com/Kri-hika/vote-chain/assets/70900997/404f325a-f515-4849-a3f9-1e7c09033524">
 
 
+## Preparation
+Please follow the procedures below and ensure that every step is successful.
+### Install resvault chrome extension
+Google Chrome is installable on macOS, Linux, and Windows platforms. Please refer to the official Google installation guide based on your platform.
+1. Clone the ResVault repo to get started:
+   ```
+   git clone https://github.com/ResilientApp/ResVault.git
+   cd ResVault
+   ```
+2. Create the build folder in repo
+   ```
+   npm install
+   npm run build
+   ```
+3. Load the extension in chrome
+   - Open chrome://extensions/ in Google Chrome, toggle Developer mode on
+   - Click on Load unpacked
+   - Select the build folder you just created
+   - You should see the ResVault extension in chrome
+### Node.js is required
+1. **Node.js** - Download and install Node.js from [https://nodejs.org/](https://nodejs.org/) based on your platform.
+2. **npm (Node Package Manager)** - npm is included with Node.js. Run the following commands to ensure your installation is successful.
+   ```
+   node --version
+   npm --version
+   ```
 ## Steps to run the system
-
+1. Clone this Git repository to your local machine
+   ```
+   git clone https://github.com/ItsBaiShiXi/VoteChain.git
+   cd VoteChain
+   ```
+2. Install required dependencies for VoteChain and Backend in VoteChain.
+   - Navigate to the VoteChain directory
+      ```
+      npm install
+      ```
+   - Navigate to the backend directory in VoteChain directory
+      ```
+      npm install
+      ```
+3. Once the dependencies are installed successfully
+   - Navigate to the backend directory, launch the backend
+      ```
+      cd backend
+      node server.js
+      ```
+   - Navigate to the VoteChain directory, start the development server
+      ```
+      npm start
+      ```
+      This will launch the application, and you can access it in your web browser
+# Following guides has been deprecated, just for reference
+## Steps to run the system 
 Please follow the detailed procedure below and ensure that every step is successful.
 
 ### Setup Python3.10
