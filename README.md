@@ -32,15 +32,15 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 ## Screenshots
 
 1) Home Screen
-<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/628c9068-1590-4e67-8a2b-23e960e05b1f">
+<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/94acf367-69bd-4363-aad6-bb6e9233f4a9">
 
-<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/bc76ca20-fe62-43e1-aa6c-ed2bc1d4ed8e">
+<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/1b6f55b9-b548-4ddb-b9c0-a7fe2b977a19">
 
 2) Create Polls Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/04d6648e-26ec-4d2d-b916-a065080574de">
 
 3) Vote Polls Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/b7c9627e-99ee-4d83-b28f-1594b17273a6">
+<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/101543ac-f1f7-4e01-b8d6-ca719753a0b0">
 
 4) Vote Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/6867216a-2d26-4e30-8931-4a9db9ff17c2">
