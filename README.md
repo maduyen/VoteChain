@@ -17,8 +17,7 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 8) NEW! View Poll Results & Personal Vote History
 
 ## Architecture Diagram
-
-<img src="https://github.com/Kri-hika/vote-chain/assets/70900997/2282f2ba-6268-488c-9b79-999b05456be3" alt="Architecture Diagram" width="500">
+<img src="https://github.com/user-attachments/assets/e3344304-5da8-4f2b-a545-836900a4f08e" alt="Architecture Diagram" width="500">
 
 ## Tech Stack
 
