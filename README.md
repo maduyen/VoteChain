@@ -100,6 +100,10 @@ Google Chrome is installable on macOS, Linux, and Windows platforms. Please refe
       npm start
       ```
       This will launch the application, and you can access it in your web browser
+4. Connect the ResVault chrome extension, then you can anonymously login to votechain through it
+   ![ResVault screen](https://github.com/user-attachments/assets/9afcaeeb-e36d-4d4d-aaf4-724ddf2ba97c)  
+   Enjoy your voting!
+
 
 ## For more information
 Refer to the Blog - [https://naitikjain3071.wixsite.com/my-site](https://xiuyuanqi799.wixsite.com/expanded-votechain)
