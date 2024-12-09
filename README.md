@@ -40,7 +40,7 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 <img width="931" alt="Screenshot 2024-12-08 171743" src="https://github.com/user-attachments/assets/dd690de2-ce82-4c66-9d9c-ae2624e16311">
 
 3) Authenticate with ResVault
-<img width="931" alt="Screenshot 2024-12-08 172213" src="https://github.com/user-attachments/assets/829027e0-39fa-473e-`91a9-e3d1147a9d00">
+<img width="931" alt="Screenshot 2024-12-08 172213" src="https://github.com/user-attachments/assets/27a482bf-557f-43bb-8719-9715e943aed0">
 
 4) Create Polls Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/04d6648e-26ec-4d2d-b916-a065080574de">
