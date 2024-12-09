@@ -10,10 +10,11 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 1) Secure and Transparent Election
 2) Single Voting Instance
 3) Immutable Votes
-4) Customizable Voting
-5) Participate in Discussion Panels
-6) View Poll Results & Personal Vote History
-7) User Friendly Interface
+4) User Friendly Interface
+5) NEW! User Authentication with ResVault
+6) NEW! Customizable Voting
+7) NEW! Participate in Discussion Panels
+8) NEW! View Poll Results & Personal Vote History
 
 ## Architecture Diagram
 
