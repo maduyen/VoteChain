@@ -113,5 +113,5 @@ Google Chrome is installable on macOS, Linux, and Windows platforms. Please refe
 
 
 ## For more information
-Refer to the Blog - [https://naitikjain3071.wixsite.com/my-site](https://xiuyuanqi799.wixsite.com/expanded-votechain)
+Refer to the Blog - [https://xiuyuanqi799.wixsite.com/expanded-votechain](https://xiuyuanqi799.wixsite.com/expanded-votechain)
 
