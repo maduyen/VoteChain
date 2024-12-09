@@ -27,7 +27,8 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 3) **React.js** - It was utilized for building composable and interactive user interface within the VoteChain platform, facilitating the creation of modular components and seamless UI interactions.
 4) **Material UI** - A responsive UI design library complementing React.js, ensured a consistent and visually appealing layout across various devices and screen sizes.
 5) **Node.js** - It forms the foundational infrastructure for the VoteChain back end, managing server-side logic and acting as an intermediary between the user interface and ResilientDB blockchain
-6) **MongoDB** - The Custom Poll Creation and Discussion Panel features utilize MongoDB to securely store transaction-related data such as Poll Topics, Vote Options, and Messages. This data is organized into three collections: Poll, Vote, and Message Data, ensuring efficient management and retrieval of information.
+6) **ResVault** - VoteChain now uses ResVault for user authentication. Users will log in with their ResVault Wallet, and poll submissions will be linked to their account for enhanced protection and accountability.
+7) **MongoDB** - The Custom Poll Creation and Discussion Panel features utilize MongoDB to securely store transaction-related data such as Poll Topics, Vote Options, and Messages. This data is organized into three collections: Poll, Vote, and Message Data, ensuring efficient management and retrieval of information.
 
 ## Screenshots
 
