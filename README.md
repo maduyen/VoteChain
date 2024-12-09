@@ -37,22 +37,28 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 
 <img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/1b6f55b9-b548-4ddb-b9c0-a7fe2b977a19">
 
-2) Create Polls Screen
+2) Login Page
+<img width="931" alt="Screenshot 2024-12-08 171743" src="https://github.com/user-attachments/assets/dd690de2-ce82-4c66-9d9c-ae2624e16311">
+
+3) Authenticate with ResVault
+<img width="931" alt="Screenshot 2024-12-08 172213" src="https://github.com/user-attachments/assets/829027e0-39fa-473e-`91a9-e3d1147a9d00">
+
+4) Create Polls Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/04d6648e-26ec-4d2d-b916-a065080574de">
 
-3) Vote Polls Screen
+5) Vote Polls Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/101543ac-f1f7-4e01-b8d6-ca719753a0b0">
 
-4) Vote Screen
+6) Vote Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/6867216a-2d26-4e30-8931-4a9db9ff17c2">
 
-5) Result Screen
+7) Result Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/1829cb3b-c275-4cbf-be84-77456083afb1">
 
-6) User History Screen
+8) User History Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/user-attachments/assets/07e0154f-eec5-4075-a9b6-f8d19871a8ab">
 
-7) Discussion Screen
+9) Discussion Screen
 <img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/1cc0c76c-9068-4885-9ad6-1e23d91cd524">
 
 
