@@ -58,7 +58,7 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 <img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/user-attachments/assets/07e0154f-eec5-4075-a9b6-f8d19871a8ab">
 
 9) Discussion Screen
-<img width="931" alt="Screenshot 2024-12-08 211323" src="https://github.com/user-attachments/assets/401ad96a-58c8-4287-98c2-edbf882aba26">
+<img width="931" alt="Screenshot 2024-12-08 212205" src="https://github.com/user-attachments/assets/ace0250f-da24-48b1-ba0b-a1588c90665e">
 
 
 ## Preparation
