@@ -9,6 +9,7 @@ import discussion from "../../components/images/discussion.svg";
 import blockchain from "../../components/images/blockchain.svg";
 import customize from "../../components/images/customize.svg";
 import signup from "../../components/images/signup.svg";
+import piechart from "../../components/images/pie-chart.svg";
 import { Button } from "reactstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 
@@ -147,14 +148,19 @@ const data = [
     text: (<span>VoteChain now uses the Resilient-App <a href="https://github.com/apache/incubator-resilientdb-resvault" style={{textDecoration: "underline"}}>ResVault</a> for user authentication, adding extra security. Users log in with their ResVault Wallet, and poll submissions will be linked to their account for enhanced protection and accountability.</span>)
   },
   {
+    image: customize,
+    section: 'NEW! Customizable Voting',
+    text: 'With our latest update, users can now create and customize their own polls, tailoring voting rules and formats to meet their specific needs! This enhancement ensures a seamless blend of flexibility and security for an optimized voting experience.'
+  },
+  {
     image: election,
     section: 'Get Ready to Vote!',
     text: 'Dive into the details and vote for what you believe in. Explore the topic pages to find essential information about the polls and be prepared to make your voice heard. Your participation is crucial for shaping our community!'
   },
   {
-    image: customize,
-    section: 'NEW! Customizable Voting',
-    text: 'With our latest update, users can now create and customize their own polls, tailoring voting rules and formats to meet their specific needs! This enhancement ensures a seamless blend of flexibility and security for an optimized voting experience.'
+    image: piechart,
+    section: 'NEW! View Poll Results',
+    text: 'Poll results are now available to voters! After casting their votes, users can view the poll outcomes. This creates a more interactive experience, and promotes transparency throughout the voting process.'
   },
   {
     image: discussion,
