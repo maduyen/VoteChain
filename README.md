@@ -5,16 +5,15 @@
 
 Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and GraphQL, a cutting-edge blockchain technology, to revolutionize the landscape of electronic voting systems. Our primary focus is to ensure a secure and transparent voting process while emphasizing the significance of each voter's singular vote. VoteChain is designed to guarantee the permanence of votes, enabling every participant to cast a single vote per election. Our system strictly prohibits multiple votes, ensuring the integrity and fairness of the electoral process. One of the standout features of VoteChain is its user-friendly interface and the provision of a dedicated admin panel. Within the admin panel, a comprehensive display of all elections and their respective candidates' votes is showcased. These statistics are presented dynamically through visually intuitive representations such as bar graphs, pie charts, and polar area charts. At VoteChain, we are committed to fostering a trustworthy environment where the sanctity of each vote is upheld. Our utilization of ResilientDB technology ensures the highest standards of security, transparency, and reliability in electronic voting, empowering individuals to participate in the democratic process with confidence.
 
-Website Link -- https://kri-hika.github.io/vote-chain/ 
-
 ## Features
 
 1) Secure and Transparent Election
 2) Single Voting Instance
 3) Immutable Votes
-4) Limited Access to Results
-5) Electronic Vote Visualisation in the Admin Panel
-6) User Friendly interface
+4) Customizable Voting
+5) Participate in Discussion Panels
+6) View Poll Results & Personal Vote History
+7) User Friendly Interface
 
 ## Architecture Diagram
 
@@ -27,7 +26,7 @@ Website Link -- https://kri-hika.github.io/vote-chain/
 3) **React.js** - It was utilized for building composable and interactive user interface within the VoteChain platform, facilitating the creation of modular components and seamless UI interactions.
 4) **Material UI** - A responsive UI design library complementing React.js, ensured a consistent and visually appealing layout across various devices and screen sizes.
 5) **Node.js** - It forms the foundational infrastructure for the VoteChain back end, managing server-side logic and acting as an intermediary between the user interface and ResilientDB blockchain
-6) **MongoDB** - ~~Please add description~~
+6) **MongoDB** - The Custom Poll Creation and Discussion Panel features utilize MongoDB to securely store transaction-related data such as Poll Topics, Vote Options, and Messages. This data is organized into three collections: Poll, Vote, and Message Data, ensuring efficient management and retrieval of information.
 
 ## Screenshots
 
