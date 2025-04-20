@@ -161,9 +161,9 @@ const PollCreationPage = () => {
         <Navbar />
       </div>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-200 flex items-center justify-center py-10 px-6">
-        <div className="w-full max-w-3xl bg-white rounded-2xl shadow-lg p-10">
-          <h1 className="text-4xl font-extrabold text-blue-600 text-center mb-10">Create a Poll</h1>
+      <div className="min-h-screen flex items-center justify-center py-10 px-6">
+        <div className="mt-20 w-full max-w-4xl bg-white rounded-2xl shadow-lg p-10">
+          <h1 className="text-4xl font-extrabold text-center mb-10">Create a Poll</h1>
 
           {/* Basic Info */}
           <div className="mb-10">
