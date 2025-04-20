@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -8,7 +8,6 @@ import React, { useState, useEffect } from "react";
 const Navbar = () => {
   const linkStyle = { color: "white", marginRight: "15px" };
   const topicStyle = { color: "white", marginRight: "15px", fontSize: "25px"};
-  const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -43,18 +42,26 @@ const Navbar = () => {
         </Typography>
         {/* left */}
         <div>
-          <Button component={Link} to="/polls" style={linkStyle}>
-            VIEW POLLS
-          </Button>
-          <Button component={Link} to="/create-poll" style={linkStyle}>
-            CREATE POLL
-          </Button>                    
-          <Button component={Link} to="/userinfo" style={linkStyle}>
+          {isLoggedIn && (
+            <>
+            <Button component={Link} to="/polls" style={linkStyle}>
+              VIEW POLLS
+            </Button>
+            
+            <Button component={Link} to="/create-poll" style={linkStyle}>
+              CREATE POLL
+            </Button> 
+
+            <Button component={Link} to="/userinfo" style={linkStyle}>
             YOUR VOTES
-          </Button>
+            </Button>
+            </>   
+          )}                
+
           <Button component={Link}  to={isLoggedIn ? "#" : "/login"}  onClick={handleClick} style={linkStyle} >
-            {isLoggedIn ? "Logined" : "VOTER LOGIN"}
+            {isLoggedIn ? "VIEW ACCOUNT" : "SIGN UP/LOG IN"}
           </Button>
+          
           {isLoggedIn && (
             <Button style={linkStyle} onClick={handleLogout}>
               Logout
