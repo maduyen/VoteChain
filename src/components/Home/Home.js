@@ -44,18 +44,19 @@ function Home(props) {
         <section className="section section-lg section-safe">
           <div style={{ display: "flex", alignItems: "center" }}>
             <div>
-              <h1 className="display-1" style={{ color: "#221c1c", marginBottom: "0px" }}>
+              <h2 style={{ color: "#f5cfa8", marginBottom: "0px"}}> Introducing... </h2>
+              <h1 className="display-1" style={{ color: "#f5cfa8", marginBottom: "0px", fontWeight: 400 }}>
                 VoteChain 2.0
               </h1>
-              <h4 style={{ color: "#555b69" }}>
-                Decentralizing Voting with Blockchain, One Vote at a Time ✅
+              <h4 style={{ color: 'white' }}>
+                Decentralizing Voting with Blockchain - One Vote at a Time ✅
               </h4>
-              <p style={{ color: "#555b69" }}>
-                Read about VoteChain's latest updates{" "}
+              <p style={{ color: 'white' }}>
+              Learn more about our latest updates {" "}
                 <span
                   onClick={scrollToHowItWorks}
                   style={{
-                    color: "#8fac86",
+                    color: "#f0c38e",
                     textDecoration: "underline",
                     cursor: "pointer",
                   }}
@@ -64,16 +65,14 @@ function Home(props) {
                 </span>
                 !
               </p>
-              <Button
-                style={{
-                  marginTop: "20px",
-                  backgroundColor: "#8fac86",
-                  color: "#fff",
-                }}
-                onClick={() => navigate("/polls")} // Navigate to PollsListPage
-              >
-                View Polls
-              </Button>
+              <div className="btn-wrapper profile">
+                <Button
+                    style={{ backgroundColor: "#f0c38e", color: "#312c51" }}
+                    onClick={() => navigate("/login")} // Navigate to Login
+                  >
+                    Get Started
+                </Button>
+              </div>
             </div>
             <img
               src={homepage}
@@ -90,48 +89,111 @@ function Home(props) {
               className="img-fluid floating"
               style={{ width: "600px", height: "600px" }}
             />
-            <div>
-              <h4 style={{ color: "#555b69", marginTop: "15px" }}>
+            <div
+              style={{
+              backgroundColor: "#312c51", 
+              borderRadius: "50px", 
+              padding: "40px", 
+              marginTop: "40px", 
+              marginLeft: '40px',
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+            }}>
+              <h4 style={{ color: 'white' }}>
                 Experience the future of e-voting with VoteChain - our customizable, secure voting
-                app that offers convenience, transparency, and accessibility for all!
+                platform that offers convenience, transparency, and accessibility for all!
               </h4>
               <div className="btn-wrapper profile">
                 <Button
-                  href="https://xiuyuanqi799.wixsite.com/expanded-votechain"
-                  style={{ backgroundColor: "#8fac86", color: "#fff" }}
+                  style={{
+                    marginTop: "10px",
+                    backgroundColor: "#f0c38e",
+                    color: "#312c51"
+                  }}
+                  onClick={() => navigate("/polls")} // Navigate to PollsListPage
                 >
-                  Blog
+                  View Polls
                 </Button>
               </div>
             </div>
           </div>
         </section>
-        <div id="how-it-works" className="content-center brand">
-          <h1 className="display-2 text-center" style={{ color: "#221c1c" }}>
-            How Does VoteChain Work?
-          </h1>
+        <div
+          style={{
+            backgroundColor: "#312c51", 
+            borderRadius: "50px",
+            padding: "50px", 
+            paddingBottom: "70px",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)"
+        }}>
+          <div id="how-it-works" className="content-center brand">
+            <h2 style={{ color: "#f5cfa8", textAlign: 'center', marginBottom: '20px'}}>
+              How Does VoteChain Work?
+            </h2>
+          </div>
+          <div className="w-7/8 m-auto px-5">
+            <Slider {...settings}>
+              {data.map((d) => (
+                <div className="bg-[#48426d] h-[500px] text-black rounded-xl" key={d.section}>
+                  <div className="h-50 bg-[#48426d] flex justify-center items-center rounded-t-xl">
+                    <div className="floating bg-white rounded-full img-fluid floating p-4">
+                      <img
+                        style={{ width: "150px", height: "150px" }}
+                        src={d.image}
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col jusify-center items-center p-4">
+                    <h4 style={{ color: "#f5cfa8" }}>
+                      {d.section}
+                    </h4>
+                    <p style= {{ color: 'white', paddingLeft: '5px', paddingRight: '5px'}}>{d.text}</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
-        <div className="w-3/4 m-auto">
-          <Slider {...settings}>
-            {data.map((d) => (
-              <div className="bg-white h-[520px] text-black rounded-xl" key={d.section}>
-                <div className="h-60 bg-white flex justify-center items-center rounded-t-xl">
-                  <img
-                    style={{ width: "200px", height: "200px" }}
-                    className="img-fluid floating"
-                    src={d.image}
-                    alt="..."
-                  />
-                </div>
-                <div className="flex flex-col jusify-center items-center p-4">
-                  <p className="text-xl font-semibold" style={{ color: "#8fac86" }}>
-                    {d.section}
-                  </p>
-                  <p>{d.text}</p>
-                </div>
-              </div>
-            ))}
-          </Slider>
+        <div
+          style={{
+            backgroundColor: "#312c51", 
+            borderRadius: "50px", 
+            padding: "40px", 
+            marginTop: "80px", 
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
+            maxWidth: "900px"
+          }}>
+          <h2 style = {{ color: "#f5cfa8", marginBottom: '5px'}}> Building the Future of Voting 🔨</h2>
+          <h4 style = {{ color: 'white' }}> See How:</h4>
+          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+            <div className="btn-wrapper profile">
+                  <Button
+                    href="https://xiuyuanqi799.wixsite.com/expanded-votechain"
+                    style={{ backgroundColor: "#f0c38e", color: "#312c51" }}
+                  >
+                  <i className="fas fa-newspaper mr-2"></i> {/* Blog icon */}
+                    Read Our Blog
+                  </Button>
+            </div>
+            <div className="btn-wrapper profile">
+                  <Button
+                    href="https://github.com/maduyen/VoteChain"
+                    style={{ backgroundColor: "#f0c38e", color: "#312c51" }}
+                  >
+                  <i className="fab fa-github mr-2"></i>  {/* GitHub icon */}
+                    Visit Our GitHub Repository
+                  </Button>
+            </div>
+            <div className="btn-wrapper profile">
+                  <Button
+                    href="https://resilientdb.apache.org/"
+                    style={{ backgroundColor: "#f0c38e", color: "#312c51" }}
+                  >
+                  <i className="fas fa-database mr-2"></i> {/* Database icon */}
+                    Learn More About ResilientDB
+                  </Button>
+            </div>
+          </div>
         </div>
       </div>
       <div style={{ paddingTop: "6rem" }}>

@@ -1,5 +1,9 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
-  background-image: url('./components/images/back_tan.png');  /*changed backgroung to match blog*/
+  background-image: url('./components/images/purple_bg.png');  /*changed backgroung to match blog*/
 }
 
 .page-container {

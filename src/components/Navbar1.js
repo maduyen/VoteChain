@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const linkStyle = { color: "white", marginRight: "15px" };
-  const topicStyle = { color: "white", marginRight: "15px", fontSize: "25px"};
+  const topicStyle = { fontFamily: "Poppins", textTransform: "none", color: "#f5cfa8", marginRight: "15px", fontSize: "20px"};
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="fixed" style={{ backgroundColor: "#a2856d" }}>
+    <AppBar position="fixed" style={{ backgroundColor: "#312c51" }}>
       <Toolbar style={{ justifyContent: "space-between" }}>
         {/* left */}
         <div>
