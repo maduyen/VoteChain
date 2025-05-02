@@ -34,6 +34,7 @@ const Navbar = () => {
         {/* left */}
         <div>
           <Button component={Link} to="/" style={topicStyle}>
+            <i className="fas fa-home mr-2"></i>  {/*Home icon */}
               VoteChain
           </Button>
         </div>
