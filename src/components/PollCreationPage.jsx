@@ -4,6 +4,7 @@ import { GlobalContext } from "../context/GlobalContext";
 import { fetchTransactionDetails } from "./utils/ResilientDB";
 import Navbar from "./Navbar1";
 import Footer from "./Footer2";
+import createPoll from "./images/createPoll.svg";
 
 const sdk = new ResVaultSDK();
 
@@ -164,61 +165,69 @@ const PollCreationPage = () => {
       
       <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
         {/* Header */}
-        <div className="w-full flex justify-center mt-20">
-          <h1 className="font-medium text-[#f5cfa8] text-4xl text-center mb-4">Create a New Poll</h1>
+        <div className="w-full flex justify-start items-end mt-4 max-w-4xl mx-auto">
+          <h1 className="font-medium text-[#f5cfa8] text-4xl text-center mb-[50px]">Create a New Poll</h1>
+          <img
+            src={createPoll}
+            alt="..."
+            className="img-fluid floating"
+            style={{ width: "200px", height: "200px", marginLeft: '10px'}}
+          />
         </div>
-        <div className="w-full max-w-4xl bg-[#312c51] rounded-2xl shadow-lg p-10">
+        <div className="w-full max-w-4xl bg-[#312c51] rounded-3xl shadow-lg p-10">
           {/* Basic Info */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-[#f5cfa8] mb-4">Basic Info</h2>
-            <div className="space-y-4 w-full max-w-4xl bg-[#48426d] rounded-2xl shadow-lg p-10">
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mb-4">Basic Info 📋</h2>
+            <div className="space-y-4 w-full max-w-4xl bg-[#48426d] rounded-3xl shadow-lg p-10">
               <input
                 type="text"
                 placeholder="Poll Topic"
                 value={pollTopic}
                 onChange={(e) => setPollTopic(e.target.value)}
-                className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400"
+                className="w-full p-4 border border-gray-300 rounded-3xl shadow-sm focus:ring-2 focus:ring-blue-400"
               />
               <textarea
                 placeholder="Poll Description (optional)"
                 value={pollDescription}
                 onChange={(e) => setPollDescription(e.target.value)}
-                className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400"
+                className="w-full p-4 border border-gray-300 rounded-3xl shadow-sm focus:ring-2 focus:ring-blue-400"
               />
               <input
                 type="file"
                 accept="image/*"
                 onChange={handleImageUpload}
-                className="w-full text-white file:mr-4 file:py-2 file:px-4 file:border-0 file:text-[#312c51] file:bg-[#f0c38e] file:rounded-lg hover:file:bg-[#d9ab78]"
+                className="w-full text-white file:mr-4 file:py-2 file:px-4 file:border-0 file:text-[#312c51] file:bg-[#f0c38e] file:rounded-3xl hover:file:bg-[#d9ab78]"
               />
             </div>
           </div>
 
           {/* Options Setting */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-6 mb-4">Options Setting</h2>
-            {options.map((option, index) => (
-              <div key={index} className="flex items-center gap-3 mb-4 w-full max-w-4xl bg-[#48426d] rounded-2xl shadow-lg p-10">
-                <input
-                  type="text"
-                  placeholder={`Option ${index + 1}`}
-                  value={option}
-                  onChange={(e) => handleOptionChange(index, e.target.value)}
-                  className="flex-grow p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400"
-                />
-                {options.length > 2 && (
-                  <button
-                    onClick={() => setOptions(options.filter((_, i) => i !== index))}
-                    className="text-red-500 hover:text-red-700 font-bold"
-                  >
-                    ✕
-                  </button>
-                )}
-              </div>
-            ))}
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-6 mb-4">Options Setting 🗳️</h2>
+            <div className="bg-[#48426d] rounded-3xl shadow-lg p-10 mb-4">
+              {options.map((option, index) => (
+                <div key={index} className="flex items-center gap-3 mb-4 w-full max-w-4xl">
+                  <input
+                    type="text"
+                    placeholder={`Option ${index + 1}`}
+                    value={option}
+                    onChange={(e) => handleOptionChange(index, e.target.value)}
+                    className="flex-grow p-4 border border-gray-300 rounded-3xl shadow-sm focus:ring-2 focus:ring-blue-400"
+                  />
+                  {options.length > 2 && (
+                    <button
+                      onClick={() => setOptions(options.filter((_, i) => i !== index))}
+                      className="text-red-500 hover:text-red-700 font-bold"
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
             <button
               onClick={handleAddOption}
-              className="w-full bg-[#f0c38e] text-[#312c51] py-3 rounded-lg shadow-lg hover:bg-[#d9ab78] transition duration-200"
+              className="w-full bg-[#f0c38e] text-[#312c51] py-3 rounded-3xl shadow-lg hover:bg-[#d9ab78] transition duration-200"
             >
               + Add Option
             </button>
@@ -226,15 +235,15 @@ const PollCreationPage = () => {
 
           {/* Time Setting */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-6 mb-4">Time Setting</h2>
-            <div className="flex gap-6 w-full max-w-4xl bg-[#48426d] rounded-2xl shadow-lg p-10">
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-6 mb-4">Time Setting ⏱️</h2>
+            <div className="flex gap-6 w-full max-w-4xl bg-[#48426d] rounded-3xl shadow-lg p-10">
               <div className="flex-grow">
                 <label className="block text-white mb-2">Start Time:</label>
                 <input
                   type="datetime-local"
                   value={startTime}
                   onChange={(e) => setStartTime(e.target.value)}
-                  className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400"
+                  className="w-full p-4 border border-gray-300 rounded-3xl shadow-sm focus:ring-2 focus:ring-blue-400"
                 />
               </div>
               <div className="flex-grow">
@@ -243,7 +252,7 @@ const PollCreationPage = () => {
                   type="datetime-local"
                   value={endTime}
                   onChange={(e) => setEndTime(e.target.value)}
-                  className="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-400"
+                  className="w-full p-4 border border-gray-300 rounded-3xl shadow-sm focus:ring-2 focus:ring-blue-400"
                 />
               </div>
             </div>
@@ -252,7 +261,7 @@ const PollCreationPage = () => {
           {/* Submit Button */}
           <button
             onClick={handleSubmit}
-            className="w-full bg-[#5d9c76] text-white py-4 rounded-lg shadow-lg hover:bg-[#73b68c] transition duration-200 text-xl"
+            className="w-full bg-[#5d9c76] text-white py-4 rounded-3xl shadow-lg hover:bg-[#73b68c] transition duration-200 text-xl"
           >
             Create Poll
           </button>
