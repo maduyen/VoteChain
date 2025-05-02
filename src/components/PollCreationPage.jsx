@@ -3,6 +3,7 @@ import ResVaultSDK from "resvault-sdk";
 import { GlobalContext } from "../context/GlobalContext";
 import { fetchTransactionDetails } from "./utils/ResilientDB";
 import Navbar from "./Navbar1";
+import Footer from "./Footer2";
 
 const sdk = new ResVaultSDK();
 
@@ -161,14 +162,16 @@ const PollCreationPage = () => {
         <Navbar />
       </div>
       
-      <div className="min-h-screen flex items-center justify-center py-10 px-6">
-        <div className="mt-20 w-full max-w-4xl bg-white rounded-2xl shadow-lg p-10">
-          <h1 className="text-4xl font-extrabold text-center mb-10">Create a Poll</h1>
-
+      <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
+        {/* Header */}
+        <div className="w-full flex justify-center mt-20">
+          <h1 className="font-medium text-[#f5cfa8] text-4xl text-center mb-4">Create a New Poll</h1>
+        </div>
+        <div className="w-full max-w-4xl bg-[#312c51] rounded-2xl shadow-lg p-10">
           {/* Basic Info */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Basic Info</h2>
-            <div className="space-y-4">
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mb-4">Basic Info</h2>
+            <div className="space-y-4 w-full max-w-4xl bg-[#48426d] rounded-2xl shadow-lg p-10">
               <input
                 type="text"
                 placeholder="Poll Topic"
@@ -186,16 +189,16 @@ const PollCreationPage = () => {
                 type="file"
                 accept="image/*"
                 onChange={handleImageUpload}
-                className="w-full text-gray-600 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-white file:bg-blue-500 file:rounded-lg hover:file:bg-blue-600"
+                className="w-full text-white file:mr-4 file:py-2 file:px-4 file:border-0 file:text-[#312c51] file:bg-[#f0c38e] file:rounded-lg hover:file:bg-[#d9ab78]"
               />
             </div>
           </div>
 
           {/* Options Setting */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Options Setting</h2>
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-6 mb-4">Options Setting</h2>
             {options.map((option, index) => (
-              <div key={index} className="flex items-center gap-3 mb-4">
+              <div key={index} className="flex items-center gap-3 mb-4 w-full max-w-4xl bg-[#48426d] rounded-2xl shadow-lg p-10">
                 <input
                   type="text"
                   placeholder={`Option ${index + 1}`}
@@ -215,7 +218,7 @@ const PollCreationPage = () => {
             ))}
             <button
               onClick={handleAddOption}
-              className="w-full bg-blue-500 text-white py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-200"
+              className="w-full bg-[#f0c38e] text-[#312c51] py-3 rounded-lg shadow-lg hover:bg-[#d9ab78] transition duration-200"
             >
               + Add Option
             </button>
@@ -223,10 +226,10 @@ const PollCreationPage = () => {
 
           {/* Time Setting */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Time Setting</h2>
-            <div className="flex gap-6">
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-6 mb-4">Time Setting</h2>
+            <div className="flex gap-6 w-full max-w-4xl bg-[#48426d] rounded-2xl shadow-lg p-10">
               <div className="flex-grow">
-                <label className="block text-gray-600 mb-2">Start Time:</label>
+                <label className="block text-white mb-2">Start Time:</label>
                 <input
                   type="datetime-local"
                   value={startTime}
@@ -235,7 +238,7 @@ const PollCreationPage = () => {
                 />
               </div>
               <div className="flex-grow">
-                <label className="block text-gray-600 mb-2">End Time:</label>
+                <label className="block text-white mb-2">End Time:</label>
                 <input
                   type="datetime-local"
                   value={endTime}
@@ -249,11 +252,16 @@ const PollCreationPage = () => {
           {/* Submit Button */}
           <button
             onClick={handleSubmit}
-            className="w-full bg-green-500 text-white py-4 rounded-lg shadow-lg hover:bg-green-600 transition duration-200 text-xl"
+            className="w-full bg-[#5d9c76] text-white py-4 rounded-lg shadow-lg hover:bg-[#73b68c] transition duration-200 text-xl"
           >
             Create Poll
           </button>
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="pt-4">
+        <Footer />
       </div>
     </div>
   );

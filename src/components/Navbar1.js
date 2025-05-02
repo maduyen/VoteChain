@@ -45,22 +45,23 @@ const Navbar = () => {
         <div>
           {isLoggedIn && (
             <>
+            <Button component={Link} to="/create-poll" style={linkStyle}>
+              + CREATE POLL
+            </Button> 
+
             <Button component={Link} to="/polls" style={linkStyle}>
               VIEW POLLS
             </Button>
-            
-            <Button component={Link} to="/create-poll" style={linkStyle}>
-              CREATE POLL
-            </Button> 
 
             <Button component={Link} to="/userinfo" style={linkStyle}>
-            YOUR VOTES
+              YOUR VOTES
             </Button>
             </>   
           )}                
 
           <Button component={Link}  to={isLoggedIn ? "#" : "/login"}  onClick={handleClick} style={linkStyle} >
-            {isLoggedIn ? "VIEW ACCOUNT" : "SIGN UP/LOG IN"}
+            <i className="fas fa-user mr-2"></i>  {/*Profile icon */}
+            {isLoggedIn ? "ACCOUNT" : "LOGIN"}
           </Button>
           
           {isLoggedIn && (
