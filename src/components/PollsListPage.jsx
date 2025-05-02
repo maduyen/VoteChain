@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "reactstrap";
 import Navbar from "./Navbar1";
+import Footer from "./Footer2";
+import pollsIcon from "./images/polls.svg"
 
 const PollsListPage = () => {
   const [polls, setPolls] = useState([]);
@@ -48,42 +50,47 @@ const PollsListPage = () => {
         <Navbar />
       </div>
 
-      <div className="max-w-4xl mx-auto p-6">
-        <h1 className="text-3xl font-bold text-center mb-6">Polls</h1>
-
+      <div className="max-w-5xl mx-auto p-6">
+        <div className="w-full flex justify-start items-end max-w-4xl mx-auto">
+          <h1 className="text-4xl font-medium text-[#f5cfa8] text-center mb-4">Active Polls</h1>
+          <img
+            src={pollsIcon}
+            alt="..."
+            className="img-fluid floating"
+            style={{ width: "200px", height: "200px", marginLeft: '20px'}}
+          />
+        </div>
         {/* Search Input */}
-        <div className="mb-6">
+        <div className="mb-6" >
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search polls by topic..."
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border rounded-3xl focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
 
         {/* Polls Grid */}
-        <div className="grid gap-3">
+        <div className="grid gap-8 w-full max-w-4xl bg-[#312c51] rounded-3xl shadow-lg p-12">
           {filteredPolls.length > 0 ? (
             filteredPolls.map((poll) => (
               <div
                 key={poll.transactionId}
-                className="bg-white shadow-md rounded-lg p-5 hover:shadow-lg transition-shadow"
+                className="bg-[#48426d] shadow-md rounded-3xl p-5 hover:shadow-lg transition-shadow"
               >
-                <h2 className="text-xl font-semibold mb-2">{poll.pollData.topic}</h2>
-                <p className="text-gray-600 mb-4">{poll.pollData.description}</p>
-                <p className="text-sm text-gray-500">Created by: {poll.publicKey}</p>
+                <h2 className="text-[#f5cfa8] text-2xl font-semibold mb-2">{poll.pollData.topic}</h2>
+                <p className="text-white mb-4">{poll.pollData.description}</p>
+                <p className="text-sm text-white ml-4">Created by: {poll.publicKey}</p>
                 <Link
                   to={`/polls/${poll.transactionId}`}
-                  style={{ backgroundColor: "#8fac86", color: "#fff" }}
-                  className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
+                  className="block mt-4 bg-[#f0c38e] text-[#312c51] text-center py-2 px-4 rounded-3xl hover:text-[#312c51] hover:bg-[#d9ab78]"
                 >
                   View & Vote
                 </Link>
                 <Link
                   to={`/polls/${poll.transactionId}/discussion`}
-                  style={{ backgroundColor: "#8fac86", color: "#fff" }}
-                  className="block mt-4 bg-blue-500 text-white text-center py-2 px-4 rounded-md hover:bg-blue-600"
+                  className="block mt-4 bg-[#f0c38e] text-[#312c51] text-center py-2 px-4 rounded-3xl hover:text-[#312c51] hover:bg-[#d9ab78]"
                 >
                   Join Discussion Panel
                 </Link>
@@ -95,11 +102,11 @@ const PollsListPage = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-between items-center mt-8">
+        <div className="flex justify-between items-center mt-6">
           <button
             onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
             disabled={page === 1}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-3xl ${
               page === 1
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-blue-500 text-white hover:bg-blue-600"
@@ -110,7 +117,7 @@ const PollsListPage = () => {
           <button
             onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
             disabled={page === totalPages}
-            className={`px-4 py-2 rounded-md ${
+            className={`px-4 py-2 rounded-3xl ${
               page === totalPages
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-blue-500 text-white hover:bg-blue-600"
@@ -119,7 +126,12 @@ const PollsListPage = () => {
             Next
           </button>
         </div>
-      </div>  
+      </div>
+
+      {/* Footer */}
+      <div className="pt-4">
+        <Footer />
+      </div>
     </div>
     );
 };

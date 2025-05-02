@@ -166,18 +166,18 @@ const PollCreationPage = () => {
       <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
         {/* Header */}
         <div className="w-full flex justify-start items-end mt-4 max-w-4xl mx-auto">
-          <h1 className="font-medium text-[#f5cfa8] text-4xl text-center mb-[50px]">Create a New Poll</h1>
+          <h1 className="font-medium text-[#f5cfa8] text-4xl mb-[50px]">Create Poll</h1>
           <img
             src={createPoll}
             alt="..."
             className="img-fluid floating"
-            style={{ width: "200px", height: "200px", marginLeft: '10px'}}
+            style={{ width: "200px", height: "200px", marginLeft: '12px'}}
           />
         </div>
         <div className="w-full max-w-4xl bg-[#312c51] rounded-3xl shadow-lg p-10">
           {/* Basic Info */}
           <div className="mb-10">
-            <h2 className="text-2xl font-semibold text-[#f5cfa8] mb-4">Basic Info 📋</h2>
+            <h2 className="text-2xl font-semibold text-[#f5cfa8] mt-2 mb-4">Basic Info 📋</h2>
             <div className="space-y-4 w-full max-w-4xl bg-[#48426d] rounded-3xl shadow-lg p-10">
               <input
                 type="text"
@@ -261,7 +261,7 @@ const PollCreationPage = () => {
           {/* Submit Button */}
           <button
             onClick={handleSubmit}
-            className="w-full bg-[#5d9c76] text-white py-4 rounded-3xl shadow-lg hover:bg-[#73b68c] transition duration-200 text-xl"
+            className="w-full bg-[#4caf68] text-white py-4 rounded-3xl shadow-lg hover:bg-[#44995b] transition duration-200 text-xl mb-2"
           >
             Create Poll
           </button>

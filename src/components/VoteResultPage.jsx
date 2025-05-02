@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Bar, Pie, PolarArea, Doughnut } from "react-chartjs-2";
 import "chart.js/auto"; // Necessary for Chart.js
 import Navbar from "./Navbar1";
+import Footer from "./Footer2";
 
 const PollResultPage = () => {
   const { transactionId } = useParams(); // Get transactionId from the URL
@@ -152,45 +153,53 @@ const PollResultPage = () => {
 
   return (
     <div>
-    <div>
-      <Navbar />
-    </div>
-      <div className="max-w-4xl mx-auto p-6">
-        <h1 className="text-3xl font-bold text-center mb-4">{pollTopic} Results</h1> {/* Display poll topic */}
-        <p className="text-center text-gray-700 text-lg md:text-2xl font-medium mb-8">{pollDescription}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <Navbar />
+      </div>
+
+      {/* Back Button */}
+      <div className="absolute top-[90px] left-5 z-10">
+        <button
+          onClick={() => window.history.back()}
+          className="text-[#312c51] bg-[#f0c38e] hover:bg-[#d9ab78] rounded-3xl px-4 py-2"
+        >
+          ◄ Go Back
+        </button>
+      </div>
+
+      <div className="max-w-6xl mx-auto p-6">
+        <h1 className="text-4xl font-medium text-center text-[#f5cfa8] mt-4 mb-2">{pollTopic} Results</h1> {/* Display poll topic */}
+        <p className="text-2xl text-white text-center mb-4">{pollDescription}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-16 bg-[#312c51] shadow-lg rounded-3xl">
           {/* Bar Chart */}
-          <div className="p-4 bg-white shadow-lg rounded-lg">
+          <div className="p-4 bg-white shadow-lg rounded-3xl">
             <h2 className="text-xl font-semibold text-center mb-4">Bar Chart</h2>
             <Bar data={barData} options={chartOptions} />
           </div>
 
           {/* Pie Chart */}
-          <div className="p-4 bg-white shadow-lg rounded-lg">
+          <div className="p-4 bg-white shadow-lg rounded-3xl">
             <h2 className="text-xl font-semibold text-center mb-4">Pie Chart</h2>
             <Pie data={pieData} options={chartOptions} />
           </div>
 
           {/* Polar Area Chart */}
-          <div className="p-4 bg-white shadow-lg rounded-lg">
+          <div className="p-4 bg-white shadow-lg rounded-3xl">
             <h2 className="text-xl font-semibold text-center mb-4">Polar Area Chart</h2>
             <PolarArea data={polarData} options={chartOptions} />
           </div>
 
           {/* Doughnut Chart */}
-          <div className="p-4 bg-white shadow-lg rounded-lg">
+          <div className="p-4 bg-white shadow-lg rounded-3xl">
             <h2 className="text-xl font-semibold text-center mb-4">Doughnut Chart</h2>
             <Doughnut data={doughnutData} options={chartOptions} />
           </div>
         </div>
-        <div className="mt-8 text-center">
-          <button
-            onClick={() => window.history.back()}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-          >
-            Go Back
-          </button>
-        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="pt-4">
+        <Footer />
       </div>
     </div>
   );

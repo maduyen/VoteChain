@@ -1,32 +1,47 @@
 /* referred to VoteChain/src/components/Login/Login.module.css for style setup */
 
+.heading {
+    color: #f5cfa8;
+    font-weight: 450;
+    font-size: 35px;
+    margin-top: 80px;
+}
+
+.backButton {
+    position: absolute;
+    top: 90px; /* below the navbar */
+    left: 20px;
+    z-index: 10;
+  }
 .container {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* optional: centers vertically */
+    flex-direction: column;
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
     background-size: cover;
-    align-items: center;
     background-repeat: no-repeat;
-    padding-top: 70px;
 }
 
 .innerBox {
+    margin:0;
     text-align: left;
-    min-height: 85vh;
-    width: 85vw;
-    background-color: #fff;
+    height: 75vh;
+    width: 75vw;
+    background-color: #312c51;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
     position: relative; /* relative positioning -> using for formContainer */
 }
 
 .formContainer {
-  border-radius: 10px; /*rounds corners ;)*/
+  background-color: #48426d;
+  border-radius: 30px; /*rounds corners ;)*/
   width: 95%;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow */
@@ -37,7 +52,8 @@
 }
 
 .sendButton {
-    background-color: #8fac86 !important; /* other class was overriding the color */
+    background-color: #f0c38e !important; /* other class was overriding the color */
+    color: #312c51 !important; 
     margin-left: 8px;
     height: 75%;
 }
@@ -54,5 +70,5 @@
     padding: 8px; /* padding between msg and border */
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 30px;
 }

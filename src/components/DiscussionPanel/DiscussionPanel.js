@@ -73,34 +73,44 @@ function DiscussionPanel() {
     };
 
     return (
-		<div>
-			<div>
-			<Navbar />
-			</div>
-			<Container className={styles.container}>
-				<div className={styles.innerBox}>
-                    <h1 className={styles.heading}>Discussion: {pollTopic}</h1>
-					<Form className={styles.formContainer} id="msgForm" onSubmit={handleSendMessage}>
-						<Input 
-							type="text"
-							name="msg"
-							placeholder="Post to Discussion Panel"
-							value={message}
-							onChange={(e) => setMessage(e.target.value)}/>
-						<Button className={styles.sendButton}>Send</Button>
-					</Form>
-
-					<div className={styles.msgContainer}>
-                        <div id="messages" className={styles.discussionMessage}>
-                            {messages.map((msg, index) => (
-                                <div key={index}>{msg}</div>
-                            ))}
-                        </div>
-					</div>
-					
-				</div>
-			</Container>
-		</div>
+        <div>
+        <Navbar />
+      
+        {/* Back Button */}
+        <div className={styles.backButton}>
+          <button
+            onClick={() => window.history.back()}
+            className="text-[#312c51] bg-[#f0c38e] hover:bg-[#d9ab78] rounded-3xl px-4 py-2"
+          >
+            ◄ Go Back
+          </button>
+        </div>
+      
+        {/* Main Discussion Panel */}
+        <Container className={styles.container}>
+          <h1 className={styles.heading}>Discussion: {pollTopic}</h1>
+          <div className={styles.innerBox}>
+            <Form className={styles.formContainer} id="msgForm" onSubmit={handleSendMessage}>
+              <Input
+                type="text"
+                name="msg"
+                placeholder="Post to Discussion Panel"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <Button className={styles.sendButton}>Send</Button>
+            </Form>
+      
+            <div className={styles.msgContainer}>
+              <div id="messages" className={styles.discussionMessage}>
+                {messages.map((msg, index) => (
+                  <div key={index}>{msg}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
     );
 }
 

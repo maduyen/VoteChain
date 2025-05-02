@@ -4,6 +4,7 @@ import { fetchTransactionDetails } from "./utils/ResilientDB";
 import { GlobalContext } from "../context/GlobalContext";
 import { useParams,Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar1";
+import Footer from "./Footer2";
 
 const sdk = new ResVaultSDK();
 const PollDetailPage = () => {
@@ -203,12 +204,26 @@ const handleViewResults = () => {
       <div>
         <Navbar />
       </div>
-      <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
-        <h1 className="text-2xl font-bold text-center mb-4">{poll.pollData.topic}</h1>
-        <p className="text-gray-600 text-center mb-6">{poll.pollData.description}</p>
+
+      {/* Back Button */}
+      <div className="absolute top-[90px] left-5 z-10">
+          <button
+            onClick={() => window.history.back()}
+            className="text-[#312c51] bg-[#f0c38e] hover:bg-[#d9ab78] rounded-3xl px-4 py-2"
+          >
+            ◄ Go Back
+          </button>
+        </div>
+
+      {/* Header */}
+      <h1 className="text-4xl font-medium text-[#f5cfa8] text-center mt-[100px] mb-2">{poll.pollData.topic}</h1>
+      <h2 className="text-2xl text-white text-center mb-4">{poll.pollData.description}</h2>
+
+      {/* Voting Container */}
+      <div className="max-w-4xl mx-auto p-6 bg-[#312c51] shadow-lg rounded-3xl">
         <form className="space-y-4">
           {poll.pollData.options.map((option, index) => (
-            <div key={index} className="flex items-center">
+            <div key={index} className="w-fit flex items-center px-4 py-3 bg-[#48426d] shadow-lg rounded-3xl">
               <input
                 type="radio"
                 id={`option-${index}`}
@@ -220,7 +235,7 @@ const handleViewResults = () => {
               />
               <label
                 htmlFor={`option-${index}`}
-                className="ml-3 text-gray-700 cursor-pointer"
+                className="ml-3 text-white cursor-pointer"
               >
                 {option}
               </label>
@@ -230,7 +245,7 @@ const handleViewResults = () => {
         {!hasVoted && (
           <button
             onClick={handleVote}
-            className="mt-6 w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+            className="mt-6 w-full bg-[#f0c38e] text-[#312c51] py-2 px-4 rounded-3xl hover:bg-[#d9ab78] transition-colors"
           >
             Submit Vote
           </button>
@@ -238,11 +253,16 @@ const handleViewResults = () => {
         {hasVoted && (
           <button
             onClick={handleViewResults}
-            className="mt-6 w-full bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 transition-colors"
+            className="mt-6 w-full bg-[#4caf68] text-white py-2 px-4 rounded-3xl hover:bg-[#44995b] transition-colors"
           >
             View Results
           </button>
         )}
+      </div>
+
+      {/* Footer */}
+      <div className="pt-4">
+        <Footer />
       </div>
     </div>
   );
