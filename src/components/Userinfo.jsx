@@ -55,8 +55,8 @@ const VoteHistoryPage = () => {
     fetchVoteHistory();
   }, []);
 
-  if (loading) return <div>Loading vote history...</div>;
-  if (error) return <div className="text-red-500">{error}</div>;
+  if (loading) return <div className="flex items-center justify-center h-screen text-lg font-semibold text-white">Loading vote history...</div>;
+  if (error) return <div className="flex items-center justify-center h-screen text-lg font-semibold text-red-500">{error}</div>;
 
   if (voteHistory.length === 0)
     return <div>No vote history found for this user.</div>;

@@ -16,12 +16,6 @@ const Navbar = () => {
     setIsLoggedIn(!!publicKey); // Update state based on presence of publicKey
   }, []);
 
-  const handleClick = (e) => {
-    if (isLoggedIn) {
-      alert("You are already logged in!");
-    }
-  };
-
   const handleLogout = () => {
     sessionStorage.removeItem("publicKey"); // Clear publicKey from sessionStorage
     setIsLoggedIn(false); // Update state
@@ -59,7 +53,7 @@ const Navbar = () => {
             </>   
           )}                
 
-          <Button component={Link}  to={isLoggedIn ? "#" : "/login"}  onClick={handleClick} style={linkStyle} >
+          <Button component={Link}  to={isLoggedIn ? "/user-dashboard" : "/login"} style={linkStyle} >
             <i className="fas fa-user mr-2"></i>  {/*Profile icon */}
             {isLoggedIn ? "ACCOUNT" : "LOGIN"}
           </Button>

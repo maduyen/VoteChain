@@ -40,7 +40,7 @@ const PollsListPage = () => {
     poll.pollData.topic.toLowerCase().includes(search.toLowerCase())
   );
 
-  if (loading) return <div className="flex items-center justify-center h-screen text-lg font-semibold">Loading polls...</div>;
+  if (loading) return <div className="flex items-center justify-center h-screen text-lg font-semibold text-white">Loading polls...</div>;
   if (error) return <div className="text-center text-red-500 font-medium">{error}</div>;
   if (polls.length === 0) return <div className="text-center text-gray-500">No polls available.</div>;
 
