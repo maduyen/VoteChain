@@ -18,59 +18,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const useSectionScroll = () => {
-  const isScrolling = useRef(false);
-  const scrollDelta = useRef(0);
-  const lastScrollTime = useRef(Date.now());
-
-  useEffect(() => {
-    const sections = Array.from(document.querySelectorAll("section"));
-    const sectionHeight = window.innerHeight;
-
-    const handleScroll = (e) => {
-      const now = Date.now();
-      const delta = e.deltaY;
-
-      // Prevent rapid triggers -> jumping too many sections/jittering
-      if (isScrolling.current || now - lastScrollTime.current < 500) return;
-
-      scrollDelta.current += delta;
-
-      // If delta exceeds a threshold, perform scroll -> increases user exp of trackpad users
-      if (Math.abs(scrollDelta.current) > 40) {
-        isScrolling.current = true;
-
-        const currentScroll = window.scrollY;
-        const currentIndex = Math.round(currentScroll / sectionHeight);
-        const direction = scrollDelta.current > 0 ? 1 : -1;
-
-        let nextIndex = currentIndex + direction;
-        nextIndex = Math.max(0, Math.min(sections.length - 1, nextIndex));
-
-        sections[nextIndex].scrollIntoView({ behavior: "smooth" });
-
-        scrollDelta.current = 0;
-        lastScrollTime.current = now;
-
-        // Reset scroll lock after animation
-        setTimeout(() => {
-          isScrolling.current = false;
-        }, 800);
-      }
-    };
-
-    window.addEventListener("wheel", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll);
-    };
-  }, []);
-}
-
 
 function Home(props) {
   const navigate = useNavigate(); // Hook for navigation
-  useSectionScroll(); // activates the section scroll handler
 
   // Settings for carousel/Slider
   const settings = {
