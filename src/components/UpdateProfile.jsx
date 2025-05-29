@@ -43,7 +43,7 @@ const UpdateProfile = () => {
         console.log("Submitting profile update:", message);
         sdkRef.current.sendMessage(message);
         } catch (error) {
-        console.error("Error updating profile:", error);
+            console.error("Error updating profile:", error);
         }
     };
 
@@ -94,7 +94,7 @@ const UpdateProfile = () => {
                 console.error("MongoDB update failed:", await response.text());
             }
             } catch (error) {
-            console.error("Error storing profile:", error);
+                console.error("Error storing profile:", error);
             }
         }
         };

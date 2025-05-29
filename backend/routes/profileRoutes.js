@@ -45,6 +45,25 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/:publicKey', async (req, res) => {
+    const { publicKey } = req.params;
 
+    try {
+        const profile = await Profile.findOne({ publicKey });
+
+        if (!profile) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json({
+            userName: profile.profileData.userName || "",
+            about: profile.profileData.about || "",
+            profilePicUrl: profile.profileData.profilePic || ""
+        });
+    } catch (error) {
+        console.error("Error fetching profile:", error);
+        res.status(500).json({ message: "Server error" });
+    }
+});
 
 module.exports = router;
