@@ -11,6 +11,7 @@ import PollsListPage from "./components/PollsListPage";
 import PollDetailPage from "./components/PollDetailPage";
 import DiscussionPanel from "./components/DiscussionPanel/DiscussionPanel";
 import UserDashboard from "./components/UserDashboard";
+import UpdateProfile from "./components/UpdateProfile";
 import "./App.css";
 
 // ProtectedRoute component for authenticated routes
@@ -47,6 +48,14 @@ function App() {
               element={
                 <ProtectedRoute>
                   <Userinfo />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/updateprofile"
+              element={
+                <ProtectedRoute>
+                  <UpdateProfile />
                 </ProtectedRoute>
               }
             />

@@ -11,6 +11,7 @@ const Poll = require('./models/Poll');  //importing Poll model to get topic name
 const pollRoutes = require("./routes/pollRoutes");
 const storePollRoutes = require("./routes/storePollRoutes");
 const voteRoutes = require("./routes/voteRoutes");
+const profileRoutes = require('./routes/profileRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -56,6 +57,7 @@ app.use(express.json());
 app.use("/api/polls", pollRoutes); // For fetching
 app.use("/api/storePollRoutes", storePollRoutes);  // For storing
 app.use("/api/vote", voteRoutes);
+app.use('/api/profile', profileRoutes);  // for creating & updating user profile
 
 // Socket.IO: handling discussion feature
 io.on("connection", (socket) => {

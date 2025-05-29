@@ -46,10 +46,6 @@ const Navbar = () => {
             <Button component={Link} to="/polls" style={linkStyle}>
               VIEW POLLS
             </Button>
-
-            <Button component={Link} to="/userinfo" style={linkStyle}>
-              YOUR VOTES
-            </Button>
             </>   
           )}                
 
