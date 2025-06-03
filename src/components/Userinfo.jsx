@@ -66,6 +66,17 @@ const VoteHistoryPage = () => {
     <div>
       <Navbar />
     </div>
+    
+    {/* Back Button */}
+    <div className="absolute top-[90px] left-5 z-10">
+    <button
+        onClick={() => window.history.back()}
+        className="text-[#312c51] bg-[#f0c38e] hover:bg-[#d9ab78] rounded-3xl px-4 py-2"
+    >
+        ◄ Go Back
+    </button>
+    </div>
+
       <div className="max-w-5xl mx-auto p-6">
         <div className="w-full flex justify-start items-end max-w-4xl mx-auto mt-4">
             <h1 className="text-4xl font-medium text-[#f5cfa8] text-center mb-2">Vote History</h1>

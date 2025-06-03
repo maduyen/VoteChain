@@ -163,6 +163,16 @@ const PollCreationPage = () => {
         <Navbar />
       </div>
       
+      {/* Back Button */}
+      <div className="absolute top-[90px] left-5 z-10">
+      <button
+          onClick={() => window.history.back()}
+          className="text-[#312c51] bg-[#f0c38e] hover:bg-[#d9ab78] rounded-3xl px-4 py-2"
+      >
+          ◄ Go Back
+      </button>
+      </div>
+
       <div className="min-h-screen flex flex-col items-center justify-center py-10 px-6">
         {/* Header */}
         <div className="w-full flex justify-start items-end mt-4 max-w-4xl mx-auto">
