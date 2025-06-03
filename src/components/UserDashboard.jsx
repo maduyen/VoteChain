@@ -68,24 +68,20 @@ const UserDashboard = () => {
                             {about }
                         </p>
                         {/* Update Profile Button */}
-                        <Button
-                            style={{
-                                backgroundColor: "#312c51",
-                                color: "white",
-                                marginBottom: "20px"
-                            }}
+                        <button
+                            className="w-64 mx-auto bg-[#312c51] text-white py-3 rounded-3xl shadow-lg hover:bg-[#423867] transition duration-200"
                             onClick={() => navigate("/updateprofile")} // Navigate to UpdateProfile
                             >
                             Edit Profile
-                        </Button>
+                        </button>
                     </div>
                     {/* Dashboard Options */}
                     <div className="min-h-screen flex flex-col">
                         {/* Top Row */}
                         {/* PublicKey container */}
                         <div className="max-w h-[110px] bg-[#312c51] rounded-[25px] shadow-lg flex-col p-4 mb-4">
-                            <p className="font-bold text-xl text-white mb-1">Public Key:</p> {/* Display Public Key */}
-                            <p className="text-white break-words">{publicKey}</p>
+                            <p className="font-bold text-xl text-white mb-1">Public Key 🔑:</p> {/* Display Public Key */}
+                            <p className="text-white ml-4">{publicKey}</p>
                         </div>
                         {/* Bottom Row */}
                         <div className="min-h-screen flex flex-row">
@@ -97,16 +93,12 @@ const UserDashboard = () => {
                                     className="img-fluid floating mx-auto"
                                     style={{ width: "180px", height: "180px", marginBottom: "20px"}}
                                 />
-                                <Button
-                                    style={{
-                                        marginTop: "10px",
-                                        backgroundColor: "#f0c38e",
-                                        color: "#312c51"
-                                    }}
+                                <button
+                                    className="w-64 bg-[#f0c38e] text-[#312c51] py-3 rounded-3xl shadow-lg hover:bg-[#d9ab78] transition duration-200"
                                     onClick={() => navigate("/userinfo")} // Navigate to PollsListPage
                                     >
                                     View Vote History
-                                </Button>
+                                </button>
                             </div>
                             {/* Create Poll container */}
                             <div className="w-[350px] h-[325px] bg-[#312c51] rounded-[50px] shadow-lg flex flex-col items-center justify-center">
@@ -116,16 +108,12 @@ const UserDashboard = () => {
                                     className="img-fluid floating mx-auto"
                                     style={{ width: "180px", height: "180px", marginBottom: "20px"}}
                                 />
-                                <Button
-                                    style={{
-                                        marginTop: "10px",
-                                        backgroundColor: "#f0c38e",
-                                        color: "#312c51"
-                                    }}
+                                <button
+                                    className="w-48 bg-[#f0c38e] text-[#312c51] py-3 rounded-3xl shadow-lg hover:bg-[#d9ab78] transition duration-200"
                                     onClick={() => navigate("/create-poll")} // Navigate to PollsListPage
                                     >
-                                    Create Poll
-                                </Button>
+                                    + Create Poll
+                                </button>
                             </div>
                         </div>
                     </div>
