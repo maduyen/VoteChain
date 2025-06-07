@@ -50,7 +50,7 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 <img width="931" alt="Screenshot 2024-12-08 172213" src="https://github.com/user-attachments/assets/27a482bf-557f-43bb-8719-9715e943aed0">
 
 4) Create Polls Screen
-<img width="931" alt="Create Poll" src="(https://github.com/user-attachments/assets/f9082a84-5639-42fe-8bab-e59407b81dce">
+<img width="931" alt="Create Poll" src="https://github.com/user-attachments/assets/f9082a84-5639-42fe-8bab-e59407b81dce">
 
 5) View Polls Screen
 <img width="931" alt="View Polls" src="https://github.com/user-attachments/assets/70301084-6f23-4e20-9e59-79fa4121e663">
@@ -77,21 +77,9 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 Please follow the procedures below and ensure that every step is successful.
 ### Install resvault chrome extension
 Google Chrome is installable on macOS, Linux, and Windows platforms. Please refer to the official Google installation guide based on your platform.
-1. Clone the ResVault repo to get started:
-   ```
-   git clone https://github.com/ResilientApp/ResVault.git
-   cd ResVault
-   ```
-2. Create the build folder in repo
-   ```
-   npm install
-   npm run build
-   ```
-3. Load the extension in chrome
-   - Open chrome://extensions/ in Google Chrome, toggle Developer mode on
-   - Click on Load unpacked
-   - Select the build folder you just created
-   - You should see the ResVault extension in chrome
+1. Open https://chromewebstore.google.com/category/extensions
+2. Search "ResVault"
+3. Install Chrome Extension
 ### Node.js is required
 1. **Node.js** - Download and install Node.js from [https://nodejs.org/](https://nodejs.org/) based on your platform.
 2. **npm (Node Package Manager)** - npm is included with Node.js. Run the following commands to ensure your installation is successful.
@@ -102,14 +90,20 @@ Google Chrome is installable on macOS, Linux, and Windows platforms. Please refe
 ## Steps to run the system
 1. Clone this Git repository to your local machine
    ```
-   git clone https://github.com/ItsBaiShiXi/VoteChain.git
+   git clone https://github.com/maduyen/VoteChain.git
    cd VoteChain
    ```
 2. Install required dependencies
       ```
       npm install
       ```
-3. Once the dependencies are installed successfully
+3. Create a .env file 
+   - In the ./backend directory, create a .env file.
+   - Add your MongoDB connection string to it using the following format:
+      ```
+      MONGO_URI=your_mongodb_connection_string
+      ```
+4. Once the dependencies are installed successfully
    - Open a terminal, run following command
       ```
       npm run start-backend
@@ -119,7 +113,7 @@ Google Chrome is installable on macOS, Linux, and Windows platforms. Please refe
       npm start
       ```
       This will launch the application, and you can access it in your web browser
-4. Connect the ResVault chrome extension, then you can anonymously login to votechain through it
+5. Connect the ResVault chrome extension, then you can anonymously login to votechain through it
    ![ResVault screen](https://github.com/user-attachments/assets/9afcaeeb-e36d-4d4d-aaf4-724ddf2ba97c)  
    Enjoy your voting!
 
