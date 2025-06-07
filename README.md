@@ -35,9 +35,13 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 ## Screenshots
 
 1) Home Screen
-<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/3f3e76f6-1d81-4ca1-a257-ecaefdbf6e7d">
+<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/3c155f4c-270a-4a5d-b131-f07dd05170c1">
 
-<img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/1b6f55b9-b548-4ddb-b9c0-a7fe2b977a19">
+<img width="931" alt="Homepage1" src="https://github.com/user-attachments/assets/84ff75ce-3907-4a89-bd7b-63439609790e">
+
+<img width="931" alt="Homepage2" src="https://github.com/user-attachments/assets/e6ae9ec8-0ec6-4ee7-a3d9-085464970a51">
+
+<img width="931" alt="Homepage3" src="https://github.com/user-attachments/assets/2f0973b8-e960-4adf-bcf2-1b76649aba7f">
 
 2) Login Page
 <img width="931" alt="Screenshot 2024-12-08 171743" src="https://github.com/user-attachments/assets/dd690de2-ce82-4c66-9d9c-ae2624e16311">
@@ -46,23 +50,28 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 <img width="931" alt="Screenshot 2024-12-08 172213" src="https://github.com/user-attachments/assets/27a482bf-557f-43bb-8719-9715e943aed0">
 
 4) Create Polls Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/04d6648e-26ec-4d2d-b916-a065080574de">
+<img width="931" alt="Create Poll" src="(https://github.com/user-attachments/assets/f9082a84-5639-42fe-8bab-e59407b81dce">
 
-5) Vote Polls Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/101543ac-f1f7-4e01-b8d6-ca719753a0b0">
+5) View Polls Screen
+<img width="931" alt="View Polls" src="https://github.com/user-attachments/assets/70301084-6f23-4e20-9e59-79fa4121e663">
 
 6) Vote Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/6867216a-2d26-4e30-8931-4a9db9ff17c2">
+<img width="931" alt="Vote Screen" src="https://github.com/user-attachments/assets/d56dc814-26c2-4f3c-8bd5-1e84aac53cea">
 
 7) Result Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 40 37 PM" src="https://github.com/user-attachments/assets/1829cb3b-c275-4cbf-be84-77456083afb1">
+<img width="931" alt="Result Screen" src="https://github.com/user-attachments/assets/886d8d7f-dbfb-41bf-ae7c-1104da32df4a">
 
 8) User History Screen
-<img width="931" alt="Screenshot 2023-12-09 at 4 41 32 PM" src="https://github.com/user-attachments/assets/07e0154f-eec5-4075-a9b6-f8d19871a8ab">
+<img width="931" alt="User Vote History" src="https://github.com/user-attachments/assets/89057bcc-4681-4c50-ab3a-6d66ce74f733">
 
 9) Discussion Screen
-<img width="931" alt="Screenshot 2024-12-08 212205" src="https://github.com/user-attachments/assets/ace0250f-da24-48b1-ba0b-a1588c90665e">
+<img width="931" alt="Discussion Screen" src="https://github.com/user-attachments/assets/f82a65e8-6bf0-4f75-8a02-0b0cf6501f6f">
 
+10) User Dashboard
+<img width="931" alt="User Dashboard" src="https://github.com/user-attachments/assets/550fc079-c805-4579-a4e0-015859a0ccfe">
+
+11) Update Profile
+<img width="931" alt="Update Profile" src="https://github.com/user-attachments/assets/517c683b-d838-4d8d-8069-dc4a51ad77c8">
 
 ## Preparation
 Please follow the procedures below and ensure that every step is successful.
