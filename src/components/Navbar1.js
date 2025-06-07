@@ -64,10 +64,47 @@ const Navbar = () => {
           )}                
 
           {/* Account Dropdown */}
-           <Button onClick={toggleDropdown} style={linkStyle}>
-            <i className="fas fa-user mr-2"></i>  {/*Profile icon */}
-            {isLoggedIn ? "ACCOUNT" : "LOGIN"}
-          </Button>
+          {isLoggedIn ? (
+            <>
+              <Button onClick={toggleDropdown} style={linkStyle}>
+                <i className="fas fa-user mr-2"></i>  {/*Profile icon */}
+                ACCOUNT
+              </Button>
+              {dropdownOpen && (
+                <div
+                  className="absolute right-2 mt-2 rounded-md shadow-lg bg-white text-[#312c51] z-50"
+                  style={{ minWidth: "150px", marginTop: "5px" }}
+                >
+                  {/* LOGGED IN -> ACCESS TO USER DASHBOARD + LOGOUT BUTTON */}
+                  <Link to="/user-dashboard" className="block px-4 py-2 text-[#312c51] hover:bg-gray-100 rounded-md transition duration-200">
+                    Dashboard
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200"
+                  >
+                    Logout▸
+                  </button>
+                </div>
+              )}
+            </>
+          ) : (
+            <Button component={Link}  to="/login" style={linkStyle} >
+              <i className="fas fa-user mr-2"></i>  {/*Profile icon */}
+              LOGIN
+            </Button>
+          )}
+
+
+
+
+
+
+
+
+
+
+    
           
           {dropdownOpen && (
             <div
@@ -77,7 +114,9 @@ const Navbar = () => {
               {isLoggedIn ? (
                 <>
                   {/* LOGGED IN -> ACCESS TO USER DASHBOARD + LOGOUT BUTTON */}
-                  <Link to="/user-dashboard" className="block px-4 py-2 text-[#312c51] hover:bg-gray-100 rounded-md transition duration-200">Dashboard</Link>
+                  <Link to="/user-dashboard" className="block px-4 py-2 text-[#312c51] hover:bg-gray-100 rounded-md transition duration-200">
+                    Dashboard
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md transition duration-200"
