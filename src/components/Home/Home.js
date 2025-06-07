@@ -237,17 +237,17 @@ function Home(props) {
 const data = [
   {
     image: dashboard,
-    section: 'NEW! User Dashboard',
-    text: 'Voters now have access to personalized dashboards where they can view and manage their profiles, track their voting history, and see active or past polls they’ve participated in.'
+    section: 'NEW! User Dashboard ⚙️',
+    text: 'Voters now have access to personalized dashboards where they can view and manage their profiles, track their voting history, and see active or past polls they’ve participated in. '
   },
   {
     image: profile,
-    section: 'NEW! Custom Usernames and Bios',
-    text: 'Stand out in the crowd — voters can now add a custom username and bio to personalize their profile.'
+    section: 'NEW! Custom Usernames & Bios',
+    text: 'Stand out in the crowd — voters can now add a custom username and bio to personalize their profile!'
   },
   {
     image: appRefresh,
-    section: 'NEW! App Refresh',
+    section: 'NEW! App Refresh ✨',
     text: 'VoteChain has undergone a major revamp — with a fresh new look and an improved user experience. We hope you love the updated theme and find everything smoother and easier to use!'
   },
   {
