@@ -10,6 +10,9 @@ import customize from "../../components/images/customize.svg";
 import signup from "../../components/images/signup.svg";
 import piechart from "../../components/images/pie-chart.svg";
 import futureVoting from "../../components/images/future_of_voting.svg"
+import dashboard from "../../components/images/dashboard_slide.svg"
+import profile from "../../components/images/profile_slide.svg"
+import appRefresh from "../../components/images/appRefresh_slide.svg"
 import { Button } from "reactstrap";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import { React, useEffect, useRef } from "react";
@@ -232,6 +235,21 @@ function Home(props) {
 }
 
 const data = [
+  {
+    image: dashboard,
+    section: 'NEW! User Dashboard',
+    text: 'Voters now have access to personalized dashboards where they can view and manage their profiles, track their voting history, and see active or past polls they’ve participated in.'
+  },
+  {
+    image: profile,
+    section: 'NEW! Custom Usernames and Bios',
+    text: 'Stand out in the crowd — voters can now add a custom username and bio to personalize their profile.'
+  },
+  {
+    image: appRefresh,
+    section: 'NEW! App Refresh',
+    text: 'VoteChain has undergone a major revamp — with a fresh new look and an improved user experience. We hope you love the updated theme and find everything smoother and easier to use!'
+  },
   {
     image: signup,
     section: 'Registration',
