@@ -75,11 +75,6 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 
 ## Preparation
 Please follow the procedures below and ensure that every step is successful.
-### Install resvault chrome extension
-Google Chrome is installable on macOS, Linux, and Windows platforms. Please refer to the official Google installation guide based on your platform.
-1. Open https://chromewebstore.google.com/category/extensions
-2. Search "ResVault"
-3. Install Chrome Extension
 ### Node.js is required
 1. **Node.js** - Download and install Node.js from [https://nodejs.org/](https://nodejs.org/) based on your platform.
 2. **npm (Node Package Manager)** - npm is included with Node.js. Run the following commands to ensure your installation is successful.
@@ -87,6 +82,8 @@ Google Chrome is installable on macOS, Linux, and Windows platforms. Please refe
    node --version
    npm --version
    ```
+### Install ResVault chrome extension
+https://chromewebstore.google.com/detail/odnmbbfjnkgboakjpjlcceggpkoaheil?utm_source=item-share-cb
 ## Steps to run the system
 1. Clone this Git repository to your local machine
    ```
