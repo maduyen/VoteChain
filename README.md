@@ -83,6 +83,7 @@ Please follow the procedures below and ensure that every step is successful.
    npm --version
    ```
 ## Install ResVault chrome extension
+Google Chrome is installable on macOS, Linux, and Windows platforms. Please refer to the official Google installation guide based on your platform.
 https://chromewebstore.google.com/detail/odnmbbfjnkgboakjpjlcceggpkoaheil?utm_source=item-share-cb
 ## Steps to run the system
 1. Clone this Git repository to your local machine
