@@ -73,16 +73,16 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 11) Update Profile
 <img width="931" alt="Update Profile" src="https://github.com/user-attachments/assets/517c683b-d838-4d8d-8069-dc4a51ad77c8">
 
-## Preparation
+# Preparation
 Please follow the procedures below and ensure that every step is successful.
-### Node.js is required
+## Node.js is required
 1. **Node.js** - Download and install Node.js from [https://nodejs.org/](https://nodejs.org/) based on your platform.
 2. **npm (Node Package Manager)** - npm is included with Node.js. Run the following commands to ensure your installation is successful.
    ```
    node --version
    npm --version
    ```
-### Install ResVault chrome extension
+## Install ResVault chrome extension
 https://chromewebstore.google.com/detail/odnmbbfjnkgboakjpjlcceggpkoaheil?utm_source=item-share-cb
 ## Steps to run the system
 1. Clone this Git repository to your local machine
