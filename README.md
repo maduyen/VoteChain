@@ -11,10 +11,13 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 2) Single Voting Instance
 3) Immutable Votes
 4) User Friendly Interface
-5) NEW! User Authentication with ResVault
-6) NEW! Customizable Voting
-7) NEW! Participate in Discussion Panels
-8) NEW! View Poll Results & Personal Vote History
+5) User Authentication with ResVault
+6) Customizable Voting
+7) Participate in Discussion Panels
+8) View Poll Results & Personal Vote History
+9) NEW! User Dashboard
+10) NEW! Custom Usernames and Bios
+11) NEW! App Refresh
 
 ## Architecture Diagram
 <img src="https://github.com/user-attachments/assets/e3344304-5da8-4f2b-a545-836900a4f08e" alt="Architecture Diagram" width="500">
@@ -32,7 +35,7 @@ Welcome to the "VoteChain" – a pioneering platform utilizing ResilientDB and G
 ## Screenshots
 
 1) Home Screen
-<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/94acf367-69bd-4363-aad6-bb6e9233f4a9">
+<img width="931" alt="Landing page" src="https://github.com/user-attachments/assets/3f3e76f6-1d81-4ca1-a257-ecaefdbf6e7d">
 
 <img width="931" alt="Screenshot 2023-12-09 at 4 36 16 PM" src="https://github.com/user-attachments/assets/1b6f55b9-b548-4ddb-b9c0-a7fe2b977a19">
 
