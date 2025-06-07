@@ -9,12 +9,34 @@ import Navbar from "../Navbar1";
 
 function DiscussionPanel() {
     const { transactionId } = useParams(); //access curr transactionID
+    const publicKey = sessionStorage.getItem('publicKey');
 
     // state to store messages, socket connection, and topic
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
     const [socket, setSocket] = useState(null);
     const [pollTopic, setPollTopic] = useState("");
+    const [userName, setUserName] = useState("");
+
+    //get username (reused this funct from userDashboard)
+    useEffect(() => {
+        const fetchProfile = async () => {
+            try {
+                if (!publicKey) return;
+
+                const res = await fetch(`http://localhost:3000/api/profile/${publicKey}`);
+                if (!res.ok) throw new Error("Failed to fetch profile");
+                
+                const data = await res.json();
+                console.log("Fetched profile data:", data);
+                setUserName(data.userName || "");
+            } catch (err) {
+                console.error("Error fetching profile info:", err);
+            }
+        };
+
+        fetchProfile();
+    }, [publicKey]);
 
     useEffect(() => {
         //establish socket connection
@@ -66,7 +88,7 @@ function DiscussionPanel() {
     const handleSendMessage = (e) => {
         e.preventDefault();
         if (message.trim() && socket) {  //ensures connection + NOT blank msg
-            const formattedMessage = { transactionId, sender: "Voter", msg: message };  // add "Voter: " to the start of the msg
+            const formattedMessage = { transactionId, sender: userName, msg: message };  // add "Voter: " OR userName to the start of the msg
             socket.emit("chatmessage", formattedMessage); // send message via socket
             setMessage(""); // clear Input after sending the message
         }

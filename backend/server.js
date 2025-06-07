@@ -81,7 +81,7 @@ io.on("connection", (socket) => {
     Msg.find({ transactionId })
     .then(result => {
       console.log("Previous messages:", result);
-      const messagesWithPrefix = result.map(msg => `Voter: ${msg.msg}`);  //adding Voter previx -> can be upgraded to "username" in future!!
+      const messagesWithPrefix = result.map(msg => `${msg.username}: ${msg.msg}`);  //adding Voter previx -> can be upgraded to "username" in future!!
       socket.emit('output-messages', messagesWithPrefix);
     }).catch((error) => {
       console.error("Error retrieving messages:", error);
@@ -93,7 +93,7 @@ io.on("connection", (socket) => {
     console.log(`Message received for transactionId ${transactionId}: ${msg}`);
     
     //save msg to MongoDB
-    const message = new Msg({ transactionId, msg });
+    const message = new Msg({ transactionId, username: sender, msg });
     message.save()
       .then(() => {
         console.log("Message saved to MongoDB, emitting to panel");
